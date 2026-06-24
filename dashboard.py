@@ -17,7 +17,6 @@ import streamlit.components.v1 as components
 from branca.element import MacroElement
 from folium.plugins import HeatMap
 from jinja2 import Template
-from streamlit_folium import st_folium
 
 DATA_DIR = Path(__file__).parent / "data" / "extracted" / "csv"
 
@@ -713,9 +712,10 @@ def build_county_folium_map_cached(
     data_signature: str,
     categories: tuple[str, ...],
     radius_km: float,
-) -> folium.Map:
+) -> str:
     df = pd.read_json(io.StringIO(data_signature))
-    return build_county_folium_map(df, county, list(categories), radius_km)
+    m = build_county_folium_map(df, county, list(categories), radius_km)
+    return folium_to_html(m)
 
 
 def build_county_folium_map(
@@ -765,9 +765,10 @@ def build_category_heatmap_cached(
     category: str,
     county_data_json: str,
     radius_km: float,
-) -> folium.Map:
+) -> str:
     county_df = pd.read_json(io.StringIO(county_data_json))
-    return build_category_heatmap(county_df, county, category, radius_km)
+    m = build_category_heatmap(county_df, county, category, radius_km)
+    return folium_to_html(m)
 
 
 def build_category_heatmap(
@@ -804,30 +805,17 @@ def build_category_heatmap(
     return m
 
 
-def render_folium_static(m: folium.Map, height: int, key: str) -> None:
-    st.markdown('<div class="map-frame">', unsafe_allow_html=True)
-    st_folium(
-        m,
-        width=None,
-        height=height,
-        use_container_width=True,
-        returned_objects=[],
-        key=key,
-    )
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-def render_folium_html_embed(m: folium.Map, height: int) -> None:
+def render_folium_html_embed(map_html: str, height: int) -> None:
     """Embed folium HTML directly (loads reliably inside inactive Streamlit tabs)."""
     st.markdown('<div class="map-frame">', unsafe_allow_html=True)
-    components.html(folium_to_html(m), height=height, scrolling=False)
+    components.html(map_html, height=height, scrolling=False)
     st.markdown("</div>", unsafe_allow_html=True)
 
 
-def render_map_download(m: folium.Map, label: str, filename: str, key: str) -> None:
+def render_map_download(map_html: str, label: str, filename: str, key: str) -> None:
     st.download_button(
         label,
-        data=folium_to_html(m),
+        data=map_html,
         file_name=filename,
         mime="text/html",
         key=key,
@@ -1118,24 +1106,24 @@ def main() -> None:
         categories_tuple = tuple(selected_categories)
         map_key_suffix = f"{radius_km}_{'_'.join(categories_tuple)}"
 
-        map_dublin = build_county_folium_map_cached("dublin", data_signature, categories_tuple, radius_km)
-        map_galway = build_county_folium_map_cached("galway", data_signature, categories_tuple, radius_km)
+        map_dublin_html = build_county_folium_map_cached("dublin", data_signature, categories_tuple, radius_km)
+        map_galway_html = build_county_folium_map_cached("galway", data_signature, categories_tuple, radius_km)
 
         col_left, col_right = st.columns(2, gap="large")
         with col_left:
             st.markdown(f"**{COUNTY_META['dublin']['label']}**")
-            render_folium_static(map_dublin, height=POINT_MAP_HEIGHT, key=f"map_dublin_{map_key_suffix}")
+            render_folium_html_embed(map_dublin_html, height=POINT_MAP_HEIGHT)
             render_map_download(
-                map_dublin,
+                map_dublin_html,
                 "Download Dublin map (HTML)",
                 "dublin_food_map.html",
                 f"dl_dub_map_html_{map_key_suffix}",
             )
         with col_right:
             st.markdown(f"**{COUNTY_META['galway']['label']}**")
-            render_folium_static(map_galway, height=POINT_MAP_HEIGHT, key=f"map_galway_{map_key_suffix}")
+            render_folium_html_embed(map_galway_html, height=POINT_MAP_HEIGHT)
             render_map_download(
-                map_galway,
+                map_galway_html,
                 "Download Galway map (HTML)",
                 "galway_food_map.html",
                 f"dl_gal_map_html_{map_key_suffix}",
