@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import io
 import math
+import base64
 from pathlib import Path
 
 import folium
@@ -18,6 +19,11 @@ from folium.plugins import HeatMap
 from jinja2 import Template
 
 DATA_DIR = Path(__file__).parent / "data" / "extracted" / "csv"
+IMAGE_DIR = Path(__file__).parent / "image"
+UC_DAVIS_LOGO = IMAGE_DIR / "uc_davis.png"
+UCD_LOGO = IMAGE_DIR / "ucd.png"
+OH_TEXT_COLOR = "#4A4A4A"
+OH_FONT = "Helvetica, Arial, sans-serif"
 
 CATEGORY_META = {
     "restaurant": {
@@ -195,6 +201,286 @@ METRIC_DEFINITIONS = [
         "Unhealthy density (per km²)",
         "Unhealthy access points divided by the buffer area (π × radius²).",
     ),
+]
+
+PLATFORM_DESCRIPTION = (
+    "This platform integrates food environment data, foodborne disease surveillance, and food "
+    "safety alerts to compare Galway and Dublin through a One Health framework. The goal is to "
+    "understand how city scale, coastal ecology, and supply chain structure shape human health "
+    "outcomes. It combines HPSC epidemiological data, FSAI/RASFF alerts, and urban food system "
+    "indicators to surface the connections between what people eat, where food comes from, and "
+    "who gets sick. Built to support the argument that food policy is health policy, and that "
+    "the gap between Galway's ecological advantage and Dublin's governance capacity is the central "
+    "One Health challenge for Irish cities."
+)
+
+ONE_HEALTH_DOMAINS = {
+    "human": {
+        "label": "HUMAN HEALTH",
+        "cx": 0.0,
+        "cy": -1.05,
+        "color": "#9DC9E8",
+    },
+    "environment": {
+        "label": "ENVIRONMENTAL HEALTH",
+        "cx": 1.05,
+        "cy": 0.78,
+        "color": "#F2E682",
+    },
+    "animal_plant": {
+        "label": "ANIMAL AND<br>PLANT HEALTH",
+        "cx": -1.05,
+        "cy": 0.78,
+        "color": "#6EC4B3",
+    },
+}
+
+OH_DOMAIN_LABEL_GAP = 0.38
+
+OH_DOMAIN_RADIUS = 1.84
+OH_THEME_INSET = 0.18
+OH_LABEL_MAX_DISTANCE = 0.44
+OH_REGION_ANCHORS: dict[tuple[str, ...], tuple[float, float]] = {
+    ("human",): (0.0, -1.78),
+    ("environment",): (1.34, 0.72),
+    ("animal_plant",): (-1.34, 0.72),
+    ("animal_plant", "human"): (-0.72, -0.42),
+    ("environment", "human"): (0.72, -0.42),
+    ("animal_plant", "environment"): (0.0, 0.88),
+}
+
+ONE_HEALTH_THEMES = [
+    {
+        "id": "spatial_food",
+        "label": "Spatial food sources",
+        "color": "#27AE60",
+        "domains": ["human", "environment"],
+        "tab": "Food System",
+        "coverage": "full",
+        "detail": "OSM point maps of retail, markets, farms, and food service within urban buffers.",
+    },
+    {
+        "id": "access_equity",
+        "label": "Distance & access equity",
+        "color": "#2980B9",
+        "domains": ["human"],
+        "tab": "Food System",
+        "coverage": "full",
+        "detail": "Healthy vs unhealthy access metrics, density, and comparative Galway–Dublin tables.",
+    },
+    {
+        "id": "food_ecology",
+        "label": "Food ecology & clustering",
+        "color": "#1ABC9C",
+        "domains": ["environment", "human"],
+        "tab": "Food ecology",
+        "coverage": "full",
+        "detail": "Kernel-density heatmaps of food infrastructure by category.",
+    },
+    {
+        "id": "foodborne_burden",
+        "label": "Foodborne disease burden",
+        "color": "#C0392B",
+        "domains": ["human", "animal_plant"],
+        "tab": "Burden disease",
+        "coverage": "partial",
+        "detail": "HPSC epidemiological indicators (integration in progress).",
+    },
+    {
+        "id": "alert_frequency",
+        "label": "Food safety alert frequency",
+        "color": "#E67E22",
+        "domains": ["human", "animal_plant"],
+        "tab": "Alert frequency",
+        "coverage": "partial",
+        "detail": "FSAI/RASFF alert geolocation and temporal patterns (integration in progress).",
+    },
+    {
+        "id": "water_risk",
+        "label": "Water use & risk",
+        "color": "#3498DB",
+        "domains": ["environment"],
+        "tab": "Water risk",
+        "coverage": "partial",
+        "detail": "Water infrastructure from OSM; quality and coastal risk layers pending.",
+    },
+    {
+        "id": "waste_interface",
+        "label": "Waste & animal interface",
+        "color": "#7F8C8D",
+        "domains": ["environment", "animal_plant"],
+        "tab": "Waste / animal interface",
+        "coverage": "partial",
+        "detail": "Waste disposal and production nodes; zoonotic overlap mapping pending.",
+    },
+    {
+        "id": "livestock_production",
+        "label": "Livestock & farm production",
+        "color": "#159957",
+        "domains": ["animal_plant"],
+        "tab": "Food System",
+        "coverage": "partial",
+        "detail": "OSM farm and agricultural nodes within urban buffers; species mix and throughput not yet modelled.",
+    },
+    {
+        "id": "supply_chain",
+        "label": "Supply chain & city scale",
+        "color": "#5B6CFF",
+        "domains": ["human", "environment"],
+        "tab": "Food System",
+        "coverage": "partial",
+        "detail": "Urban buffer comparisons proxy supply-chain exposure; establishment-level linkage pending.",
+    },
+    {
+        "id": "climate_coastal",
+        "label": "Climate & coastal ecology",
+        "color": "#0E7490",
+        "domains": ["environment"],
+        "tab": "Food ecology",
+        "coverage": "partial",
+        "detail": "Spatial food patterns as ecological proxy; climate attribution not yet modelled.",
+    },
+    {
+        "id": "fine_spatial",
+        "label": "Fine spatial patterns",
+        "color": "#D97706",
+        "domains": ["human", "environment"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: neighbourhood-scale census small areas and micro-buffer analysis.",
+    },
+    {
+        "id": "nutrition_direct",
+        "label": "Direct nutritional status",
+        "color": "#D97706",
+        "domains": ["human"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: link HSE dietary surveys or biomarkers to food environment exposure.",
+    },
+    {
+        "id": "price_affordability",
+        "label": "Price & affordability",
+        "color": "#D97706",
+        "domains": ["human"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: integrate CSO price indices and healthy basket cost by district.",
+    },
+    {
+        "id": "gender_access",
+        "label": "Gender & social access",
+        "color": "#D97706",
+        "domains": ["human"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: gender-disaggregated vulnerability and care-work food access patterns.",
+    },
+    {
+        "id": "alert_case_link",
+        "label": "Alert-to-case linkage",
+        "color": "#D97706",
+        "domains": ["human", "animal_plant"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: connect FSAI alerts to HPSC outbreak line lists in space and time.",
+    },
+    {
+        "id": "water_quality",
+        "label": "Real-time water quality",
+        "color": "#D97706",
+        "domains": ["environment"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: EPA bathing-water and shellfish monitoring near food production zones.",
+    },
+    {
+        "id": "zoonotic_overlap",
+        "label": "Zoonotic overlap maps",
+        "color": "#D97706",
+        "domains": ["animal_plant", "human"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: farm–urban edge and wildlife interface layers for Galway vs Dublin.",
+    },
+    {
+        "id": "meat_consumption",
+        "label": "Meat consumption",
+        "color": "#D97706",
+        "domains": ["animal_plant", "human"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: link household meat intake (CSO/HSE surveys) to retail and farm-source exposure.",
+    },
+    {
+        "id": "fish_consumption",
+        "label": "Fish & seafood consumption",
+        "color": "#D97706",
+        "domains": ["animal_plant", "human"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: map seafood retail, coastal catch zones, and per-capita fish intake by district.",
+    },
+    {
+        "id": "milk_consumption",
+        "label": "Milk & dairy consumption",
+        "color": "#D97706",
+        "domains": ["animal_plant", "human"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: connect dairy retail density and farm supply to population dairy intake patterns.",
+    },
+    {
+        "id": "scavenger_animals",
+        "label": "Scavenger animals",
+        "color": "#D97706",
+        "domains": ["animal_plant", "environment"],
+        "tab": "Waste / animal interface",
+        "coverage": "gap",
+        "detail": "Opportunity: gulls, rodents, and other scavengers at waste sites and food-handling zones.",
+    },
+    {
+        "id": "poultry_eggs",
+        "label": "Poultry & egg supply",
+        "color": "#D97706",
+        "domains": ["animal_plant"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: poultry farms, egg retail, and avian influenza risk near urban food nodes.",
+    },
+    {
+        "id": "wildlife_feral",
+        "label": "Wildlife & feral animals",
+        "color": "#D97706",
+        "domains": ["animal_plant", "environment"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: urban wildlife corridors and feral populations overlapping food production areas.",
+    },
+    {
+        "id": "antimicrobial_animals",
+        "label": "Antimicrobial use in animals",
+        "color": "#D97706",
+        "domains": ["animal_plant", "human"],
+        "tab": "What's missing?",
+        "coverage": "gap",
+        "detail": "Opportunity: farm-level antimicrobial stewardship data linked to foodborne resistance burden.",
+    },
+]
+
+GAP_OPPORTUNITIES = [
+    "Neighbourhood-scale spatial analysis beyond OSM point resolution.",
+    "Direct nutritional intake and biomarker data linked to food environment exposure.",
+    "Price, affordability, and healthy-basket cost comparisons by district.",
+    "Gender-disaggregated and care-work-sensitive access indicators.",
+    "Spatial linkage between FSAI/RASFF alerts and HPSC confirmed outbreak cases.",
+    "Real-time water-quality and coastal ecology layers for food-production zones.",
+    "Climate-change attribution and future-scenario modelling at city scale.",
+    "Zoonotic and farm–urban interface mapping for animal–human food pathways.",
+    "Animal-source food consumption pathways for meat, fish, and dairy by district.",
+    "Scavenger and wildlife interfaces at waste sites and urban food-handling zones.",
+    "Poultry, egg supply chains, and avian disease risk near population centres.",
+    "Farm-level antimicrobial use linked to human foodborne resistance outcomes.",
 ]
 
 CUSTOM_CSS = """
@@ -410,6 +696,70 @@ CUSTOM_CSS = """
     }
     .dashboard-header-block {
         margin-bottom: 0.5rem;
+    }
+    .dashboard-logo-row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 28px;
+        flex-wrap: wrap;
+        margin: 0 0 0.85rem 0;
+        padding: 0;
+    }
+    .dashboard-logo-row img {
+        max-height: 112px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+        mix-blend-mode: multiply;
+    }
+    .oh-network-frame {
+        border: 1px solid #E2E8F0;
+        border-radius: 14px;
+        overflow: hidden;
+        background: #FFFFFF;
+        padding: 0;
+        margin-bottom: 6px;
+    }
+    .oh-legend-grid {
+        margin: 6px 0 2px 0;
+    }
+    .platform-description {
+        background: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin: 0.75rem 0 1rem 0;
+        font-size: 1.02rem;
+        color: #334155;
+        line-height: 1.65;
+    }
+    .oh-legend-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 10px 16px;
+        margin: 12px 0 4px 0;
+    }
+    .oh-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.88rem;
+        color: #334155;
+    }
+    .oh-legend-swatch {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+    }
+    .oh-domain-swatch {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        border: 2px solid rgba(15, 23, 42, 0.15);
     }
     .heatmap-math {
         background: #F8FAFC;
@@ -1318,24 +1668,554 @@ def render_chart_download(fig: go.Figure, label: str, filename: str, key: str) -
     st.markdown('<div class="chart-block-gap"></div>', unsafe_allow_html=True)
 
 
+def _theme_opacity(coverage: str, mode: str) -> float:
+    if mode == "gaps":
+        if coverage == "gap":
+            return 1.0
+        if coverage == "partial":
+            return 0.45
+        return 0.25
+    if coverage == "gap":
+        return 0.35
+    if coverage == "partial":
+        return 0.85
+    return 1.0
+
+
+def _theme_marker_size(coverage: str, mode: str) -> int:
+    if mode == "gaps" and coverage == "gap":
+        return 30
+    return 26
+
+
+def _theme_marker_opacity(coverage: str, mode: str) -> float:
+    opacity = _theme_opacity(coverage, mode)
+    if mode == "overview" and coverage == "gap":
+        return max(opacity, 0.55)
+    return opacity
+
+
+def _hex_rgba(hex_color: str, alpha: float) -> str:
+    value = hex_color.lstrip("#")
+    red = int(value[0:2], 16)
+    green = int(value[2:4], 16)
+    blue = int(value[4:6], 16)
+    return f"rgba({red},{green},{blue},{alpha})"
+
+
+def _domain_region_key(domains: list[str]) -> tuple[str, ...]:
+    return tuple(sorted(domains))
+
+
+def _spread_theme_positions(
+    anchor: tuple[float, float],
+    count: int,
+    spread: float = 0.34,
+    aspect: float = 1.0,
+) -> list[tuple[float, float]]:
+    if count <= 1:
+        return [anchor]
+    if count == 2:
+        return [
+            (anchor[0] - spread * aspect * 0.5, anchor[1]),
+            (anchor[0] + spread * aspect * 0.5, anchor[1]),
+        ]
+    positions = []
+    for idx in range(count):
+        angle = (2 * math.pi * idx / count) - (math.pi / 2)
+        positions.append(
+            (
+                anchor[0] + spread * aspect * math.cos(angle),
+                anchor[1] + spread * math.sin(angle),
+            )
+        )
+    return positions
+
+
+def _spread_intersection_positions(
+    domain_ids: list[str],
+    count: int,
+) -> list[tuple[float, float]]:
+    first, second = ONE_HEALTH_DOMAINS[domain_ids[0]], ONE_HEALTH_DOMAINS[domain_ids[1]]
+    mid_x = (first["cx"] + second["cx"]) / 2
+    mid_y = (first["cy"] + second["cy"]) / 2
+    axis_x = second["cx"] - first["cx"]
+    axis_y = second["cy"] - first["cy"]
+    axis_len = math.hypot(axis_x, axis_y) or 1.0
+    unit_x, unit_y = axis_x / axis_len, axis_y / axis_len
+    perp_x, perp_y = -unit_y, unit_x
+    major = min(0.58, OH_DOMAIN_RADIUS * 0.34)
+    minor = min(0.78, OH_DOMAIN_RADIUS * 0.46)
+    positions: list[tuple[float, float]] = []
+    for idx in range(count):
+        angle = (2 * math.pi * idx / count) - (math.pi / 2)
+        tx = mid_x + major * math.cos(angle) * unit_x + minor * math.sin(angle) * perp_x
+        ty = mid_y + major * math.cos(angle) * unit_y + minor * math.sin(angle) * perp_y
+        tx, ty = _clamp_theme_position(tx, ty, domain_ids)
+        positions.append((tx, ty))
+    return positions
+
+
+def _theme_spread_params(count: int) -> tuple[float, float]:
+    if count <= 2:
+        return 0.30, 1.0
+    if count <= 4:
+        return 0.38, 1.12
+    if count <= 6:
+        return 0.46, 1.24
+    return 0.54, 1.42
+
+
+def _theme_min_separation(theme_a: dict, theme_b: dict) -> float:
+    return 0.48 + 0.0045 * (len(theme_a["label"]) + len(theme_b["label"]))
+
+
+def _label_offset_for_position(textposition: str) -> tuple[float, float]:
+    dist = 0.26
+    offsets = {
+        "top center": (0.0, dist),
+        "bottom center": (0.0, -dist),
+        "middle right": (dist, 0.0),
+        "middle left": (-dist, 0.0),
+        "top right": (dist * 0.72, dist * 0.72),
+        "top left": (-dist * 0.72, dist * 0.72),
+        "bottom right": (dist * 0.72, -dist * 0.72),
+        "bottom left": (-dist * 0.72, -dist * 0.72),
+    }
+    return offsets.get(textposition, (0.0, -dist))
+
+
+def _repel_theme_markers(themes: list[dict], iterations: int = 100) -> list[dict]:
+    items = [{**theme} for theme in themes]
+    for _ in range(iterations):
+        adjusted = False
+        for i in range(len(items)):
+            for j in range(i + 1, len(items)):
+                first, second = items[i], items[j]
+                dx = second["x"] - first["x"]
+                dy = second["y"] - first["y"]
+                dist = math.hypot(dx, dy)
+                needed = 0.36
+                if dist >= needed or dist < 1e-9:
+                    continue
+                push = (needed - dist) / 2
+                ux, uy = dx / dist, dy / dist
+                for idx, sign in ((i, -1), (j, 1)):
+                    nx = items[idx]["x"] + sign * ux * push
+                    ny = items[idx]["y"] + sign * uy * push
+                    nx, ny = _clamp_theme_position(nx, ny, items[idx]["domains"])
+                    items[idx]["x"], items[idx]["y"] = nx, ny
+                adjusted = True
+        if not adjusted:
+            break
+    return items
+
+
+def _prepare_theme_labels(themes: list[dict]) -> list[dict]:
+    prepared = []
+    for theme in themes:
+        textposition = _theme_text_position(theme)
+        offset_x, offset_y = _label_offset_for_position(textposition)
+        prepared.append(
+            {
+                **theme,
+                "textposition": textposition,
+                "label_x": theme["x"] + offset_x,
+                "label_y": theme["y"] + offset_y,
+            }
+        )
+    return _repel_theme_labels(prepared)
+
+
+def _tether_label_to_marker(theme: dict) -> None:
+    dx = theme["label_x"] - theme["x"]
+    dy = theme["label_y"] - theme["y"]
+    dist = math.hypot(dx, dy)
+    if dist <= OH_LABEL_MAX_DISTANCE or dist < 1e-9:
+        return
+    scale = OH_LABEL_MAX_DISTANCE / dist
+    theme["label_x"] = theme["x"] + dx * scale
+    theme["label_y"] = theme["y"] + dy * scale
+
+
+def _repel_theme_labels(themes: list[dict], iterations: int = 280) -> list[dict]:
+    items = [{**theme} for theme in themes]
+    for _ in range(iterations):
+        adjusted = False
+        for i in range(len(items)):
+            for j in range(i + 1, len(items)):
+                first, second = items[i], items[j]
+                dx = second["label_x"] - first["label_x"]
+                dy = second["label_y"] - first["label_y"]
+                dist = math.hypot(dx, dy)
+                needed = _theme_min_separation(first, second) + 0.10
+                if dist >= needed or dist < 1e-9:
+                    continue
+                push = (needed - dist) / 2
+                ux, uy = dx / dist, dy / dist
+                for idx, sign in ((i, -1), (j, 1)):
+                    items[idx]["label_x"] += sign * ux * push
+                    items[idx]["label_y"] += sign * uy * push
+                    _tether_label_to_marker(items[idx])
+                adjusted = True
+        if not adjusted:
+            break
+    for item in items:
+        _tether_label_to_marker(item)
+    return items
+
+
+def _theme_text_position(theme: dict) -> str:
+    dx = theme["x"]
+    dy = theme["y"] - 0.12
+    angle = math.degrees(math.atan2(dy, dx))
+    if -22.5 <= angle < 22.5:
+        return "middle right"
+    if 22.5 <= angle < 67.5:
+        return "top right"
+    if 67.5 <= angle < 112.5:
+        return "top center"
+    if 112.5 <= angle < 157.5:
+        return "top left"
+    if angle >= 157.5 or angle < -157.5:
+        return "middle left"
+    if -157.5 <= angle < -112.5:
+        return "bottom left"
+    if -112.5 <= angle < -67.5:
+        return "bottom center"
+    return "bottom right"
+
+
+def _domain_label_position(domain_id: str) -> tuple[float, float]:
+    cx = ONE_HEALTH_DOMAINS[domain_id]["cx"]
+    cy = ONE_HEALTH_DOMAINS[domain_id]["cy"]
+    if domain_id == "human":
+        return cx, cy - OH_DOMAIN_RADIUS - OH_DOMAIN_LABEL_GAP
+    return cx, cy + OH_DOMAIN_RADIUS + OH_DOMAIN_LABEL_GAP
+
+
+def _clamp_theme_position(x: float, y: float, domain_ids: list[str]) -> tuple[float, float]:
+    limit = OH_DOMAIN_RADIUS - OH_THEME_INSET
+    for domain_id in domain_ids:
+        cx = ONE_HEALTH_DOMAINS[domain_id]["cx"]
+        cy = ONE_HEALTH_DOMAINS[domain_id]["cy"]
+        dx, dy = x - cx, y - cy
+        dist = math.hypot(dx, dy)
+        if dist > limit:
+            scale = limit / dist
+            x = cx + dx * scale
+            y = cy + dy * scale
+    return x, y
+
+
+def _layout_visible_themes(mode: str) -> list[dict]:
+    grouped: dict[tuple[str, ...], list[dict]] = {}
+    for theme in ONE_HEALTH_THEMES:
+        if _theme_opacity(theme["coverage"], mode) <= 0.05:
+            continue
+        key = _domain_region_key(theme["domains"])
+        grouped.setdefault(key, []).append(theme)
+
+    laid_out: list[dict] = []
+    for key, themes in grouped.items():
+        anchor = OH_REGION_ANCHORS.get(key)
+        if anchor is None:
+            cx = sum(ONE_HEALTH_DOMAINS[d]["cx"] for d in key) / len(key)
+            cy = sum(ONE_HEALTH_DOMAINS[d]["cy"] for d in key) / len(key)
+            anchor = (cx, cy)
+        spread, aspect = _theme_spread_params(len(themes))
+        if len(key) == 2:
+            positions = _spread_intersection_positions(list(key), len(themes))
+        else:
+            positions = _spread_theme_positions(anchor, len(themes), spread=spread, aspect=aspect)
+        for theme, (tx, ty) in zip(sorted(themes, key=lambda t: t["label"]), positions):
+            tx, ty = _clamp_theme_position(tx, ty, theme["domains"])
+            laid_out.append({**theme, "x": tx, "y": ty})
+    return _prepare_theme_labels(_repel_theme_markers(laid_out))
+
+
+OH_NETWORK_LAYOUT = {
+    "height": 760,
+    "margin": {"l": 16, "r": 16, "t": 8, "b": 16},
+    "x_range": [-3.35, 3.35],
+    "y_range": [-3.55, 3.25],
+}
+
+
+def _apply_oh_network_layout(fig: go.Figure) -> go.Figure:
+    fig.update_layout(
+        height=OH_NETWORK_LAYOUT["height"],
+        margin=OH_NETWORK_LAYOUT["margin"],
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+        xaxis={"visible": False, "range": OH_NETWORK_LAYOUT["x_range"]},
+        yaxis={
+            "visible": False,
+            "range": OH_NETWORK_LAYOUT["y_range"],
+            "scaleanchor": "x",
+            "scaleratio": 1,
+        },
+        dragmode="pan",
+        hovermode="closest",
+    )
+    return fig
+
+
+def build_one_health_network(mode: str = "overview") -> go.Figure:
+    fig = go.Figure()
+    themes = _layout_visible_themes(mode)
+
+    for domain in ONE_HEALTH_DOMAINS.values():
+        cx, cy = domain["cx"], domain["cy"]
+        radius = OH_DOMAIN_RADIUS
+        fig.add_shape(
+            type="circle",
+            xref="x",
+            yref="y",
+            x0=cx - radius,
+            y0=cy - radius,
+            x1=cx + radius,
+            y1=cy + radius,
+            fillcolor=_hex_rgba(domain["color"], 0.42),
+            line={"color": _hex_rgba(domain["color"], 0.85), "width": 1.5},
+            layer="below",
+        )
+
+    for theme in themes:
+        opacity = _theme_opacity(theme["coverage"], mode)
+        for domain_id in theme["domains"]:
+            domain = ONE_HEALTH_DOMAINS[domain_id]
+            dash = "dash" if theme["coverage"] == "gap" else "solid"
+            width = 1.4 if theme["coverage"] == "gap" and mode == "gaps" else 0.9
+            line_color = "#D97706" if theme["coverage"] == "gap" else OH_TEXT_COLOR
+            if mode == "gaps" and theme["coverage"] != "gap":
+                line_color = _hex_rgba("#64748B", opacity * 0.45)
+            else:
+                line_color = _hex_rgba(OH_TEXT_COLOR, 0.28 * opacity)
+            fig.add_trace(
+                go.Scatter(
+                    x=[theme["x"], domain["cx"]],
+                    y=[theme["y"], domain["cy"]],
+                    mode="lines",
+                    line={"color": line_color, "width": width, "dash": dash},
+                    hoverinfo="skip",
+                    showlegend=False,
+                )
+            )
+
+    if themes:
+        theme_opacities = [_theme_marker_opacity(t["coverage"], mode) for t in themes]
+        theme_borders = [
+            2.2 if t["coverage"] == "gap" and mode == "gaps" else 1.0 for t in themes
+        ]
+        theme_border_colors = [
+            "#D97706" if t["coverage"] == "gap" else OH_TEXT_COLOR for t in themes
+        ]
+        for theme in themes:
+            label_dist = math.hypot(theme["label_x"] - theme["x"], theme["label_y"] - theme["y"])
+            if label_dist > 0.18:
+                fig.add_trace(
+                    go.Scatter(
+                        x=[theme["x"], theme["label_x"]],
+                        y=[theme["y"], theme["label_y"]],
+                        mode="lines",
+                        line={"color": _hex_rgba(OH_TEXT_COLOR, 0.16), "width": 0.8, "dash": "dot"},
+                        hoverinfo="skip",
+                        showlegend=False,
+                    )
+                )
+        fig.add_trace(
+            go.Scatter(
+                x=[t["x"] for t in themes],
+                y=[t["y"] for t in themes],
+                mode="markers",
+                marker={
+                    "size": [_theme_marker_size(t["coverage"], mode) for t in themes],
+                    "color": [t["color"] for t in themes],
+                    "opacity": theme_opacities,
+                    "line": {"width": theme_borders, "color": theme_border_colors},
+                },
+                hovertext=[
+                    f"<b>{t['label']}</b><br>"
+                    f"Status: {t['coverage'].title()}<br>"
+                    f"Dashboard tab: {t['tab']}<br>"
+                    f"{t['detail']}"
+                    for t in themes
+                ],
+                hoverinfo="text",
+                showlegend=False,
+            )
+        )
+        fig.add_trace(
+            go.Scatter(
+                x=[t["label_x"] for t in themes],
+                y=[t["label_y"] for t in themes],
+                mode="text",
+                text=[t["label"] for t in themes],
+                textposition="middle center",
+                textfont={"size": 9, "color": OH_TEXT_COLOR, "family": OH_FONT},
+                hoverinfo="skip",
+                showlegend=False,
+            )
+        )
+
+    for domain_id, domain in ONE_HEALTH_DOMAINS.items():
+        label_x, label_y = _domain_label_position(domain_id)
+        label_size = 12 if domain_id == "animal_plant" else 13
+        fig.add_annotation(
+            x=label_x,
+            y=label_y,
+            text=f"<b>{domain['label']}</b>",
+            showarrow=False,
+            font={"size": label_size, "color": OH_TEXT_COLOR, "family": OH_FONT},
+            xref="x",
+            yref="y",
+            align="center",
+        )
+
+    fig.add_annotation(
+        x=0.0,
+        y=0.06,
+        text="<b>OH</b>",
+        showarrow=False,
+        font={"size": 30, "color": OH_TEXT_COLOR, "family": OH_FONT},
+        xref="x",
+        yref="y",
+    )
+
+    return _apply_oh_network_layout(fig)
+
+
+def render_oh_network_legend(mode: str = "overview") -> str:
+    if mode == "gaps":
+        items = [
+            ('<span class="oh-legend-swatch" style="background:#D97706;"></span>', "Data gap / opportunity"),
+            ('<span class="oh-legend-swatch" style="background:#94A3B8; opacity:0.7;"></span>', "Partially covered"),
+            ('<span class="oh-legend-swatch" style="background:#CBD5E1;"></span>', "Currently mapped in dashboard"),
+        ]
+    else:
+        items = [
+            ('<span class="oh-legend-swatch" style="background:#27AE60;"></span>', "Fully mapped theme"),
+            ('<span class="oh-legend-swatch" style="background:#5B6CFF; opacity:0.85;"></span>', "Partially mapped theme"),
+            ('<span class="oh-legend-swatch" style="background:#D97706; opacity:0.45;"></span>', "Identified gap"),
+        ]
+    domain_items = "".join(
+        f'<div class="oh-legend-item">'
+        f'<span class="oh-domain-swatch" style="background:{d["color"]};"></span>'
+        f'<span>{d["label"].replace("<br>", " ").replace("&amp;", "&").title()}</span></div>'
+        for d in ONE_HEALTH_DOMAINS.values()
+    )
+    theme_items = "".join(
+        f'<div class="oh-legend-item">{sw}<span>{label}</span></div>'
+        for sw, label in items
+    )
+    return (
+        '<div class="oh-legend-grid">'
+        f"{domain_items}"
+        f"{theme_items}"
+        "</div>"
+    )
+
+
+def _trim_logo_image(path: Path) -> bytes:
+    try:
+        from PIL import Image
+
+        with Image.open(path) as img:
+            rgba = img.convert("RGBA")
+            pixels = rgba.load()
+            width, height = rgba.size
+            min_x, min_y = width, height
+            max_x, max_y = 0, 0
+            for y in range(height):
+                for x in range(width):
+                    red, green, blue, alpha = pixels[x, y]
+                    if alpha < 12:
+                        continue
+                    if red > 245 and green > 245 and blue > 245:
+                        continue
+                    min_x = min(min_x, x)
+                    min_y = min(min_y, y)
+                    max_x = max(max_x, x)
+                    max_y = max(max_y, y)
+            if max_x <= min_x or max_y <= min_y:
+                return path.read_bytes()
+            cropped = rgba.crop((min_x, min_y, max_x + 1, max_y + 1))
+            buf = io.BytesIO()
+            cropped.save(buf, format="PNG")
+            return buf.getvalue()
+    except Exception:
+        return path.read_bytes()
+
+
+def _logo_data_uri(path: Path) -> str | None:
+    if not path.exists():
+        return None
+    payload = _trim_logo_image(path)
+    encoded = base64.b64encode(payload).decode("ascii")
+    return f"data:image/png;base64,{encoded}"
+
+
+def render_dashboard_hero_banner() -> None:
+    logos = [
+        (_logo_data_uri(UC_DAVIS_LOGO), "UC Davis"),
+        (_logo_data_uri(UCD_LOGO), "University College Dublin"),
+    ]
+    logos = [(src, alt) for src, alt in logos if src]
+    if not logos:
+        return
+    items = "".join(
+        f'<img src="{src}" alt="{alt}" />' for src, alt in logos
+    )
+    st.markdown(
+        f'<div class="dashboard-logo-row">{items}</div>',
+        unsafe_allow_html=True,
+    )
+
+
+def render_oh_network_chart(fig: go.Figure, chart_key: str) -> None:
+    st.markdown('<div class="oh-network-frame">', unsafe_allow_html=True)
+    st.plotly_chart(fig, use_container_width=True, key=chart_key)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
+def render_oh_network_section(
+    mode: str,
+    chart_key: str,
+    subheader: str,
+    caption: str,
+    footer_md: str,
+) -> None:
+    st.subheader(subheader)
+    st.caption(caption)
+    render_oh_network_chart(build_one_health_network(mode=mode), chart_key=chart_key)
+    st.markdown(render_oh_network_legend(mode=mode), unsafe_allow_html=True)
+    st.markdown(footer_md)
+
+
 def main() -> None:
     st.set_page_config(
-        page_title="Rx One Health | Food Environment Ecology",
+        page_title="Rx One Health | One Health Food Lens",
         layout="wide",
     )
     st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
+    render_dashboard_hero_banner()
+
     st.markdown(
         '<div class="dashboard-header-block">'
         '<h1 class="dashboard-title-main">Capstone project Rx One Health Field Institute</h1>'
-        '<h2 class="dashboard-title-sub">Food Environment Ecology</h2>'
+        '<h2 class="dashboard-title-sub">One Health Food Lens: Galway &amp; Dublin</h2>'
         '</div>',
         unsafe_allow_html=True,
     )
-    st.caption("Spatial distribution of food system infrastructure from OpenStreetMap.")
     st.markdown(
-        '<p class="tab-hint">👆 Select a tab below to explore food system, heatmaps, '
-        'epidemiology, or vulnerability.</p>',
+        f'<div class="platform-description">{PLATFORM_DESCRIPTION}</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        '<p class="tab-hint">👆 Select a tab to explore the One Health food system network, '
+        'maps, disease burden, alerts, and data gaps for Galway and Dublin.</p>',
         unsafe_allow_html=True,
     )
 
@@ -1348,16 +2228,46 @@ def main() -> None:
 
     warm_heatmap_cache(df, DEFAULT_RADIUS_KM)
 
-    tab_food, tab_heatmaps, tab_epidemiology, tab_vulnerability = st.tabs(
+    (
+        tab_home,
+        tab_food,
+        tab_heatmaps,
+        tab_burden,
+        tab_alerts,
+        tab_water,
+        tab_waste,
+        tab_gaps,
+    ) = st.tabs(
         [
+            "🏠  Home",
             "📍  Food System",
-            "🗺️  Heatmaps",
-            "📊  Epidemiology",
-            "🛡️  Vulnerability",
+            "🗺️  Food ecology",
+            "📊  Burden disease",
+            "🔔  Alert frequency",
+            "💧  Water risk",
+            "♻️  Waste / animal interface",
+            "🔍  What's missing?",
         ]
     )
 
-    # ── Tab 1: food distribution (point maps, stats, charts) ──────────────
+    with tab_home:
+        render_oh_network_section(
+            mode="overview",
+            chart_key="oh_network_home",
+            subheader="One Health food system network",
+            caption=(
+                "Three large circles are the One Health domains. Smaller nodes sit inside each "
+                "domain or at shared intersections when a theme spans two areas. Hover for details."
+            ),
+            footer_md=(
+                "**Explore the dashboard:** use **Food System** and **Food ecology** for spatial "
+                "food environment data; **Burden disease** and **Alert frequency** for health "
+                "surveillance; **Water risk** and **Waste / animal interface** for ecological "
+                "infrastructure; **What's missing?** for data gaps and research opportunities."
+            ),
+        )
+
+    # ── Tab: Food System ──────────────────────────────────────────────────
     with tab_food:
         st.subheader("Map filters")
         f1, f2, f3 = st.columns([4, 2, 1])
@@ -1675,9 +2585,9 @@ def main() -> None:
                     hide_index=True,
                 )
 
-    # ── Tab 2: heatmaps only ──────────────────────────────────────────────
+    # ── Tab: Food ecology ─────────────────────────────────────────────────
     with tab_heatmaps:
-        st.subheader("Heatmap settings")
+        st.subheader("Food ecology heatmaps")
         heat_radius_km = st.slider(
             "Radius from city centre (km)",
             min_value=1,
@@ -1731,26 +2641,62 @@ def main() -> None:
         st.markdown(render_osm_subcategories_html(), unsafe_allow_html=True)
         st.markdown(render_heatmap_methodology_html(), unsafe_allow_html=True)
 
-    # ── Tab 3: epidemiology population ────────────────────────────────────
-    with tab_epidemiology:
-        st.subheader("Epidemiology")
+    # ── Tab: Burden disease ───────────────────────────────────────────────
+    with tab_burden:
+        st.subheader("Burden disease")
         st.caption(
-            "Population health and epidemiological indicators for Dublin and Galway."
+            "Foodborne and enteric disease burden for Galway and Dublin from HPSC surveillance."
         )
         st.info(
-            "This section will integrate population demographics, disease burden, "
-            "and epidemiological datasets for comparative analysis across counties."
+            "This section will integrate HPSC epidemiological indicators, outbreak trends, "
+            "and comparative disease burden across counties within the One Health framework."
         )
 
-    # ── Tab 4: vulnerability ──────────────────────────────────────────────
-    with tab_vulnerability:
-        st.subheader("Vulnerability")
+    # ── Tab: Alert frequency ──────────────────────────────────────────────
+    with tab_alerts:
+        st.subheader("Alert frequency")
         st.caption(
-            "Social, economic, and environmental vulnerability indicators for Dublin and Galway."
+            "FSAI and RASFF food safety alert frequency and geolocation for Galway and Dublin."
         )
         st.info(
-            "This section will integrate vulnerability indices and risk factors "
-            "to support food environment and health equity analysis."
+            "This section will integrate FSAI/RASFF alert timelines, hazard categories, "
+            "and spatial patterns to link food safety signals with population exposure."
+        )
+
+    # ── Tab: Water risk ───────────────────────────────────────────────────
+    with tab_water:
+        st.subheader("Water risk")
+        st.caption(
+            "Water infrastructure, coastal ecology, and exposure risk in urban food environments."
+        )
+        st.info(
+            "This section will combine OSM water features with EPA bathing-water quality, "
+            "shellfish monitoring, and coastal risk layers for Galway and Dublin."
+        )
+
+    # ── Tab: Waste / animal interface ─────────────────────────────────────
+    with tab_waste:
+        st.subheader("Waste / animal interface")
+        st.caption(
+            "Waste disposal, primary production, and animal–human food pathway interfaces."
+        )
+        st.info(
+            "This section will map waste infrastructure, farm–urban edges, and zoonotic "
+            "interface zones to support One Health food safety analysis."
+        )
+
+    # ── Tab: What's missing? ──────────────────────────────────────────────
+    with tab_gaps:
+        gap_list = "".join(f"- {item}\n" for item in GAP_OPPORTUNITIES)
+        render_oh_network_section(
+            mode="gaps",
+            chart_key="oh_network_gaps",
+            subheader="What's missing? — opportunity windows",
+            caption=(
+                "The same One Health network, highlighting themes that current data cannot yet "
+                "resolve and where additional evidence would strengthen food–health policy."
+            ),
+            footer_md=f"**Priority opportunity windows**\n{gap_list}",
         )
 
 
