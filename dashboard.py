@@ -74,8 +74,10 @@ COUNTY_META = {
 
 CATEGORY_ORDER = list(CATEGORY_META.keys())
 DEFAULT_CATEGORIES = ["fast_food", "local_market", "farm"]
+DEFAULT_SUBCATEGORIES = ["shop=butcher", "shop=greengrocer", "landuse=farmland"]
 DEFAULT_RADIUS_KM = 3
-MARKER_PX = 12
+MARKER_PX = 16
+MARKER_ICON_PX = 9
 POINT_MAP_HEIGHT = 520
 HEATMAP_MAP_HEIGHT = 480
 CHART_TITLE_TOP_MARGIN = 72
@@ -413,6 +415,23 @@ def load_panel() -> pd.DataFrame:
     return df
 
 
+def format_subcategory_label(subcategory: str) -> str:
+    value = subcategory.split("=", 1)[1] if "=" in subcategory else subcategory
+    return value.replace("_", " ").title()
+
+
+def format_osm_tag_list(tags_str: str) -> str:
+    return ", ".join(format_subcategory_label(part.strip()) for part in tags_str.split(","))
+
+
+def filter_by_subcategories(df: pd.DataFrame, subcategories: list[str]) -> pd.DataFrame:
+    return df[df["subcategory"].isin(subcategories)].copy()
+
+
+def subcategory_options(df: pd.DataFrame) -> list[str]:
+    return sorted(df["subcategory"].unique(), key=format_subcategory_label)
+
+
 def filter_data(df: pd.DataFrame, categories: list[str]) -> pd.DataFrame:
     return df[df["category"].isin(categories)].copy()
 
@@ -482,7 +501,7 @@ def category_div_icon(cat: str) -> folium.DivIcon:
         justify-content:center;
         box-shadow:0 0 0 1px rgba(0,0,0,0.15);
     ">
-        <i class="fa-solid fa-{fa_name}" style="color:#ffffff;font-size:7px;line-height:1;"></i>
+        <i class="fa-solid fa-{fa_name}" style="color:#ffffff;font-size:{MARKER_ICON_PX}px;line-height:1;"></i>
     </div>
     """
     return folium.DivIcon(
@@ -600,14 +619,48 @@ def _static_map_base(county: str, radius_km: float, map_height_px: int) -> foliu
 def render_osm_subcategories_html() -> str:
     blocks = [
         '<div class="subcategory-ref">'
-        "<h4>OSM subcategories within the urban buffer</h4><ul>"
+        "<h4>OSM subcategories within the urban buffer</h4>"
+        "<p>Each tag shows the OpenStreetMap key=value pair; only the value is used in filters and charts below.</p>"
+        "<ul>"
     ]
     for cat in CATEGORY_ORDER:
         label = CATEGORY_META[cat]["label"]
-        tags = OSM_SUBCATEGORIES[cat]
+        tags = format_osm_tag_list(OSM_SUBCATEGORIES[cat])
         blocks.append(f"<li><strong>{label}:</strong> {tags}</li>")
     blocks.append("</ul></div>")
     return "".join(blocks)
+
+
+def render_subcategory_map_legend_html(
+    df: pd.DataFrame,
+    active_subcategories: list[str],
+) -> str:
+    subcat_to_cat = (
+        df.drop_duplicates("subcategory")
+        .set_index("subcategory")["category"]
+        .to_dict()
+    )
+    items = []
+    for subcat in sorted(active_subcategories, key=format_subcategory_label):
+        cat = subcat_to_cat.get(subcat)
+        if not cat:
+            continue
+        meta = CATEGORY_META[cat]
+        fa_name = meta["fa_icon"][3:] if meta["fa_icon"].startswith("fa-") else meta["fa_icon"]
+        items.append(
+            f'<div class="map-legend-item">'
+            f'<span class="map-legend-icon" style="background-color:{meta["color"]};">'
+            f'<i class="fa-solid fa-{fa_name}"></i>'
+            f"</span>"
+            f"<span>{format_subcategory_label(subcat)}</span>"
+            f"</div>"
+        )
+    return (
+        '<div class="map-legend-wrap">'
+        '<div class="map-legend-title">Subcategories</div>'
+        f'<div class="map-legend-items">{"".join(items)}</div>'
+        "</div>"
+    )
 
 
 def render_category_title_html(category: str) -> str:
@@ -669,6 +722,90 @@ def render_metric_definitions_html(radius_km: float) -> str:
     for _, label, definition in METRIC_DEFINITIONS:
         lines.append(f"<p>- <strong>{label}:</strong> {definition}</p>")
     return f'<div class="metric-definitions">{"".join(lines)}</div>'
+
+
+def compute_subcategory_density_summary(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
+    area = buffer_area_km2(radius_km)
+    radius_df = filter_by_city_radius(df, radius_km)
+    rows = []
+    for subcat in subcategory_options(radius_df):
+        dub_count = int(
+            ((radius_df["county"] == "dublin") & (radius_df["subcategory"] == subcat)).sum()
+        )
+        gal_count = int(
+            ((radius_df["county"] == "galway") & (radius_df["subcategory"] == subcat)).sum()
+        )
+        rows.append(
+            {
+                "Subcategory": format_subcategory_label(subcat),
+                "Dublin": round(dub_count / area, 2),
+                "Galway": round(gal_count / area, 2),
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def compute_subcategory_density_top10(
+    df: pd.DataFrame,
+    radius_km: float,
+    top_n: int = 10,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    summary = compute_subcategory_density_summary(df, radius_km)
+    dublin_top = summary.nlargest(top_n, "Dublin")[["Subcategory", "Dublin"]].reset_index(drop=True)
+    galway_top = summary.nlargest(top_n, "Galway")[["Subcategory", "Galway"]].reset_index(drop=True)
+    return dublin_top, galway_top
+
+
+def render_subcategory_density_table_html(
+    dublin_top: pd.DataFrame,
+    galway_top: pd.DataFrame,
+    radius_km: float,
+    top_n: int = 10,
+) -> str:
+    def _rows(table: pd.DataFrame, value_col: str) -> str:
+        body = []
+        for _, row in table.iterrows():
+            body.append(
+                f"<tr><td>{row['Subcategory']}</td>"
+                f"<td>{row[value_col]:.2f}</td></tr>"
+            )
+        return "".join(body)
+
+    return (
+        '<div class="metric-definitions">'
+        f"<p>Top {top_n} subcategories by point density within a <strong>{radius_km:g} km</strong> "
+        f"urban buffer (area ≈ {buffer_area_km2(radius_km):.1f} km²).</p>"
+        f"</div>"
+        '<div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">'
+        '<div class="stats-table-wrap" style="flex:1;min-width:280px;">'
+        '<table class="stats-table">'
+        f"<thead><tr><th>Subcategory</th><th>Dublin (per km²)</th></tr></thead>"
+        f"<tbody>{_rows(dublin_top, 'Dublin')}</tbody>"
+        "</table></div>"
+        '<div class="stats-table-wrap" style="flex:1;min-width:280px;">'
+        '<table class="stats-table">'
+        f"<thead><tr><th>Subcategory</th><th>Galway (per km²)</th></tr></thead>"
+        f"<tbody>{_rows(galway_top, 'Galway')}</tbody>"
+        "</table></div>"
+        "</div>"
+    )
+
+
+def build_category_subcategory_donut(
+    df: pd.DataFrame,
+    county: str,
+    category: str,
+) -> go.Figure:
+    county_df = df[(df["county"] == county) & (df["category"] == category)]
+    subcats = county_df["subcategory"].unique()
+    label_map = {subcat: format_subcategory_label(subcat) for subcat in subcats}
+    title = f"{COUNTY_META[county]['label']} — {CATEGORY_META[category]['label']}"
+    return build_donut(
+        county_df["subcategory"],
+        title,
+        label_map=label_map,
+        color_map=None,
+    )
 
 
 def render_heatmap_methodology_html() -> str:
@@ -747,7 +884,67 @@ def build_county_folium_map(
         fg = folium.FeatureGroup(name=cat_meta["label"], show=True)
         for row in sub.itertuples(index=False):
             name = row.name if pd.notna(row.name) and str(row.name).strip() else "(unnamed)"
-            tip = f"{name} | {cat_meta['label']} | {row.subcategory} | {row.distance_km:.1f} km"
+            tip = (
+                f"{name} | {cat_meta['label']} | "
+                f"{format_subcategory_label(row.subcategory)} | {row.distance_km:.1f} km"
+            )
+            folium.Marker(
+                location=[row.lat, row.lon],
+                tooltip=tip,
+                icon=icon,
+            ).add_to(fg)
+        fg.add_to(m)
+
+    return m
+
+
+@st.cache_data(show_spinner="Building map...")
+def build_county_folium_map_subcat_cached(
+    county: str,
+    data_signature: str,
+    subcategories: tuple[str, ...],
+    radius_km: float,
+) -> str:
+    df = pd.read_json(io.StringIO(data_signature))
+    m = build_county_folium_map_subcategories(df, county, list(subcategories), radius_km)
+    return folium_to_html(m)
+
+
+def build_county_folium_map_subcategories(
+    df: pd.DataFrame,
+    county: str,
+    active_subcategories: list[str],
+    radius_km: float,
+) -> folium.Map:
+    county_df = df[
+        (df["county"] == county) & (df["subcategory"].isin(active_subcategories))
+    ].copy()
+    meta = COUNTY_META[county]
+    city_lat, city_lon = meta["city_lat"], meta["city_lon"]
+    m = _static_map_base(county, radius_km, POINT_MAP_HEIGHT)
+
+    if county_df.empty:
+        folium.Marker(
+            [city_lat, city_lon],
+            tooltip="No features match the current subcategory filters within this radius",
+            icon=folium.Icon(color="gray", icon="info-sign"),
+        ).add_to(m)
+        return m
+
+    active_categories = [cat for cat in CATEGORY_ORDER if cat in county_df["category"].values]
+    for cat in active_categories:
+        sub = county_df[county_df["category"] == cat]
+        if sub.empty:
+            continue
+        cat_meta = CATEGORY_META[cat]
+        icon = category_div_icon(cat)
+        fg = folium.FeatureGroup(name=cat_meta["label"], show=True)
+        for row in sub.itertuples(index=False):
+            name = row.name if pd.notna(row.name) and str(row.name).strip() else "(unnamed)"
+            tip = (
+                f"{name} | {cat_meta['label']} | "
+                f"{format_subcategory_label(row.subcategory)} | {row.distance_km:.1f} km"
+            )
             folium.Marker(
                 location=[row.lat, row.lon],
                 tooltip=tip,
@@ -1124,16 +1321,16 @@ def main() -> None:
                 )
     
             st.markdown(render_osm_subcategories_html(), unsafe_allow_html=True)
-    
+
             access_summary = compute_access_summary(filtered, radius_km)
-    
+
             st.subheader("Food access overview")
             st.markdown(render_stats_table_html(access_summary), unsafe_allow_html=True)
             st.markdown(render_metric_definitions_html(radius_km), unsafe_allow_html=True)
-    
+
             cat_label_map = {k: CATEGORY_META[k]["label"] for k in CATEGORY_META}
             cat_color_map = {k: v["color"] for k, v in CATEGORY_META.items()}
-    
+
             donut_dublin = build_donut(
                 filtered.loc[filtered["county"] == "dublin", "category"],
                 COUNTY_META["dublin"]["label"],
@@ -1146,7 +1343,7 @@ def main() -> None:
                 label_map=cat_label_map,
                 color_map=cat_color_map,
             )
-    
+
             st.subheader("Points by category")
             d1, d2 = st.columns(2)
             with d1:
@@ -1165,13 +1362,13 @@ def main() -> None:
                     "galway_category_donut.html",
                     "dl_gal_donut",
                 )
-    
+
             st.subheader("Healthy vs unhealthy food access")
             access_dublin = build_access_tier_donut(filtered, "dublin")
             access_galway = build_access_tier_donut(filtered, "galway")
             bar_access = build_access_comparison_bar(access_summary)
             bar_density = build_access_density_bar(access_summary, radius_km)
-    
+
             a1, a2 = st.columns(2)
             with a1:
                 st.plotly_chart(access_dublin, use_container_width=True, key="access_dublin")
@@ -1189,7 +1386,7 @@ def main() -> None:
                     "galway_access_donut.html",
                     "dl_gal_access",
                 )
-    
+
             b1, b2 = st.columns(2)
             with b1:
                 st.plotly_chart(bar_access, use_container_width=True, key="bar_access")
@@ -1207,7 +1404,127 @@ def main() -> None:
                     "food_access_density.html",
                     "dl_bar_density",
                 )
-    
+
+            st.subheader("Spatial maps by subcategory")
+            subcat_options = subcategory_options(df)
+            default_subcats = [s for s in DEFAULT_SUBCATEGORIES if s in subcat_options]
+            sc1, sc2 = st.columns([4, 2])
+            with sc1:
+                selected_subcategories = st.multiselect(
+                    "Subcategories",
+                    options=subcat_options,
+                    default=default_subcats or subcat_options[:3],
+                    format_func=format_subcategory_label,
+                    key="overview_subcategories",
+                )
+            with sc2:
+                subcat_radius_km = st.slider(
+                    "Radius from city centre (km)",
+                    min_value=1,
+                    max_value=5,
+                    value=radius_km,
+                    step=1,
+                    key="subcat_radius",
+                )
+
+            if not selected_subcategories:
+                st.warning("Select at least one subcategory.")
+            else:
+                subcat_radius_all = filter_by_city_radius(df, subcat_radius_km)
+                subcat_filtered = filter_by_subcategories(subcat_radius_all, selected_subcategories)
+                if show_named_only:
+                    subcat_filtered = subcat_filtered[
+                        subcat_filtered["name"].astype(str).str.strip().astype(bool)
+                    ]
+
+                subcat_dub_n = len(subcat_filtered[subcat_filtered["county"] == "dublin"])
+                subcat_gal_n = len(subcat_filtered[subcat_filtered["county"] == "galway"])
+                st.caption(
+                    f"Showing {len(subcat_filtered):,} features within {subcat_radius_km} km "
+                    f"of each city centre (Dublin: {subcat_dub_n:,}, Galway: {subcat_gal_n:,})."
+                )
+                st.markdown(
+                    render_subcategory_map_legend_html(subcat_radius_all, selected_subcategories),
+                    unsafe_allow_html=True,
+                )
+
+                subcat_signature = subcat_filtered.to_json()
+                subcats_tuple = tuple(selected_subcategories)
+                subcat_map_key_suffix = f"{subcat_radius_km}_{'_'.join(subcats_tuple)}"
+
+                subcat_map_dublin = build_county_folium_map_subcat_cached(
+                    "dublin", subcat_signature, subcats_tuple, subcat_radius_km
+                )
+                subcat_map_galway = build_county_folium_map_subcat_cached(
+                    "galway", subcat_signature, subcats_tuple, subcat_radius_km
+                )
+
+                subcat_left, subcat_right = st.columns(2, gap="large")
+                with subcat_left:
+                    st.markdown(f"**{COUNTY_META['dublin']['label']}**")
+                    render_folium_html_embed(subcat_map_dublin, height=POINT_MAP_HEIGHT)
+                    render_map_download(
+                        subcat_map_dublin,
+                        "Download Dublin subcategory map (HTML)",
+                        "dublin_subcategory_map.html",
+                        f"dl_dub_subcat_map_{subcat_map_key_suffix}",
+                    )
+                with subcat_right:
+                    st.markdown(f"**{COUNTY_META['galway']['label']}**")
+                    render_folium_html_embed(subcat_map_galway, height=POINT_MAP_HEIGHT)
+                    render_map_download(
+                        subcat_map_galway,
+                        "Download Galway subcategory map (HTML)",
+                        "galway_subcategory_map.html",
+                        f"dl_gal_subcat_map_{subcat_map_key_suffix}",
+                    )
+
+            st.subheader("Subcategory density")
+            dublin_top, galway_top = compute_subcategory_density_top10(df, subcat_radius_km)
+            st.markdown(
+                render_subcategory_density_table_html(dublin_top, galway_top, subcat_radius_km),
+                unsafe_allow_html=True,
+            )
+
+            st.subheader("Points by subcategory")
+            st.caption(
+                f"Static view of all subcategories within {DEFAULT_RADIUS_KM:g} km of each city centre "
+                "(not affected by the filters above)."
+            )
+            static_radius_df = filter_by_city_radius(df, DEFAULT_RADIUS_KM)
+            for cat in CATEGORY_ORDER:
+                sub_d1, sub_d2 = st.columns(2)
+                with sub_d1:
+                    sub_donut_dublin = build_category_subcategory_donut(
+                        static_radius_df, "dublin", cat
+                    )
+                    st.plotly_chart(
+                        sub_donut_dublin,
+                        use_container_width=True,
+                        key=f"subcat_donut_dub_{cat}",
+                    )
+                    render_chart_download(
+                        sub_donut_dublin,
+                        f"Download Dublin {CATEGORY_META[cat]['label']} subcategory chart (HTML)",
+                        f"dublin_{cat}_subcategory_donut.html",
+                        f"dl_dub_subcat_{cat}",
+                    )
+                with sub_d2:
+                    sub_donut_galway = build_category_subcategory_donut(
+                        static_radius_df, "galway", cat
+                    )
+                    st.plotly_chart(
+                        sub_donut_galway,
+                        use_container_width=True,
+                        key=f"subcat_donut_gal_{cat}",
+                    )
+                    render_chart_download(
+                        sub_donut_galway,
+                        f"Download Galway {CATEGORY_META[cat]['label']} subcategory chart (HTML)",
+                        f"galway_{cat}_subcategory_donut.html",
+                        f"dl_gal_subcat_{cat}",
+                    )
+
             st.subheader("Data export")
             csv_buf = io.StringIO()
             filtered.to_csv(csv_buf, index=False)
