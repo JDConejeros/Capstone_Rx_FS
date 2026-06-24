@@ -1031,7 +1031,8 @@ def main() -> None:
     )
     st.caption("Spatial distribution of food system infrastructure from OpenStreetMap.")
     st.markdown(
-        '<p class="tab-hint">👆 Select a tab below to explore point maps & statistics or category heatmaps.</p>',
+        '<p class="tab-hint">👆 Select a tab below to explore food system, heatmaps, '
+        'epidemiology, or vulnerability.</p>',
         unsafe_allow_html=True,
     )
 
@@ -1044,12 +1045,17 @@ def main() -> None:
 
     warm_heatmap_cache(df, DEFAULT_RADIUS_KM)
 
-    tab_overview, tab_heatmaps = st.tabs(
-        ["📍  Point maps & statistics", "🗺️  Category heatmaps"]
+    tab_food, tab_heatmaps, tab_epidemiology, tab_vulnerability = st.tabs(
+        [
+            "📍  Food System",
+            "🗺️  Heatmaps",
+            "📊  Epidemiology",
+            "🛡️  Vulnerability",
+        ]
     )
 
-    # ── Tab 1: point maps, stats, charts ──────────────────────────────────
-    with tab_overview:
+    # ── Tab 1: food distribution (point maps, stats, charts) ──────────────
+    with tab_food:
         st.subheader("Map filters")
         f1, f2, f3 = st.columns([4, 2, 1])
         with f1:
@@ -1074,178 +1080,177 @@ def main() -> None:
 
         if not selected_categories:
             st.warning("Select at least one category.")
-            return
-
-        radius_all = filter_by_city_radius(df, radius_km)
-        filtered = filter_data(radius_all, selected_categories)
-        if show_named_only:
-            filtered = filtered[filtered["name"].astype(str).str.strip().astype(bool)]
-
-        dublin_n = len(filtered[filtered["county"] == "dublin"])
-        galway_n = len(filtered[filtered["county"] == "galway"])
-        st.caption(
-            f"Showing {len(filtered):,} features within {radius_km} km of each city centre "
-            f"(Dublin: {dublin_n:,}, Galway: {galway_n:,})."
-        )
-
-        st.subheader("Spatial maps")
-        st.markdown(render_map_legend_html(selected_categories), unsafe_allow_html=True)
-
-        data_signature = filtered.to_json()
-        categories_tuple = tuple(selected_categories)
-        map_key_suffix = f"{radius_km}_{'_'.join(categories_tuple)}"
-
-        map_dublin_html = build_county_folium_map_cached("dublin", data_signature, categories_tuple, radius_km)
-        map_galway_html = build_county_folium_map_cached("galway", data_signature, categories_tuple, radius_km)
-
-        col_left, col_right = st.columns(2, gap="large")
-        with col_left:
-            st.markdown(f"**{COUNTY_META['dublin']['label']}**")
-            render_folium_html_embed(map_dublin_html, height=POINT_MAP_HEIGHT)
-            render_map_download(
-                map_dublin_html,
-                "Download Dublin map (HTML)",
-                "dublin_food_map.html",
-                f"dl_dub_map_html_{map_key_suffix}",
+        if selected_categories:
+            radius_all = filter_by_city_radius(df, radius_km)
+            filtered = filter_data(radius_all, selected_categories)
+            if show_named_only:
+                filtered = filtered[filtered["name"].astype(str).str.strip().astype(bool)]
+    
+            dublin_n = len(filtered[filtered["county"] == "dublin"])
+            galway_n = len(filtered[filtered["county"] == "galway"])
+            st.caption(
+                f"Showing {len(filtered):,} features within {radius_km} km of each city centre "
+                f"(Dublin: {dublin_n:,}, Galway: {galway_n:,})."
             )
-        with col_right:
-            st.markdown(f"**{COUNTY_META['galway']['label']}**")
-            render_folium_html_embed(map_galway_html, height=POINT_MAP_HEIGHT)
-            render_map_download(
-                map_galway_html,
-                "Download Galway map (HTML)",
-                "galway_food_map.html",
-                f"dl_gal_map_html_{map_key_suffix}",
+    
+            st.subheader("Spatial maps")
+            st.markdown(render_map_legend_html(selected_categories), unsafe_allow_html=True)
+    
+            data_signature = filtered.to_json()
+            categories_tuple = tuple(selected_categories)
+            map_key_suffix = f"{radius_km}_{'_'.join(categories_tuple)}"
+    
+            map_dublin_html = build_county_folium_map_cached("dublin", data_signature, categories_tuple, radius_km)
+            map_galway_html = build_county_folium_map_cached("galway", data_signature, categories_tuple, radius_km)
+    
+            col_left, col_right = st.columns(2, gap="large")
+            with col_left:
+                st.markdown(f"**{COUNTY_META['dublin']['label']}**")
+                render_folium_html_embed(map_dublin_html, height=POINT_MAP_HEIGHT)
+                render_map_download(
+                    map_dublin_html,
+                    "Download Dublin map (HTML)",
+                    "dublin_food_map.html",
+                    f"dl_dub_map_html_{map_key_suffix}",
+                )
+            with col_right:
+                st.markdown(f"**{COUNTY_META['galway']['label']}**")
+                render_folium_html_embed(map_galway_html, height=POINT_MAP_HEIGHT)
+                render_map_download(
+                    map_galway_html,
+                    "Download Galway map (HTML)",
+                    "galway_food_map.html",
+                    f"dl_gal_map_html_{map_key_suffix}",
+                )
+    
+            st.markdown(render_osm_subcategories_html(), unsafe_allow_html=True)
+    
+            access_summary = compute_access_summary(filtered, radius_km)
+    
+            st.subheader("Food access overview")
+            st.markdown(render_stats_table_html(access_summary), unsafe_allow_html=True)
+            st.markdown(render_metric_definitions_html(radius_km), unsafe_allow_html=True)
+    
+            cat_label_map = {k: CATEGORY_META[k]["label"] for k in CATEGORY_META}
+            cat_color_map = {k: v["color"] for k, v in CATEGORY_META.items()}
+    
+            donut_dublin = build_donut(
+                filtered.loc[filtered["county"] == "dublin", "category"],
+                COUNTY_META["dublin"]["label"],
+                label_map=cat_label_map,
+                color_map=cat_color_map,
             )
-
-        st.markdown(render_osm_subcategories_html(), unsafe_allow_html=True)
-
-        access_summary = compute_access_summary(filtered, radius_km)
-
-        st.subheader("Food access overview")
-        st.markdown(render_stats_table_html(access_summary), unsafe_allow_html=True)
-        st.markdown(render_metric_definitions_html(radius_km), unsafe_allow_html=True)
-
-        cat_label_map = {k: CATEGORY_META[k]["label"] for k in CATEGORY_META}
-        cat_color_map = {k: v["color"] for k, v in CATEGORY_META.items()}
-
-        donut_dublin = build_donut(
-            filtered.loc[filtered["county"] == "dublin", "category"],
-            COUNTY_META["dublin"]["label"],
-            label_map=cat_label_map,
-            color_map=cat_color_map,
-        )
-        donut_galway = build_donut(
-            filtered.loc[filtered["county"] == "galway", "category"],
-            COUNTY_META["galway"]["label"],
-            label_map=cat_label_map,
-            color_map=cat_color_map,
-        )
-
-        st.subheader("Points by category")
-        d1, d2 = st.columns(2)
-        with d1:
-            st.plotly_chart(donut_dublin, use_container_width=True, key="donut_dublin")
-            render_chart_download(
-                donut_dublin,
-                "Download Dublin chart (HTML)",
-                "dublin_category_donut.html",
-                "dl_dub_donut",
+            donut_galway = build_donut(
+                filtered.loc[filtered["county"] == "galway", "category"],
+                COUNTY_META["galway"]["label"],
+                label_map=cat_label_map,
+                color_map=cat_color_map,
             )
-        with d2:
-            st.plotly_chart(donut_galway, use_container_width=True, key="donut_galway")
-            render_chart_download(
-                donut_galway,
-                "Download Galway chart (HTML)",
-                "galway_category_donut.html",
-                "dl_gal_donut",
+    
+            st.subheader("Points by category")
+            d1, d2 = st.columns(2)
+            with d1:
+                st.plotly_chart(donut_dublin, use_container_width=True, key="donut_dublin")
+                render_chart_download(
+                    donut_dublin,
+                    "Download Dublin chart (HTML)",
+                    "dublin_category_donut.html",
+                    "dl_dub_donut",
+                )
+            with d2:
+                st.plotly_chart(donut_galway, use_container_width=True, key="donut_galway")
+                render_chart_download(
+                    donut_galway,
+                    "Download Galway chart (HTML)",
+                    "galway_category_donut.html",
+                    "dl_gal_donut",
+                )
+    
+            st.subheader("Healthy vs unhealthy food access")
+            access_dublin = build_access_tier_donut(filtered, "dublin")
+            access_galway = build_access_tier_donut(filtered, "galway")
+            bar_access = build_access_comparison_bar(access_summary)
+            bar_density = build_access_density_bar(access_summary, radius_km)
+    
+            a1, a2 = st.columns(2)
+            with a1:
+                st.plotly_chart(access_dublin, use_container_width=True, key="access_dublin")
+                render_chart_download(
+                    access_dublin,
+                    "Download Dublin chart (HTML)",
+                    "dublin_access_donut.html",
+                    "dl_dub_access",
+                )
+            with a2:
+                st.plotly_chart(access_galway, use_container_width=True, key="access_galway")
+                render_chart_download(
+                    access_galway,
+                    "Download Galway chart (HTML)",
+                    "galway_access_donut.html",
+                    "dl_gal_access",
+                )
+    
+            b1, b2 = st.columns(2)
+            with b1:
+                st.plotly_chart(bar_access, use_container_width=True, key="bar_access")
+                render_chart_download(
+                    bar_access,
+                    "Download comparison bar chart (HTML)",
+                    "food_access_comparison.html",
+                    "dl_bar_access",
+                )
+            with b2:
+                st.plotly_chart(bar_density, use_container_width=True, key="bar_density")
+                render_chart_download(
+                    bar_density,
+                    "Download density bar chart (HTML)",
+                    "food_access_density.html",
+                    "dl_bar_density",
+                )
+    
+            st.subheader("Data export")
+            csv_buf = io.StringIO()
+            filtered.to_csv(csv_buf, index=False)
+            st.download_button(
+                "Download filtered dataset (CSV)",
+                data=csv_buf.getvalue(),
+                file_name="food_environment_filtered.csv",
+                mime="text/csv",
+                key="dl_csv",
             )
-
-        st.subheader("Healthy vs unhealthy food access")
-        access_dublin = build_access_tier_donut(filtered, "dublin")
-        access_galway = build_access_tier_donut(filtered, "galway")
-        bar_access = build_access_comparison_bar(access_summary)
-        bar_density = build_access_density_bar(access_summary, radius_km)
-
-        a1, a2 = st.columns(2)
-        with a1:
-            st.plotly_chart(access_dublin, use_container_width=True, key="access_dublin")
-            render_chart_download(
-                access_dublin,
-                "Download Dublin chart (HTML)",
-                "dublin_access_donut.html",
-                "dl_dub_access",
-            )
-        with a2:
-            st.plotly_chart(access_galway, use_container_width=True, key="access_galway")
-            render_chart_download(
-                access_galway,
-                "Download Galway chart (HTML)",
-                "galway_access_donut.html",
-                "dl_gal_access",
-            )
-
-        b1, b2 = st.columns(2)
-        with b1:
-            st.plotly_chart(bar_access, use_container_width=True, key="bar_access")
-            render_chart_download(
-                bar_access,
-                "Download comparison bar chart (HTML)",
-                "food_access_comparison.html",
-                "dl_bar_access",
-            )
-        with b2:
-            st.plotly_chart(bar_density, use_container_width=True, key="bar_density")
-            render_chart_download(
-                bar_density,
-                "Download density bar chart (HTML)",
-                "food_access_density.html",
-                "dl_bar_density",
-            )
-
-        st.subheader("Data export")
-        csv_buf = io.StringIO()
-        filtered.to_csv(csv_buf, index=False)
-        st.download_button(
-            "Download filtered dataset (CSV)",
-            data=csv_buf.getvalue(),
-            file_name="food_environment_filtered.csv",
-            mime="text/csv",
-            key="dl_csv",
-        )
-
-        with st.expander("Browse filtered records"):
-            st.dataframe(
-                filtered[
-                    [
-                        "county_label",
-                        "category_label",
-                        "access_tier_label",
-                        "subcategory",
-                        "name",
-                        "lat",
-                        "lon",
-                        "admin_division",
-                        "distance_km",
-                        "osm_id",
-                    ]
-                ].rename(
-                    columns={
-                        "county_label": "Area",
-                        "category_label": "Category",
-                        "access_tier_label": "Access tier",
-                        "subcategory": "Subcategory",
-                        "name": "Name",
-                        "lat": "Lat",
-                        "lon": "Lon",
-                        "admin_division": "Admin division",
-                        "distance_km": "Distance (km)",
-                        "osm_id": "OSM ID",
-                    }
-                ),
-                use_container_width=True,
-                hide_index=True,
-            )
+    
+            with st.expander("Browse filtered records"):
+                st.dataframe(
+                    filtered[
+                        [
+                            "county_label",
+                            "category_label",
+                            "access_tier_label",
+                            "subcategory",
+                            "name",
+                            "lat",
+                            "lon",
+                            "admin_division",
+                            "distance_km",
+                            "osm_id",
+                        ]
+                    ].rename(
+                        columns={
+                            "county_label": "Area",
+                            "category_label": "Category",
+                            "access_tier_label": "Access tier",
+                            "subcategory": "Subcategory",
+                            "name": "Name",
+                            "lat": "Lat",
+                            "lon": "Lon",
+                            "admin_division": "Admin division",
+                            "distance_km": "Distance (km)",
+                            "osm_id": "OSM ID",
+                        }
+                    ),
+                    use_container_width=True,
+                    hide_index=True,
+                )
 
     # ── Tab 2: heatmaps only ──────────────────────────────────────────────
     with tab_heatmaps:
@@ -1302,6 +1307,28 @@ def main() -> None:
 
         st.markdown(render_osm_subcategories_html(), unsafe_allow_html=True)
         st.markdown(render_heatmap_methodology_html(), unsafe_allow_html=True)
+
+    # ── Tab 3: epidemiology population ────────────────────────────────────
+    with tab_epidemiology:
+        st.subheader("Epidemiology")
+        st.caption(
+            "Population health and epidemiological indicators for Dublin and Galway."
+        )
+        st.info(
+            "This section will integrate population demographics, disease burden, "
+            "and epidemiological datasets for comparative analysis across counties."
+        )
+
+    # ── Tab 4: vulnerability ──────────────────────────────────────────────
+    with tab_vulnerability:
+        st.subheader("Vulnerability")
+        st.caption(
+            "Social, economic, and environmental vulnerability indicators for Dublin and Galway."
+        )
+        st.info(
+            "This section will integrate vulnerability indices and risk factors "
+            "to support food environment and health equity analysis."
+        )
 
 
 if __name__ == "__main__":
