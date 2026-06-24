@@ -1,0 +1,3085 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.565015,
+          53.2006296
+        ]
+      },
+      "properties": {
+        "osm_id": "n280873272",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2006296,
+        "lon": -8.565015,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2221378,
+          53.3148164
+        ]
+      },
+      "properties": {
+        "osm_id": "n281348335",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3148164,
+        "lon": -8.2221378,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7490654,
+          53.3014954
+        ]
+      },
+      "properties": {
+        "osm_id": "n369320718",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3014954,
+        "lon": -8.7490654,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6616809,
+          53.1048575
+        ]
+      },
+      "properties": {
+        "osm_id": "n387542963",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.1048575,
+        "lon": -9.6616809,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6732322,
+          53.1181826
+        ]
+      },
+      "properties": {
+        "osm_id": "n387542981",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.1181826,
+        "lon": -9.6732322,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5898017,
+          53.0843075
+        ]
+      },
+      "properties": {
+        "osm_id": "n390044176",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.0843075,
+        "lon": -9.5898017,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6961267,
+          53.1360007
+        ]
+      },
+      "properties": {
+        "osm_id": "n394202220",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.1360007,
+        "lon": -9.6961267,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9288387,
+          53.2732676
+        ]
+      },
+      "properties": {
+        "osm_id": "n568037330",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2732676,
+        "lon": -8.9288387,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9301612,
+          53.2663606
+        ]
+      },
+      "properties": {
+        "osm_id": "n568037341",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2663606,
+        "lon": -8.9301612,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9508654,
+          53.5521228
+        ]
+      },
+      "properties": {
+        "osm_id": "n659793545",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5521228,
+        "lon": -9.9508654,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9451554,
+          53.1389047
+        ]
+      },
+      "properties": {
+        "osm_id": "n699720922",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.1389047,
+        "lon": -8.9451554,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4584023,
+          53.5107093
+        ]
+      },
+      "properties": {
+        "osm_id": "n840320289",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5107093,
+        "lon": -9.4584023,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.656419,
+          53.2885937
+        ]
+      },
+      "properties": {
+        "osm_id": "n850273586",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2885937,
+        "lon": -9.656419,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5826646,
+          53.2025931
+        ]
+      },
+      "properties": {
+        "osm_id": "n998760992",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2025931,
+        "lon": -8.5826646,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4356638,
+          53.4367828
+        ]
+      },
+      "properties": {
+        "osm_id": "n1155667356",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4367828,
+        "lon": -8.4356638,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5146837,
+          53.4730501
+        ]
+      },
+      "properties": {
+        "osm_id": "n1155695734",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4730501,
+        "lon": -8.5146837,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4546297,
+          53.6525621
+        ]
+      },
+      "properties": {
+        "osm_id": "n1155744488",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.6525621,
+        "lon": -8.4546297,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2191429,
+          53.3288508
+        ]
+      },
+      "properties": {
+        "osm_id": "n1170115426",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3288508,
+        "lon": -8.2191429,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.223898,
+          53.3236641
+        ]
+      },
+      "properties": {
+        "osm_id": "n1208287628",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3236641,
+        "lon": -8.223898,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0859887,
+          53.2576371
+        ]
+      },
+      "properties": {
+        "osm_id": "n1314958631",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2576371,
+        "lon": -9.0859887,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0733055,
+          53.2602999
+        ]
+      },
+      "properties": {
+        "osm_id": "n1314972681",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2602999,
+        "lon": -9.0733055,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9838527,
+          53.4882721
+        ]
+      },
+      "properties": {
+        "osm_id": "n1318994666",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4882721,
+        "lon": -9.9838527,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5777831,
+          53.4218044
+        ]
+      },
+      "properties": {
+        "osm_id": "n1574591015",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4218044,
+        "lon": -8.5777831,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6991178,
+          53.3741114
+        ]
+      },
+      "properties": {
+        "osm_id": "n1576414030",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3741114,
+        "lon": -8.6991178,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4798778,
+          53.4282864
+        ]
+      },
+      "properties": {
+        "osm_id": "n1576429684",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4282864,
+        "lon": -8.4798778,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9951069,
+          53.3982187
+        ]
+      },
+      "properties": {
+        "osm_id": "n1601723680",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3982187,
+        "lon": -8.9951069,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1057808,
+          53.2620373
+        ]
+      },
+      "properties": {
+        "osm_id": "n1730686811",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2620373,
+        "lon": -9.1057808,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.564127,
+          53.48685
+        ]
+      },
+      "properties": {
+        "osm_id": "n1735659347",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.48685,
+        "lon": -8.564127,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0122851,
+          53.2951095
+        ]
+      },
+      "properties": {
+        "osm_id": "n1735729533",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2951095,
+        "lon": -9.0122851,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0442154,
+          53.2840748
+        ]
+      },
+      "properties": {
+        "osm_id": "n1735778320",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2840748,
+        "lon": -9.0442154,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0923787,
+          53.2566022
+        ]
+      },
+      "properties": {
+        "osm_id": "n1739131333",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2566022,
+        "lon": -9.0923787,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0972689,
+          53.2709114
+        ]
+      },
+      "properties": {
+        "osm_id": "n1739254436",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2709114,
+        "lon": -9.0972689,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0791165,
+          53.2581082
+        ]
+      },
+      "properties": {
+        "osm_id": "n1751659169",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2581082,
+        "lon": -9.0791165,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7414767,
+          53.6183408
+        ]
+      },
+      "properties": {
+        "osm_id": "n1813928609",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.6183408,
+        "lon": -8.7414767,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0783235,
+          53.2767333
+        ]
+      },
+      "properties": {
+        "osm_id": "n1819100621",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2767333,
+        "lon": -9.0783235,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1819732,
+          53.3366816
+        ]
+      },
+      "properties": {
+        "osm_id": "n1821214923",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3366816,
+        "lon": -9.1819732,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8221091,
+          53.0638214
+        ]
+      },
+      "properties": {
+        "osm_id": "n1824333673",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.0638214,
+        "lon": -8.8221091,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8808082,
+          53.2270429
+        ]
+      },
+      "properties": {
+        "osm_id": "n1881372427",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2270429,
+        "lon": -8.8808082,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.876582,
+          53.2298286
+        ]
+      },
+      "properties": {
+        "osm_id": "n1881372855",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2298286,
+        "lon": -8.876582,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9830728,
+          53.2856098
+        ]
+      },
+      "properties": {
+        "osm_id": "n1972899797",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2856098,
+        "lon": -8.9830728,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4873101,
+          53.3810608
+        ]
+      },
+      "properties": {
+        "osm_id": "n1988553308",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3810608,
+        "lon": -8.4873101,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5117688,
+          53.2922247
+        ]
+      },
+      "properties": {
+        "osm_id": "n2047472740",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2922247,
+        "lon": -8.5117688,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9206547,
+          53.3938862
+        ]
+      },
+      "properties": {
+        "osm_id": "n2050271749",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3938862,
+        "lon": -9.9206547,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8746085,
+          53.5073003
+        ]
+      },
+      "properties": {
+        "osm_id": "n2050576888",
+        "name": "Wers Waste",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5073003,
+        "lon": -8.8746085,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5663647,
+          53.5528225
+        ]
+      },
+      "properties": {
+        "osm_id": "n2051429339",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5528225,
+        "lon": -8.5663647,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3631134,
+          53.5937509
+        ]
+      },
+      "properties": {
+        "osm_id": "n2051429521",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5937509,
+        "lon": -8.3631134,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8144242,
+          53.0617287
+        ]
+      },
+      "properties": {
+        "osm_id": "n2051894331",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.0617287,
+        "lon": -8.8144242,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8161387,
+          53.0658298
+        ]
+      },
+      "properties": {
+        "osm_id": "n2052047321",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.0658298,
+        "lon": -8.8161387,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.598204,
+          53.2643004
+        ]
+      },
+      "properties": {
+        "osm_id": "n2065588223",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2643004,
+        "lon": -9.598204,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5650007,
+          53.5103079
+        ]
+      },
+      "properties": {
+        "osm_id": "n2097999760",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5103079,
+        "lon": -9.5650007,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4541094,
+          53.2308727
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102342108",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2308727,
+        "lon": -8.4541094,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0046867,
+          53.2724148
+        ]
+      },
+      "properties": {
+        "osm_id": "n2195189351",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2724148,
+        "lon": -9.0046867,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0037158,
+          53.2725019
+        ]
+      },
+      "properties": {
+        "osm_id": "n2195189352",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2725019,
+        "lon": -9.0037158,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0027848,
+          53.2730088
+        ]
+      },
+      "properties": {
+        "osm_id": "n2195189354",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2730088,
+        "lon": -9.0027848,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0037181,
+          53.2731072
+        ]
+      },
+      "properties": {
+        "osm_id": "n2195189355",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2731072,
+        "lon": -9.0037181,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0018961,
+          53.2732361
+        ]
+      },
+      "properties": {
+        "osm_id": "n2195189356",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2732361,
+        "lon": -9.0018961,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0749534,
+          53.4310473
+        ]
+      },
+      "properties": {
+        "osm_id": "n2864965261",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4310473,
+        "lon": -10.0749534,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.694115,
+          53.5970163
+        ]
+      },
+      "properties": {
+        "osm_id": "n2865117854",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5970163,
+        "lon": -9.694115,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7491364,
+          53.296295
+        ]
+      },
+      "properties": {
+        "osm_id": "n3378778693",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.296295,
+        "lon": -8.7491364,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2255449,
+          53.3308533
+        ]
+      },
+      "properties": {
+        "osm_id": "n3378935977",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3308533,
+        "lon": -8.2255449,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0575537,
+          53.2791526
+        ]
+      },
+      "properties": {
+        "osm_id": "n3390523838",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2791526,
+        "lon": -9.0575537,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0050227,
+          53.4879836
+        ]
+      },
+      "properties": {
+        "osm_id": "n3903689155",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4879836,
+        "lon": -10.0050227,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3068581,
+          53.2427339
+        ]
+      },
+      "properties": {
+        "osm_id": "n4308635003",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2427339,
+        "lon": -9.3068581,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9490879,
+          53.5527004
+        ]
+      },
+      "properties": {
+        "osm_id": "n4356467747",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5527004,
+        "lon": -9.9490879,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6964633,
+          53.1353417
+        ]
+      },
+      "properties": {
+        "osm_id": "n4743436897",
+        "name": "Recycling Plant",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.1353417,
+        "lon": -9.6964633,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5160195,
+          53.0642571
+        ]
+      },
+      "properties": {
+        "osm_id": "n5851729760",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.0642571,
+        "lon": -9.5160195,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.1123443,
+          53.5567262
+        ]
+      },
+      "properties": {
+        "osm_id": "n5856136219",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5567262,
+        "lon": -10.1123443,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4021582,
+          53.0538171
+        ]
+      },
+      "properties": {
+        "osm_id": "n7827801355",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.0538171,
+        "lon": -8.4021582,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3990602,
+          53.0507885
+        ]
+      },
+      "properties": {
+        "osm_id": "n7827801356",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.0507885,
+        "lon": -8.3990602,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6729707,
+          53.1184149
+        ]
+      },
+      "properties": {
+        "osm_id": "n7887625203",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.1184149,
+        "lon": -9.6729707,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4786712,
+          53.2387505
+        ]
+      },
+      "properties": {
+        "osm_id": "n8773294813",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2387505,
+        "lon": -9.4786712,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.8375734,
+          53.3238438
+        ]
+      },
+      "properties": {
+        "osm_id": "n8783763630",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3238438,
+        "lon": -9.8375734,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3646023,
+          53.543109
+        ]
+      },
+      "properties": {
+        "osm_id": "n8812883155",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.543109,
+        "lon": -9.3646023,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3655401,
+          53.5455351
+        ]
+      },
+      "properties": {
+        "osm_id": "n8812883452",
+        "name": "Ionad Athchúrsála",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5455351,
+        "lon": -9.3655401,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6093481,
+          53.259882
+        ]
+      },
+      "properties": {
+        "osm_id": "n8972233975",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.259882,
+        "lon": -9.6093481,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5453761,
+          53.3759756
+        ]
+      },
+      "properties": {
+        "osm_id": "n8972238347",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3759756,
+        "lon": -9.5453761,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9829578,
+          53.6048421
+        ]
+      },
+      "properties": {
+        "osm_id": "n9943525371",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.6048421,
+        "lon": -9.9829578,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8184339,
+          53.0702766
+        ]
+      },
+      "properties": {
+        "osm_id": "n9952552355",
+        "name": "Bottle Bank",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.0702766,
+        "lon": -8.8184339,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0924665,
+          53.4501815
+        ]
+      },
+      "properties": {
+        "osm_id": "n10601759292",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4501815,
+        "lon": -9.0924665,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0428751,
+          53.276416
+        ]
+      },
+      "properties": {
+        "osm_id": "n10709264339",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.276416,
+        "lon": -9.0428751,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3867143,
+          53.2453036
+        ]
+      },
+      "properties": {
+        "osm_id": "n10819358173",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2453036,
+        "lon": -9.3867143,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3867175,
+          53.2453186
+        ]
+      },
+      "properties": {
+        "osm_id": "n10819358174",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2453186,
+        "lon": -9.3867175,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3867279,
+          53.2453752
+        ]
+      },
+      "properties": {
+        "osm_id": "n10819358175",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2453752,
+        "lon": -9.3867279,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.386723,
+          53.245355
+        ]
+      },
+      "properties": {
+        "osm_id": "n10819358176",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.245355,
+        "lon": -9.386723,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3867204,
+          53.2453323
+        ]
+      },
+      "properties": {
+        "osm_id": "n10819358177",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2453323,
+        "lon": -9.3867204,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3867324,
+          53.2453941
+        ]
+      },
+      "properties": {
+        "osm_id": "n10819358178",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2453941,
+        "lon": -9.3867324,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0750563,
+          53.4310296
+        ]
+      },
+      "properties": {
+        "osm_id": "n10820429035",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4310296,
+        "lon": -10.0750563,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0750811,
+          53.4310244
+        ]
+      },
+      "properties": {
+        "osm_id": "n10820429036",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4310244,
+        "lon": -10.0750811,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6172106,
+          53.3138557
+        ]
+      },
+      "properties": {
+        "osm_id": "n10838412305",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3138557,
+        "lon": -9.6172106,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.8055694,
+          53.4187392
+        ]
+      },
+      "properties": {
+        "osm_id": "n10844062775",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4187392,
+        "lon": -9.8055694,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.8055731,
+          53.4187266
+        ]
+      },
+      "properties": {
+        "osm_id": "n10844062776",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4187266,
+        "lon": -9.8055731,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.8055771,
+          53.418714
+        ]
+      },
+      "properties": {
+        "osm_id": "n10844062777",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.418714,
+        "lon": -9.8055771,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.8055795,
+          53.4187042
+        ]
+      },
+      "properties": {
+        "osm_id": "n10844062778",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4187042,
+        "lon": -9.8055795,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2112868,
+          53.0837894
+        ]
+      },
+      "properties": {
+        "osm_id": "n10960259291",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.0837894,
+        "lon": -8.2112868,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.1348932,
+          53.5238033
+        ]
+      },
+      "properties": {
+        "osm_id": "n11170638928",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5238033,
+        "lon": -10.1348932,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9756256,
+          53.5964594
+        ]
+      },
+      "properties": {
+        "osm_id": "n12124295749",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5964594,
+        "lon": -9.9756256,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3629732,
+          53.5938685
+        ]
+      },
+      "properties": {
+        "osm_id": "n12693960218",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5938685,
+        "lon": -8.3629732,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3022806,
+          53.2444198
+        ]
+      },
+      "properties": {
+        "osm_id": "n12722709071",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.2444198,
+        "lon": -9.3022806,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3000605,
+          53.245334
+        ]
+      },
+      "properties": {
+        "osm_id": "n12722794606",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.245334,
+        "lon": -9.3000605,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4630326,
+          53.6927608
+        ]
+      },
+      "properties": {
+        "osm_id": "n13057075880",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.6927608,
+        "lon": -8.4630326,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.462991,
+          53.6927997
+        ]
+      },
+      "properties": {
+        "osm_id": "n13057075881",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.6927997,
+        "lon": -8.462991,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4630004,
+          53.6927902
+        ]
+      },
+      "properties": {
+        "osm_id": "n13057075882",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.6927902,
+        "lon": -8.4630004,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4630112,
+          53.6927803
+        ]
+      },
+      "properties": {
+        "osm_id": "n13057075883",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.6927803,
+        "lon": -8.4630112,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4630232,
+          53.69277
+        ]
+      },
+      "properties": {
+        "osm_id": "n13057075884",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.69277,
+        "lon": -8.4630232,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9491079,
+          53.5526418
+        ]
+      },
+      "properties": {
+        "osm_id": "n13074065564",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5526418,
+        "lon": -9.9491079,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0070529,
+          53.2796989
+        ]
+      },
+      "properties": {
+        "osm_id": "n13524027216",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2796989,
+        "lon": -9.0070529,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4046868,
+          53.3297257
+        ]
+      },
+      "properties": {
+        "osm_id": "n13711573638",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3297257,
+        "lon": -8.4046868,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4046758,
+          53.3297154
+        ]
+      },
+      "properties": {
+        "osm_id": "n13711573639",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3297154,
+        "lon": -8.4046758,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4046642,
+          53.3297048
+        ]
+      },
+      "properties": {
+        "osm_id": "n13711573640",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3297048,
+        "lon": -8.4046642,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4046558,
+          53.3296956
+        ]
+      },
+      "properties": {
+        "osm_id": "n13711573641",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3296956,
+        "lon": -8.4046558,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4046419,
+          53.3296855
+        ]
+      },
+      "properties": {
+        "osm_id": "n13711573642",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3296855,
+        "lon": -8.4046419,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4046242,
+          53.3296671
+        ]
+      },
+      "properties": {
+        "osm_id": "n13711573643",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3296671,
+        "lon": -8.4046242,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4046057,
+          53.3296519
+        ]
+      },
+      "properties": {
+        "osm_id": "n13711573644",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3296519,
+        "lon": -8.4046057,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3176058,
+          53.3029439
+        ]
+      },
+      "properties": {
+        "osm_id": "n13732252982",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3029439,
+        "lon": -8.3176058,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3176089,
+          53.3029306
+        ]
+      },
+      "properties": {
+        "osm_id": "n13732252983",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3029306,
+        "lon": -8.3176089,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3176135,
+          53.3029182
+        ]
+      },
+      "properties": {
+        "osm_id": "n13732252984",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3029182,
+        "lon": -8.3176135,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.117838,
+          53.2730685
+        ]
+      },
+      "properties": {
+        "osm_id": "n13863562568",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2730685,
+        "lon": -9.117838,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1192177,
+          53.2734289
+        ]
+      },
+      "properties": {
+        "osm_id": "n13863562571",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2734289,
+        "lon": -9.1192177,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0545663,
+          53.25464
+        ]
+      },
+      "properties": {
+        "osm_id": "w25048625",
+        "name": "Mutton Island Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.25464,
+        "lon": -9.0545663,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.230651,
+          53.0869371
+        ]
+      },
+      "properties": {
+        "osm_id": "w124126242",
+        "name": "Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.0869371,
+        "lon": -8.230651,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0114562,
+          53.2855463
+        ]
+      },
+      "properties": {
+        "osm_id": "w161095439",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2855463,
+        "lon": -9.0114562,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0390503,
+          53.2846848
+        ]
+      },
+      "properties": {
+        "osm_id": "w161440516",
+        "name": "Galway City Council Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2846848,
+        "lon": -9.0390503,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8459044,
+          53.4962168
+        ]
+      },
+      "properties": {
+        "osm_id": "w178574411",
+        "name": "GCC Recycling Center",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4962168,
+        "lon": -8.8459044,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1737819,
+          53.3388952
+        ]
+      },
+      "properties": {
+        "osm_id": "w200081200",
+        "name": "Moycullen Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.3388952,
+        "lon": -9.1737819,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2012409,
+          53.2504096
+        ]
+      },
+      "properties": {
+        "osm_id": "w237131369",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.2504096,
+        "lon": -9.2012409,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3003854,
+          53.2694435
+        ]
+      },
+      "properties": {
+        "osm_id": "w241099633",
+        "name": "Spiddal Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.2694435,
+        "lon": -9.3003854,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2888033,
+          53.5414564
+        ]
+      },
+      "properties": {
+        "osm_id": "w260679978",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.5414564,
+        "lon": -9.2888033,
+        "admin_division": "Cong",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7493617,
+          53.6224436
+        ]
+      },
+      "properties": {
+        "osm_id": "w262482944",
+        "name": "Dunmore Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.6224436,
+        "lon": -8.7493617,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.879848,
+          53.5161752
+        ]
+      },
+      "properties": {
+        "osm_id": "w263444793",
+        "name": "Tuam Waste Water Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.5161752,
+        "lon": -8.879848,
+        "admin_division": "Tuam",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5589963,
+          53.4846139
+        ]
+      },
+      "properties": {
+        "osm_id": "w310579795",
+        "name": "Moylough Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4846139,
+        "lon": -8.5589963,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5610879,
+          53.2142286
+        ]
+      },
+      "properties": {
+        "osm_id": "w393885313",
+        "name": "Loughrea Sewage Works",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.2142286,
+        "lon": -8.5610879,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4314227,
+          53.3127296
+        ]
+      },
+      "properties": {
+        "osm_id": "w399455705",
+        "name": "Greenstar Landfill Dump",
+        "category": "waste",
+        "subcategory": "landuse=landfill",
+        "lat": 53.3127296,
+        "lon": -8.4314227,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3929426,
+          53.3313818
+        ]
+      },
+      "properties": {
+        "osm_id": "w399543470",
+        "name": "Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.3313818,
+        "lon": -8.3929426,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3195591,
+          53.5212146
+        ]
+      },
+      "properties": {
+        "osm_id": "w441263172",
+        "name": "Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.5212146,
+        "lon": -8.3195591,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2037656,
+          53.3247181
+        ]
+      },
+      "properties": {
+        "osm_id": "w514047355",
+        "name": "Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.3247181,
+        "lon": -8.2037656,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2116381,
+          53.3214361
+        ]
+      },
+      "properties": {
+        "osm_id": "w514047359",
+        "name": "Ballinasloe Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.3214361,
+        "lon": -8.2116381,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5337264,
+          53.2784653
+        ]
+      },
+      "properties": {
+        "osm_id": "w620199454",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.2784653,
+        "lon": -9.5337264,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8469141,
+          53.496804
+        ]
+      },
+      "properties": {
+        "osm_id": "w729244132",
+        "name": "",
+        "category": "waste",
+        "subcategory": "landuse=landfill",
+        "lat": 53.496804,
+        "lon": -8.8469141,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0178985,
+          53.3303661
+        ]
+      },
+      "properties": {
+        "osm_id": "w766753329",
+        "name": "Carrowbrowne Recycling Depot",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3303661,
+        "lon": -9.0178985,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2068794,
+          53.0929092
+        ]
+      },
+      "properties": {
+        "osm_id": "w789068621",
+        "name": "Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.0929092,
+        "lon": -8.2068794,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7518151,
+          53.2920343
+        ]
+      },
+      "properties": {
+        "osm_id": "w812647987",
+        "name": "Athenry Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.2920343,
+        "lon": -8.7518151,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2319265,
+          53.0876931
+        ]
+      },
+      "properties": {
+        "osm_id": "w996875992",
+        "name": "Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.0876931,
+        "lon": -8.2319265,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.816013,
+          53.0730559
+        ]
+      },
+      "properties": {
+        "osm_id": "w1006545393",
+        "name": "Gort Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.0730559,
+        "lon": -8.816013,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3173078,
+          53.4310361
+        ]
+      },
+      "properties": {
+        "osm_id": "w1040904826",
+        "name": "Oughterard Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4310361,
+        "lon": -9.3173078,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2218247,
+          53.0902239
+        ]
+      },
+      "properties": {
+        "osm_id": "w1052093230",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.0902239,
+        "lon": -8.2218247,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9555405,
+          53.3484314
+        ]
+      },
+      "properties": {
+        "osm_id": "w1056091411",
+        "name": "Claregalway Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.3484314,
+        "lon": -8.9555405,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2240886,
+          53.3127085
+        ]
+      },
+      "properties": {
+        "osm_id": "w1073436985",
+        "name": "",
+        "category": "waste",
+        "subcategory": "landuse=landfill",
+        "lat": 53.3127085,
+        "lon": -8.2240886,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5658793,
+          53.2624761
+        ]
+      },
+      "properties": {
+        "osm_id": "w1133973882",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.2624761,
+        "lon": -9.5658793,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9536977,
+          53.38266
+        ]
+      },
+      "properties": {
+        "osm_id": "w1165443097",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.38266,
+        "lon": -9.9536977,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9232775,
+          53.2807835
+        ]
+      },
+      "properties": {
+        "osm_id": "w1196134789",
+        "name": "City Bin Waste & Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2807835,
+        "lon": -8.9232775,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6964758,
+          53.1350231
+        ]
+      },
+      "properties": {
+        "osm_id": "w1317931183",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.1350231,
+        "lon": -9.6964758,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6608524,
+          53.2752409
+        ]
+      },
+      "properties": {
+        "osm_id": "w1474235523",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.2752409,
+        "lon": -9.6608524,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2996749,
+          53.1687034
+        ]
+      },
+      "properties": {
+        "osm_id": "w1494664578",
+        "name": "Killimor Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.1687034,
+        "lon": -8.2996749,
+        "admin_division": "Killimor",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0772019,
+          53.2766841
+        ]
+      },
+      "properties": {
+        "osm_id": "w1499793760",
+        "name": "Meitheal Bike Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2766841,
+        "lon": -9.0772019,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    }
+  ]
+}

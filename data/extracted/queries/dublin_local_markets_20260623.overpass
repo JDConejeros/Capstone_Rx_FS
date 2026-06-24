@@ -1,0 +1,17 @@
+[out:json][timeout:120][maxsize:536870912];
+relation["name"="County Dublin"]["admin_level"="6"]["boundary"="administrative"]->.county_rel;
+.county_rel map_to_area -> .county;
+(
+  node["amenity"="marketplace"](area.county);
+  way["amenity"="marketplace"](area.county);
+  relation["amenity"="marketplace"](area.county);
+  node["shop"="farm"](area.county);
+  way["shop"="farm"](area.county);
+  relation["shop"="farm"](area.county);
+  way["landuse"="farmyard"](area.county);
+  relation["landuse"="farmyard"](area.county);
+  node["craft"]["food"="yes"](area.county);
+  way["craft"]["food"="yes"](area.county);
+  relation["craft"]["food"="yes"](area.county);
+);
+out center;

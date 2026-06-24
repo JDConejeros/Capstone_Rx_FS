@@ -1,0 +1,2585 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5684184,
+          53.198667
+        ]
+      },
+      "properties": {
+        "osm_id": "n278555542",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.198667,
+        "lon": -8.5684184,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9290597,
+          53.2732424
+        ]
+      },
+      "properties": {
+        "osm_id": "n568036454",
+        "name": "Domino's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2732424,
+        "lon": -8.9290597,
+        "admin_division": "Oranmore",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7435869,
+          53.6179662
+        ]
+      },
+      "properties": {
+        "osm_id": "n861311201",
+        "name": "Martino's Takeaway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.6179662,
+        "lon": -8.7435869,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0633158,
+          53.2759995
+        ]
+      },
+      "properties": {
+        "osm_id": "n918897050",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2759995,
+        "lon": -9.0633158,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8183027,
+          53.0661098
+        ]
+      },
+      "properties": {
+        "osm_id": "n943642909",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.0661098,
+        "lon": -8.8183027,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8684844,
+          53.2084579
+        ]
+      },
+      "properties": {
+        "osm_id": "n1127138177",
+        "name": "Mother Hubbards",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2084579,
+        "lon": -8.8684844,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0317678,
+          53.2819393
+        ]
+      },
+      "properties": {
+        "osm_id": "n1156287196",
+        "name": "Shake Dog",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2819393,
+        "lon": -9.0317678,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8687002,
+          53.2084825
+        ]
+      },
+      "properties": {
+        "osm_id": "n1164405213",
+        "name": "Oriental Takeaway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2084825,
+        "lon": -8.8687002,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0488373,
+          53.2797235
+        ]
+      },
+      "properties": {
+        "osm_id": "n1171408162",
+        "name": "Zambrero",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2797235,
+        "lon": -9.0488373,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2200029,
+          53.3307483
+        ]
+      },
+      "properties": {
+        "osm_id": "n1211156946",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.3307483,
+        "lon": -8.2200029,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2218786,
+          53.3300143
+        ]
+      },
+      "properties": {
+        "osm_id": "n1214317794",
+        "name": "Good Taste",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.3300143,
+        "lon": -8.2218786,
+        "admin_division": "Ballinasloe",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.574151,
+          53.1996536
+        ]
+      },
+      "properties": {
+        "osm_id": "n1257141959",
+        "name": "Spring Garden",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.1996536,
+        "lon": -8.574151,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0608483,
+          53.2697124
+        ]
+      },
+      "properties": {
+        "osm_id": "n1469221582",
+        "name": "Woozza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2697124,
+        "lon": -9.0608483,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0503113,
+          53.2743664
+        ]
+      },
+      "properties": {
+        "osm_id": "n1469801988",
+        "name": "Lil' Bros Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2743664,
+        "lon": -9.0503113,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0543578,
+          53.2709311
+        ]
+      },
+      "properties": {
+        "osm_id": "n1556829514",
+        "name": "Mc Donagh's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2709311,
+        "lon": -9.0543578,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.054085,
+          53.2714504
+        ]
+      },
+      "properties": {
+        "osm_id": "n1589666865",
+        "name": "Pizza Napoli",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2714504,
+        "lon": -9.054085,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5658713,
+          53.1992483
+        ]
+      },
+      "properties": {
+        "osm_id": "n1645056784",
+        "name": "Subway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.1992483,
+        "lon": -8.5658713,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9992254,
+          53.2743747
+        ]
+      },
+      "properties": {
+        "osm_id": "n1727006536",
+        "name": "Eddie's Take Away and Diner",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2743747,
+        "lon": -8.9992254,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0117896,
+          53.285796
+        ]
+      },
+      "properties": {
+        "osm_id": "n1730937288",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.285796,
+        "lon": -9.0117896,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0036586,
+          53.2760507
+        ]
+      },
+      "properties": {
+        "osm_id": "n1732295186",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2760507,
+        "lon": -9.0036586,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0193578,
+          53.291892
+        ]
+      },
+      "properties": {
+        "osm_id": "n1734456116",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.291892,
+        "lon": -9.0193578,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0508365,
+          53.2747052
+        ]
+      },
+      "properties": {
+        "osm_id": "n1743423046",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2747052,
+        "lon": -9.0508365,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0525511,
+          53.274757
+        ]
+      },
+      "properties": {
+        "osm_id": "n1743429523",
+        "name": "Capital Turkish Kebabs",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.274757,
+        "lon": -9.0525511,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0353708,
+          53.2844087
+        ]
+      },
+      "properties": {
+        "osm_id": "n1747227196",
+        "name": "Subway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2844087,
+        "lon": -9.0353708,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1019529,
+          53.2581533
+        ]
+      },
+      "properties": {
+        "osm_id": "n1748698925",
+        "name": "Blackrock Cottage Pantry",
+        "category": "fast_food",
+        "subcategory": "shop=deli",
+        "lat": 53.2581533,
+        "lon": -9.1019529,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0764405,
+          53.2597387
+        ]
+      },
+      "properties": {
+        "osm_id": "n1760050065",
+        "name": "Salt n' Pepper",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2597387,
+        "lon": -9.0764405,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0759669,
+          53.2602336
+        ]
+      },
+      "properties": {
+        "osm_id": "n1760050066",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2602336,
+        "lon": -9.0759669,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0578076,
+          53.2700231
+        ]
+      },
+      "properties": {
+        "osm_id": "n1762595032",
+        "name": "Monroe's Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2700231,
+        "lon": -9.0578076,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7422309,
+          53.6180523
+        ]
+      },
+      "properties": {
+        "osm_id": "n1813912976",
+        "name": "May Flower",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.6180523,
+        "lon": -8.7422309,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0525604,
+          53.2729063
+        ]
+      },
+      "properties": {
+        "osm_id": "n1861529072",
+        "name": "McDonald's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2729063,
+        "lon": -9.0525604,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0574004,
+          53.2702989
+        ]
+      },
+      "properties": {
+        "osm_id": "n1867003792",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2702989,
+        "lon": -9.0574004,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0585785,
+          53.2701795
+        ]
+      },
+      "properties": {
+        "osm_id": "n1867214436",
+        "name": "Giovanni's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2701795,
+        "lon": -9.0585785,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4374567,
+          53.4354338
+        ]
+      },
+      "properties": {
+        "osm_id": "n1880091974",
+        "name": "Uncle Bill's Takeaway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.4354338,
+        "lon": -8.4374567,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8993274,
+          53.6148329
+        ]
+      },
+      "properties": {
+        "osm_id": "n1887579060",
+        "name": "Saman’s kebabs",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.6148329,
+        "lon": -8.8993274,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6027496,
+          53.2623145
+        ]
+      },
+      "properties": {
+        "osm_id": "n1889253886",
+        "name": "Bia Anois",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2623145,
+        "lon": -9.6027496,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9835649,
+          53.285816
+        ]
+      },
+      "properties": {
+        "osm_id": "n1986137191",
+        "name": "Jack Jordans",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.285816,
+        "lon": -8.9835649,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2274404,
+          53.3314402
+        ]
+      },
+      "properties": {
+        "osm_id": "n2051499539",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.3314402,
+        "lon": -8.2274404,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0446955,
+          53.285065
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102030226",
+        "name": "European Food Store",
+        "category": "fast_food",
+        "subcategory": "shop=deli",
+        "lat": 53.285065,
+        "lon": -9.0446955,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.045488,
+          53.2853197
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102030258",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2853197,
+        "lon": -9.045488,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0444409,
+          53.2849228
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102030262",
+        "name": "Terryland Asian Food Market",
+        "category": "fast_food",
+        "subcategory": "shop=deli",
+        "lat": 53.2849228,
+        "lon": -9.0444409,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0510045,
+          53.2777877
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102030267",
+        "name": "Yummy Wok",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2777877,
+        "lon": -9.0510045,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0418948,
+          53.282335
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102298911",
+        "name": "Galway Asian Foods",
+        "category": "fast_food",
+        "subcategory": "shop=deli",
+        "lat": 53.282335,
+        "lon": -9.0418948,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9863761,
+          53.2912607
+        ]
+      },
+      "properties": {
+        "osm_id": "n2103642007",
+        "name": "KFC",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2912607,
+        "lon": -8.9863761,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0756825,
+          53.2751946
+        ]
+      },
+      "properties": {
+        "osm_id": "n2107075591",
+        "name": "Upick Store",
+        "category": "fast_food",
+        "subcategory": "shop=deli",
+        "lat": 53.2751946,
+        "lon": -9.0756825,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0537054,
+          53.2702733
+        ]
+      },
+      "properties": {
+        "osm_id": "n3204651761",
+        "name": "Boojum",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2702733,
+        "lon": -9.0537054,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0147096,
+          53.4886005
+        ]
+      },
+      "properties": {
+        "osm_id": "n3455276236",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.4886005,
+        "lon": -10.0147096,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0512153,
+          53.2737288
+        ]
+      },
+      "properties": {
+        "osm_id": "n3516044066",
+        "name": "Krispy Kreme",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2737288,
+        "lon": -9.0512153,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8511313,
+          53.5144249
+        ]
+      },
+      "properties": {
+        "osm_id": "n4142773792",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.5144249,
+        "lon": -8.8511313,
+        "admin_division": "Tuam",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8519473,
+          53.5141304
+        ]
+      },
+      "properties": {
+        "osm_id": "n4148057440",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.5141304,
+        "lon": -8.8519473,
+        "admin_division": "Tuam",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0531972,
+          53.2738001
+        ]
+      },
+      "properties": {
+        "osm_id": "n4152402389",
+        "name": "Dungeons & Donuts",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2738001,
+        "lon": -9.0531972,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9482321,
+          53.5538237
+        ]
+      },
+      "properties": {
+        "osm_id": "n4356500432",
+        "name": "Pizza Max",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.5538237,
+        "lon": -9.9482321,
+        "admin_division": "Letterfrack",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.053913,
+          53.2712102
+        ]
+      },
+      "properties": {
+        "osm_id": "n4360653572",
+        "name": "Xi'an Street Food",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2712102,
+        "lon": -9.053913,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6945807,
+          53.5956623
+        ]
+      },
+      "properties": {
+        "osm_id": "n4881563140",
+        "name": "The Village Grill",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.5956623,
+        "lon": -9.6945807,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0631945,
+          53.2754364
+        ]
+      },
+      "properties": {
+        "osm_id": "n5097986215",
+        "name": "Zambrero",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2754364,
+        "lon": -9.0631945,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5011207,
+          53.4702979
+        ]
+      },
+      "properties": {
+        "osm_id": "n5098794449",
+        "name": "Roma",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.4702979,
+        "lon": -8.5011207,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5238218,
+          53.067609
+        ]
+      },
+      "properties": {
+        "osm_id": "n5813468154",
+        "name": "Chipper na Céibhe",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.067609,
+        "lon": -9.5238218,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.745952,
+          53.298908
+        ]
+      },
+      "properties": {
+        "osm_id": "n6479165507",
+        "name": "Luca's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.298908,
+        "lon": -8.745952,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0543228,
+          53.2706609
+        ]
+      },
+      "properties": {
+        "osm_id": "n6617236786",
+        "name": "The Burgerstory",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2706609,
+        "lon": -9.0543228,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6069433,
+          53.2645374
+        ]
+      },
+      "properties": {
+        "osm_id": "n6762717371",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2645374,
+        "lon": -8.6069433,
+        "admin_division": "Kiltullagh",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6069168,
+          53.2644896
+        ]
+      },
+      "properties": {
+        "osm_id": "n6762717372",
+        "name": "Papa John's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2644896,
+        "lon": -8.6069168,
+        "admin_division": "Kiltullagh",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6068879,
+          53.2644375
+        ]
+      },
+      "properties": {
+        "osm_id": "n6762717375",
+        "name": "SuperSubs",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2644375,
+        "lon": -8.6068879,
+        "admin_division": "Kiltullagh",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8514465,
+          53.5140237
+        ]
+      },
+      "properties": {
+        "osm_id": "n6831927469",
+        "name": "Spice of Life",
+        "category": "fast_food",
+        "subcategory": "amenity=cafe",
+        "lat": 53.5140237,
+        "lon": -8.8514465,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3202176,
+          53.4283707
+        ]
+      },
+      "properties": {
+        "osm_id": "n6918295472",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.4283707,
+        "lon": -9.3202176,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0571438,
+          53.2709651
+        ]
+      },
+      "properties": {
+        "osm_id": "n7029703672",
+        "name": "Handsome Burger",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2709651,
+        "lon": -9.0571438,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0748268,
+          53.2752768
+        ]
+      },
+      "properties": {
+        "osm_id": "n7042985259",
+        "name": "Domino's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2752768,
+        "lon": -9.0748268,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8205544,
+          53.0698277
+        ]
+      },
+      "properties": {
+        "osm_id": "n7731920867",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.0698277,
+        "lon": -8.8205544,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.820593,
+          53.0698797
+        ]
+      },
+      "properties": {
+        "osm_id": "n7731926152",
+        "name": "Tuk away",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.0698797,
+        "lon": -8.820593,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0533692,
+          53.2712718
+        ]
+      },
+      "properties": {
+        "osm_id": "n8005943281",
+        "name": "Smash Bird",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2712718,
+        "lon": -9.0533692,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0748509,
+          53.2751796
+        ]
+      },
+      "properties": {
+        "osm_id": "n8916999850",
+        "name": "The Captain's Cabin",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2751796,
+        "lon": -9.0748509,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0994051,
+          53.273054
+        ]
+      },
+      "properties": {
+        "osm_id": "n8960683589",
+        "name": "PizzaList",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.273054,
+        "lon": -9.0994051,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1534485,
+          53.2511604
+        ]
+      },
+      "properties": {
+        "osm_id": "n9003583574",
+        "name": "La Dalce Vita",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2511604,
+        "lon": -9.1534485,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0499816,
+          53.2731786
+        ]
+      },
+      "properties": {
+        "osm_id": "n9010280285",
+        "name": "Subway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2731786,
+        "lon": -9.0499816,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0579844,
+          53.2700313
+        ]
+      },
+      "properties": {
+        "osm_id": "n9054449374",
+        "name": "pizza time",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2700313,
+        "lon": -9.0579844,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.030896,
+          53.2870637
+        ]
+      },
+      "properties": {
+        "osm_id": "n9071523140",
+        "name": "Burger King",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2870637,
+        "lon": -9.030896,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2906928,
+          53.1654801
+        ]
+      },
+      "properties": {
+        "osm_id": "n9264219513",
+        "name": "Sammy's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.1654801,
+        "lon": -8.2906928,
+        "admin_division": "Killimor",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0570017,
+          53.2711939
+        ]
+      },
+      "properties": {
+        "osm_id": "n9364039449",
+        "name": "BóTOWN",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2711939,
+        "lon": -9.0570017,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0748399,
+          53.2608079
+        ]
+      },
+      "properties": {
+        "osm_id": "n9393278907",
+        "name": "Pizza Max",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2608079,
+        "lon": -9.0748399,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0749861,
+          53.2606501
+        ]
+      },
+      "properties": {
+        "osm_id": "n9393278908",
+        "name": "Subway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2606501,
+        "lon": -9.0749861,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0630627,
+          53.2762734
+        ]
+      },
+      "properties": {
+        "osm_id": "n9408672694",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2762734,
+        "lon": -9.0630627,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0466056,
+          53.274803
+        ]
+      },
+      "properties": {
+        "osm_id": "n9487961161",
+        "name": "Four Star Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.274803,
+        "lon": -9.0466056,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1058475,
+          53.4678807
+        ]
+      },
+      "properties": {
+        "osm_id": "n9561475347",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.4678807,
+        "lon": -9.1058475,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8713502,
+          53.5081609
+        ]
+      },
+      "properties": {
+        "osm_id": "n9576143051",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.5081609,
+        "lon": -8.8713502,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8714038,
+          53.5081306
+        ]
+      },
+      "properties": {
+        "osm_id": "n9576143052",
+        "name": "Papa John's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.5081306,
+        "lon": -8.8714038,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8714521,
+          53.508086
+        ]
+      },
+      "properties": {
+        "osm_id": "n9576143053",
+        "name": "SuperSubs",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.508086,
+        "lon": -8.8714521,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0484068,
+          53.2755241
+        ]
+      },
+      "properties": {
+        "osm_id": "n9855905488",
+        "name": "Domino's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2755241,
+        "lon": -9.0484068,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3070981,
+          53.2442049
+        ]
+      },
+      "properties": {
+        "osm_id": "n9859161446",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2442049,
+        "lon": -9.3070981,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3067216,
+          53.2439969
+        ]
+      },
+      "properties": {
+        "osm_id": "n9859161449",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2439969,
+        "lon": -9.3067216,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9296933,
+          53.2683091
+        ]
+      },
+      "properties": {
+        "osm_id": "n9885245211",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2683091,
+        "lon": -8.9296933,
+        "admin_division": "Oranmore",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0545276,
+          53.2718479
+        ]
+      },
+      "properties": {
+        "osm_id": "n9922900943",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2718479,
+        "lon": -9.0545276,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0546461,
+          53.2718352
+        ]
+      },
+      "properties": {
+        "osm_id": "n9922900962",
+        "name": "Nut Hot",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2718352,
+        "lon": -9.0546461,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0534218,
+          53.273917
+        ]
+      },
+      "properties": {
+        "osm_id": "n9928054886",
+        "name": "Munch Haven",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.273917,
+        "lon": -9.0534218,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7485101,
+          53.2993464
+        ]
+      },
+      "properties": {
+        "osm_id": "n9995425416",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2993464,
+        "lon": -8.7485101,
+        "admin_division": "Athenry",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2028804,
+          53.3286526
+        ]
+      },
+      "properties": {
+        "osm_id": "n9995589999",
+        "name": "Creagh Pizza House",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.3286526,
+        "lon": -8.2028804,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2223448,
+          53.3296046
+        ]
+      },
+      "properties": {
+        "osm_id": "n9995596117",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.3296046,
+        "lon": -8.2223448,
+        "admin_division": "Ballinasloe",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.222406,
+          53.3299184
+        ]
+      },
+      "properties": {
+        "osm_id": "n9995596118",
+        "name": "Nico's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.3299184,
+        "lon": -8.222406,
+        "admin_division": "Ballinasloe",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.22289,
+          53.3303775
+        ]
+      },
+      "properties": {
+        "osm_id": "n9995596130",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.3303775,
+        "lon": -8.22289,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0624384,
+          53.2734937
+        ]
+      },
+      "properties": {
+        "osm_id": "n10037867447",
+        "name": "The Gourmet Offensive",
+        "category": "fast_food",
+        "subcategory": "shop=deli",
+        "lat": 53.2734937,
+        "lon": -9.0624384,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0576418,
+          53.2708159
+        ]
+      },
+      "properties": {
+        "osm_id": "n10114387915",
+        "name": "Birdhouse",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2708159,
+        "lon": -9.0576418,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.135447,
+          53.1990111
+        ]
+      },
+      "properties": {
+        "osm_id": "n10114485367",
+        "name": "Eyrecourt Chip Shop",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.1990111,
+        "lon": -8.135447,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0518753,
+          53.2724402
+        ]
+      },
+      "properties": {
+        "osm_id": "n10157019409",
+        "name": "Meltd",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2724402,
+        "lon": -9.0518753,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0631388,
+          53.2762775
+        ]
+      },
+      "properties": {
+        "osm_id": "n10299267719",
+        "name": "Subway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2762775,
+        "lon": -9.0631388,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0632049,
+          53.2754972
+        ]
+      },
+      "properties": {
+        "osm_id": "n10299267720",
+        "name": "Abrakebabra",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2754972,
+        "lon": -9.0632049,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0533052,
+          53.2725146
+        ]
+      },
+      "properties": {
+        "osm_id": "n10743309286",
+        "name": "Prátaí",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2725146,
+        "lon": -9.0533052,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0495545,
+          53.2730275
+        ]
+      },
+      "properties": {
+        "osm_id": "n10857650590",
+        "name": "Jump Juice",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2730275,
+        "lon": -9.0495545,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0507496,
+          53.2722709
+        ]
+      },
+      "properties": {
+        "osm_id": "n10857705946",
+        "name": "Aryan Pizzeria",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2722709,
+        "lon": -9.0507496,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4999586,
+          53.4696842
+        ]
+      },
+      "properties": {
+        "osm_id": "n11053623870",
+        "name": "The Hob",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.4696842,
+        "lon": -8.4999586,
+        "admin_division": "Mountbellew",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0314171,
+          53.2964458
+        ]
+      },
+      "properties": {
+        "osm_id": "n11097528367",
+        "name": "Pizza Max",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2964458,
+        "lon": -9.0314171,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2202671,
+          53.0919129
+        ]
+      },
+      "properties": {
+        "osm_id": "n11154591866",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.0919129,
+        "lon": -8.2202671,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3179081,
+          53.4283271
+        ]
+      },
+      "properties": {
+        "osm_id": "n11367106129",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.4283271,
+        "lon": -9.3179081,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9294682,
+          53.2682081
+        ]
+      },
+      "properties": {
+        "osm_id": "n11871745425",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2682081,
+        "lon": -8.9294682,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0480441,
+          53.2747842
+        ]
+      },
+      "properties": {
+        "osm_id": "n11917969175",
+        "name": "Dough Bros",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2747842,
+        "lon": -9.0480441,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0542093,
+          53.2717544
+        ]
+      },
+      "properties": {
+        "osm_id": "n12601239408",
+        "name": "Street Dog",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2717544,
+        "lon": -9.0542093,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0176445,
+          53.2854996
+        ]
+      },
+      "properties": {
+        "osm_id": "n12634185690",
+        "name": "China Garden",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2854996,
+        "lon": -9.0176445,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2188754,
+          53.0917702
+        ]
+      },
+      "properties": {
+        "osm_id": "n12908400901",
+        "name": "Roma Take Away Restaurant",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.0917702,
+        "lon": -8.2188754,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6636138,
+          53.1047569
+        ]
+      },
+      "properties": {
+        "osm_id": "n12961122801",
+        "name": "Cuan Chill Éinne",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.1047569,
+        "lon": -9.6636138,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0228319,
+          53.4880266
+        ]
+      },
+      "properties": {
+        "osm_id": "n13037344194",
+        "name": "Apache Pizza",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.4880266,
+        "lon": -10.0228319,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9914675,
+          53.3971565
+        ]
+      },
+      "properties": {
+        "osm_id": "n13120147685",
+        "name": "Fabio Takeaway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.3971565,
+        "lon": -8.9914675,
+        "admin_division": "Corrandulla",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.8408466,
+          53.5633459
+        ]
+      },
+      "properties": {
+        "osm_id": "n13811037706",
+        "name": "Spuds & shells",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.5633459,
+        "lon": -9.8408466,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5693334,
+          53.1984276
+        ]
+      },
+      "properties": {
+        "osm_id": "n13887943931",
+        "name": "",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.1984276,
+        "lon": -8.5693334,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0761804,
+          53.2756564
+        ]
+      },
+      "properties": {
+        "osm_id": "w25761888",
+        "name": "McDonald's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2756564,
+        "lon": -9.0761804,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0499231,
+          53.2799377
+        ]
+      },
+      "properties": {
+        "osm_id": "w78474056",
+        "name": "McDonald's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2799377,
+        "lon": -9.0499231,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4367027,
+          53.4353451
+        ]
+      },
+      "properties": {
+        "osm_id": "w177585451",
+        "name": "Little Wang's Chinese Takeaway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.4353451,
+        "lon": -8.4367027,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8800787,
+          53.2273378
+        ]
+      },
+      "properties": {
+        "osm_id": "w177705344",
+        "name": "Fabrizio Italian Takeaway",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2273378,
+        "lon": -8.8800787,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7468262,
+          53.2991035
+        ]
+      },
+      "properties": {
+        "osm_id": "w178054692",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2991035,
+        "lon": -8.7468262,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.081212,
+          53.2734914
+        ]
+      },
+      "properties": {
+        "osm_id": "w211850452",
+        "name": "King Ding",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2734914,
+        "lon": -9.081212,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9294733,
+          53.2678806
+        ]
+      },
+      "properties": {
+        "osm_id": "w684671651",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2678806,
+        "lon": -8.9294733,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9292232,
+          53.2684574
+        ]
+      },
+      "properties": {
+        "osm_id": "w684671663",
+        "name": "Giovannis Oranmore",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.2684574,
+        "lon": -8.9292232,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0469215,
+          53.280998
+        ]
+      },
+      "properties": {
+        "osm_id": "w954710162",
+        "name": "Supermac's",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.280998,
+        "lon": -9.0469215,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.2294081,
+          53.6144822
+        ]
+      },
+      "properties": {
+        "osm_id": "w1308676587",
+        "name": "Iniswallah",
+        "category": "fast_food",
+        "subcategory": "amenity=fast_food",
+        "lat": 53.6144822,
+        "lon": -10.2294081,
+        "admin_division": "",
+        "county": "galway"
+      }
+    }
+  ]
+}

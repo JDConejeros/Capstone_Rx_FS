@@ -1,0 +1,7005 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0662609,
+          53.2887578
+        ]
+      },
+      "properties": {
+        "osm_id": "n281089396",
+        "name": "Day-Today",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2887578,
+        "lon": -9.0662609,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0649616,
+          53.2813182
+        ]
+      },
+      "properties": {
+        "osm_id": "n281097610",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2813182,
+        "lon": -9.0649616,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0495215,
+          53.2785616
+        ]
+      },
+      "properties": {
+        "osm_id": "n288761601",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2785616,
+        "lon": -9.0495215,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7504485,
+          53.2935411
+        ]
+      },
+      "properties": {
+        "osm_id": "n366930972",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2935411,
+        "lon": -8.7504485,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6716944,
+          53.1199942
+        ]
+      },
+      "properties": {
+        "osm_id": "n387542980",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.1199942,
+        "lon": -9.6716944,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9295314,
+          53.2732383
+        ]
+      },
+      "properties": {
+        "osm_id": "n568036487",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2732383,
+        "lon": -8.9295314,
+        "admin_division": "Oranmore",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3727555,
+          52.9854413
+        ]
+      },
+      "properties": {
+        "osm_id": "n620827455",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 52.9854413,
+        "lon": -8.3727555,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9496059,
+          53.5531236
+        ]
+      },
+      "properties": {
+        "osm_id": "n659793145",
+        "name": "Letterfrack Country Shop",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5531236,
+        "lon": -9.9496059,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4487626,
+          53.5143056
+        ]
+      },
+      "properties": {
+        "osm_id": "n840275976",
+        "name": "Lowry's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5143056,
+        "lon": -9.4487626,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6546947,
+          53.2896162
+        ]
+      },
+      "properties": {
+        "osm_id": "n850273599",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2896162,
+        "lon": -9.6546947,
+        "admin_division": "Lettermore",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.666549,
+          53.2891264
+        ]
+      },
+      "properties": {
+        "osm_id": "n850273689",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2891264,
+        "lon": -9.666549,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7414957,
+          53.6186161
+        ]
+      },
+      "properties": {
+        "osm_id": "n861311285",
+        "name": "Eurospar",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.6186161,
+        "lon": -8.7414957,
+        "admin_division": "Dunmore",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0633462,
+          53.2762411
+        ]
+      },
+      "properties": {
+        "osm_id": "n919637087",
+        "name": "Londis",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2762411,
+        "lon": -9.0633462,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.8375675,
+          53.3246688
+        ]
+      },
+      "properties": {
+        "osm_id": "n919678086",
+        "name": "Geraghty's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3246688,
+        "lon": -9.8375675,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0612508,
+          53.2797126
+        ]
+      },
+      "properties": {
+        "osm_id": "n919956771",
+        "name": "Student's Union Shop",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2797126,
+        "lon": -9.0612508,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.987576,
+          53.2906274
+        ]
+      },
+      "properties": {
+        "osm_id": "n921361578",
+        "name": "Dunnes Stores",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2906274,
+        "lon": -8.987576,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0554249,
+          53.2717265
+        ]
+      },
+      "properties": {
+        "osm_id": "n925970967",
+        "name": "Bridge Stores",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2717265,
+        "lon": -9.0554249,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2298862,
+          53.0911751
+        ]
+      },
+      "properties": {
+        "osm_id": "n941808281",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.0911751,
+        "lon": -8.2298862,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.926085,
+          53.2642986
+        ]
+      },
+      "properties": {
+        "osm_id": "n947390568",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2642986,
+        "lon": -8.926085,
+        "admin_division": "Oranmore",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7493304,
+          53.303621
+        ]
+      },
+      "properties": {
+        "osm_id": "n967331497",
+        "name": "Londis",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.303621,
+        "lon": -8.7493304,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5023439,
+          53.2411568
+        ]
+      },
+      "properties": {
+        "osm_id": "n1084485625",
+        "name": "Costcutter",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2411568,
+        "lon": -9.5023439,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0476066,
+          53.2872005
+        ]
+      },
+      "properties": {
+        "osm_id": "n1121993461",
+        "name": "Castlelawn Heights",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2872005,
+        "lon": -9.0476066,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0331755,
+          53.2860899
+        ]
+      },
+      "properties": {
+        "osm_id": "n1171456407",
+        "name": "Polonez",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2860899,
+        "lon": -9.0331755,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9307384,
+          53.2697039
+        ]
+      },
+      "properties": {
+        "osm_id": "n1172922374",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2697039,
+        "lon": -8.9307384,
+        "admin_division": "Oranmore",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9871072,
+          53.2981492
+        ]
+      },
+      "properties": {
+        "osm_id": "n1173359642",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2981492,
+        "lon": -8.9871072,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3261588,
+          53.5225085
+        ]
+      },
+      "properties": {
+        "osm_id": "n1209427316",
+        "name": "Holmes Day-Today",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5225085,
+        "lon": -8.3261588,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4296325,
+          53.5084223
+        ]
+      },
+      "properties": {
+        "osm_id": "n1209487024",
+        "name": "Cunningham's General Merchants",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5084223,
+        "lon": -8.4296325,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5731508,
+          53.1989988
+        ]
+      },
+      "properties": {
+        "osm_id": "n1209723170",
+        "name": "Londis",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.1989988,
+        "lon": -8.5731508,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5678255,
+          53.1987129
+        ]
+      },
+      "properties": {
+        "osm_id": "n1257321230",
+        "name": "Hopes Bakery & Coffee Shop",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.1987129,
+        "lon": -8.5678255,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5675052,
+          53.1987476
+        ]
+      },
+      "properties": {
+        "osm_id": "n1257321515",
+        "name": "Pat Loughnane & Sons",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.1987476,
+        "lon": -8.5675052,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5672785,
+          53.1987677
+        ]
+      },
+      "properties": {
+        "osm_id": "n1257321587",
+        "name": "Donlon's Fruit & Veg",
+        "category": "supermarket",
+        "subcategory": "shop=greengrocer",
+        "lat": 53.1987677,
+        "lon": -8.5672785,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3999825,
+          53.0527117
+        ]
+      },
+      "properties": {
+        "osm_id": "n1259952884",
+        "name": "Q&R",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.0527117,
+        "lon": -8.3999825,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8197413,
+          53.067871
+        ]
+      },
+      "properties": {
+        "osm_id": "n1315103190",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.067871,
+        "lon": -8.8197413,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3191566,
+          53.4284677
+        ]
+      },
+      "properties": {
+        "osm_id": "n1315965304",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4284677,
+        "lon": -9.3191566,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0756324,
+          53.4311879
+        ]
+      },
+      "properties": {
+        "osm_id": "n1403172186",
+        "name": "Mace",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4311879,
+        "lon": -10.0756324,
+        "admin_division": "Clifden",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0633345,
+          53.2768249
+        ]
+      },
+      "properties": {
+        "osm_id": "n1447469530",
+        "name": "Tesco Express",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2768249,
+        "lon": -9.0633345,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0607236,
+          53.2697612
+        ]
+      },
+      "properties": {
+        "osm_id": "n1469221572",
+        "name": "Ernie's",
+        "category": "supermarket",
+        "subcategory": "shop=greengrocer",
+        "lat": 53.2697612,
+        "lon": -9.0607236,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0603497,
+          53.2697599
+        ]
+      },
+      "properties": {
+        "osm_id": "n1469221583",
+        "name": "Farraghers Nearbuy",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2697599,
+        "lon": -9.0603497,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0487327,
+          53.275245
+        ]
+      },
+      "properties": {
+        "osm_id": "n1469801989",
+        "name": "Gala",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.275245,
+        "lon": -9.0487327,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5722449,
+          53.4211291
+        ]
+      },
+      "properties": {
+        "osm_id": "n1574591008",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4211291,
+        "lon": -8.5722449,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9309203,
+          53.3050079
+        ]
+      },
+      "properties": {
+        "osm_id": "n1575735462",
+        "name": "Mace",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3050079,
+        "lon": -8.9309203,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7972802,
+          53.3399228
+        ]
+      },
+      "properties": {
+        "osm_id": "n1576401926",
+        "name": "Xentro",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3399228,
+        "lon": -8.7972802,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0606884,
+          53.2673143
+        ]
+      },
+      "properties": {
+        "osm_id": "n1595768132",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2673143,
+        "lon": -9.0606884,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9335521,
+          53.2625037
+        ]
+      },
+      "properties": {
+        "osm_id": "n1597134379",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2625037,
+        "lon": -8.9335521,
+        "admin_division": "Oranmore",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0227381,
+          53.3136599
+        ]
+      },
+      "properties": {
+        "osm_id": "n1601684103",
+        "name": "Ballindooley Stores",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3136599,
+        "lon": -9.0227381,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.016371,
+          53.3752324
+        ]
+      },
+      "properties": {
+        "osm_id": "n1601684118",
+        "name": "XL",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3752324,
+        "lon": -9.016371,
+        "admin_division": "Cloonboo",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9918042,
+          53.397337
+        ]
+      },
+      "properties": {
+        "osm_id": "n1601723622",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.397337,
+        "lon": -8.9918042,
+        "admin_division": "Corrandulla",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1007527,
+          53.4697868
+        ]
+      },
+      "properties": {
+        "osm_id": "n1601728642",
+        "name": "Keadys Supermarket",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.4697868,
+        "lon": -9.1007527,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8550295,
+          53.5156634
+        ]
+      },
+      "properties": {
+        "osm_id": "n1604412708",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.5156634,
+        "lon": -8.8550295,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9833746,
+          53.2856464
+        ]
+      },
+      "properties": {
+        "osm_id": "n1641346260",
+        "name": "Tesco Express",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2856464,
+        "lon": -8.9833746,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0157978,
+          53.2727526
+        ]
+      },
+      "properties": {
+        "osm_id": "n1716852138",
+        "name": "Limeleaf XL",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2727526,
+        "lon": -9.0157978,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0091679,
+          53.2741623
+        ]
+      },
+      "properties": {
+        "osm_id": "n1717791278",
+        "name": "4 Seasons",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2741623,
+        "lon": -9.0091679,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0265011,
+          53.2803899
+        ]
+      },
+      "properties": {
+        "osm_id": "n1728439947",
+        "name": "Londis",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2803899,
+        "lon": -9.0265011,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0543317,
+          53.272913
+        ]
+      },
+      "properties": {
+        "osm_id": "n1729163821",
+        "name": "Herterich's Pork Butchers",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.272913,
+        "lon": -9.0543317,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0122536,
+          53.2854551
+        ]
+      },
+      "properties": {
+        "osm_id": "n1729288376",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2854551,
+        "lon": -9.0122536,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0173447,
+          53.2856418
+        ]
+      },
+      "properties": {
+        "osm_id": "n1730948453",
+        "name": "Londis",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2856418,
+        "lon": -9.0173447,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0177268,
+          53.2854606
+        ]
+      },
+      "properties": {
+        "osm_id": "n1730948455",
+        "name": "McGraths Butcher",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.2854606,
+        "lon": -9.0177268,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.072524,
+          53.2633489
+        ]
+      },
+      "properties": {
+        "osm_id": "n1731023600",
+        "name": "Morton's",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2633489,
+        "lon": -9.072524,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0037814,
+          53.2760808
+        ]
+      },
+      "properties": {
+        "osm_id": "n1732295108",
+        "name": "Merlin Stores",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2760808,
+        "lon": -9.0037814,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8926032,
+          53.3690376
+        ]
+      },
+      "properties": {
+        "osm_id": "n1732368908",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3690376,
+        "lon": -8.8926032,
+        "admin_division": "Lackagh",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0158182,
+          53.2917317
+        ]
+      },
+      "properties": {
+        "osm_id": "n1734343010",
+        "name": "Abbastanza",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2917317,
+        "lon": -9.0158182,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1245628,
+          53.2621512
+        ]
+      },
+      "properties": {
+        "osm_id": "n1736584768",
+        "name": "Cappagh Stores",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2621512,
+        "lon": -9.1245628,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1063447,
+          53.2676636
+        ]
+      },
+      "properties": {
+        "osm_id": "n1743355866",
+        "name": "Clybaun Stores",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2676636,
+        "lon": -9.1063447,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0508896,
+          53.2742768
+        ]
+      },
+      "properties": {
+        "osm_id": "n1743517632",
+        "name": "Hollands Newsagents",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2742768,
+        "lon": -9.0508896,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.694283,
+          53.595662
+        ]
+      },
+      "properties": {
+        "osm_id": "n1749530467",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.595662,
+        "lon": -9.694283,
+        "admin_division": "Leenaun",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0801395,
+          53.2619005
+        ]
+      },
+      "properties": {
+        "osm_id": "n1751640040",
+        "name": "Hollands of Salthill",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2619005,
+        "lon": -9.0801395,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0761658,
+          53.260018
+        ]
+      },
+      "properties": {
+        "osm_id": "n1760050062",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.260018,
+        "lon": -9.0761658,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6951718,
+          53.5956377
+        ]
+      },
+      "properties": {
+        "osm_id": "n1789914261",
+        "name": "Hamilton Grocery",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.5956377,
+        "lon": -9.6951718,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0209313,
+          53.4877315
+        ]
+      },
+      "properties": {
+        "osm_id": "n1809978654",
+        "name": "Mannion's Butcher",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.4877315,
+        "lon": -10.0209313,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0214583,
+          53.4875975
+        ]
+      },
+      "properties": {
+        "osm_id": "n1809978666",
+        "name": "Walsh's Bakery & Coffee Shop",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.4875975,
+        "lon": -10.0214583,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7447361,
+          53.6179473
+        ]
+      },
+      "properties": {
+        "osm_id": "n1813912954",
+        "name": "Hannon's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.6179473,
+        "lon": -8.7447361,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7441661,
+          53.6177753
+        ]
+      },
+      "properties": {
+        "osm_id": "n1813929455",
+        "name": "Mark's Meats",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.6177753,
+        "lon": -8.7441661,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8064552,
+          53.1567341
+        ]
+      },
+      "properties": {
+        "osm_id": "n1824115600",
+        "name": "Taylor's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1567341,
+        "lon": -8.8064552,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0523738,
+          53.273015
+        ]
+      },
+      "properties": {
+        "osm_id": "n1861529058",
+        "name": "McCambridges",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.273015,
+        "lon": -9.0523738,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.054306,
+          53.2721072
+        ]
+      },
+      "properties": {
+        "osm_id": "n1861546815",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2721072,
+        "lon": -9.054306,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.7387124,
+          53.4671423
+        ]
+      },
+      "properties": {
+        "osm_id": "n1864613705",
+        "name": "Joyce's Post Office",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4671423,
+        "lon": -9.7387124,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1026015,
+          53.2631952
+        ]
+      },
+      "properties": {
+        "osm_id": "n1865492115",
+        "name": "Orlik - Polski Sklep",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2631952,
+        "lon": -9.1026015,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0508482,
+          53.272323
+        ]
+      },
+      "properties": {
+        "osm_id": "n1865541425",
+        "name": "BakeBox",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.272323,
+        "lon": -9.0508482,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0524719,
+          53.2762209
+        ]
+      },
+      "properties": {
+        "osm_id": "n1865556934",
+        "name": "Woodquay Stores",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2762209,
+        "lon": -9.0524719,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0533953,
+          53.2751782
+        ]
+      },
+      "properties": {
+        "osm_id": "n1865573303",
+        "name": "O'Connors",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.2751782,
+        "lon": -9.0533953,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0026367,
+          53.2825032
+        ]
+      },
+      "properties": {
+        "osm_id": "n1867159640",
+        "name": "Gala",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2825032,
+        "lon": -9.0026367,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3059802,
+          53.2443046
+        ]
+      },
+      "properties": {
+        "osm_id": "n1868768712",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2443046,
+        "lon": -9.3059802,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.8900018,
+          53.6058847
+        ]
+      },
+      "properties": {
+        "osm_id": "n1878571003",
+        "name": "King's Store",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.6058847,
+        "lon": -9.8900018,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.475853,
+          53.4295932
+        ]
+      },
+      "properties": {
+        "osm_id": "n1880091971",
+        "name": "Foodstore",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4295932,
+        "lon": -8.475853,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8807239,
+          53.2274089
+        ]
+      },
+      "properties": {
+        "osm_id": "n1881372298",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2274089,
+        "lon": -8.8807239,
+        "admin_division": "Clarinbridge",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9468722,
+          53.3405705
+        ]
+      },
+      "properties": {
+        "osm_id": "n1983182218",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3405705,
+        "lon": -8.9468722,
+        "admin_division": "Claregalway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9887988,
+          53.2903738
+        ]
+      },
+      "properties": {
+        "osm_id": "n1986137184",
+        "name": "Coynes Foodmarket",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2903738,
+        "lon": -8.9887988,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9836965,
+          53.2859273
+        ]
+      },
+      "properties": {
+        "osm_id": "n1986137194",
+        "name": "Polski Skelp",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2859273,
+        "lon": -8.9836965,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9747753,
+          53.2765618
+        ]
+      },
+      "properties": {
+        "osm_id": "n1986317557",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2765618,
+        "lon": -8.9747753,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9034396,
+          53.3571497
+        ]
+      },
+      "properties": {
+        "osm_id": "n1987207110",
+        "name": "Carraun Foodstore",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3571497,
+        "lon": -8.9034396,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.037402,
+          53.2937342
+        ]
+      },
+      "properties": {
+        "osm_id": "n1987818028",
+        "name": "Tesco Express",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2937342,
+        "lon": -9.037402,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6106613,
+          53.317658
+        ]
+      },
+      "properties": {
+        "osm_id": "n1988551952",
+        "name": "McGanns XL Stop & Shop",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.317658,
+        "lon": -8.6106613,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7013036,
+          53.3746394
+        ]
+      },
+      "properties": {
+        "osm_id": "n1988607500",
+        "name": "Cookes",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3746394,
+        "lon": -8.7013036,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7044603,
+          53.3745063
+        ]
+      },
+      "properties": {
+        "osm_id": "n1988647583",
+        "name": "M. Fordham",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3745063,
+        "lon": -8.7044603,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7048549,
+          53.374461
+        ]
+      },
+      "properties": {
+        "osm_id": "n1988647585",
+        "name": "Monivea Butchers",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.374461,
+        "lon": -8.7048549,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.641013,
+          53.4291091
+        ]
+      },
+      "properties": {
+        "osm_id": "n2046663524",
+        "name": "Daybreak",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4291091,
+        "lon": -8.641013,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8618154,
+          53.4374916
+        ]
+      },
+      "properties": {
+        "osm_id": "n2050674168",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4374916,
+        "lon": -8.8618154,
+        "admin_division": "Corrofin",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9845664,
+          53.2865947
+        ]
+      },
+      "properties": {
+        "osm_id": "n2051539104",
+        "name": "Spice Bazaar",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2865947,
+        "lon": -8.9845664,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9843463,
+          53.2867067
+        ]
+      },
+      "properties": {
+        "osm_id": "n2051539118",
+        "name": "The Grove",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2867067,
+        "lon": -8.9843463,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0015838,
+          53.2884421
+        ]
+      },
+      "properties": {
+        "osm_id": "n2051655497",
+        "name": "McGreals Mace",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2884421,
+        "lon": -9.0015838,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0028768,
+          53.2824949
+        ]
+      },
+      "properties": {
+        "osm_id": "n2051779552",
+        "name": "Alren Stores",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2824949,
+        "lon": -9.0028768,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7733153,
+          53.0908455
+        ]
+      },
+      "properties": {
+        "osm_id": "n2053274464",
+        "name": "Sprar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.0908455,
+        "lon": -8.7733153,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5673492,
+          53.1974969
+        ]
+      },
+      "properties": {
+        "osm_id": "n2053316785",
+        "name": "O'Reilly's Newsagents",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1974969,
+        "lon": -8.5673492,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5569114,
+          53.2013409
+        ]
+      },
+      "properties": {
+        "osm_id": "n2053541659",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2013409,
+        "lon": -8.5569114,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5971577,
+          53.2649726
+        ]
+      },
+      "properties": {
+        "osm_id": "n2087237530",
+        "name": "Tí Mhaitín",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2649726,
+        "lon": -9.5971577,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6006909,
+          53.263261
+        ]
+      },
+      "properties": {
+        "osm_id": "n2087402416",
+        "name": "Tí Mhicí",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.263261,
+        "lon": -9.6006909,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.044226,
+          53.2848014
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102030259",
+        "name": "Seasons",
+        "category": "supermarket",
+        "subcategory": "shop=greengrocer",
+        "lat": 53.2848014,
+        "lon": -9.044226,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0443002,
+          53.2848441
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102030265",
+        "name": "Terryland Fruit and Veg",
+        "category": "supermarket",
+        "subcategory": "shop=greengrocer",
+        "lat": 53.2848441,
+        "lon": -9.0443002,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0444977,
+          53.2849545
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102030270",
+        "name": "The Meat Market",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.2849545,
+        "lon": -9.0444977,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0503731,
+          53.275658
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102123313",
+        "name": "Headlines Newsagents",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.275658,
+        "lon": -9.0503731,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3170149,
+          53.3024578
+        ]
+      },
+      "properties": {
+        "osm_id": "n2102352110",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3024578,
+        "lon": -8.3170149,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2312017,
+          53.3276145
+        ]
+      },
+      "properties": {
+        "osm_id": "n2103061761",
+        "name": "O'Connors Foodhall",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3276145,
+        "lon": -8.2312017,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9867976,
+          53.2904694
+        ]
+      },
+      "properties": {
+        "osm_id": "n2103642009",
+        "name": "O'Hehirs Bakery & Cafe",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.2904694,
+        "lon": -8.9867976,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9866939,
+          53.290515
+        ]
+      },
+      "properties": {
+        "osm_id": "n2103642012",
+        "name": "Briarhill Butchers",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.290515,
+        "lon": -8.9866939,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9868843,
+          53.2904344
+        ]
+      },
+      "properties": {
+        "osm_id": "n2103642016",
+        "name": "Xpress News",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2904344,
+        "lon": -8.9868843,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9933547,
+          53.2996182
+        ]
+      },
+      "properties": {
+        "osm_id": "n2105124832",
+        "name": "Alans Bakery",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.2996182,
+        "lon": -8.9933547,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1050758,
+          53.2627326
+        ]
+      },
+      "properties": {
+        "osm_id": "n2105271928",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2627326,
+        "lon": -9.1050758,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3643175,
+          53.2457107
+        ]
+      },
+      "properties": {
+        "osm_id": "n2123187723",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2457107,
+        "lon": -9.3643175,
+        "admin_division": "Inverin",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0816013,
+          53.2899185
+        ]
+      },
+      "properties": {
+        "osm_id": "n2147003795",
+        "name": "Bushypark Lawn",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2899185,
+        "lon": -9.0816013,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.075242,
+          53.2819565
+        ]
+      },
+      "properties": {
+        "osm_id": "n2148173604",
+        "name": "Laurel Stores",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2819565,
+        "lon": -9.075242,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0926269,
+          53.2773133
+        ]
+      },
+      "properties": {
+        "osm_id": "n2165832833",
+        "name": "Daybreak",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2773133,
+        "lon": -9.0926269,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0568568,
+          53.2710052
+        ]
+      },
+      "properties": {
+        "osm_id": "n2217191372",
+        "name": "Hickey Meats",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.2710052,
+        "lon": -9.0568568,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0216778,
+          53.2787321
+        ]
+      },
+      "properties": {
+        "osm_id": "n2274624297",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2787321,
+        "lon": -9.0216778,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6318408,
+          53.5720773
+        ]
+      },
+      "properties": {
+        "osm_id": "n2471892040",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.5720773,
+        "lon": -8.6318408,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.83816,
+          53.3248802
+        ]
+      },
+      "properties": {
+        "osm_id": "n2519130014",
+        "name": "Mylotte's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3248802,
+        "lon": -9.83816,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0236024,
+          53.487993
+        ]
+      },
+      "properties": {
+        "osm_id": "n2823779149",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.487993,
+        "lon": -10.0236024,
+        "admin_division": "Clifden",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9187334,
+          53.3959151
+        ]
+      },
+      "properties": {
+        "osm_id": "n2864934393",
+        "name": "Ferron's XL",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3959151,
+        "lon": -9.9187334,
+        "admin_division": "Roundstone",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1801034,
+          53.3380182
+        ]
+      },
+      "properties": {
+        "osm_id": "n2865743664",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3380182,
+        "lon": -9.1801034,
+        "admin_division": "Moycullen",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4293007,
+          53.5087419
+        ]
+      },
+      "properties": {
+        "osm_id": "n3034764286",
+        "name": "The Shiven Inn",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5087419,
+        "lon": -8.4293007,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.938334,
+          53.1387749
+        ]
+      },
+      "properties": {
+        "osm_id": "n3039439305",
+        "name": "Eurospar",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.1387749,
+        "lon": -8.938334,
+        "admin_division": "Kinvara",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0331859,
+          53.2867033
+        ]
+      },
+      "properties": {
+        "osm_id": "n3056104044",
+        "name": "Little Teapot Bakery",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.2867033,
+        "lon": -9.0331859,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5397642,
+          53.457223
+        ]
+      },
+      "properties": {
+        "osm_id": "n3065074337",
+        "name": "Maam Cross Mart",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.457223,
+        "lon": -9.5397642,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0141983,
+          53.4886109
+        ]
+      },
+      "properties": {
+        "osm_id": "n3455276234",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4886109,
+        "lon": -10.0141983,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0311914,
+          53.2965669
+        ]
+      },
+      "properties": {
+        "osm_id": "n3475115795",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2965669,
+        "lon": -9.0311914,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0524277,
+          53.2752098
+        ]
+      },
+      "properties": {
+        "osm_id": "n3514768946",
+        "name": "Corner Express",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2752098,
+        "lon": -9.0524277,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0573247,
+          53.2699285
+        ]
+      },
+      "properties": {
+        "osm_id": "n3520438807",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2699285,
+        "lon": -9.0573247,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.7756725,
+          53.3053
+        ]
+      },
+      "properties": {
+        "osm_id": "n3608443896",
+        "name": "Foodstore",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3053,
+        "lon": -9.7756725,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2026053,
+          53.328561
+        ]
+      },
+      "properties": {
+        "osm_id": "n3779499140",
+        "name": "Connelly's Butchers",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.328561,
+        "lon": -8.2026053,
+        "admin_division": "Creagh",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.919078,
+          53.3959641
+        ]
+      },
+      "properties": {
+        "osm_id": "n3862429160",
+        "name": "J.Woods General store",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3959641,
+        "lon": -9.919078,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.7365876,
+          53.3231253
+        ]
+      },
+      "properties": {
+        "osm_id": "n3925624275",
+        "name": "Gala Cill Chiaráin",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3231253,
+        "lon": -9.7365876,
+        "admin_division": "Conamara",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0213977,
+          53.488775
+        ]
+      },
+      "properties": {
+        "osm_id": "n3929625754",
+        "name": "Des Moran",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.488775,
+        "lon": -10.0213977,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0216658,
+          53.4887032
+        ]
+      },
+      "properties": {
+        "osm_id": "n3929625755",
+        "name": "Sullivan's Supermarket",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4887032,
+        "lon": -10.0216658,
+        "admin_division": "Clifden",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.011292,
+          53.4888434
+        ]
+      },
+      "properties": {
+        "osm_id": "n3930705180",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.4888434,
+        "lon": -10.011292,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0521748,
+          53.2716936
+        ]
+      },
+      "properties": {
+        "osm_id": "n4207238254",
+        "name": "Local Express",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2716936,
+        "lon": -9.0521748,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9502794,
+          53.2319678
+        ]
+      },
+      "properties": {
+        "osm_id": "n5017543001",
+        "name": "Costcutter Grealys Stores",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2319678,
+        "lon": -8.9502794,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9537961,
+          53.1395909
+        ]
+      },
+      "properties": {
+        "osm_id": "n5018634723",
+        "name": "Mace",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1395909,
+        "lon": -8.9537961,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4999727,
+          53.4703139
+        ]
+      },
+      "properties": {
+        "osm_id": "n5098751508",
+        "name": "Geraghty's Family Butcher",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.4703139,
+        "lon": -8.4999727,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2202625,
+          53.3270125
+        ]
+      },
+      "properties": {
+        "osm_id": "n5141100258",
+        "name": "Tony Carroll Family Butcher",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.3270125,
+        "lon": -8.2202625,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2199916,
+          53.3271831
+        ]
+      },
+      "properties": {
+        "osm_id": "n5141100261",
+        "name": "Polska Strefa",
+        "category": "supermarket",
+        "subcategory": "shop=greengrocer",
+        "lat": 53.3271831,
+        "lon": -8.2199916,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6066307,
+          53.2643515
+        ]
+      },
+      "properties": {
+        "osm_id": "n5199904093",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2643515,
+        "lon": -8.6066307,
+        "admin_division": "Kiltullagh",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9104834,
+          53.183998
+        ]
+      },
+      "properties": {
+        "osm_id": "n5463317513",
+        "name": "Connaughtons of Ballindereen",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.183998,
+        "lon": -8.9104834,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.9748123,
+          53.5959988
+        ]
+      },
+      "properties": {
+        "osm_id": "n5662053058",
+        "name": "Mace",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5959988,
+        "lon": -9.9748123,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.1116624,
+          53.5565563
+        ]
+      },
+      "properties": {
+        "osm_id": "n5856136217",
+        "name": "Gala",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5565563,
+        "lon": -10.1116624,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.2129405,
+          53.6142926
+        ]
+      },
+      "properties": {
+        "osm_id": "n5857066844",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.6142926,
+        "lon": -10.2129405,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6170661,
+          53.3140784
+        ]
+      },
+      "properties": {
+        "osm_id": "n5918583956",
+        "name": "Costcutter",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3140784,
+        "lon": -9.6170661,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9264613,
+          53.2811146
+        ]
+      },
+      "properties": {
+        "osm_id": "n6261900779",
+        "name": "Spar Express",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2811146,
+        "lon": -8.9264613,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7457971,
+          53.2990234
+        ]
+      },
+      "properties": {
+        "osm_id": "n6479165508",
+        "name": "Athenry Country Market",
+        "category": "supermarket",
+        "subcategory": "shop=greengrocer",
+        "lat": 53.2990234,
+        "lon": -8.7457971,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0475572,
+          53.2744423
+        ]
+      },
+      "properties": {
+        "osm_id": "n6763875977",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2744423,
+        "lon": -9.0475572,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5828787,
+          53.2021603
+        ]
+      },
+      "properties": {
+        "osm_id": "n6771903281",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2021603,
+        "lon": -8.5828787,
+        "admin_division": "Loughrea",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5827366,
+          53.20147
+        ]
+      },
+      "properties": {
+        "osm_id": "n6771919394",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.20147,
+        "lon": -8.5827366,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0797012,
+          53.2583331
+        ]
+      },
+      "properties": {
+        "osm_id": "n6873694185",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2583331,
+        "lon": -9.0797012,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3194462,
+          53.4284462
+        ]
+      },
+      "properties": {
+        "osm_id": "n6918295477",
+        "name": "Roger Finnerty & Sons",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.4284462,
+        "lon": -9.3194462,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3185811,
+          53.4283533
+        ]
+      },
+      "properties": {
+        "osm_id": "n6918297345",
+        "name": "Sullivan's Country Grocer",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4283533,
+        "lon": -9.3185811,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3185654,
+          53.4285274
+        ]
+      },
+      "properties": {
+        "osm_id": "n6918349168",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.4285274,
+        "lon": -9.3185654,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3197107,
+          53.4294319
+        ]
+      },
+      "properties": {
+        "osm_id": "n6918382394",
+        "name": "McGeough's Butchers",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.4294319,
+        "lon": -9.3197107,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0503376,
+          53.2730634
+        ]
+      },
+      "properties": {
+        "osm_id": "n7042942439",
+        "name": "Dunnes Stores",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2730634,
+        "lon": -9.0503376,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7456009,
+          53.3003981
+        ]
+      },
+      "properties": {
+        "osm_id": "n7067036337",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3003981,
+        "lon": -8.7456009,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0442066,
+          53.2847736
+        ]
+      },
+      "properties": {
+        "osm_id": "n7104483500",
+        "name": "Fabrique",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.2847736,
+        "lon": -9.0442066,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7465828,
+          53.2988154
+        ]
+      },
+      "properties": {
+        "osm_id": "n7561019554",
+        "name": "Polska Chatka",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2988154,
+        "lon": -8.7465828,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4815811,
+          53.3919208
+        ]
+      },
+      "properties": {
+        "osm_id": "n7599118369",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3919208,
+        "lon": -8.4815811,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.856723,
+          53.5135954
+        ]
+      },
+      "properties": {
+        "osm_id": "n7616119781",
+        "name": "Spar Express",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5135954,
+        "lon": -8.856723,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4377806,
+          53.4353013
+        ]
+      },
+      "properties": {
+        "osm_id": "n7618660424",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4353013,
+        "lon": -8.4377806,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8052008,
+          53.1402874
+        ]
+      },
+      "properties": {
+        "osm_id": "n7621654438",
+        "name": "Applegreen",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1402874,
+        "lon": -8.8052008,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9413723,
+          53.1389608
+        ]
+      },
+      "properties": {
+        "osm_id": "n7621824281",
+        "name": "Costcutter",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1389608,
+        "lon": -8.9413723,
+        "admin_division": "Kinvara, Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8149347,
+          53.0598796
+        ]
+      },
+      "properties": {
+        "osm_id": "n7705603290",
+        "name": "Howleys Service Station",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.0598796,
+        "lon": -8.8149347,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7365833,
+          53.2311708
+        ]
+      },
+      "properties": {
+        "osm_id": "n7707177663",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2311708,
+        "lon": -8.7365833,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8546805,
+          53.3820063
+        ]
+      },
+      "properties": {
+        "osm_id": "n7707250327",
+        "name": "Texaco",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3820063,
+        "lon": -8.8546805,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4443364,
+          53.6551532
+        ]
+      },
+      "properties": {
+        "osm_id": "n7707302889",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.6551532,
+        "lon": -8.4443364,
+        "admin_division": "Glinsk, Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9994637,
+          53.2743867
+        ]
+      },
+      "properties": {
+        "osm_id": "n7711263818",
+        "name": "Smako Teka",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2743867,
+        "lon": -8.9994637,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9240286,
+          53.2986816
+        ]
+      },
+      "properties": {
+        "osm_id": "n7964718006",
+        "name": "Divillys",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.2986816,
+        "lon": -8.9240286,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0508346,
+          53.2748645
+        ]
+      },
+      "properties": {
+        "osm_id": "n8009084827",
+        "name": "Daybreak",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2748645,
+        "lon": -9.0508346,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7468097,
+          53.2992646
+        ]
+      },
+      "properties": {
+        "osm_id": "n8592670549",
+        "name": "La Pause Dessert",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.2992646,
+        "lon": -8.7468097,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5539921,
+          53.2889315
+        ]
+      },
+      "properties": {
+        "osm_id": "n8772866597",
+        "name": "Tigh an Bhreathnaigh",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2889315,
+        "lon": -9.5539921,
+        "admin_division": "Casla",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0363933,
+          53.2867986
+        ]
+      },
+      "properties": {
+        "osm_id": "n8839012903",
+        "name": "African Pride Store",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2867986,
+        "lon": -9.0363933,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0348192,
+          53.2862409
+        ]
+      },
+      "properties": {
+        "osm_id": "n8839145632",
+        "name": "Mace",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2862409,
+        "lon": -9.0348192,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0356378,
+          53.285801
+        ]
+      },
+      "properties": {
+        "osm_id": "n8839145639",
+        "name": "Moldova",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.285801,
+        "lon": -9.0356378,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0719162,
+          53.2772191
+        ]
+      },
+      "properties": {
+        "osm_id": "n8960666519",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2772191,
+        "lon": -9.0719162,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2926541,
+          53.1657623
+        ]
+      },
+      "properties": {
+        "osm_id": "n9264260188",
+        "name": "Costcutter",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.1657623,
+        "lon": -8.2926541,
+        "admin_division": "Killimor",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0745124,
+          53.2893693
+        ]
+      },
+      "properties": {
+        "osm_id": "n9283895509",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2893693,
+        "lon": -9.0745124,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0534639,
+          53.2741091
+        ]
+      },
+      "properties": {
+        "osm_id": "n9366345204",
+        "name": "Asiatic Manila",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2741091,
+        "lon": -9.0534639,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0743267,
+          53.2614348
+        ]
+      },
+      "properties": {
+        "osm_id": "n9393278901",
+        "name": "O'Connor's Bakery",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.2614348,
+        "lon": -9.0743267,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.7387694,
+          53.4671514
+        ]
+      },
+      "properties": {
+        "osm_id": "n9407476402",
+        "name": "XL",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4671514,
+        "lon": -9.7387694,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8714564,
+          53.5081395
+        ]
+      },
+      "properties": {
+        "osm_id": "n9576143056",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5081395,
+        "lon": -8.8714564,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3233942,
+          53.5234128
+        ]
+      },
+      "properties": {
+        "osm_id": "n9646705427",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5234128,
+        "lon": -8.3233942,
+        "admin_division": "Ballygar",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4984759,
+          53.4692765
+        ]
+      },
+      "properties": {
+        "osm_id": "n9646871675",
+        "name": "Kitt's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4692765,
+        "lon": -8.4984759,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0166461,
+          53.3742089
+        ]
+      },
+      "properties": {
+        "osm_id": "n9825105092",
+        "name": "Daybreak",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3742089,
+        "lon": -9.0166461,
+        "admin_division": "Cloonboo",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3068988,
+          53.2439831
+        ]
+      },
+      "properties": {
+        "osm_id": "n9859161448",
+        "name": "Feeney's Butchers",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.2439831,
+        "lon": -9.3068988,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9287539,
+          53.2690734
+        ]
+      },
+      "properties": {
+        "osm_id": "n9885327306",
+        "name": "Orlik",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2690734,
+        "lon": -8.9287539,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0588816,
+          53.2701014
+        ]
+      },
+      "properties": {
+        "osm_id": "n9897424641",
+        "name": "No. 26",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2701014,
+        "lon": -9.0588816,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0526288,
+          53.2747933
+        ]
+      },
+      "properties": {
+        "osm_id": "n9915217515",
+        "name": "Day-Today",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2747933,
+        "lon": -9.0526288,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0500351,
+          53.2761834
+        ]
+      },
+      "properties": {
+        "osm_id": "n9925153364",
+        "name": "M&S Foodhall",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2761834,
+        "lon": -9.0500351,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0504258,
+          53.2738114
+        ]
+      },
+      "properties": {
+        "osm_id": "n9925200651",
+        "name": "La Despensa",
+        "category": "supermarket",
+        "subcategory": "shop=grocery",
+        "lat": 53.2738114,
+        "lon": -9.0504258,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0528216,
+          53.2735736
+        ]
+      },
+      "properties": {
+        "osm_id": "n9927974872",
+        "name": "The Filling Station",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2735736,
+        "lon": -9.0528216,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0567461,
+          53.2712378
+        ]
+      },
+      "properties": {
+        "osm_id": "n9937660791",
+        "name": "XL",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2712378,
+        "lon": -9.0567461,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.047709,
+          53.2761925
+        ]
+      },
+      "properties": {
+        "osm_id": "n9953658407",
+        "name": "Armazém Brazil",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2761925,
+        "lon": -9.047709,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2233609,
+          53.3281516
+        ]
+      },
+      "properties": {
+        "osm_id": "n9995596127",
+        "name": "Priority Meats",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.3281516,
+        "lon": -8.2233609,
+        "admin_division": "Ballinasloe",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.176684,
+          53.236428
+        ]
+      },
+      "properties": {
+        "osm_id": "n10114632855",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.236428,
+        "lon": -8.176684,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.1742224,
+          53.2366801
+        ]
+      },
+      "properties": {
+        "osm_id": "n10114633006",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2366801,
+        "lon": -8.1742224,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1080955,
+          53.4687974
+        ]
+      },
+      "properties": {
+        "osm_id": "n10126748609",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.4687974,
+        "lon": -9.1080955,
+        "admin_division": "Headford",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0520627,
+          53.2752785
+        ]
+      },
+      "properties": {
+        "osm_id": "n10126780738",
+        "name": "Bridie Murphy's Home Bakery",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.2752785,
+        "lon": -9.0520627,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0542013,
+          53.2719614
+        ]
+      },
+      "properties": {
+        "osm_id": "n10126780739",
+        "name": "Bridie Murphy's Home Bakery",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.2719614,
+        "lon": -9.0542013,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0513801,
+          53.2753253
+        ]
+      },
+      "properties": {
+        "osm_id": "n10183465864",
+        "name": "Carnival Supermarket",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2753253,
+        "lon": -9.0513801,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.053343,
+          53.274384
+        ]
+      },
+      "properties": {
+        "osm_id": "n10299278568",
+        "name": "Jasmine Asian Grocery",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.274384,
+        "lon": -9.053343,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0387718,
+          53.285684
+        ]
+      },
+      "properties": {
+        "osm_id": "n10299343232",
+        "name": "William's Gate",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.285684,
+        "lon": -9.0387718,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0453888,
+          53.2854057
+        ]
+      },
+      "properties": {
+        "osm_id": "n10563410082",
+        "name": "Super Asia",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2854057,
+        "lon": -9.0453888,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8464179,
+          53.388164
+        ]
+      },
+      "properties": {
+        "osm_id": "n10596992908",
+        "name": "Loughnane's Service Station",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.388164,
+        "lon": -8.8464179,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3260421,
+          53.4274463
+        ]
+      },
+      "properties": {
+        "osm_id": "n10795888932",
+        "name": "Day-Today",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4274463,
+        "lon": -9.3260421,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0446866,
+          53.2850609
+        ]
+      },
+      "properties": {
+        "osm_id": "n10886964708",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2850609,
+        "lon": -9.0446866,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9884685,
+          53.2936158
+        ]
+      },
+      "properties": {
+        "osm_id": "n11151112637",
+        "name": "Homesavers",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2936158,
+        "lon": -8.9884685,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2208124,
+          53.0919611
+        ]
+      },
+      "properties": {
+        "osm_id": "n11154591862",
+        "name": "Enda Hayes & Sons",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.0919611,
+        "lon": -8.2208124,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2185019,
+          53.0925767
+        ]
+      },
+      "properties": {
+        "osm_id": "n11154746875",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.0925767,
+        "lon": -8.2185019,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5243578,
+          53.0652704
+        ]
+      },
+      "properties": {
+        "osm_id": "n11166472784",
+        "name": "XL Ó'Conghaile",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.0652704,
+        "lon": -9.5243578,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1006567,
+          53.2703554
+        ]
+      },
+      "properties": {
+        "osm_id": "n11203275102",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2703554,
+        "lon": -9.1006567,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3179754,
+          53.4278401
+        ]
+      },
+      "properties": {
+        "osm_id": "n11367106128",
+        "name": "Mace",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4278401,
+        "lon": -9.3179754,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9105145,
+          53.1839676
+        ]
+      },
+      "properties": {
+        "osm_id": "n11537194769",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1839676,
+        "lon": -8.9105145,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8707655,
+          53.211561
+        ]
+      },
+      "properties": {
+        "osm_id": "n11537204469",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.211561,
+        "lon": -8.8707655,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6942646,
+          53.5956585
+        ]
+      },
+      "properties": {
+        "osm_id": "n11540220869",
+        "name": "Grocery store",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5956585,
+        "lon": -9.6942646,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.051583,
+          53.273618
+        ]
+      },
+      "properties": {
+        "osm_id": "n11542411970",
+        "name": "O'Brien",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.273618,
+        "lon": -9.051583,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.365147,
+          53.544902
+        ]
+      },
+      "properties": {
+        "osm_id": "n11553098742",
+        "name": "Joyce Country Bakery",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.544902,
+        "lon": -9.365147,
+        "admin_division": "Clonbur",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.048754,
+          53.2749158
+        ]
+      },
+      "properties": {
+        "osm_id": "n12080172391",
+        "name": "Pick 'N' Pay",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2749158,
+        "lon": -9.048754,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0493385,
+          53.2717181
+        ]
+      },
+      "properties": {
+        "osm_id": "n12166081228",
+        "name": "Costcutter",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2717181,
+        "lon": -9.0493385,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8144018,
+          53.0630993
+        ]
+      },
+      "properties": {
+        "osm_id": "n12613396034",
+        "name": "P J Hawkins",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.0630993,
+        "lon": -8.8144018,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4955533,
+          53.4694272
+        ]
+      },
+      "properties": {
+        "osm_id": "n12681430756",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.4694272,
+        "lon": -8.4955533,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1807742,
+          53.3367178
+        ]
+      },
+      "properties": {
+        "osm_id": "n12716943446",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3367178,
+        "lon": -9.1807742,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1815109,
+          53.336203
+        ]
+      },
+      "properties": {
+        "osm_id": "n12716943447",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.336203,
+        "lon": -9.1815109,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0391088,
+          53.2866506
+        ]
+      },
+      "properties": {
+        "osm_id": "n12778620276",
+        "name": "Asialand",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2866506,
+        "lon": -9.0391088,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1549094,
+          53.2504091
+        ]
+      },
+      "properties": {
+        "osm_id": "n12879511538",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2504091,
+        "lon": -9.1549094,
+        "admin_division": "Barna",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0513425,
+          53.2727507
+        ]
+      },
+      "properties": {
+        "osm_id": "n12892483905",
+        "name": "Candy Cloud",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2727507,
+        "lon": -9.0513425,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9442419,
+          53.3419545
+        ]
+      },
+      "properties": {
+        "osm_id": "n13058118224",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3419545,
+        "lon": -8.9442419,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9852355,
+          53.2874244
+        ]
+      },
+      "properties": {
+        "osm_id": "n13104092872",
+        "name": "Polonez",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2874244,
+        "lon": -8.9852355,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0480923,
+          53.2744395
+        ]
+      },
+      "properties": {
+        "osm_id": "n13311919068",
+        "name": "Londis",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2744395,
+        "lon": -9.0480923,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0768962,
+          53.2594309
+        ]
+      },
+      "properties": {
+        "osm_id": "n13343134566",
+        "name": "Tesco Express",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2594309,
+        "lon": -9.0768962,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8704267,
+          53.5092881
+        ]
+      },
+      "properties": {
+        "osm_id": "n13626434040",
+        "name": "Maxol",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5092881,
+        "lon": -8.8704267,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2242779,
+          53.0953845
+        ]
+      },
+      "properties": {
+        "osm_id": "n13692002313",
+        "name": "Daybreak",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.0953845,
+        "lon": -8.2242779,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2868737,
+          53.1649359
+        ]
+      },
+      "properties": {
+        "osm_id": "n13695737473",
+        "name": "Duffy's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1649359,
+        "lon": -8.2868737,
+        "admin_division": "Killimor",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5683583,
+          53.1984527
+        ]
+      },
+      "properties": {
+        "osm_id": "n13887943925",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.1984527,
+        "lon": -8.5683583,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5687318,
+          53.1984419
+        ]
+      },
+      "properties": {
+        "osm_id": "n13887943928",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.1984419,
+        "lon": -8.5687318,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8507039,
+          53.5160954
+        ]
+      },
+      "properties": {
+        "osm_id": "w39909554",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.5160954,
+        "lon": -8.8507039,
+        "admin_division": "Tuam",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0502059,
+          53.281133
+        ]
+      },
+      "properties": {
+        "osm_id": "w78474064",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.281133,
+        "lon": -9.0502059,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8705515,
+          53.2113732
+        ]
+      },
+      "properties": {
+        "osm_id": "w100724616",
+        "name": "Mace",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2113732,
+        "lon": -8.8705515,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9301273,
+          53.2681686
+        ]
+      },
+      "properties": {
+        "osm_id": "w101593649",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2681686,
+        "lon": -8.9301273,
+        "admin_division": "Oranmore",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8692598,
+          53.20932
+        ]
+      },
+      "properties": {
+        "osm_id": "w104914065",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.20932,
+        "lon": -8.8692598,
+        "admin_division": "Kilcolgan",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0664636,
+          53.2673425
+        ]
+      },
+      "properties": {
+        "osm_id": "w134826780",
+        "name": "Maxol",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2673425,
+        "lon": -9.0664636,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0308692,
+          53.2870269
+        ]
+      },
+      "properties": {
+        "osm_id": "w161450769",
+        "name": "Applegreen",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2870269,
+        "lon": -9.0308692,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0194107,
+          53.292275
+        ]
+      },
+      "properties": {
+        "osm_id": "w161479312",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.292275,
+        "lon": -9.0194107,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1295604,
+          53.2589181
+        ]
+      },
+      "properties": {
+        "osm_id": "w161693555",
+        "name": "Silverstrand Service Station",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2589181,
+        "lon": -9.1295604,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0718152,
+          53.263412
+        ]
+      },
+      "properties": {
+        "osm_id": "w164368579",
+        "name": "XL",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.263412,
+        "lon": -9.0718152,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0129696,
+          53.4883325
+        ]
+      },
+      "properties": {
+        "osm_id": "w177232872",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.4883325,
+        "lon": -10.0129696,
+        "admin_division": "Clifden",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8162049,
+          53.0665372
+        ]
+      },
+      "properties": {
+        "osm_id": "w177387752",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.0665372,
+        "lon": -8.8162049,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4752673,
+          53.4296327
+        ]
+      },
+      "properties": {
+        "osm_id": "w177580360",
+        "name": "The Village Store",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4296327,
+        "lon": -8.4752673,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8810049,
+          53.2293892
+        ]
+      },
+      "properties": {
+        "osm_id": "w177700820",
+        "name": "Kelly's Newsagents",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2293892,
+        "lon": -8.8810049,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5853865,
+          53.3645277
+        ]
+      },
+      "properties": {
+        "osm_id": "w177714775",
+        "name": "Mitchells XL Stop & Shop",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3645277,
+        "lon": -8.5853865,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8221545,
+          53.0635147
+        ]
+      },
+      "properties": {
+        "osm_id": "w177716687",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.0635147,
+        "lon": -8.8221545,
+        "admin_division": "Gort",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5983248,
+          53.2636254
+        ]
+      },
+      "properties": {
+        "osm_id": "w178583284",
+        "name": "Eurospar",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2636254,
+        "lon": -9.5983248,
+        "admin_division": "Carraroe",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5836004,
+          53.2730741
+        ]
+      },
+      "properties": {
+        "osm_id": "w180138830",
+        "name": "Geraghty's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2730741,
+        "lon": -9.5836004,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2231101,
+          53.3249903
+        ]
+      },
+      "properties": {
+        "osm_id": "w182387231",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3249903,
+        "lon": -8.2231101,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2256446,
+          53.3230633
+        ]
+      },
+      "properties": {
+        "osm_id": "w182387266",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3230633,
+        "lon": -8.2256446,
+        "admin_division": "Ballinasloe",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.6690226,
+          53.1199517
+        ]
+      },
+      "properties": {
+        "osm_id": "w183014422",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1199517,
+        "lon": -9.6690226,
+        "admin_division": "Kilronan",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0302473,
+          53.2818055
+        ]
+      },
+      "properties": {
+        "osm_id": "w188659957",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2818055,
+        "lon": -9.0302473,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9946227,
+          53.2767529
+        ]
+      },
+      "properties": {
+        "osm_id": "w189234839",
+        "name": "Coffee Shop",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2767529,
+        "lon": -8.9946227,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.217126,
+          53.0927728
+        ]
+      },
+      "properties": {
+        "osm_id": "w191740299",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.0927728,
+        "lon": -8.217126,
+        "admin_division": "Portumna",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5638948,
+          53.4870284
+        ]
+      },
+      "properties": {
+        "osm_id": "w194149796",
+        "name": "Clancy's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4870284,
+        "lon": -8.5638948,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7309811,
+          53.2269084
+        ]
+      },
+      "properties": {
+        "osm_id": "w194226109",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2269084,
+        "lon": -8.7309811,
+        "admin_division": "Craughwell",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1856223,
+          53.3410154
+        ]
+      },
+      "properties": {
+        "osm_id": "w194491967",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3410154,
+        "lon": -9.1856223,
+        "admin_division": "Moycullen",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7962201,
+          53.3968362
+        ]
+      },
+      "properties": {
+        "osm_id": "w194534041",
+        "name": "Laraghmore Foodstore",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3968362,
+        "lon": -8.7962201,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8654821,
+          53.5102048
+        ]
+      },
+      "properties": {
+        "osm_id": "w194553120",
+        "name": "Circle K",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5102048,
+        "lon": -8.8654821,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8727595,
+          53.5074364
+        ]
+      },
+      "properties": {
+        "osm_id": "w194557070",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.5074364,
+        "lon": -8.8727595,
+        "admin_division": "Tuam",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8220045,
+          53.0702067
+        ]
+      },
+      "properties": {
+        "osm_id": "w194705952",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.0702067,
+        "lon": -8.8220045,
+        "admin_division": "Gort",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8188893,
+          53.0689936
+        ]
+      },
+      "properties": {
+        "osm_id": "w194712738",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.0689936,
+        "lon": -8.8188893,
+        "admin_division": "Gort",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.57519,
+          53.1988264
+        ]
+      },
+      "properties": {
+        "osm_id": "w195637431",
+        "name": "Circle K",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1988264,
+        "lon": -8.57519,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5016796,
+          53.4699053
+        ]
+      },
+      "properties": {
+        "osm_id": "w195997438",
+        "name": "Costcutter",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.4699053,
+        "lon": -8.5016796,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3019781,
+          53.2444153
+        ]
+      },
+      "properties": {
+        "osm_id": "w198635780",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2444153,
+        "lon": -9.3019781,
+        "admin_division": "Spiddal",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.559758,
+          53.5154203
+        ]
+      },
+      "properties": {
+        "osm_id": "w199801154",
+        "name": "Keane's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5154203,
+        "lon": -9.559758,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.219899,
+          53.3278998
+        ]
+      },
+      "properties": {
+        "osm_id": "w200006924",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3278998,
+        "lon": -8.219899,
+        "admin_division": "Ballinasloe",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4890584,
+          53.299884
+        ]
+      },
+      "properties": {
+        "osm_id": "w200238269",
+        "name": "XL New Inn",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.299884,
+        "lon": -8.4890584,
+        "admin_division": "New Inn",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5134348,
+          53.2917646
+        ]
+      },
+      "properties": {
+        "osm_id": "w200238276",
+        "name": "Wards Shop",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2917646,
+        "lon": -8.5134348,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5615744,
+          53.2527842
+        ]
+      },
+      "properties": {
+        "osm_id": "w200238696",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2527842,
+        "lon": -8.5615744,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2409634,
+          53.3229188
+        ]
+      },
+      "properties": {
+        "osm_id": "w200301468",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3229188,
+        "lon": -8.2409634,
+        "admin_division": "Ballinasloe",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2432899,
+          53.3195341
+        ]
+      },
+      "properties": {
+        "osm_id": "w200301471",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3195341,
+        "lon": -8.2432899,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2350003,
+          53.3254462
+        ]
+      },
+      "properties": {
+        "osm_id": "w200308535",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3254462,
+        "lon": -8.2350003,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2371592,
+          53.3245028
+        ]
+      },
+      "properties": {
+        "osm_id": "w200308536",
+        "name": "Circle K",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3245028,
+        "lon": -8.2371592,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9421443,
+          53.3038963
+        ]
+      },
+      "properties": {
+        "osm_id": "w212373241",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.3038963,
+        "lon": -8.9421443,
+        "admin_division": "Carnmore",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2098276,
+          53.2493663
+        ]
+      },
+      "properties": {
+        "osm_id": "w237580966",
+        "name": "Daybreak",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2493663,
+        "lon": -9.2098276,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5875256,
+          53.0843364
+        ]
+      },
+      "properties": {
+        "osm_id": "w240252029",
+        "name": "Siopa Ruaidhrí Beag",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.0843364,
+        "lon": -9.5875256,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5405078,
+          53.273171
+        ]
+      },
+      "properties": {
+        "osm_id": "w263433167",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.273171,
+        "lon": -9.5405078,
+        "admin_division": "Ros an Mhíl",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0207783,
+          53.4893572
+        ]
+      },
+      "properties": {
+        "osm_id": "w277747448",
+        "name": "Clifden Fruit & Veg Market",
+        "category": "supermarket",
+        "subcategory": "shop=greengrocer",
+        "lat": 53.4893572,
+        "lon": -10.0207783,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.020584,
+          53.4893078
+        ]
+      },
+      "properties": {
+        "osm_id": "w277747450",
+        "name": "Gala",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4893078,
+        "lon": -10.020584,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8165553,
+          53.0653758
+        ]
+      },
+      "properties": {
+        "osm_id": "w277853236",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.0653758,
+        "lon": -8.8165553,
+        "admin_division": "Gort",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.852914,
+          53.5230752
+        ]
+      },
+      "properties": {
+        "osm_id": "w311852602",
+        "name": "Mace",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5230752,
+        "lon": -8.852914,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7492133,
+          53.2973731
+        ]
+      },
+      "properties": {
+        "osm_id": "w330407968",
+        "name": "Daybreak",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2973731,
+        "lon": -8.7492133,
+        "admin_division": "Athenry",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7486168,
+          53.2993784
+        ]
+      },
+      "properties": {
+        "osm_id": "w330976249",
+        "name": "Brady's Butcher",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.2993784,
+        "lon": -8.7486168,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7475506,
+          53.2988597
+        ]
+      },
+      "properties": {
+        "osm_id": "w331441523",
+        "name": "Mike Walsh Butcher",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.2988597,
+        "lon": -8.7475506,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9007748,
+          53.6150934
+        ]
+      },
+      "properties": {
+        "osm_id": "w451596193",
+        "name": "Sheridan's",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.6150934,
+        "lon": -8.9007748,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8440956,
+          53.5102244
+        ]
+      },
+      "properties": {
+        "osm_id": "w481082643",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5102244,
+        "lon": -8.8440956,
+        "admin_division": "Tuam",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.1455743,
+          53.5449813
+        ]
+      },
+      "properties": {
+        "osm_id": "w504511481",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5449813,
+        "lon": -10.1455743,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0451432,
+          53.2858531
+        ]
+      },
+      "properties": {
+        "osm_id": "w586572963",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2858531,
+        "lon": -9.0451432,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0453751,
+          53.2712493
+        ]
+      },
+      "properties": {
+        "osm_id": "w588467536",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2712493,
+        "lon": -9.0453751,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0983173,
+          53.2708253
+        ]
+      },
+      "properties": {
+        "osm_id": "w614947378",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2708253,
+        "lon": -9.0983173,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7482622,
+          53.2994971
+        ]
+      },
+      "properties": {
+        "osm_id": "w621970732",
+        "name": "The Shopping Basket",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2994971,
+        "lon": -8.7482622,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9351492,
+          53.4911463
+        ]
+      },
+      "properties": {
+        "osm_id": "w659560955",
+        "name": "Canavan's General Store",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4911463,
+        "lon": -8.9351492,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9322171,
+          53.2683601
+        ]
+      },
+      "properties": {
+        "osm_id": "w725978583",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2683601,
+        "lon": -8.9322171,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8442663,
+          53.518501
+        ]
+      },
+      "properties": {
+        "osm_id": "w729743038",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.518501,
+        "lon": -8.8442663,
+        "admin_division": "Tuam",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0066874,
+          53.2901735
+        ]
+      },
+      "properties": {
+        "osm_id": "w753792912",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2901735,
+        "lon": -9.0066874,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1009684,
+          53.2585307
+        ]
+      },
+      "properties": {
+        "osm_id": "w756621545",
+        "name": "XL",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2585307,
+        "lon": -9.1009684,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8689289,
+          53.2086607
+        ]
+      },
+      "properties": {
+        "osm_id": "w756622359",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2086607,
+        "lon": -8.8689289,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4990541,
+          53.4711881
+        ]
+      },
+      "properties": {
+        "osm_id": "w777357729",
+        "name": "SuperValu",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.4711881,
+        "lon": -8.4990541,
+        "admin_division": "Mountbellew",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9807916,
+          53.2846541
+        ]
+      },
+      "properties": {
+        "osm_id": "w795003998",
+        "name": "Lidl",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2846541,
+        "lon": -8.9807916,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8971375,
+          53.6113095
+        ]
+      },
+      "properties": {
+        "osm_id": "w825345919",
+        "name": "Ryans Daybreak",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.6113095,
+        "lon": -8.8971375,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.024902,
+          53.4872386
+        ]
+      },
+      "properties": {
+        "osm_id": "w825347743",
+        "name": "Tom's Checkout",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4872386,
+        "lon": -9.024902,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8565135,
+          53.2757692
+        ]
+      },
+      "properties": {
+        "osm_id": "w825348800",
+        "name": "Derrydonnell Stores",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2757692,
+        "lon": -8.8565135,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5725854,
+          53.4884573
+        ]
+      },
+      "properties": {
+        "osm_id": "w825437360",
+        "name": "Shop Express",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4884573,
+        "lon": -8.5725854,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5650226,
+          53.1992828
+        ]
+      },
+      "properties": {
+        "osm_id": "w841967345",
+        "name": "Brodericks",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1992828,
+        "lon": -8.5650226,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5631413,
+          53.1999441
+        ]
+      },
+      "properties": {
+        "osm_id": "w841971097",
+        "name": "Murphys XL",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.1999441,
+        "lon": -8.5631413,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3646079,
+          53.5449268
+        ]
+      },
+      "properties": {
+        "osm_id": "w952139701",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5449268,
+        "lon": -9.3646079,
+        "admin_division": "Clonbur",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0993545,
+          53.273081
+        ]
+      },
+      "properties": {
+        "osm_id": "w953076928",
+        "name": "Dunnes Stores",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.273081,
+        "lon": -9.0993545,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0720248,
+          53.2767264
+        ]
+      },
+      "properties": {
+        "osm_id": "w954418403",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2767264,
+        "lon": -9.0720248,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0718222,
+          53.2760551
+        ]
+      },
+      "properties": {
+        "osm_id": "w954418405",
+        "name": "Aroma Foods",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2760551,
+        "lon": -9.0718222,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0718387,
+          53.2761115
+        ]
+      },
+      "properties": {
+        "osm_id": "w954418406",
+        "name": "Foodland",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2761115,
+        "lon": -9.0718387,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0756574,
+          53.2766657
+        ]
+      },
+      "properties": {
+        "osm_id": "w954426795",
+        "name": "Dunnes Stores",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2766657,
+        "lon": -9.0756574,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0763496,
+          53.2763735
+        ]
+      },
+      "properties": {
+        "osm_id": "w954426800",
+        "name": "O'Hehirs Bakery & Cafe",
+        "category": "supermarket",
+        "subcategory": "shop=bakery",
+        "lat": 53.2763735,
+        "lon": -9.0763496,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0479014,
+          53.280035
+        ]
+      },
+      "properties": {
+        "osm_id": "w954710153",
+        "name": "Tesco",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.280035,
+        "lon": -9.0479014,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.047767,
+          53.2804428
+        ]
+      },
+      "properties": {
+        "osm_id": "w954710183",
+        "name": "Tormeys Butchers",
+        "category": "supermarket",
+        "subcategory": "shop=butcher",
+        "lat": 53.2804428,
+        "lon": -9.047767,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0482794,
+          53.2803455
+        ]
+      },
+      "properties": {
+        "osm_id": "w954718153",
+        "name": "Masterson's Fruit and Veg",
+        "category": "supermarket",
+        "subcategory": "shop=greengrocer",
+        "lat": 53.2803455,
+        "lon": -9.0482794,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0457569,
+          53.2835525
+        ]
+      },
+      "properties": {
+        "osm_id": "w954891437",
+        "name": "Paper Chase",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2835525,
+        "lon": -9.0457569,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0462933,
+          53.2835694
+        ]
+      },
+      "properties": {
+        "osm_id": "w954891438",
+        "name": "Dunnes Stores",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2835694,
+        "lon": -9.0462933,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8142356,
+          53.0629343
+        ]
+      },
+      "properties": {
+        "osm_id": "w1023439620",
+        "name": "Hawkins Foodstore & Newsagent",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.0629343,
+        "lon": -8.8142356,
+        "admin_division": "Gort",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0350021,
+          53.2815272
+        ]
+      },
+      "properties": {
+        "osm_id": "w1034248228",
+        "name": "Circle K",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2815272,
+        "lon": -9.0350021,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0647859,
+          53.28177
+        ]
+      },
+      "properties": {
+        "osm_id": "w1038388819",
+        "name": "Circle K",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.28177,
+        "lon": -9.0647859,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0389314,
+          53.2820725
+        ]
+      },
+      "properties": {
+        "osm_id": "w1039931013",
+        "name": "Circle K",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2820725,
+        "lon": -9.0389314,
+        "admin_division": "Galway",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8549722,
+          53.5118605
+        ]
+      },
+      "properties": {
+        "osm_id": "w1046949462",
+        "name": "",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5118605,
+        "lon": -8.8549722,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0207471,
+          53.2899426
+        ]
+      },
+      "properties": {
+        "osm_id": "w1066138348",
+        "name": "Spar",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2899426,
+        "lon": -9.0207471,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7202966,
+          53.478726
+        ]
+      },
+      "properties": {
+        "osm_id": "w1081798722",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.478726,
+        "lon": -8.7202966,
+        "admin_division": "Barndaderg",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0922941,
+          53.4498344
+        ]
+      },
+      "properties": {
+        "osm_id": "w1137317878",
+        "name": "Mace",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4498344,
+        "lon": -9.0922941,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8311437,
+          53.5063049
+        ]
+      },
+      "properties": {
+        "osm_id": "w1137840867",
+        "name": "XL",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5063049,
+        "lon": -8.8311437,
+        "admin_division": "Tuam",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3991029,
+          53.3321227
+        ]
+      },
+      "properties": {
+        "osm_id": "w1138414080",
+        "name": "Hickey's Supermarket",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.3321227,
+        "lon": -8.3991029,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8745537,
+          53.5302391
+        ]
+      },
+      "properties": {
+        "osm_id": "w1299287660",
+        "name": "Elite service station",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.5302391,
+        "lon": -8.8745537,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1058333,
+          53.4678995
+        ]
+      },
+      "properties": {
+        "osm_id": "w1370074768",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.4678995,
+        "lon": -9.1058333,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1471553,
+          53.251593
+        ]
+      },
+      "properties": {
+        "osm_id": "w1370076633",
+        "name": "Centra",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.251593,
+        "lon": -9.1471553,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7488465,
+          53.2967063
+        ]
+      },
+      "properties": {
+        "osm_id": "w1481728305",
+        "name": "Aldi",
+        "category": "supermarket",
+        "subcategory": "shop=supermarket",
+        "lat": 53.2967063,
+        "lon": -8.7488465,
+        "admin_division": "",
+        "county": "galway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5541598,
+          53.2473971
+        ]
+      },
+      "properties": {
+        "osm_id": "r12743728",
+        "name": "The Village Store",
+        "category": "supermarket",
+        "subcategory": "shop=convenience",
+        "lat": 53.2473971,
+        "lon": -8.5541598,
+        "admin_division": "",
+        "county": "galway"
+      }
+    }
+  ]
+}

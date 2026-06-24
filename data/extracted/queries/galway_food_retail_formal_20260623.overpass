@@ -1,0 +1,27 @@
+[out:json][timeout:120][maxsize:536870912];
+relation["name"="County Galway"]["admin_level"="6"]["boundary"="administrative"]->.county_rel;
+.county_rel map_to_area -> .county;
+(
+  node["shop"="supermarket"](area.county);
+  way["shop"="supermarket"](area.county);
+  relation["shop"="supermarket"](area.county);
+  node["shop"="convenience"](area.county);
+  way["shop"="convenience"](area.county);
+  relation["shop"="convenience"](area.county);
+  node["shop"="grocery"](area.county);
+  way["shop"="grocery"](area.county);
+  relation["shop"="grocery"](area.county);
+  node["shop"="butcher"](area.county);
+  way["shop"="butcher"](area.county);
+  relation["shop"="butcher"](area.county);
+  node["shop"="bakery"](area.county);
+  way["shop"="bakery"](area.county);
+  relation["shop"="bakery"](area.county);
+  node["shop"="fishmonger"](area.county);
+  way["shop"="fishmonger"](area.county);
+  relation["shop"="fishmonger"](area.county);
+  node["shop"="greengrocer"](area.county);
+  way["shop"="greengrocer"](area.county);
+  relation["shop"="greengrocer"](area.county);
+);
+out center;

@@ -1,0 +1,7865 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3259694,
+          53.296868
+        ]
+      },
+      "properties": {
+        "osm_id": "n59998053",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.296868,
+        "lon": -6.3259694,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3229483,
+          53.3109183
+        ]
+      },
+      "properties": {
+        "osm_id": "n108004939",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3109183,
+        "lon": -6.3229483,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3408955,
+          53.2760883
+        ]
+      },
+      "properties": {
+        "osm_id": "n282916315",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2760883,
+        "lon": -6.3408955,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2967209,
+          53.2982351
+        ]
+      },
+      "properties": {
+        "osm_id": "n282961930",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2982351,
+        "lon": -6.2967209,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1179956,
+          53.2365743
+        ]
+      },
+      "properties": {
+        "osm_id": "n311344608",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2365743,
+        "lon": -6.1179956,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.22119,
+          53.4679917
+        ]
+      },
+      "properties": {
+        "osm_id": "n334615369",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4679917,
+        "lon": -6.22119,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2029554,
+          53.4607426
+        ]
+      },
+      "properties": {
+        "osm_id": "n334615373",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4607426,
+        "lon": -6.2029554,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3444981,
+          53.4633558
+        ]
+      },
+      "properties": {
+        "osm_id": "n365175247",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4633558,
+        "lon": -6.3444981,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2779631,
+          53.3364193
+        ]
+      },
+      "properties": {
+        "osm_id": "n367408087",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3364193,
+        "lon": -6.2779631,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3590127,
+          53.2777958
+        ]
+      },
+      "properties": {
+        "osm_id": "n367654050",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2777958,
+        "lon": -6.3590127,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1387628,
+          53.4498659
+        ]
+      },
+      "properties": {
+        "osm_id": "n375783909",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4498659,
+        "lon": -6.1387628,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2208203,
+          53.4489391
+        ]
+      },
+      "properties": {
+        "osm_id": "n388505449",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4489391,
+        "lon": -6.2208203,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2455065,
+          53.4600471
+        ]
+      },
+      "properties": {
+        "osm_id": "n388507635",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4600471,
+        "lon": -6.2455065,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2128373,
+          53.4663195
+        ]
+      },
+      "properties": {
+        "osm_id": "n388508639",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4663195,
+        "lon": -6.2128373,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2503006,
+          53.4394575
+        ]
+      },
+      "properties": {
+        "osm_id": "n388513177",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4394575,
+        "lon": -6.2503006,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2287119,
+          53.422368
+        ]
+      },
+      "properties": {
+        "osm_id": "n388514961",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.422368,
+        "lon": -6.2287119,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1496577,
+          53.439805
+        ]
+      },
+      "properties": {
+        "osm_id": "n388519573",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.439805,
+        "lon": -6.1496577,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.18702,
+          53.4229171
+        ]
+      },
+      "properties": {
+        "osm_id": "n388523662",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4229171,
+        "lon": -6.18702,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1742406,
+          53.4092461
+        ]
+      },
+      "properties": {
+        "osm_id": "n388540789",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4092461,
+        "lon": -6.1742406,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1837732,
+          53.4107037
+        ]
+      },
+      "properties": {
+        "osm_id": "n388540820",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4107037,
+        "lon": -6.1837732,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1486108,
+          53.3967289
+        ]
+      },
+      "properties": {
+        "osm_id": "n388541009",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3967289,
+        "lon": -6.1486108,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1534405,
+          53.3926798
+        ]
+      },
+      "properties": {
+        "osm_id": "n388541010",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3926798,
+        "lon": -6.1534405,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1093507,
+          53.3902681
+        ]
+      },
+      "properties": {
+        "osm_id": "n388550064",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3902681,
+        "lon": -6.1093507,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1073784,
+          53.3891201
+        ]
+      },
+      "properties": {
+        "osm_id": "n388550067",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3891201,
+        "lon": -6.1073784,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.093685,
+          53.3800042
+        ]
+      },
+      "properties": {
+        "osm_id": "n388551056",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3800042,
+        "lon": -6.093685,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0604132,
+          53.369357
+        ]
+      },
+      "properties": {
+        "osm_id": "n388552424",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.369357,
+        "lon": -6.0604132,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0576366,
+          53.3728185
+        ]
+      },
+      "properties": {
+        "osm_id": "n388552425",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3728185,
+        "lon": -6.0576366,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0661154,
+          53.3881087
+        ]
+      },
+      "properties": {
+        "osm_id": "n388554000",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3881087,
+        "lon": -6.0661154,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.127875,
+          53.4162938
+        ]
+      },
+      "properties": {
+        "osm_id": "n388557164",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4162938,
+        "lon": -6.127875,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1255518,
+          53.4300755
+        ]
+      },
+      "properties": {
+        "osm_id": "n388558221",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4300755,
+        "lon": -6.1255518,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1665286,
+          53.439756
+        ]
+      },
+      "properties": {
+        "osm_id": "n388561351",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.439756,
+        "lon": -6.1665286,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2989228,
+          53.4917446
+        ]
+      },
+      "properties": {
+        "osm_id": "n390289054",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4917446,
+        "lon": -6.2989228,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3154857,
+          53.5243008
+        ]
+      },
+      "properties": {
+        "osm_id": "n390289070",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5243008,
+        "lon": -6.3154857,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2669952,
+          53.5222776
+        ]
+      },
+      "properties": {
+        "osm_id": "n390289072",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5222776,
+        "lon": -6.2669952,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3835116,
+          53.5678386
+        ]
+      },
+      "properties": {
+        "osm_id": "n390289073",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5678386,
+        "lon": -6.3835116,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2906547,
+          53.585819
+        ]
+      },
+      "properties": {
+        "osm_id": "n390304371",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.585819,
+        "lon": -6.2906547,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1886597,
+          53.5871873
+        ]
+      },
+      "properties": {
+        "osm_id": "n390304479",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5871873,
+        "lon": -6.1886597,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2992449,
+          53.36132
+        ]
+      },
+      "properties": {
+        "osm_id": "n411822908",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.36132,
+        "lon": -6.2992449,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4176191,
+          53.4170484
+        ]
+      },
+      "properties": {
+        "osm_id": "n444648636",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4170484,
+        "lon": -6.4176191,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2061598,
+          53.3699729
+        ]
+      },
+      "properties": {
+        "osm_id": "n447824516",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3699729,
+        "lon": -6.2061598,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2297231,
+          53.2920449
+        ]
+      },
+      "properties": {
+        "osm_id": "n453143014",
+        "name": "Goatstown Goat Grill Pub",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2920449,
+        "lon": -6.2297231,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2921402,
+          53.3477042
+        ]
+      },
+      "properties": {
+        "osm_id": "n471861767",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3477042,
+        "lon": -6.2921402,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3745728,
+          53.2816749
+        ]
+      },
+      "properties": {
+        "osm_id": "n507061510",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2816749,
+        "lon": -6.3745728,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3894726,
+          53.3307807
+        ]
+      },
+      "properties": {
+        "osm_id": "n539821738",
+        "name": "Clondalkin Community Recycling Initiative",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3307807,
+        "lon": -6.3894726,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2636599,
+          53.324195
+        ]
+      },
+      "properties": {
+        "osm_id": "n560602926",
+        "name": "Dublin City Council Gulistan Terrace Bring Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.324195,
+        "lon": -6.2636599,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.26022,
+          53.3284939
+        ]
+      },
+      "properties": {
+        "osm_id": "n564399664",
+        "name": "McGovern's Metals Recycling",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3284939,
+        "lon": -6.26022,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2665921,
+          53.3210247
+        ]
+      },
+      "properties": {
+        "osm_id": "n564430856",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3210247,
+        "lon": -6.2665921,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2924202,
+          53.3316747
+        ]
+      },
+      "properties": {
+        "osm_id": "n565585596",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3316747,
+        "lon": -6.2924202,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3346566,
+          53.3212157
+        ]
+      },
+      "properties": {
+        "osm_id": "n565585938",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3212157,
+        "lon": -6.3346566,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2764147,
+          53.3378662
+        ]
+      },
+      "properties": {
+        "osm_id": "n583256606",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3378662,
+        "lon": -6.2764147,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4506953,
+          53.3469742
+        ]
+      },
+      "properties": {
+        "osm_id": "n604983332",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3469742,
+        "lon": -6.4506953,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2933384,
+          53.3190917
+        ]
+      },
+      "properties": {
+        "osm_id": "n612930963",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3190917,
+        "lon": -6.2933384,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1697951,
+          53.2977474
+        ]
+      },
+      "properties": {
+        "osm_id": "n613618101",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2977474,
+        "lon": -6.1697951,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2949959,
+          53.3899572
+        ]
+      },
+      "properties": {
+        "osm_id": "n644741194",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3899572,
+        "lon": -6.2949959,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2827756,
+          53.3120623
+        ]
+      },
+      "properties": {
+        "osm_id": "n646566132",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3120623,
+        "lon": -6.2827756,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2734514,
+          53.3625651
+        ]
+      },
+      "properties": {
+        "osm_id": "n662969569",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3625651,
+        "lon": -6.2734514,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1374959,
+          53.2744486
+        ]
+      },
+      "properties": {
+        "osm_id": "n667889324",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2744486,
+        "lon": -6.1374959,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2066839,
+          53.324242
+        ]
+      },
+      "properties": {
+        "osm_id": "n669012859",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.324242,
+        "lon": -6.2066839,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1615481,
+          53.4020212
+        ]
+      },
+      "properties": {
+        "osm_id": "n689404009",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4020212,
+        "lon": -6.1615481,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3434805,
+          53.2990042
+        ]
+      },
+      "properties": {
+        "osm_id": "n715837743",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2990042,
+        "lon": -6.3434805,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2434376,
+          53.2690757
+        ]
+      },
+      "properties": {
+        "osm_id": "n760250461",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2690757,
+        "lon": -6.2434376,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1959147,
+          53.3090989
+        ]
+      },
+      "properties": {
+        "osm_id": "n909368243",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3090989,
+        "lon": -6.1959147,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2033875,
+          53.3151944
+        ]
+      },
+      "properties": {
+        "osm_id": "n909489315",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3151944,
+        "lon": -6.2033875,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1783933,
+          53.3025368
+        ]
+      },
+      "properties": {
+        "osm_id": "n910665753",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3025368,
+        "lon": -6.1783933,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3233733,
+          53.3705144
+        ]
+      },
+      "properties": {
+        "osm_id": "n967677657",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3705144,
+        "lon": -6.3233733,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.284062,
+          53.335715
+        ]
+      },
+      "properties": {
+        "osm_id": "n973852345",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.335715,
+        "lon": -6.284062,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.330194,
+          53.321288
+        ]
+      },
+      "properties": {
+        "osm_id": "n989132696",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.321288,
+        "lon": -6.330194,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4315223,
+          53.3450095
+        ]
+      },
+      "properties": {
+        "osm_id": "n1264074846",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3450095,
+        "lon": -6.4315223,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4274956,
+          53.4045104
+        ]
+      },
+      "properties": {
+        "osm_id": "n1279248475",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4045104,
+        "lon": -6.4274956,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2890023,
+          53.2779635
+        ]
+      },
+      "properties": {
+        "osm_id": "n1320086493",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2779635,
+        "lon": -6.2890023,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2439833,
+          53.3023815
+        ]
+      },
+      "properties": {
+        "osm_id": "n1348263279",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3023815,
+        "lon": -6.2439833,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4254922,
+          53.3838948
+        ]
+      },
+      "properties": {
+        "osm_id": "n1358185621",
+        "name": "Glass and Can Banks",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3838948,
+        "lon": -6.4254922,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2733125,
+          53.2687156
+        ]
+      },
+      "properties": {
+        "osm_id": "n1425374428",
+        "name": "Marlay Park College Road Car Park",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2687156,
+        "lon": -6.2733125,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1806668,
+          53.2957579
+        ]
+      },
+      "properties": {
+        "osm_id": "n1425999497",
+        "name": "Carysfort Park Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2957579,
+        "lon": -6.1806668,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4537699,
+          53.2363368
+        ]
+      },
+      "properties": {
+        "osm_id": "n1430777327",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2363368,
+        "lon": -6.4537699,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2771031,
+          53.381886
+        ]
+      },
+      "properties": {
+        "osm_id": "n1484714006",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.381886,
+        "lon": -6.2771031,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2135814,
+          53.3630581
+        ]
+      },
+      "properties": {
+        "osm_id": "n1517883509",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3630581,
+        "lon": -6.2135814,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2858287,
+          53.3397409
+        ]
+      },
+      "properties": {
+        "osm_id": "n1521411062",
+        "name": "Marrowbone Lane Bring Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3397409,
+        "lon": -6.2858287,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2234842,
+          53.3632451
+        ]
+      },
+      "properties": {
+        "osm_id": "n1521585675",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3632451,
+        "lon": -6.2234842,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2163782,
+          53.3831534
+        ]
+      },
+      "properties": {
+        "osm_id": "n1529996841",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3831534,
+        "lon": -6.2163782,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2258577,
+          53.3345842
+        ]
+      },
+      "properties": {
+        "osm_id": "n1565420556",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3345842,
+        "lon": -6.2258577,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1542622,
+          53.2880676
+        ]
+      },
+      "properties": {
+        "osm_id": "n1572257527",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2880676,
+        "lon": -6.1542622,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.278083,
+          53.407833
+        ]
+      },
+      "properties": {
+        "osm_id": "n1583388211",
+        "name": "Ikea",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.407833,
+        "lon": -6.278083,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1771678,
+          53.527143
+        ]
+      },
+      "properties": {
+        "osm_id": "n1606667997",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.527143,
+        "lon": -6.1771678,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1454319,
+          53.5626382
+        ]
+      },
+      "properties": {
+        "osm_id": "n1607068665",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5626382,
+        "lon": -6.1454319,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2750856,
+          53.3328382
+        ]
+      },
+      "properties": {
+        "osm_id": "n1609451745",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3328382,
+        "lon": -6.2750856,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2998278,
+          53.3908038
+        ]
+      },
+      "properties": {
+        "osm_id": "n1691814783",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3908038,
+        "lon": -6.2998278,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2402415,
+          53.3548175
+        ]
+      },
+      "properties": {
+        "osm_id": "n1794164476",
+        "name": "Ossory Car Recycling Co.",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3548175,
+        "lon": -6.2402415,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2489629,
+          53.3314203
+        ]
+      },
+      "properties": {
+        "osm_id": "n1824651388",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3314203,
+        "lon": -6.2489629,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1525434,
+          53.5881591
+        ]
+      },
+      "properties": {
+        "osm_id": "n1829889883",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5881591,
+        "lon": -6.1525434,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1542852,
+          53.3854499
+        ]
+      },
+      "properties": {
+        "osm_id": "n2080833060",
+        "name": "Bottle Bank",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3854499,
+        "lon": -6.1542852,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3599746,
+          53.263359
+        ]
+      },
+      "properties": {
+        "osm_id": "n2099560923",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.263359,
+        "lon": -6.3599746,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2698693,
+          53.3738634
+        ]
+      },
+      "properties": {
+        "osm_id": "n2105642554",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3738634,
+        "lon": -6.2698693,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3787064,
+          53.3508072
+        ]
+      },
+      "properties": {
+        "osm_id": "n2218807507",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3508072,
+        "lon": -6.3787064,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.117011,
+          53.2224214
+        ]
+      },
+      "properties": {
+        "osm_id": "n2331946771",
+        "name": "Shanganagh Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2224214,
+        "lon": -6.117011,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1133529,
+          53.2569136
+        ]
+      },
+      "properties": {
+        "osm_id": "n2364394640",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2569136,
+        "lon": -6.1133529,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.136844,
+          53.4348541
+        ]
+      },
+      "properties": {
+        "osm_id": "n2562954483",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4348541,
+        "lon": -6.136844,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.181819,
+          53.389134
+        ]
+      },
+      "properties": {
+        "osm_id": "n2716323110",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.389134,
+        "lon": -6.181819,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2573764,
+          53.3446226
+        ]
+      },
+      "properties": {
+        "osm_id": "n2866511321",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.3446226,
+        "lon": -6.2573764,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1859282,
+          53.6124401
+        ]
+      },
+      "properties": {
+        "osm_id": "n2969077417",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.6124401,
+        "lon": -6.1859282,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2757693,
+          53.3301215
+        ]
+      },
+      "properties": {
+        "osm_id": "n3008616857",
+        "name": "Mullen Scrap",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3301215,
+        "lon": -6.2757693,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.27351,
+          53.3126213
+        ]
+      },
+      "properties": {
+        "osm_id": "n3067708137",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3126213,
+        "lon": -6.27351,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2561595,
+          53.3693746
+        ]
+      },
+      "properties": {
+        "osm_id": "n3342235981",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3693746,
+        "lon": -6.2561595,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2446255,
+          53.3550383
+        ]
+      },
+      "properties": {
+        "osm_id": "n3485328273",
+        "name": "Oxigen",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3550383,
+        "lon": -6.2446255,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2443136,
+          53.3549012
+        ]
+      },
+      "properties": {
+        "osm_id": "n3485328274",
+        "name": "Busybees Furniture Recycling",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3549012,
+        "lon": -6.2443136,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.244414,
+          53.3549482
+        ]
+      },
+      "properties": {
+        "osm_id": "n3485328276",
+        "name": "Sunflower Recycling",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3549482,
+        "lon": -6.244414,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2567206,
+          53.3497422
+        ]
+      },
+      "properties": {
+        "osm_id": "n3579586282",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3497422,
+        "lon": -6.2567206,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1096061,
+          53.269331
+        ]
+      },
+      "properties": {
+        "osm_id": "n3709785109",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.269331,
+        "lon": -6.1096061,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1032553,
+          53.2758709
+        ]
+      },
+      "properties": {
+        "osm_id": "n3709808749",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2758709,
+        "lon": -6.1032553,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1852463,
+          53.6040403
+        ]
+      },
+      "properties": {
+        "osm_id": "n3726288829",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.6040403,
+        "lon": -6.1852463,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.289533,
+          53.3653595
+        ]
+      },
+      "properties": {
+        "osm_id": "n3780382837",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3653595,
+        "lon": -6.289533,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.257594,
+          53.3845237
+        ]
+      },
+      "properties": {
+        "osm_id": "n3873003062",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.3845237,
+        "lon": -6.257594,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1497172,
+          53.2957713
+        ]
+      },
+      "properties": {
+        "osm_id": "n4011361862",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2957713,
+        "lon": -6.1497172,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.09402,
+          53.5381289
+        ]
+      },
+      "properties": {
+        "osm_id": "n4535674990",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5381289,
+        "lon": -6.09402,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3794794,
+          53.2962164
+        ]
+      },
+      "properties": {
+        "osm_id": "n4781348722",
+        "name": "B2B Office Supplies",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2962164,
+        "lon": -6.3794794,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.331989,
+          53.3101941
+        ]
+      },
+      "properties": {
+        "osm_id": "n4837170613",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3101941,
+        "lon": -6.331989,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3292066,
+          53.3219175
+        ]
+      },
+      "properties": {
+        "osm_id": "n4913827388",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3219175,
+        "lon": -6.3292066,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3291865,
+          53.3219111
+        ]
+      },
+      "properties": {
+        "osm_id": "n4913827389",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3219111,
+        "lon": -6.3291865,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3292281,
+          53.3219263
+        ]
+      },
+      "properties": {
+        "osm_id": "n4913827390",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3219263,
+        "lon": -6.3292281,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3177793,
+          53.3154005
+        ]
+      },
+      "properties": {
+        "osm_id": "n4913827520",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3154005,
+        "lon": -6.3177793,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3178102,
+          53.3154078
+        ]
+      },
+      "properties": {
+        "osm_id": "n4913827521",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3154078,
+        "lon": -6.3178102,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.317845,
+          53.3154054
+        ]
+      },
+      "properties": {
+        "osm_id": "n4913827522",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3154054,
+        "lon": -6.317845,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3178665,
+          53.3153925
+        ]
+      },
+      "properties": {
+        "osm_id": "n4913827523",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3153925,
+        "lon": -6.3178665,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3180288,
+          53.3152908
+        ]
+      },
+      "properties": {
+        "osm_id": "n4913827524",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3152908,
+        "lon": -6.3180288,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3180985,
+          53.3152483
+        ]
+      },
+      "properties": {
+        "osm_id": "n4913827525",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3152483,
+        "lon": -6.3180985,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1930338,
+          53.3905243
+        ]
+      },
+      "properties": {
+        "osm_id": "n5054927856",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3905243,
+        "lon": -6.1930338,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4512663,
+          53.3293207
+        ]
+      },
+      "properties": {
+        "osm_id": "n5215501225",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3293207,
+        "lon": -6.4512663,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2337354,
+          53.358395
+        ]
+      },
+      "properties": {
+        "osm_id": "n5337813231",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.358395,
+        "lon": -6.2337354,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2337582,
+          53.3583766
+        ]
+      },
+      "properties": {
+        "osm_id": "n5337813232",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3583766,
+        "lon": -6.2337582,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2337877,
+          53.3583566
+        ]
+      },
+      "properties": {
+        "osm_id": "n5337813233",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3583566,
+        "lon": -6.2337877,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2219104,
+          53.4628656
+        ]
+      },
+      "properties": {
+        "osm_id": "n5410332485",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4628656,
+        "lon": -6.2219104,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2572557,
+          53.3848618
+        ]
+      },
+      "properties": {
+        "osm_id": "n5419404782",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3848618,
+        "lon": -6.2572557,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2667391,
+          53.3213496
+        ]
+      },
+      "properties": {
+        "osm_id": "n5431095490",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3213496,
+        "lon": -6.2667391,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1778542,
+          53.2984483
+        ]
+      },
+      "properties": {
+        "osm_id": "n5433115448",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2984483,
+        "lon": -6.1778542,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.281114,
+          53.2945678
+        ]
+      },
+      "properties": {
+        "osm_id": "n5555383469",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2945678,
+        "lon": -6.281114,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2811261,
+          53.2945517
+        ]
+      },
+      "properties": {
+        "osm_id": "n5555383470",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2945517,
+        "lon": -6.2811261,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2876563,
+          53.3906391
+        ]
+      },
+      "properties": {
+        "osm_id": "n5570969899",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3906391,
+        "lon": -6.2876563,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3031701,
+          53.3900106
+        ]
+      },
+      "properties": {
+        "osm_id": "n5581566355",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3900106,
+        "lon": -6.3031701,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1375728,
+          53.4346569
+        ]
+      },
+      "properties": {
+        "osm_id": "n5589105191",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4346569,
+        "lon": -6.1375728,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3951196,
+          53.277258
+        ]
+      },
+      "properties": {
+        "osm_id": "n5600984215",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.277258,
+        "lon": -6.3951196,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2343682,
+          53.3506336
+        ]
+      },
+      "properties": {
+        "osm_id": "n5602544005",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3506336,
+        "lon": -6.2343682,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.45136,
+          53.347725
+        ]
+      },
+      "properties": {
+        "osm_id": "n5618053320",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.347725,
+        "lon": -6.45136,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2309461,
+          53.618638
+        ]
+      },
+      "properties": {
+        "osm_id": "n5622256666",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.618638,
+        "lon": -6.2309461,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1180142,
+          53.2366187
+        ]
+      },
+      "properties": {
+        "osm_id": "n5631086612",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2366187,
+        "lon": -6.1180142,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2468773,
+          53.3118757
+        ]
+      },
+      "properties": {
+        "osm_id": "n5659515203",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3118757,
+        "lon": -6.2468773,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1104566,
+          53.4934904
+        ]
+      },
+      "properties": {
+        "osm_id": "n5670905422",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4934904,
+        "lon": -6.1104566,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2898029,
+          53.2786571
+        ]
+      },
+      "properties": {
+        "osm_id": "n5693414200",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2786571,
+        "lon": -6.2898029,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2905305,
+          53.2790864
+        ]
+      },
+      "properties": {
+        "osm_id": "n5693414201",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2790864,
+        "lon": -6.2905305,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2279476,
+          53.3975428
+        ]
+      },
+      "properties": {
+        "osm_id": "n6043090844",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3975428,
+        "lon": -6.2279476,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3786323,
+          53.386915
+        ]
+      },
+      "properties": {
+        "osm_id": "n6046870675",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.386915,
+        "lon": -6.3786323,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3152834,
+          53.3197754
+        ]
+      },
+      "properties": {
+        "osm_id": "n6179754247",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3197754,
+        "lon": -6.3152834,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2664843,
+          53.3971537
+        ]
+      },
+      "properties": {
+        "osm_id": "n6219768655",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3971537,
+        "lon": -6.2664843,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2642656,
+          53.3912336
+        ]
+      },
+      "properties": {
+        "osm_id": "n6254341533",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3912336,
+        "lon": -6.2642656,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2225591,
+          53.4630164
+        ]
+      },
+      "properties": {
+        "osm_id": "n6257763535",
+        "name": "Recycling centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4630164,
+        "lon": -6.2225591,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4699407,
+          53.2969516
+        ]
+      },
+      "properties": {
+        "osm_id": "n6291280539",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2969516,
+        "lon": -6.4699407,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2436884,
+          53.3823628
+        ]
+      },
+      "properties": {
+        "osm_id": "n6426795525",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3823628,
+        "lon": -6.2436884,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3714819,
+          53.2883165
+        ]
+      },
+      "properties": {
+        "osm_id": "n6533787554",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2883165,
+        "lon": -6.3714819,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3215982,
+          53.3184328
+        ]
+      },
+      "properties": {
+        "osm_id": "n6534482507",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3184328,
+        "lon": -6.3215982,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0575181,
+          53.3727041
+        ]
+      },
+      "properties": {
+        "osm_id": "n6613089604",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3727041,
+        "lon": -6.0575181,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1326211,
+          53.2493839
+        ]
+      },
+      "properties": {
+        "osm_id": "n7185899082",
+        "name": "Clothing Donation Bank",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2493839,
+        "lon": -6.1326211,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.19558,
+          53.6064109
+        ]
+      },
+      "properties": {
+        "osm_id": "n7294930452",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.6064109,
+        "lon": -6.19558,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3952188,
+          53.3924223
+        ]
+      },
+      "properties": {
+        "osm_id": "n7616111383",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3924223,
+        "lon": -6.3952188,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2644314,
+          53.2760203
+        ]
+      },
+      "properties": {
+        "osm_id": "n7792736219",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2760203,
+        "lon": -6.2644314,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2433076,
+          53.4531501
+        ]
+      },
+      "properties": {
+        "osm_id": "n7813934839",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4531501,
+        "lon": -6.2433076,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2943822,
+          53.382722
+        ]
+      },
+      "properties": {
+        "osm_id": "n7960069130",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.382722,
+        "lon": -6.2943822,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2949094,
+          53.3835293
+        ]
+      },
+      "properties": {
+        "osm_id": "n7998110009",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3835293,
+        "lon": -6.2949094,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2609942,
+          53.3694456
+        ]
+      },
+      "properties": {
+        "osm_id": "n8025655204",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3694456,
+        "lon": -6.2609942,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4124484,
+          53.3053696
+        ]
+      },
+      "properties": {
+        "osm_id": "n8091679871",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3053696,
+        "lon": -6.4124484,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3597099,
+          53.2614247
+        ]
+      },
+      "properties": {
+        "osm_id": "n8092336726",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2614247,
+        "lon": -6.3597099,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3611852,
+          53.260714
+        ]
+      },
+      "properties": {
+        "osm_id": "n8092336727",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.260714,
+        "lon": -6.3611852,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4086901,
+          53.3164976
+        ]
+      },
+      "properties": {
+        "osm_id": "n8098103399",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3164976,
+        "lon": -6.4086901,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3596253,
+          53.334504
+        ]
+      },
+      "properties": {
+        "osm_id": "n8276433196",
+        "name": "Harvey Norman",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.334504,
+        "lon": -6.3596253,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2537348,
+          53.369238
+        ]
+      },
+      "properties": {
+        "osm_id": "n8429615887",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.369238,
+        "lon": -6.2537348,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2388651,
+          53.3136816
+        ]
+      },
+      "properties": {
+        "osm_id": "n8508133376",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3136816,
+        "lon": -6.2388651,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3614426,
+          53.3432202
+        ]
+      },
+      "properties": {
+        "osm_id": "n8521097193",
+        "name": "Bring Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3432202,
+        "lon": -6.3614426,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4362263,
+          53.3475721
+        ]
+      },
+      "properties": {
+        "osm_id": "n8586456232",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3475721,
+        "lon": -6.4362263,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2607754,
+          53.3995272
+        ]
+      },
+      "properties": {
+        "osm_id": "n8826492626",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3995272,
+        "lon": -6.2607754,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2749256,
+          53.4027985
+        ]
+      },
+      "properties": {
+        "osm_id": "n8826492633",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4027985,
+        "lon": -6.2749256,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.326467,
+          53.342229
+        ]
+      },
+      "properties": {
+        "osm_id": "n8826535675",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.342229,
+        "lon": -6.326467,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.352199,
+          53.3413438
+        ]
+      },
+      "properties": {
+        "osm_id": "n8826535676",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3413438,
+        "lon": -6.352199,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2722445,
+          53.3784428
+        ]
+      },
+      "properties": {
+        "osm_id": "n8826639594",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3784428,
+        "lon": -6.2722445,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3095686,
+          53.3790172
+        ]
+      },
+      "properties": {
+        "osm_id": "n8826639595",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3790172,
+        "lon": -6.3095686,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2999706,
+          53.3850684
+        ]
+      },
+      "properties": {
+        "osm_id": "n8826640542",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3850684,
+        "lon": -6.2999706,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.144852,
+          53.2828108
+        ]
+      },
+      "properties": {
+        "osm_id": "n8870680345",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2828108,
+        "lon": -6.144852,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1448584,
+          53.2828008
+        ]
+      },
+      "properties": {
+        "osm_id": "n8870680346",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2828008,
+        "lon": -6.1448584,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1448456,
+          53.2828199
+        ]
+      },
+      "properties": {
+        "osm_id": "n8870680347",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2828199,
+        "lon": -6.1448456,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1448355,
+          53.2828309
+        ]
+      },
+      "properties": {
+        "osm_id": "n8870680348",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2828309,
+        "lon": -6.1448355,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1448325,
+          53.2828395
+        ]
+      },
+      "properties": {
+        "osm_id": "n8870680349",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2828395,
+        "lon": -6.1448325,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1285579,
+          53.2909657
+        ]
+      },
+      "properties": {
+        "osm_id": "n8872553914",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2909657,
+        "lon": -6.1285579,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1567801,
+          53.2958485
+        ]
+      },
+      "properties": {
+        "osm_id": "n8872746299",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2958485,
+        "lon": -6.1567801,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1568234,
+          53.2958682
+        ]
+      },
+      "properties": {
+        "osm_id": "n8872746300",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2958682,
+        "lon": -6.1568234,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1054313,
+          53.580753
+        ]
+      },
+      "properties": {
+        "osm_id": "n9073250574",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.580753,
+        "lon": -6.1054313,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1088418,
+          53.5776303
+        ]
+      },
+      "properties": {
+        "osm_id": "n9073250575",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5776303,
+        "lon": -6.1088418,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2446252,
+          53.354906
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640769",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.354906,
+        "lon": -6.2446252,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2446614,
+          53.3548708
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640770",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3548708,
+        "lon": -6.2446614,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2446935,
+          53.3548347
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640771",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3548347,
+        "lon": -6.2446935,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2447391,
+          53.3547947
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640772",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3547947,
+        "lon": -6.2447391,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2445702,
+          53.3547563
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640773",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3547563,
+        "lon": -6.2445702,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2445943,
+          53.3547163
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640774",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3547163,
+        "lon": -6.2445943,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2446319,
+          53.3546714
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640775",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3546714,
+        "lon": -6.2446319,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2446815,
+          53.354637
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640776",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.354637,
+        "lon": -6.2446815,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2447619,
+          53.3546138
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640777",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3546138,
+        "lon": -6.2447619,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2448142,
+          53.3546314
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640778",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3546314,
+        "lon": -6.2448142,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2448733,
+          53.3546642
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640779",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3546642,
+        "lon": -6.2448733,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2449323,
+          53.3546955
+        ]
+      },
+      "properties": {
+        "osm_id": "n9102640780",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3546955,
+        "lon": -6.2449323,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1572799,
+          53.528331
+        ]
+      },
+      "properties": {
+        "osm_id": "n9118314976",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.528331,
+        "lon": -6.1572799,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1364765,
+          53.2672447
+        ]
+      },
+      "properties": {
+        "osm_id": "n9272412829",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2672447,
+        "lon": -6.1364765,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1364558,
+          53.2672575
+        ]
+      },
+      "properties": {
+        "osm_id": "n9272412830",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2672575,
+        "lon": -6.1364558,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1363725,
+          53.2673092
+        ]
+      },
+      "properties": {
+        "osm_id": "n9272412831",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2673092,
+        "lon": -6.1363725,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1363854,
+          53.2673013
+        ]
+      },
+      "properties": {
+        "osm_id": "n9272412832",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2673013,
+        "lon": -6.1363854,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1364005,
+          53.2672919
+        ]
+      },
+      "properties": {
+        "osm_id": "n9272412833",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2672919,
+        "lon": -6.1364005,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1364114,
+          53.2672851
+        ]
+      },
+      "properties": {
+        "osm_id": "n9272412834",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2672851,
+        "lon": -6.1364114,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1364255,
+          53.2672763
+        ]
+      },
+      "properties": {
+        "osm_id": "n9272412835",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2672763,
+        "lon": -6.1364255,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.136437,
+          53.2672692
+        ]
+      },
+      "properties": {
+        "osm_id": "n9272412836",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2672692,
+        "lon": -6.136437,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1126269,
+          53.2576891
+        ]
+      },
+      "properties": {
+        "osm_id": "n9278918872",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2576891,
+        "lon": -6.1126269,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2276476,
+          53.3441413
+        ]
+      },
+      "properties": {
+        "osm_id": "n9344902459",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.3441413,
+        "lon": -6.2276476,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2025542,
+          53.3067063
+        ]
+      },
+      "properties": {
+        "osm_id": "n9389592278",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.3067063,
+        "lon": -6.2025542,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2036505,
+          53.3063723
+        ]
+      },
+      "properties": {
+        "osm_id": "n9389592283",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.3063723,
+        "lon": -6.2036505,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1174038,
+          53.4789152
+        ]
+      },
+      "properties": {
+        "osm_id": "n9522291487",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4789152,
+        "lon": -6.1174038,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1763649,
+          53.2880244
+        ]
+      },
+      "properties": {
+        "osm_id": "n9584072930",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2880244,
+        "lon": -6.1763649,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1763543,
+          53.2880319
+        ]
+      },
+      "properties": {
+        "osm_id": "n9584072931",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2880319,
+        "lon": -6.1763543,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.176347,
+          53.2880395
+        ]
+      },
+      "properties": {
+        "osm_id": "n9584072932",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2880395,
+        "lon": -6.176347,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1763385,
+          53.2880509
+        ]
+      },
+      "properties": {
+        "osm_id": "n9584072933",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2880509,
+        "lon": -6.1763385,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1763765,
+          53.288025
+        ]
+      },
+      "properties": {
+        "osm_id": "n9584072934",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.288025,
+        "lon": -6.1763765,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1763912,
+          53.2880263
+        ]
+      },
+      "properties": {
+        "osm_id": "n9584072935",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2880263,
+        "lon": -6.1763912,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.176405,
+          53.2880288
+        ]
+      },
+      "properties": {
+        "osm_id": "n9584072936",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2880288,
+        "lon": -6.176405,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1764218,
+          53.2880319
+        ]
+      },
+      "properties": {
+        "osm_id": "n9584072937",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2880319,
+        "lon": -6.1764218,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3394941,
+          53.287029
+        ]
+      },
+      "properties": {
+        "osm_id": "n9814430948",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.287029,
+        "lon": -6.3394941,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3394685,
+          53.2870292
+        ]
+      },
+      "properties": {
+        "osm_id": "n9814430949",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.2870292,
+        "lon": -6.3394685,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3394446,
+          53.2870297
+        ]
+      },
+      "properties": {
+        "osm_id": "n9814430950",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.2870297,
+        "lon": -6.3394446,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3395177,
+          53.2870306
+        ]
+      },
+      "properties": {
+        "osm_id": "n9814430951",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.2870306,
+        "lon": -6.3395177,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2246911,
+          53.3305808
+        ]
+      },
+      "properties": {
+        "osm_id": "n9821202453",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3305808,
+        "lon": -6.2246911,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3749775,
+          53.2858779
+        ]
+      },
+      "properties": {
+        "osm_id": "n9937775654",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2858779,
+        "lon": -6.3749775,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4154765,
+          53.3053185
+        ]
+      },
+      "properties": {
+        "osm_id": "n9951505280",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3053185,
+        "lon": -6.4154765,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1241699,
+          53.4324897
+        ]
+      },
+      "properties": {
+        "osm_id": "n10302327094",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4324897,
+        "lon": -6.1241699,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1454111,
+          53.5626532
+        ]
+      },
+      "properties": {
+        "osm_id": "n10586451303",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5626532,
+        "lon": -6.1454111,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1453917,
+          53.5626643
+        ]
+      },
+      "properties": {
+        "osm_id": "n10586451304",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5626643,
+        "lon": -6.1453917,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1453802,
+          53.5626727
+        ]
+      },
+      "properties": {
+        "osm_id": "n10586473305",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5626727,
+        "lon": -6.1453802,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1453614,
+          53.5626847
+        ]
+      },
+      "properties": {
+        "osm_id": "n10586473306",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5626847,
+        "lon": -6.1453614,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1642318,
+          53.5270351
+        ]
+      },
+      "properties": {
+        "osm_id": "n10597364776",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5270351,
+        "lon": -6.1642318,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1642057,
+          53.5270346
+        ]
+      },
+      "properties": {
+        "osm_id": "n10598974244",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5270346,
+        "lon": -6.1642057,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1641875,
+          53.5270342
+        ]
+      },
+      "properties": {
+        "osm_id": "n10598974245",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5270342,
+        "lon": -6.1641875,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1641701,
+          53.5270339
+        ]
+      },
+      "properties": {
+        "osm_id": "n10598974246",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5270339,
+        "lon": -6.1641701,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1641513,
+          53.5270335
+        ]
+      },
+      "properties": {
+        "osm_id": "n10598974247",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5270335,
+        "lon": -6.1641513,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1640776,
+          53.527032
+        ]
+      },
+      "properties": {
+        "osm_id": "n10598974248",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.527032,
+        "lon": -6.1640776,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1641338,
+          53.5270331
+        ]
+      },
+      "properties": {
+        "osm_id": "n10598974249",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5270331,
+        "lon": -6.1641338,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1641157,
+          53.5270328
+        ]
+      },
+      "properties": {
+        "osm_id": "n10598974250",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5270328,
+        "lon": -6.1641157,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.164099,
+          53.5270324
+        ]
+      },
+      "properties": {
+        "osm_id": "n10598974251",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5270324,
+        "lon": -6.164099,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1640561,
+          53.5270316
+        ]
+      },
+      "properties": {
+        "osm_id": "n10598974253",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5270316,
+        "lon": -6.1640561,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3956568,
+          53.5334737
+        ]
+      },
+      "properties": {
+        "osm_id": "n10616489463",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5334737,
+        "lon": -6.3956568,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3956917,
+          53.5334753
+        ]
+      },
+      "properties": {
+        "osm_id": "n10616489464",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5334753,
+        "lon": -6.3956917,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1536152,
+          53.589106
+        ]
+      },
+      "properties": {
+        "osm_id": "n10678795947",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.589106,
+        "lon": -6.1536152,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1536346,
+          53.5891191
+        ]
+      },
+      "properties": {
+        "osm_id": "n10678795948",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5891191,
+        "lon": -6.1536346,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1642181,
+          53.5270352
+        ]
+      },
+      "properties": {
+        "osm_id": "n10723917495",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5270352,
+        "lon": -6.1642181,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1395695,
+          53.2594806
+        ]
+      },
+      "properties": {
+        "osm_id": "n10743501138",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2594806,
+        "lon": -6.1395695,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1395422,
+          53.2594602
+        ]
+      },
+      "properties": {
+        "osm_id": "n10743501153",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2594602,
+        "lon": -6.1395422,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1396092,
+          53.2595131
+        ]
+      },
+      "properties": {
+        "osm_id": "n10743501154",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2595131,
+        "lon": -6.1396092,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.139587,
+          53.2594957
+        ]
+      },
+      "properties": {
+        "osm_id": "n10743501155",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2594957,
+        "lon": -6.139587,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1396278,
+          53.2595297
+        ]
+      },
+      "properties": {
+        "osm_id": "n10743501157",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2595297,
+        "lon": -6.1396278,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1396484,
+          53.2595472
+        ]
+      },
+      "properties": {
+        "osm_id": "n10743501158",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2595472,
+        "lon": -6.1396484,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1396685,
+          53.2595646
+        ]
+      },
+      "properties": {
+        "osm_id": "n10743501159",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2595646,
+        "lon": -6.1396685,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1396839,
+          53.2595793
+        ]
+      },
+      "properties": {
+        "osm_id": "n10743501160",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2595793,
+        "lon": -6.1396839,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1397037,
+          53.2595958
+        ]
+      },
+      "properties": {
+        "osm_id": "n10743501161",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2595958,
+        "lon": -6.1397037,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2096337,
+          53.2765456
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794026708",
+        "name": "Carmenhall Road",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2765456,
+        "lon": -6.2096337,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2164968,
+          53.2755358
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794026709",
+        "name": "Sandyford Bracken Road",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2755358,
+        "lon": -6.2164968,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2234797,
+          53.2770472
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794026710",
+        "name": "Balally Shopping Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2770472,
+        "lon": -6.2234797,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2527695,
+          53.2936669
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794043023",
+        "name": "Churchtown Finsbury Park",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2936669,
+        "lon": -6.2527695,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2608809,
+          53.2958937
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794043024",
+        "name": "Churchtown Supervalu",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2958937,
+        "lon": -6.2608809,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2682139,
+          53.2999003
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794043025",
+        "name": "Churchtown Glenside Pub",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2999003,
+        "lon": -6.2682139,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.265957,
+          53.2901773
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794043026",
+        "name": "Nutgrove Nutgrove Shopping Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2901773,
+        "lon": -6.265957,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2562151,
+          53.2822921
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794043027",
+        "name": "Dundrum Medowbrook Leisure Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2822921,
+        "lon": -6.2562151,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2676774,
+          53.2779553
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794043028",
+        "name": "Marlay Park Grange Road Car Park",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2779553,
+        "lon": -6.2676774,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2401489,
+          53.2642539
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794043029",
+        "name": "Sandyford Lamb Doyle's Pub",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2642539,
+        "lon": -6.2401489,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1627792,
+          53.2610654
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794065979",
+        "name": "Cabinteely Cabinteely Park, Car Park",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2610654,
+        "lon": -6.1627792,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.161263,
+          53.2676827
+        ]
+      },
+      "properties": {
+        "osm_id": "n10794065983",
+        "name": "Cornelscourt Dunnes Stores",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2676827,
+        "lon": -6.161263,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1535275,
+          53.2621066
+        ]
+      },
+      "properties": {
+        "osm_id": "n10796914928",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2621066,
+        "lon": -6.1535275,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1995204,
+          53.289445
+        ]
+      },
+      "properties": {
+        "osm_id": "n10948866270",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.289445,
+        "lon": -6.1995204,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2454452,
+          53.4302439
+        ]
+      },
+      "properties": {
+        "osm_id": "n11023837283",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4302439,
+        "lon": -6.2454452,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1373579,
+          53.4324633
+        ]
+      },
+      "properties": {
+        "osm_id": "n11077504910",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4324633,
+        "lon": -6.1373579,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1104094,
+          53.4934894
+        ]
+      },
+      "properties": {
+        "osm_id": "n11429902690",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4934894,
+        "lon": -6.1104094,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1104359,
+          53.4934896
+        ]
+      },
+      "properties": {
+        "osm_id": "n11429902691",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4934896,
+        "lon": -6.1104359,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2438846,
+          53.4523173
+        ]
+      },
+      "properties": {
+        "osm_id": "n11904075770",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4523173,
+        "lon": -6.2438846,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1854794,
+          53.3041566
+        ]
+      },
+      "properties": {
+        "osm_id": "n11985214920",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.3041566,
+        "lon": -6.1854794,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0993995,
+          53.5470701
+        ]
+      },
+      "properties": {
+        "osm_id": "n12077590939",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5470701,
+        "lon": -6.0993995,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0994024,
+          53.547054
+        ]
+      },
+      "properties": {
+        "osm_id": "n12077590940",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.547054,
+        "lon": -6.0994024,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0996221,
+          53.5470469
+        ]
+      },
+      "properties": {
+        "osm_id": "n12077590941",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5470469,
+        "lon": -6.0996221,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0996571,
+          53.5470485
+        ]
+      },
+      "properties": {
+        "osm_id": "n12077590942",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5470485,
+        "lon": -6.0996571,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0996333,
+          53.5470474
+        ]
+      },
+      "properties": {
+        "osm_id": "n12077590943",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5470474,
+        "lon": -6.0996333,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.099645,
+          53.5470479
+        ]
+      },
+      "properties": {
+        "osm_id": "n12077590944",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5470479,
+        "lon": -6.099645,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1953015,
+          53.3455969
+        ]
+      },
+      "properties": {
+        "osm_id": "n12085868570",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3455969,
+        "lon": -6.1953015,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1951853,
+          53.3456
+        ]
+      },
+      "properties": {
+        "osm_id": "n12085868571",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3456,
+        "lon": -6.1951853,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2377651,
+          53.4466431
+        ]
+      },
+      "properties": {
+        "osm_id": "n12099171273",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4466431,
+        "lon": -6.2377651,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2377687,
+          53.4467856
+        ]
+      },
+      "properties": {
+        "osm_id": "n12099176872",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4467856,
+        "lon": -6.2377687,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2556713,
+          53.343888
+        ]
+      },
+      "properties": {
+        "osm_id": "n12281083876",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.343888,
+        "lon": -6.2556713,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2560012,
+          53.3445658
+        ]
+      },
+      "properties": {
+        "osm_id": "n12281087388",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3445658,
+        "lon": -6.2560012,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2556597,
+          53.343921
+        ]
+      },
+      "properties": {
+        "osm_id": "n12281091115",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.343921,
+        "lon": -6.2556597,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2604127,
+          53.3394406
+        ]
+      },
+      "properties": {
+        "osm_id": "n12358550646",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.3394406,
+        "lon": -6.2604127,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1241438,
+          53.2303958
+        ]
+      },
+      "properties": {
+        "osm_id": "n12362255001",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2303958,
+        "lon": -6.1241438,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.124077,
+          53.2308512
+        ]
+      },
+      "properties": {
+        "osm_id": "n12362265225",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2308512,
+        "lon": -6.124077,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.245864,
+          53.426417
+        ]
+      },
+      "properties": {
+        "osm_id": "n12455497923",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.426417,
+        "lon": -6.245864,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2460571,
+          53.4260503
+        ]
+      },
+      "properties": {
+        "osm_id": "n12455509410",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4260503,
+        "lon": -6.2460571,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1025582,
+          53.5236921
+        ]
+      },
+      "properties": {
+        "osm_id": "n12504504870",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5236921,
+        "lon": -6.1025582,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0825039,
+          53.5223342
+        ]
+      },
+      "properties": {
+        "osm_id": "n12513038389",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5223342,
+        "lon": -6.0825039,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1051905,
+          53.5828275
+        ]
+      },
+      "properties": {
+        "osm_id": "n12625167497",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5828275,
+        "lon": -6.1051905,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1250322,
+          53.577943
+        ]
+      },
+      "properties": {
+        "osm_id": "n12642556262",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.577943,
+        "lon": -6.1250322,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0920787,
+          53.5185961
+        ]
+      },
+      "properties": {
+        "osm_id": "n12695352054",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.5185961,
+        "lon": -6.0920787,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4061237,
+          53.3494461
+        ]
+      },
+      "properties": {
+        "osm_id": "n12700952501",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3494461,
+        "lon": -6.4061237,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4581189,
+          53.3440916
+        ]
+      },
+      "properties": {
+        "osm_id": "n13001925491",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3440916,
+        "lon": -6.4581189,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3083508,
+          53.3274878
+        ]
+      },
+      "properties": {
+        "osm_id": "n13121608601",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3274878,
+        "lon": -6.3083508,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2270476,
+          53.3322222
+        ]
+      },
+      "properties": {
+        "osm_id": "n13152981057",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3322222,
+        "lon": -6.2270476,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2266746,
+          53.3319797
+        ]
+      },
+      "properties": {
+        "osm_id": "n13186032567",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3319797,
+        "lon": -6.2266746,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.246656,
+          53.4285009
+        ]
+      },
+      "properties": {
+        "osm_id": "n13246221712",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4285009,
+        "lon": -6.246656,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3722587,
+          53.2874521
+        ]
+      },
+      "properties": {
+        "osm_id": "n13312438702",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2874521,
+        "lon": -6.3722587,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2988541,
+          53.4922175
+        ]
+      },
+      "properties": {
+        "osm_id": "n13387398173",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4922175,
+        "lon": -6.2988541,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.277175,
+          53.3539827
+        ]
+      },
+      "properties": {
+        "osm_id": "n13573013147",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3539827,
+        "lon": -6.277175,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2721408,
+          53.3479976
+        ]
+      },
+      "properties": {
+        "osm_id": "n13580234815",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3479976,
+        "lon": -6.2721408,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1326758,
+          53.255992
+        ]
+      },
+      "properties": {
+        "osm_id": "n13704485978",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.255992,
+        "lon": -6.1326758,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1426915,
+          53.2837651
+        ]
+      },
+      "properties": {
+        "osm_id": "n13713319035",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2837651,
+        "lon": -6.1426915,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3907528,
+          53.4090732
+        ]
+      },
+      "properties": {
+        "osm_id": "n13718222475",
+        "name": "Bottle Bank",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4090732,
+        "lon": -6.3907528,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1426731,
+          53.2837757
+        ]
+      },
+      "properties": {
+        "osm_id": "n13719068927",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2837757,
+        "lon": -6.1426731,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2785115,
+          53.354256
+        ]
+      },
+      "properties": {
+        "osm_id": "n13754365344",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.354256,
+        "lon": -6.2785115,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2898947,
+          53.3476412
+        ]
+      },
+      "properties": {
+        "osm_id": "n13925713721",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3476412,
+        "lon": -6.2898947,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2418013,
+          53.4244688
+        ]
+      },
+      "properties": {
+        "osm_id": "n13945417881",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4244688,
+        "lon": -6.2418013,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2105765,
+          53.4663884
+        ]
+      },
+      "properties": {
+        "osm_id": "w23385712",
+        "name": "Swords Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4663884,
+        "lon": -6.2105765,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1549861,
+          53.4564392
+        ]
+      },
+      "properties": {
+        "osm_id": "w23397648",
+        "name": "Malahide Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4564392,
+        "lon": -6.1549861,
+        "admin_division": "Malahide",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3733102,
+          53.5689043
+        ]
+      },
+      "properties": {
+        "osm_id": "w23413898",
+        "name": "Garristown Waste Water Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.5689043,
+        "lon": -6.3733102,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1962866,
+          53.3390198
+        ]
+      },
+      "properties": {
+        "osm_id": "w23567879",
+        "name": "Ringsend Wastewater Treatment Works",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.3390198,
+        "lon": -6.1962866,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4749116,
+          53.3639577
+        ]
+      },
+      "properties": {
+        "osm_id": "w29721595",
+        "name": "Leixlip Waste Water Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.3639577,
+        "lon": -6.4749116,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1892289,
+          53.2549445
+        ]
+      },
+      "properties": {
+        "osm_id": "w35150658",
+        "name": "Ballyogan Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2549445,
+        "lon": -6.1892289,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1267885,
+          53.2880482
+        ]
+      },
+      "properties": {
+        "osm_id": "w37952911",
+        "name": "Eden Park Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2880482,
+        "lon": -6.1267885,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2029278,
+          53.4610358
+        ]
+      },
+      "properties": {
+        "osm_id": "w51346134",
+        "name": "Estuary Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4610358,
+        "lon": -6.2029278,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1372178,
+          53.5823753
+        ]
+      },
+      "properties": {
+        "osm_id": "w52036161",
+        "name": "Barnageeragh Waste Water Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.5823753,
+        "lon": -6.1372178,
+        "admin_division": "Skerries",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2614024,
+          53.5184869
+        ]
+      },
+      "properties": {
+        "osm_id": "w71391632",
+        "name": "Ballyboughal Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.5184869,
+        "lon": -6.2614024,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3958863,
+          53.3840678
+        ]
+      },
+      "properties": {
+        "osm_id": "w111662266",
+        "name": "Coolmine Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3840678,
+        "lon": -6.3958863,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2454985,
+          53.2902772
+        ]
+      },
+      "properties": {
+        "osm_id": "w112490607",
+        "name": "Dundrum Old Dundrum Shopping Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2902772,
+        "lon": -6.2454985,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3088181,
+          53.3247311
+        ]
+      },
+      "properties": {
+        "osm_id": "w152440139",
+        "name": "Windmill Road Bring Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3247311,
+        "lon": -6.3088181,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2143339,
+          53.3417422
+        ]
+      },
+      "properties": {
+        "osm_id": "w160482865",
+        "name": "Ringsend Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3417422,
+        "lon": -6.2143339,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2446148,
+          53.3547738
+        ]
+      },
+      "properties": {
+        "osm_id": "w174092686",
+        "name": "North Strand Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3547738,
+        "lon": -6.2446148,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.191587,
+          53.6010712
+        ]
+      },
+      "properties": {
+        "osm_id": "w229769415",
+        "name": "Pac-On",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.6010712,
+        "lon": -6.191587,
+        "admin_division": "Balbriggan",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1151346,
+          53.2447279
+        ]
+      },
+      "properties": {
+        "osm_id": "w231006106",
+        "name": "Shanganagh Waste Water Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.2447279,
+        "lon": -6.1151346,
+        "admin_division": "Shankill",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2637002,
+          53.2832591
+        ]
+      },
+      "properties": {
+        "osm_id": "w255761743",
+        "name": "Ballinteer Stonemason's Way",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2832591,
+        "lon": -6.2637002,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2894027,
+          53.3255066
+        ]
+      },
+      "properties": {
+        "osm_id": "w292812460",
+        "name": "Dublin City Council depot",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3255066,
+        "lon": -6.2894027,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2527316,
+          53.5591582
+        ]
+      },
+      "properties": {
+        "osm_id": "w312561511",
+        "name": "Murphy Environmental",
+        "category": "waste",
+        "subcategory": "landuse=landfill",
+        "lat": 53.5591582,
+        "lon": -6.2527316,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4241011,
+          53.4145988
+        ]
+      },
+      "properties": {
+        "osm_id": "w316770269",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4145988,
+        "lon": -6.4241011,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2569224,
+          53.4005145
+        ]
+      },
+      "properties": {
+        "osm_id": "w378717737",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4005145,
+        "lon": -6.2569224,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.209987,
+          53.5731471
+        ]
+      },
+      "properties": {
+        "osm_id": "w442141321",
+        "name": "Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.5731471,
+        "lon": -6.209987,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2033055,
+          53.2701358
+        ]
+      },
+      "properties": {
+        "osm_id": "w480297221",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.2701358,
+        "lon": -6.2033055,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3189951,
+          53.282815
+        ]
+      },
+      "properties": {
+        "osm_id": "w517065257",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.282815,
+        "lon": -6.3189951,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2528813,
+          53.3991396
+        ]
+      },
+      "properties": {
+        "osm_id": "w528200196",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3991396,
+        "lon": -6.2528813,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4543641,
+          53.3231472
+        ]
+      },
+      "properties": {
+        "osm_id": "w538878075",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.3231472,
+        "lon": -6.4543641,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2774826,
+          53.3552589
+        ]
+      },
+      "properties": {
+        "osm_id": "w543373151",
+        "name": "Grangegorman Bring Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3552589,
+        "lon": -6.2774826,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3646874,
+          53.4121339
+        ]
+      },
+      "properties": {
+        "osm_id": "w545747873",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.4121339,
+        "lon": -6.3646874,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2202846,
+          53.4629462
+        ]
+      },
+      "properties": {
+        "osm_id": "w550274710",
+        "name": "Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4629462,
+        "lon": -6.2202846,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1197779,
+          53.4863299
+        ]
+      },
+      "properties": {
+        "osm_id": "w594786009",
+        "name": "Portrane Waste Water Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4863299,
+        "lon": -6.1197779,
+        "admin_division": "Donabate",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4403565,
+          53.312391
+        ]
+      },
+      "properties": {
+        "osm_id": "w605963643",
+        "name": "Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.312391,
+        "lon": -6.4403565,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4593102,
+          53.2836586
+        ]
+      },
+      "properties": {
+        "osm_id": "w606162787",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2836586,
+        "lon": -6.4593102,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2263655,
+          53.4597133
+        ]
+      },
+      "properties": {
+        "osm_id": "w666647554",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4597133,
+        "lon": -6.2263655,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4818952,
+          53.3003829
+        ]
+      },
+      "properties": {
+        "osm_id": "w668608739",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.3003829,
+        "lon": -6.4818952,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2866577,
+          53.284065
+        ]
+      },
+      "properties": {
+        "osm_id": "w671618437",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.284065,
+        "lon": -6.2866577,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.291148,
+          53.4540521
+        ]
+      },
+      "properties": {
+        "osm_id": "w675058702",
+        "name": "Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4540521,
+        "lon": -6.291148,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2836369,
+          53.4450195
+        ]
+      },
+      "properties": {
+        "osm_id": "w675058709",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4450195,
+        "lon": -6.2836369,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2709757,
+          53.4878988
+        ]
+      },
+      "properties": {
+        "osm_id": "w690832461",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4878988,
+        "lon": -6.2709757,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3256254,
+          53.4100176
+        ]
+      },
+      "properties": {
+        "osm_id": "w706284591",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4100176,
+        "lon": -6.3256254,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2092501,
+          53.5389129
+        ]
+      },
+      "properties": {
+        "osm_id": "w745423947",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.5389129,
+        "lon": -6.2092501,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2521341,
+          53.2754386
+        ]
+      },
+      "properties": {
+        "osm_id": "w804400075",
+        "name": "Ballinteer Supervalu, Ballinteer Avenue",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2754386,
+        "lon": -6.2521341,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2470744,
+          53.292259
+        ]
+      },
+      "properties": {
+        "osm_id": "w805747888",
+        "name": "Dundrum Sweetmount Avenue",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.292259,
+        "lon": -6.2470744,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3059217,
+          53.3452978
+        ]
+      },
+      "properties": {
+        "osm_id": "w851450584",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.3452978,
+        "lon": -6.3059217,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.316537,
+          53.2895714
+        ]
+      },
+      "properties": {
+        "osm_id": "w866422049",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2895714,
+        "lon": -6.316537,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2487072,
+          53.3195342
+        ]
+      },
+      "properties": {
+        "osm_id": "w906124268",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.3195342,
+        "lon": -6.2487072,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3788167,
+          53.2885365
+        ]
+      },
+      "properties": {
+        "osm_id": "w953164794",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.2885365,
+        "lon": -6.3788167,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2020391,
+          53.3907111
+        ]
+      },
+      "properties": {
+        "osm_id": "w953609138",
+        "name": "Coolock Bring Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3907111,
+        "lon": -6.2020391,
+        "admin_division": "Coolock Village, Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3107117,
+          53.4102386
+        ]
+      },
+      "properties": {
+        "osm_id": "w1006492443",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4102386,
+        "lon": -6.3107117,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1735818,
+          53.379932
+        ]
+      },
+      "properties": {
+        "osm_id": "w1077685965",
+        "name": "Howth Road Bottle Bank, Raheny Library",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.379932,
+        "lon": -6.1735818,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2542583,
+          53.4133421
+        ]
+      },
+      "properties": {
+        "osm_id": "w1100622961",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.4133421,
+        "lon": -6.2542583,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2171919,
+          53.3029838
+        ]
+      },
+      "properties": {
+        "osm_id": "w1155272406",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=waste_disposal",
+        "lat": 53.3029838,
+        "lon": -6.2171919,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2746217,
+          53.3101475
+        ]
+      },
+      "properties": {
+        "osm_id": "w1195293199",
+        "name": "Herzog Park Bring Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3101475,
+        "lon": -6.2746217,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2907504,
+          53.5880173
+        ]
+      },
+      "properties": {
+        "osm_id": "w1208893405",
+        "name": "Naul Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.5880173,
+        "lon": -6.2907504,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.200856,
+          53.2880499
+        ]
+      },
+      "properties": {
+        "osm_id": "w1256724967",
+        "name": "Stillorgan SC",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.2880499,
+        "lon": -6.200856,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3400855,
+          53.3373998
+        ]
+      },
+      "properties": {
+        "osm_id": "w1258336726",
+        "name": "",
+        "category": "waste",
+        "subcategory": "landuse=landfill",
+        "lat": 53.3373998,
+        "lon": -6.3400855,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2522554,
+          53.4063937
+        ]
+      },
+      "properties": {
+        "osm_id": "w1276117555",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4063937,
+        "lon": -6.2522554,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.276542,
+          53.4058211
+        ]
+      },
+      "properties": {
+        "osm_id": "w1276759650",
+        "name": "Ballymun Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.4058211,
+        "lon": -6.276542,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1269674,
+          53.475948
+        ]
+      },
+      "properties": {
+        "osm_id": "w1341660418",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.475948,
+        "lon": -6.1269674,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.207994,
+          53.5264239
+        ]
+      },
+      "properties": {
+        "osm_id": "w1370377941",
+        "name": "Colecot Cottages Waste Water Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.5264239,
+        "lon": -6.207994,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4162785,
+          53.3330146
+        ]
+      },
+      "properties": {
+        "osm_id": "w1448441494",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3330146,
+        "lon": -6.4162785,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4189228,
+          53.3327573
+        ]
+      },
+      "properties": {
+        "osm_id": "w1448441497",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3327573,
+        "lon": -6.4189228,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4160473,
+          53.3317793
+        ]
+      },
+      "properties": {
+        "osm_id": "w1448444982",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3317793,
+        "lon": -6.4160473,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4174238,
+          53.3324643
+        ]
+      },
+      "properties": {
+        "osm_id": "w1458291336",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3324643,
+        "lon": -6.4174238,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3107927,
+          53.529375
+        ]
+      },
+      "properties": {
+        "osm_id": "w1459687690",
+        "name": "Oldtown Wastewater Treatment Plant",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.529375,
+        "lon": -6.3107927,
+        "admin_division": "Oldtown",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.418281,
+          53.3325945
+        ]
+      },
+      "properties": {
+        "osm_id": "w1498544494",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3325945,
+        "lon": -6.418281,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4198449,
+          53.3329009
+        ]
+      },
+      "properties": {
+        "osm_id": "w1498549373",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3329009,
+        "lon": -6.4198449,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4160547,
+          53.3323989
+        ]
+      },
+      "properties": {
+        "osm_id": "w1499084948",
+        "name": "",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3323989,
+        "lon": -6.4160547,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3366535,
+          53.440659
+        ]
+      },
+      "properties": {
+        "osm_id": "w1500923750",
+        "name": "",
+        "category": "waste",
+        "subcategory": "man_made=wastewater_plant",
+        "lat": 53.440659,
+        "lon": -6.3366535,
+        "admin_division": "",
+        "county": "dublin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3460408,
+          53.3102514
+        ]
+      },
+      "properties": {
+        "osm_id": "r7260682",
+        "name": "SDCC Ballymount Recycling Centre",
+        "category": "waste",
+        "subcategory": "amenity=recycling",
+        "lat": 53.3102514,
+        "lon": -6.3460408,
+        "admin_division": "Dublin",
+        "county": "dublin"
+      }
+    }
+  ]
+}

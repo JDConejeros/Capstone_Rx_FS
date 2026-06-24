@@ -1,0 +1,16 @@
+[out:json][timeout:120][maxsize:536870912];
+relation["name"="County Dublin"]["admin_level"="6"]["boundary"="administrative"]->.county_rel;
+.county_rel map_to_area -> .county;
+(
+  way["natural"="water"](area.county);
+  relation["natural"="water"](area.county);
+  way["waterway"="river"](area.county);
+  relation["waterway"="river"](area.county);
+  way["waterway"="stream"](area.county);
+  relation["waterway"="stream"](area.county);
+  way["waterway"="canal"](area.county);
+  relation["waterway"="canal"](area.county);
+  way["natural"="wetland"](area.county);
+  relation["natural"="wetland"](area.county);
+);
+out center;

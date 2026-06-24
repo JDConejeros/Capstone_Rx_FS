@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-06-24T01:59:55Z",
+  "since_date_filter": "2015-01-01",
+  "earliest_alert_date": "2020-03-05",
+  "latest_alert_date": "2026-06-23",
+  "total_alerts_scraped": 325,
+  "alerts_with_approval_number": 39,
+  "alerts_successfully_geolocated": 27,
+  "alerts_in_dublin_county": 7,
+  "alerts_in_galway_county": 0,
+  "alerts_with_unknown_location": 298,
+  "top_hazards_dublin": [
+    {
+      "hazard_type": "Nature Of Danger:",
+      "count": 7
+    }
+  ],
+  "top_hazards_galway": [],
+  "coverage_note": "The FSAI public website currently indexes food alerts from approximately 2022 onwards. Alerts requested from 2015 may not be available online."
+}

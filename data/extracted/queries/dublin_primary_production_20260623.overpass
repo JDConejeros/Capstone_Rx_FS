@@ -1,0 +1,16 @@
+[out:json][timeout:120][maxsize:536870912];
+relation["name"="County Dublin"]["admin_level"="6"]["boundary"="administrative"]->.county_rel;
+.county_rel map_to_area -> .county;
+(
+  way["landuse"="farmland"](area.county);
+  relation["landuse"="farmland"](area.county);
+  way["landuse"="orchard"](area.county);
+  relation["landuse"="orchard"](area.county);
+  way["landuse"="allotments"](area.county);
+  relation["landuse"="allotments"](area.county);
+  way["landuse"="greenhouse_horticulture"](area.county);
+  relation["landuse"="greenhouse_horticulture"](area.county);
+  way["building"="greenhouse"](area.county);
+  relation["building"="greenhouse"](area.county);
+);
+out center;
