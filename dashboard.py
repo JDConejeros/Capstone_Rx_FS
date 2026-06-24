@@ -75,9 +75,11 @@ COUNTY_META = {
 CATEGORY_ORDER = list(CATEGORY_META.keys())
 DEFAULT_CATEGORIES = ["fast_food", "local_market", "farm"]
 DEFAULT_SUBCATEGORIES = ["shop=butcher", "shop=greengrocer", "landuse=farmland"]
-DEFAULT_RADIUS_KM = 3
-MARKER_PX = 16
-MARKER_ICON_PX = 9
+DEFAULT_RADIUS_KM = 5
+MARKER_PX = 20
+MARKER_ICON_PX = 11
+SUBCATEGORY_MARKER_PX = 24
+SUBCATEGORY_MARKER_ICON_PX = 13
 POINT_MAP_HEIGHT = 520
 HEATMAP_MAP_HEIGHT = 480
 CHART_TITLE_TOP_MARGIN = 72
@@ -112,6 +114,39 @@ OSM_SUBCATEGORIES = {
     "farm": "building=greenhouse, landuse=allotments, landuse=farmland, landuse=greenhouse_horticulture",
     "water": "natural=water, natural=wetland, waterway=canal, waterway=river, waterway=stream",
     "waste": "amenity=recycling, amenity=waste_disposal, man_made=wastewater_plant",
+}
+
+SUBCATEGORY_FA_ICONS = {
+    "amenity=bar": "martini-glass",
+    "amenity=cafe": "mug-saucer",
+    "amenity=fast_food": "burger",
+    "amenity=food_court": "bowl-food",
+    "amenity=marketplace": "store",
+    "amenity=pub": "beer-mug-empty",
+    "amenity=recycling": "recycle",
+    "amenity=restaurant": "utensils",
+    "amenity=waste_disposal": "dumpster",
+    "building=greenhouse": "seedling",
+    "landuse=allotments": "carrot",
+    "landuse=farmland": "wheat-awn",
+    "landuse=farmyard": "cow",
+    "landuse=greenhouse_horticulture": "leaf",
+    "landuse=landfill": "trash",
+    "landuse=orchard": "apple-whole",
+    "man_made=wastewater_plant": "faucet-drip",
+    "natural=water": "water",
+    "natural=wetland": "droplet",
+    "shop=bakery": "bread-slice",
+    "shop=butcher": "drumstick-bite",
+    "shop=convenience": "store",
+    "shop=deli": "cheese",
+    "shop=farm": "barn",
+    "shop=greengrocer": "apple-whole",
+    "shop=grocery": "basket-shopping",
+    "shop=supermarket": "cart-shopping",
+    "waterway=canal": "ship",
+    "waterway=river": "water",
+    "waterway=stream": "droplet",
 }
 
 METRIC_DEFINITIONS = [
@@ -204,8 +239,8 @@ CUSTOM_CSS = """
         color: #1E293B;
     }
     .map-legend-icon {
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -215,8 +250,7 @@ CUSTOM_CSS = """
         flex-shrink: 0;
     }
     .map-legend-icon i {
-        font-size: 7px;
-        color: #FFFFFF;
+        font-size: 8px;
         line-height: 1;
     }
     .subcategory-ref {
@@ -486,29 +520,93 @@ def buffer_area_km2(radius_km: float) -> float:
     return math.pi * radius_km**2
 
 
-def category_div_icon(cat: str) -> folium.DivIcon:
-    meta = CATEGORY_META[cat]
-    fa_name = meta["fa_icon"][3:] if meta["fa_icon"].startswith("fa-") else meta["fa_icon"]
+def _category_fa_name(category: str) -> str:
+    fa_icon = CATEGORY_META[category]["fa_icon"]
+    return fa_icon[3:] if fa_icon.startswith("fa-") else fa_icon
+
+
+def subcategory_fa_name(subcategory: str, category: str) -> str:
+    return SUBCATEGORY_FA_ICONS.get(subcategory, _category_fa_name(category))
+
+
+def _hex_to_rgb(hex_color: str) -> tuple[int, int, int]:
+    value = hex_color.lstrip("#")
+    return int(value[0:2], 16), int(value[2:4], 16), int(value[4:6], 16)
+
+
+def _rgb_to_hex(red: int, green: int, blue: int) -> str:
+    return f"#{red:02x}{green:02x}{blue:02x}"
+
+
+def _mix_hex(base: str, target: str, weight: float) -> str:
+    weight = max(0.0, min(1.0, weight))
+    br, bg, bb = _hex_to_rgb(base)
+    tr, tg, tb = _hex_to_rgb(target)
+    return _rgb_to_hex(
+        int(br + (tr - br) * weight),
+        int(bg + (tg - bg) * weight),
+        int(bb + (tb - bb) * weight),
+    )
+
+
+def subcategory_marker_colors(subcategory: str, category: str) -> tuple[str, str]:
+    """Return background and icon colors as distinct tones within the category palette."""
+    base = CATEGORY_META[category]["color"]
+    subcat_index = sum(ord(ch) for ch in subcategory) % 5
+    tint_shift = 0.04 * subcat_index
+    bg_color = _mix_hex(base, "#FFFFFF", 0.62 + tint_shift)
+    icon_color = _mix_hex(base, "#000000", 0.28 + tint_shift * 0.5)
+    return bg_color, icon_color
+
+
+def _div_icon(
+    fa_name: str,
+    bg_color: str,
+    icon_color: str = "#FFFFFF",
+    marker_px: int = MARKER_PX,
+    icon_px: int = MARKER_ICON_PX,
+    border_color: str = "#FFFFFF",
+    border_width: int = 1,
+) -> folium.DivIcon:
     html = f"""
     <div style="
-        background-color:{meta['color']};
-        width:{MARKER_PX}px;
-        height:{MARKER_PX}px;
+        background-color:{bg_color};
+        width:{marker_px}px;
+        height:{marker_px}px;
         border-radius:50%;
-        border:1px solid #ffffff;
+        border:{border_width}px solid {border_color};
         display:flex;
         align-items:center;
         justify-content:center;
         box-shadow:0 0 0 1px rgba(0,0,0,0.15);
     ">
-        <i class="fa-solid fa-{fa_name}" style="color:#ffffff;font-size:{MARKER_ICON_PX}px;line-height:1;"></i>
+        <i class="fa-solid fa-{fa_name}" style="color:{icon_color};font-size:{icon_px}px;line-height:1;"></i>
     </div>
     """
     return folium.DivIcon(
         html=html,
-        icon_size=(MARKER_PX, MARKER_PX),
-        icon_anchor=(MARKER_PX // 2, MARKER_PX // 2),
+        icon_size=(marker_px, marker_px),
+        icon_anchor=(marker_px // 2, marker_px // 2),
         class_name="empty",
+    )
+
+
+def category_div_icon(cat: str) -> folium.DivIcon:
+    meta = CATEGORY_META[cat]
+    return _div_icon(_category_fa_name(cat), meta["color"], "#FFFFFF")
+
+
+def subcategory_div_icon(subcategory: str, category: str) -> folium.DivIcon:
+    bg_color, icon_color = subcategory_marker_colors(subcategory, category)
+    ring_color = CATEGORY_META[category]["color"]
+    return _div_icon(
+        subcategory_fa_name(subcategory, category),
+        bg_color,
+        icon_color,
+        marker_px=SUBCATEGORY_MARKER_PX,
+        icon_px=SUBCATEGORY_MARKER_ICON_PX,
+        border_color=ring_color,
+        border_width=2,
     )
 
 
@@ -527,7 +625,7 @@ def render_map_legend_html(active_categories: list[str]) -> str:
         items.append(
             f'<div class="map-legend-item">'
             f'<span class="map-legend-icon" style="background-color:{meta["color"]};">'
-            f'<i class="fa-solid fa-{fa_name}"></i>'
+            f'<i class="fa-solid fa-{fa_name}" style="color:#FFFFFF;"></i>'
             f"</span>"
             f"<span>{meta['label']}</span>"
             f"</div>"
@@ -645,12 +743,12 @@ def render_subcategory_map_legend_html(
         cat = subcat_to_cat.get(subcat)
         if not cat:
             continue
-        meta = CATEGORY_META[cat]
-        fa_name = meta["fa_icon"][3:] if meta["fa_icon"].startswith("fa-") else meta["fa_icon"]
+        fa_name = subcategory_fa_name(subcat, cat)
+        bg_color, icon_color = subcategory_marker_colors(subcat, cat)
         items.append(
             f'<div class="map-legend-item">'
-            f'<span class="map-legend-icon" style="background-color:{meta["color"]};">'
-            f'<i class="fa-solid fa-{fa_name}"></i>'
+            f'<span class="map-legend-icon" style="background-color:{bg_color};">'
+            f'<i class="fa-solid fa-{fa_name}" style="color:{icon_color};"></i>'
             f"</span>"
             f"<span>{format_subcategory_label(subcat)}</span>"
             f"</div>"
@@ -931,14 +1029,17 @@ def build_county_folium_map_subcategories(
         ).add_to(m)
         return m
 
-    active_categories = [cat for cat in CATEGORY_ORDER if cat in county_df["category"].values]
-    for cat in active_categories:
-        sub = county_df[county_df["category"] == cat]
+    active_subcats = [
+        subcat for subcat in active_subcategories if subcat in county_df["subcategory"].values
+    ]
+    for subcat in sorted(active_subcats, key=format_subcategory_label):
+        sub = county_df[county_df["subcategory"] == subcat]
         if sub.empty:
             continue
+        cat = sub.iloc[0]["category"]
         cat_meta = CATEGORY_META[cat]
-        icon = category_div_icon(cat)
-        fg = folium.FeatureGroup(name=cat_meta["label"], show=True)
+        icon = subcategory_div_icon(subcat, cat)
+        fg = folium.FeatureGroup(name=format_subcategory_label(subcat), show=True)
         for row in sub.itertuples(index=False):
             name = row.name if pd.notna(row.name) and str(row.name).strip() else "(unnamed)"
             tip = (
