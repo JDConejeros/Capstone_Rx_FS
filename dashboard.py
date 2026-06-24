@@ -72,6 +72,9 @@ COUNTY_META = {
     },
 }
 
+COUNTY_DISPLAY_ORDER = ["galway", "dublin"]
+COUNTY_LABEL_ORDER = [COUNTY_META[county]["label"] for county in COUNTY_DISPLAY_ORDER]
+
 CATEGORY_ORDER = list(CATEGORY_META.keys())
 DEFAULT_CATEGORIES = ["fast_food", "local_market", "farm"]
 DEFAULT_SUBCATEGORIES = ["shop=butcher", "shop=greengrocer", "landuse=farmland"]
@@ -483,7 +486,7 @@ def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 def filter_by_city_radius(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
     parts: list[pd.DataFrame] = []
-    for county in ["dublin", "galway"]:
+    for county in COUNTY_DISPLAY_ORDER:
         sub = df[df["county"] == county].copy()
         if sub.empty:
             continue
@@ -791,7 +794,7 @@ def build_comparative_stats_table(summary: pd.DataFrame) -> pd.DataFrame:
         else:
             d_fmt = f"{int(d_val):,}"
             g_fmt = f"{int(g_val):,}"
-        rows.append({"Metric": label, "Dublin": d_fmt, "Galway": g_fmt})
+        rows.append({"Metric": label, "Galway": g_fmt, "Dublin": d_fmt})
     return pd.DataFrame(rows)
 
 
@@ -800,12 +803,12 @@ def render_stats_table_html(summary: pd.DataFrame) -> str:
     body_rows = []
     for _, row in table_df.iterrows():
         body_rows.append(
-            f"<tr><td>{row['Metric']}</td><td>{row['Dublin']}</td><td>{row['Galway']}</td></tr>"
+            f"<tr><td>{row['Metric']}</td><td>{row['Galway']}</td><td>{row['Dublin']}</td></tr>"
         )
     return (
         '<div class="stats-table-wrap">'
         '<table class="stats-table">'
-        "<thead><tr><th>Metric</th><th>Dublin</th><th>Galway</th></tr></thead>"
+        "<thead><tr><th>Metric</th><th>Galway</th><th>Dublin</th></tr></thead>"
         f"<tbody>{''.join(body_rows)}</tbody>"
         "</table></div>"
     )
@@ -836,8 +839,8 @@ def compute_subcategory_density_summary(df: pd.DataFrame, radius_km: float) -> p
         rows.append(
             {
                 "Subcategory": format_subcategory_label(subcat),
-                "Dublin": round(dub_count / area, 2),
                 "Galway": round(gal_count / area, 2),
+                "Dublin": round(dub_count / area, 2),
             }
         )
     return pd.DataFrame(rows)
@@ -849,14 +852,14 @@ def compute_subcategory_density_top10(
     top_n: int = 10,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     summary = compute_subcategory_density_summary(df, radius_km)
-    dublin_top = summary.nlargest(top_n, "Dublin")[["Subcategory", "Dublin"]].reset_index(drop=True)
     galway_top = summary.nlargest(top_n, "Galway")[["Subcategory", "Galway"]].reset_index(drop=True)
-    return dublin_top, galway_top
+    dublin_top = summary.nlargest(top_n, "Dublin")[["Subcategory", "Dublin"]].reset_index(drop=True)
+    return galway_top, dublin_top
 
 
 def render_subcategory_density_table_html(
-    dublin_top: pd.DataFrame,
     galway_top: pd.DataFrame,
+    dublin_top: pd.DataFrame,
     radius_km: float,
     top_n: int = 10,
 ) -> str:
@@ -877,13 +880,13 @@ def render_subcategory_density_table_html(
         '<div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">'
         '<div class="stats-table-wrap" style="flex:1;min-width:280px;">'
         '<table class="stats-table">'
-        f"<thead><tr><th>Subcategory</th><th>Dublin (per km²)</th></tr></thead>"
-        f"<tbody>{_rows(dublin_top, 'Dublin')}</tbody>"
+        f"<thead><tr><th>Subcategory</th><th>Galway (per km²)</th></tr></thead>"
+        f"<tbody>{_rows(galway_top, 'Galway')}</tbody>"
         "</table></div>"
         '<div class="stats-table-wrap" style="flex:1;min-width:280px;">'
         '<table class="stats-table">'
-        f"<thead><tr><th>Subcategory</th><th>Galway (per km²)</th></tr></thead>"
-        f"<tbody>{_rows(galway_top, 'Galway')}</tbody>"
+        f"<thead><tr><th>Subcategory</th><th>Dublin (per km²)</th></tr></thead>"
+        f"<tbody>{_rows(dublin_top, 'Dublin')}</tbody>"
         "</table></div>"
         "</div>"
     )
@@ -1177,7 +1180,7 @@ def build_donut(
 def compute_access_summary(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
     area = buffer_area_km2(radius_km)
     rows = []
-    for county in ["dublin", "galway"]:
+    for county in COUNTY_DISPLAY_ORDER:
         sub = df[df["county"] == county]
         food = sub[sub["category"].isin(FOOD_ACCESS_CATEGORIES)]
 
@@ -1253,6 +1256,7 @@ def build_access_comparison_bar(summary: pd.DataFrame) -> go.Figure:
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
     )
+    fig.update_xaxes(categoryorder="array", categoryarray=COUNTY_LABEL_ORDER)
     return fig
 
 
@@ -1294,6 +1298,7 @@ def build_access_density_bar(summary: pd.DataFrame, radius_km: float) -> go.Figu
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
     )
+    fig.update_xaxes(categoryorder="array", categoryarray=COUNTY_LABEL_ORDER)
     return fig
 
 
@@ -1388,7 +1393,7 @@ def main() -> None:
             galway_n = len(filtered[filtered["county"] == "galway"])
             st.caption(
                 f"Showing {len(filtered):,} features within {radius_km} km of each city centre "
-                f"(Dublin: {dublin_n:,}, Galway: {galway_n:,})."
+                f"(Galway: {galway_n:,}, Dublin: {dublin_n:,})."
             )
     
             st.subheader("Spatial maps")
@@ -1403,15 +1408,6 @@ def main() -> None:
     
             col_left, col_right = st.columns(2, gap="large")
             with col_left:
-                st.markdown(f"**{COUNTY_META['dublin']['label']}**")
-                render_folium_html_embed(map_dublin_html, height=POINT_MAP_HEIGHT)
-                render_map_download(
-                    map_dublin_html,
-                    "Download Dublin map (HTML)",
-                    "dublin_food_map.html",
-                    f"dl_dub_map_html_{map_key_suffix}",
-                )
-            with col_right:
                 st.markdown(f"**{COUNTY_META['galway']['label']}**")
                 render_folium_html_embed(map_galway_html, height=POINT_MAP_HEIGHT)
                 render_map_download(
@@ -1419,6 +1415,15 @@ def main() -> None:
                     "Download Galway map (HTML)",
                     "galway_food_map.html",
                     f"dl_gal_map_html_{map_key_suffix}",
+                )
+            with col_right:
+                st.markdown(f"**{COUNTY_META['dublin']['label']}**")
+                render_folium_html_embed(map_dublin_html, height=POINT_MAP_HEIGHT)
+                render_map_download(
+                    map_dublin_html,
+                    "Download Dublin map (HTML)",
+                    "dublin_food_map.html",
+                    f"dl_dub_map_html_{map_key_suffix}",
                 )
     
             st.markdown(render_osm_subcategories_html(), unsafe_allow_html=True)
@@ -1448,20 +1453,20 @@ def main() -> None:
             st.subheader("Points by category")
             d1, d2 = st.columns(2)
             with d1:
-                st.plotly_chart(donut_dublin, use_container_width=True, key="donut_dublin")
-                render_chart_download(
-                    donut_dublin,
-                    "Download Dublin chart (HTML)",
-                    "dublin_category_donut.html",
-                    "dl_dub_donut",
-                )
-            with d2:
                 st.plotly_chart(donut_galway, use_container_width=True, key="donut_galway")
                 render_chart_download(
                     donut_galway,
                     "Download Galway chart (HTML)",
                     "galway_category_donut.html",
                     "dl_gal_donut",
+                )
+            with d2:
+                st.plotly_chart(donut_dublin, use_container_width=True, key="donut_dublin")
+                render_chart_download(
+                    donut_dublin,
+                    "Download Dublin chart (HTML)",
+                    "dublin_category_donut.html",
+                    "dl_dub_donut",
                 )
 
             st.subheader("Healthy vs unhealthy food access")
@@ -1472,20 +1477,20 @@ def main() -> None:
 
             a1, a2 = st.columns(2)
             with a1:
-                st.plotly_chart(access_dublin, use_container_width=True, key="access_dublin")
-                render_chart_download(
-                    access_dublin,
-                    "Download Dublin chart (HTML)",
-                    "dublin_access_donut.html",
-                    "dl_dub_access",
-                )
-            with a2:
                 st.plotly_chart(access_galway, use_container_width=True, key="access_galway")
                 render_chart_download(
                     access_galway,
                     "Download Galway chart (HTML)",
                     "galway_access_donut.html",
                     "dl_gal_access",
+                )
+            with a2:
+                st.plotly_chart(access_dublin, use_container_width=True, key="access_dublin")
+                render_chart_download(
+                    access_dublin,
+                    "Download Dublin chart (HTML)",
+                    "dublin_access_donut.html",
+                    "dl_dub_access",
                 )
 
             b1, b2 = st.columns(2)
@@ -1542,7 +1547,7 @@ def main() -> None:
                 subcat_gal_n = len(subcat_filtered[subcat_filtered["county"] == "galway"])
                 st.caption(
                     f"Showing {len(subcat_filtered):,} features within {subcat_radius_km} km "
-                    f"of each city centre (Dublin: {subcat_dub_n:,}, Galway: {subcat_gal_n:,})."
+                    f"of each city centre (Galway: {subcat_gal_n:,}, Dublin: {subcat_dub_n:,})."
                 )
                 st.markdown(
                     render_subcategory_map_legend_html(subcat_radius_all, selected_subcategories),
@@ -1562,15 +1567,6 @@ def main() -> None:
 
                 subcat_left, subcat_right = st.columns(2, gap="large")
                 with subcat_left:
-                    st.markdown(f"**{COUNTY_META['dublin']['label']}**")
-                    render_folium_html_embed(subcat_map_dublin, height=POINT_MAP_HEIGHT)
-                    render_map_download(
-                        subcat_map_dublin,
-                        "Download Dublin subcategory map (HTML)",
-                        "dublin_subcategory_map.html",
-                        f"dl_dub_subcat_map_{subcat_map_key_suffix}",
-                    )
-                with subcat_right:
                     st.markdown(f"**{COUNTY_META['galway']['label']}**")
                     render_folium_html_embed(subcat_map_galway, height=POINT_MAP_HEIGHT)
                     render_map_download(
@@ -1579,11 +1575,20 @@ def main() -> None:
                         "galway_subcategory_map.html",
                         f"dl_gal_subcat_map_{subcat_map_key_suffix}",
                     )
+                with subcat_right:
+                    st.markdown(f"**{COUNTY_META['dublin']['label']}**")
+                    render_folium_html_embed(subcat_map_dublin, height=POINT_MAP_HEIGHT)
+                    render_map_download(
+                        subcat_map_dublin,
+                        "Download Dublin subcategory map (HTML)",
+                        "dublin_subcategory_map.html",
+                        f"dl_dub_subcat_map_{subcat_map_key_suffix}",
+                    )
 
             st.subheader("Subcategory density")
-            dublin_top, galway_top = compute_subcategory_density_top10(df, subcat_radius_km)
+            galway_top, dublin_top = compute_subcategory_density_top10(df, subcat_radius_km)
             st.markdown(
-                render_subcategory_density_table_html(dublin_top, galway_top, subcat_radius_km),
+                render_subcategory_density_table_html(galway_top, dublin_top, subcat_radius_km),
                 unsafe_allow_html=True,
             )
 
@@ -1596,21 +1601,6 @@ def main() -> None:
             for cat in CATEGORY_ORDER:
                 sub_d1, sub_d2 = st.columns(2)
                 with sub_d1:
-                    sub_donut_dublin = build_category_subcategory_donut(
-                        static_radius_df, "dublin", cat
-                    )
-                    st.plotly_chart(
-                        sub_donut_dublin,
-                        use_container_width=True,
-                        key=f"subcat_donut_dub_{cat}",
-                    )
-                    render_chart_download(
-                        sub_donut_dublin,
-                        f"Download Dublin {CATEGORY_META[cat]['label']} subcategory chart (HTML)",
-                        f"dublin_{cat}_subcategory_donut.html",
-                        f"dl_dub_subcat_{cat}",
-                    )
-                with sub_d2:
                     sub_donut_galway = build_category_subcategory_donut(
                         static_radius_df, "galway", cat
                     )
@@ -1624,6 +1614,21 @@ def main() -> None:
                         f"Download Galway {CATEGORY_META[cat]['label']} subcategory chart (HTML)",
                         f"galway_{cat}_subcategory_donut.html",
                         f"dl_gal_subcat_{cat}",
+                    )
+                with sub_d2:
+                    sub_donut_dublin = build_category_subcategory_donut(
+                        static_radius_df, "dublin", cat
+                    )
+                    st.plotly_chart(
+                        sub_donut_dublin,
+                        use_container_width=True,
+                        key=f"subcat_donut_dub_{cat}",
+                    )
+                    render_chart_download(
+                        sub_donut_dublin,
+                        f"Download Dublin {CATEGORY_META[cat]['label']} subcategory chart (HTML)",
+                        f"dublin_{cat}_subcategory_donut.html",
+                        f"dl_dub_subcat_{cat}",
                     )
 
             st.subheader("Data export")
@@ -1691,27 +1696,16 @@ def main() -> None:
             "Use +/- on each map to adjust zoom."
         )
 
-        col_dub, col_gal = st.columns(2, gap="large")
-        with col_dub:
-            st.markdown(f"### {COUNTY_META['dublin']['label']}")
+        col_gal, col_dub = st.columns(2, gap="large")
         with col_gal:
             st.markdown(f"### {COUNTY_META['galway']['label']}")
+        with col_dub:
+            st.markdown(f"### {COUNTY_META['dublin']['label']}")
 
         for cat in CATEGORY_ORDER:
             st.markdown(render_category_title_html(cat), unsafe_allow_html=True)
             hm_left, hm_right = st.columns(2, gap="large")
             with hm_left:
-                hm_dub = build_category_heatmap_cached(
-                    "dublin", cat, dublin_radius_json, heat_radius_km
-                )
-                render_folium_html_embed(hm_dub, height=HEATMAP_MAP_HEIGHT)
-                render_map_download(
-                    hm_dub,
-                    f"Download Dublin {CATEGORY_META[cat]['label']} heatmap (HTML)",
-                    f"dublin_{cat}_heatmap.html",
-                    f"dl_hm_dub_{cat}_{heat_radius_km}",
-                )
-            with hm_right:
                 hm_gal = build_category_heatmap_cached(
                     "galway", cat, galway_radius_json, heat_radius_km
                 )
@@ -1721,6 +1715,17 @@ def main() -> None:
                     f"Download Galway {CATEGORY_META[cat]['label']} heatmap (HTML)",
                     f"galway_{cat}_heatmap.html",
                     f"dl_hm_gal_{cat}_{heat_radius_km}",
+                )
+            with hm_right:
+                hm_dub = build_category_heatmap_cached(
+                    "dublin", cat, dublin_radius_json, heat_radius_km
+                )
+                render_folium_html_embed(hm_dub, height=HEATMAP_MAP_HEIGHT)
+                render_map_download(
+                    hm_dub,
+                    f"Download Dublin {CATEGORY_META[cat]['label']} heatmap (HTML)",
+                    f"dublin_{cat}_heatmap.html",
+                    f"dl_hm_dub_{cat}_{heat_radius_km}",
                 )
 
         st.markdown(render_osm_subcategories_html(), unsafe_allow_html=True)
