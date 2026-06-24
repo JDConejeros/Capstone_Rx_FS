@@ -11,7 +11,6 @@ import folium
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import plotly.io as pio
 import streamlit as st
 import streamlit.components.v1 as components
 from branca.element import MacroElement
@@ -1000,16 +999,6 @@ def build_access_density_bar(summary: pd.DataFrame, radius_km: float) -> go.Figu
     return fig
 
 
-@st.cache_data(show_spinner=False)
-def cached_fig_png(fig_json: str) -> bytes:
-    fig = pio.from_json(fig_json)
-    return pio.to_image(fig, format="png", scale=2, engine="kaleido")
-
-
-def fig_to_png(fig: go.Figure) -> bytes:
-    return cached_fig_png(fig.to_json())
-
-
 def fig_to_html(fig: go.Figure) -> str:
     return fig.to_html(include_plotlyjs="cdn", full_html=True)
 
@@ -1018,9 +1007,9 @@ def render_chart_download(fig: go.Figure, label: str, filename: str, key: str) -
     st.markdown('<div class="chart-dl-spacer"></div>', unsafe_allow_html=True)
     st.download_button(
         label,
-        data=fig_to_png(fig),
+        data=fig_to_html(fig),
         file_name=filename,
-        mime="image/png",
+        mime="text/html",
         key=key,
     )
     st.markdown('<div class="chart-block-gap"></div>', unsafe_allow_html=True)
@@ -1159,16 +1148,16 @@ def main() -> None:
             st.plotly_chart(donut_dublin, use_container_width=True, key="donut_dublin")
             render_chart_download(
                 donut_dublin,
-                "Download Dublin chart (PNG)",
-                "dublin_category_donut.png",
+                "Download Dublin chart (HTML)",
+                "dublin_category_donut.html",
                 "dl_dub_donut",
             )
         with d2:
             st.plotly_chart(donut_galway, use_container_width=True, key="donut_galway")
             render_chart_download(
                 donut_galway,
-                "Download Galway chart (PNG)",
-                "galway_category_donut.png",
+                "Download Galway chart (HTML)",
+                "galway_category_donut.html",
                 "dl_gal_donut",
             )
 
@@ -1183,16 +1172,16 @@ def main() -> None:
             st.plotly_chart(access_dublin, use_container_width=True, key="access_dublin")
             render_chart_download(
                 access_dublin,
-                "Download Dublin chart (PNG)",
-                "dublin_access_donut.png",
+                "Download Dublin chart (HTML)",
+                "dublin_access_donut.html",
                 "dl_dub_access",
             )
         with a2:
             st.plotly_chart(access_galway, use_container_width=True, key="access_galway")
             render_chart_download(
                 access_galway,
-                "Download Galway chart (PNG)",
-                "galway_access_donut.png",
+                "Download Galway chart (HTML)",
+                "galway_access_donut.html",
                 "dl_gal_access",
             )
 
@@ -1201,16 +1190,16 @@ def main() -> None:
             st.plotly_chart(bar_access, use_container_width=True, key="bar_access")
             render_chart_download(
                 bar_access,
-                "Download comparison bar chart (PNG)",
-                "food_access_comparison.png",
+                "Download comparison bar chart (HTML)",
+                "food_access_comparison.html",
                 "dl_bar_access",
             )
         with b2:
             st.plotly_chart(bar_density, use_container_width=True, key="bar_density")
             render_chart_download(
                 bar_density,
-                "Download density bar chart (PNG)",
-                "food_access_density.png",
+                "Download density bar chart (HTML)",
+                "food_access_density.html",
                 "dl_bar_density",
             )
 
