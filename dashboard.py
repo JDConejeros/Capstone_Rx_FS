@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import io
+import json
 import math
 import base64
 from pathlib import Path
@@ -19,6 +20,13 @@ from folium.plugins import HeatMap
 from jinja2 import Template
 
 DATA_DIR = Path(__file__).parent / "data" / "extracted" / "csv"
+NUTRITION_DATA_PATH = Path(__file__).parent / "data" / "Frequency_nutritional_consumption.csv"
+NUTRITION_SOURCE_URL = "https://data.gov.ie/dataset/ihs44-frequency-of-nutritional-consumption"
+BODY_MASS_PATH = Path(__file__).parent / "data" / "Body_mass.csv"
+VSA35_PATH = Path(__file__).parent / "data" / "VSA35.20260625T190658.json"
+FSAI_ALERTS_PATH = Path(__file__).parent / "data" / "fsai_alerts_clean.csv"
+CSO_SOURCE_URL = "https://data.cso.ie/"
+FSAI_SOURCE_URL = "https://www.fsai.ie/news-and-alerts/food-alerts/"
 IMAGE_DIR = Path(__file__).parent / "image"
 UC_DAVIS_LOGO = IMAGE_DIR / "uc_davis.png"
 UCD_LOGO = IMAGE_DIR / "ucd.png"
@@ -88,6 +96,96 @@ DEFAULT_CATEGORIES = ["fast_food", "local_market", "farm"]
 DEFAULT_SUBCATEGORIES = ["shop=butcher", "shop=greengrocer", "landuse=farmland"]
 DEFAULT_RADIUS_KM = 5
 DEFAULT_ECOLOGY_CATEGORIES = ["fast_food"]
+
+NUTRITION_FREQUENCY_ORDER = [
+    "Never",
+    "Less than once a week",
+    "1 to 3 times a week",
+    "4 to 6 times a week",
+    "Once a day or more",
+]
+NUTRITION_AGE_PYRAMID_ORDER = [
+    "15 - 24 years",
+    "25 - 34 years",
+    "35 - 44 years",
+    "45 - 54 years",
+    "55 - 64 years",
+    "65 - 74 years",
+    "75 years and over",
+]
+NUTRITION_FOOD_COLORS = {
+    "Fruit": "#27AE60",
+    "Vegetable or salad": "#2ECC71",
+    "Fruit or vegetable juice": "#16A085",
+    "Sugared soft drink": "#E67E22",
+    "Red meat": "#C0392B",
+    "Processed meat": "#922B21",
+}
+NUTRITION_FOOD_DISPLAY = {
+    "fruit": "Fruit",
+    "vegetable or salad": "Vegetable or salad",
+    "fruit or vegetable juice": "Fruit or vegetable juice",
+    "sugared soft drink": "Sugared soft drink",
+    "red meat": "Red meat",
+    "processed meat": "Processed meat",
+}
+DUBLIN_HSE_REGIONS = [
+    "HSE Dublin and Midlands HR",
+    "HSE Dublin and North East HR",
+    "HSE Dublin and South East HR",
+]
+GALWAY_HSE_REGION = "HSE West and North West HR"
+BODY_MASS_ORDER = ["Underweight", "Normal Weight", "Overweight", "Obese"]
+BODY_MASS_COLORS = {
+    "Underweight": "#3498DB",
+    "Normal Weight": "#27AE60",
+    "Overweight": "#F39C12",
+    "Obese": "#C0392B",
+}
+CHART_TITLE_TOP_MARGIN = 88
+CHART_LEGEND_TOP_MARGIN = 118
+
+BURDEN_DEFAULT_FOOD_CAUSES = [
+    "A00",
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+]
+BURDEN_CAUSE_COLORS = {
+    "A00": "#1ABC9C",
+    "A01": "#16A085",
+    "A02": "#D35400",
+    "A03": "#E67E22",
+    "A04": "#C0392B",
+    "A05": "#922B21",
+    "A06": "#8E44AD",
+    "A07": "#9B59B6",
+    "A08": "#2980B9",
+    "A09": "#34495E",
+}
+FSAI_HAZARD_COLORS = {
+    "Salmonella": "#D35400",
+    "Listeria": "#8E44AD",
+    "E. coli": "#C0392B",
+    "Hepatitis A": "#E74C3C",
+    "Allergen": "#E67E22",
+    "Foreign body": "#7F8C8D",
+    "Other microbiological": "#16A085",
+    "Labelling & packaging": "#3498DB",
+    "Chemical / contaminant": "#9B59B6",
+    "Contamination (physical)": "#795548",
+    "Quality / spoilage": "#F39C12",
+    "Product compliance": "#64748B",
+    "Other": "#BDC3C7",
+}
+FSAI_ALERTS_START = pd.Timestamp("2022-01-01")
+PLOT_QUALITATIVE = px.colors.qualitative.Set2 + px.colors.qualitative.Set3
 MARKER_PX = 20
 MARKER_ICON_PX = 11
 SUBCATEGORY_MARKER_PX = 24
@@ -99,7 +197,6 @@ NETWORK_NODE_RADIUS = 2
 NETWORK_LINE_WEIGHT = 2.5
 NETWORK_LINE_OPACITY = 0.42
 TRAVEL_SPEED_KMH = 4.5
-CHART_TITLE_TOP_MARGIN = 72
 
 ACCESS_TIER = {
     "supermarket": "healthy",
@@ -825,6 +922,873 @@ def load_panel() -> pd.DataFrame:
     return df
 
 
+@st.cache_data
+def load_nutrition_consumption() -> pd.DataFrame:
+    raw = pd.read_csv(NUTRITION_DATA_PATH)
+    df = raw.rename(
+        columns={
+            "Statistic Label": "statistic_label",
+            "Frequency of consumption": "frequency",
+            "Age Group": "age_group",
+            "Sex": "sex",
+            "HSE Region": "region",
+            "VALUE": "value",
+        }
+    )
+    df = df[~df["statistic_label"].str.startswith("Standard error")].copy()
+    raw_food = (
+        df["statistic_label"]
+        .str.replace("Percentage of people who consumed ", "", regex=False)
+        .str.strip()
+        .str.replace(r"\s+", " ", regex=True)
+        .str.lower()
+    )
+    df["food"] = raw_food.map(NUTRITION_FOOD_DISPLAY).fillna(raw_food.str.title())
+    df["value"] = pd.to_numeric(df["value"], errors="coerce")
+    df["frequency"] = pd.Categorical(df["frequency"], categories=NUTRITION_FREQUENCY_ORDER, ordered=True)
+    df["age_group"] = pd.Categorical(df["age_group"], categories=NUTRITION_AGE_PYRAMID_ORDER, ordered=True)
+    return df
+
+
+def nutrition_food_order(df: pd.DataFrame) -> list[str]:
+    preferred = list(NUTRITION_FOOD_COLORS.keys())
+    foods = [food for food in preferred if food in df["food"].unique()]
+    extras = sorted(set(df["food"].unique()) - set(foods))
+    return foods + extras
+
+
+def filter_nutrition_scope(
+    df: pd.DataFrame,
+    region: str = "Ireland",
+    age_group: str | None = "15 years and over",
+    sex: str | None = "Both sexes",
+) -> pd.DataFrame:
+    scoped = df[df["region"] == region].copy()
+    if age_group is not None:
+        scoped = scoped[scoped["age_group"] == age_group]
+    if sex is not None:
+        scoped = scoped[scoped["sex"] == sex]
+    return scoped
+
+
+def render_nutrition_source_html() -> str:
+    return (
+        '<div class="heatmap-math">'
+        "<h4>Data source</h4>"
+        "<p>Frequency of nutritional consumption from the Irish Health Survey (IHS44), "
+        "published on "
+        f'<a href="{NUTRITION_SOURCE_URL}" target="_blank" rel="noopener noreferrer">'
+        "data.gov.ie: IHS44 Frequency of nutritional consumption</a>. "
+        "Values are percentages of people reporting each consumption frequency by age group, "
+        "sex, and HSE region (2025).</p>"
+        "</div>"
+    )
+
+
+def render_gender_icon_legend_html() -> str:
+    return (
+        '<div class="map-legend-wrap" style="margin-bottom:10px;">'
+        '<div class="map-legend-items" style="justify-content:center;">'
+        '<div class="map-legend-item">'
+        '<span class="map-legend-icon" style="background:#DBEAFE;">'
+        '<i class="fa-solid fa-person" style="color:#1D4ED8;"></i>'
+        "</span><span>Male</span></div>"
+        '<div class="map-legend-item">'
+        '<span class="map-legend-icon" style="background:#FCE7F3;">'
+        '<i class="fa-solid fa-person-dress" style="color:#BE185D;"></i>'
+        "</span><span>Female</span></div>"
+        "</div></div>"
+    )
+
+
+def build_nutrition_frequency_distribution(df: pd.DataFrame, region: str) -> go.Figure:
+    scoped = filter_nutrition_scope(df, region=region)
+    foods = nutrition_food_order(scoped)
+    fig = go.Figure()
+    for food in foods:
+        sub = scoped[scoped["food"] == food].sort_values("frequency")
+        fig.add_trace(
+            go.Bar(
+                name=food,
+                x=sub["frequency"].astype(str),
+                y=sub["value"],
+                marker={"color": NUTRITION_FOOD_COLORS.get(food, "#64748B")},
+                hovertemplate=f"{food}<br>%{{x}}: %{{y:.1f}}%<extra></extra>",
+            )
+        )
+    fig.update_layout(
+        barmode="group",
+        title={"text": f"Consumption frequency distributions ({region})", "x": 0.5},
+        height=420,
+        margin={"l": 20, "r": 20, "t": 72, "b": 20},
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+        xaxis={"title": "Frequency of consumption", "categoryorder": "array", "categoryarray": NUTRITION_FREQUENCY_ORDER},
+        yaxis={"title": "Percentage of people (%)", "range": [0, None]},
+        legend={"title": {"text": "Food item"}},
+    )
+    return fig
+
+
+def build_nutrition_gender_comparison(df: pd.DataFrame, region: str) -> go.Figure:
+    scoped = df[
+        (df["region"] == region)
+        & (df["age_group"] == "15 years and over")
+        & (df["sex"].isin(["Male", "Female"]))
+    ].copy()
+    foods = nutrition_food_order(scoped)
+    fig = go.Figure()
+    for food in foods:
+        sub = scoped[scoped["food"] == food].sort_values(["frequency", "sex"])
+        for sex, color in (
+            ("Male", "#2563EB"),
+            ("Female", "#DB2777"),
+        ):
+            sex_sub = sub[sub["sex"] == sex]
+            fig.add_trace(
+                go.Bar(
+                    name=f"{food} ({sex})",
+                    x=sex_sub["frequency"].astype(str),
+                    y=sex_sub["value"],
+                    legendgroup=food,
+                    marker={"color": color, "opacity": 0.88 if sex == "Male" else 0.78},
+                    hovertemplate=f"{food} | {sex}<br>%{{x}}: %{{y:.1f}}%<extra></extra>",
+                    visible=True,
+                )
+            )
+    fig.update_layout(
+        barmode="group",
+        title={"text": f"Gender comparison by food item ({region})", "x": 0.5},
+        height=460,
+        margin={"l": 20, "r": 20, "t": 72, "b": 20},
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+        xaxis={"title": "Frequency of consumption", "categoryorder": "array", "categoryarray": NUTRITION_FREQUENCY_ORDER},
+        yaxis={"title": "Percentage of people (%)", "range": [0, None]},
+        showlegend=False,
+    )
+    return fig
+
+
+def build_nutrition_gender_daily_chart(df: pd.DataFrame, region: str) -> go.Figure:
+    scoped = df[
+        (df["region"] == region)
+        & (df["age_group"] == "15 years and over")
+        & (df["frequency"] == "Once a day or more")
+        & (df["sex"].isin(["Male", "Female"]))
+    ].copy()
+    foods = nutrition_food_order(scoped)
+    male_vals = []
+    female_vals = []
+    for food in foods:
+        male_vals.append(float(scoped.loc[(scoped["food"] == food) & (scoped["sex"] == "Male"), "value"].iloc[0]))
+        female_vals.append(float(scoped.loc[(scoped["food"] == food) & (scoped["sex"] == "Female"), "value"].iloc[0]))
+    fig = go.Figure(
+        data=[
+            go.Bar(
+                name="Male",
+                x=foods,
+                y=male_vals,
+                marker={"color": "#2563EB"},
+                text=[f"{v:.1f}%" for v in male_vals],
+                textposition="outside",
+            ),
+            go.Bar(
+                name="Female",
+                x=foods,
+                y=female_vals,
+                marker={"color": "#DB2777"},
+                text=[f"{v:.1f}%" for v in female_vals],
+                textposition="outside",
+            ),
+        ]
+    )
+    fig.update_layout(
+        barmode="group",
+        title={"text": "Daily consumption (once a day or more) by gender", "x": 0.5},
+        height=420,
+        margin={"l": 20, "r": 20, "t": 72, "b": 20},
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+        yaxis={"title": "Percentage of people (%)", "range": [0, None]},
+        xaxis={"tickangle": -18},
+        showlegend=False,
+    )
+    return fig
+
+
+def build_nutrition_age_pyramid(
+    df: pd.DataFrame,
+    food: str,
+    region: str,
+    frequency: str,
+) -> go.Figure:
+    scoped = df[
+        (df["region"] == region)
+        & (df["food"] == food)
+        & (df["frequency"] == frequency)
+        & (df["sex"].isin(["Male", "Female"]))
+        & (df["age_group"].isin(NUTRITION_AGE_PYRAMID_ORDER))
+    ].copy()
+    ages = list(NUTRITION_AGE_PYRAMID_ORDER)
+    male = []
+    female = []
+    for age in ages:
+        male.append(
+            -float(scoped.loc[(scoped["age_group"] == age) & (scoped["sex"] == "Male"), "value"].iloc[0])
+        )
+        female.append(
+            float(scoped.loc[(scoped["age_group"] == age) & (scoped["sex"] == "Female"), "value"].iloc[0])
+        )
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            y=ages,
+            x=male,
+            name="Male",
+            orientation="h",
+            marker={"color": "#2563EB"},
+            hovertemplate="Male<br>%{y}: %{x:.1f}%<extra></extra>",
+        )
+    )
+    fig.add_trace(
+        go.Bar(
+            y=ages,
+            x=female,
+            name="Female",
+            orientation="h",
+            marker={"color": "#DB2777"},
+            hovertemplate="Female<br>%{y}: %{x:.1f}%<extra></extra>",
+        )
+    )
+    max_val = max(max(abs(v) for v in male), max(female)) * 1.25
+    fig.update_layout(
+        title={"text": f"{food}: {frequency}", "x": 0.5},
+        height=360,
+        margin={"l": 20, "r": 20, "t": 64, "b": 16},
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+        barmode="overlay",
+        xaxis={
+            "title": "Percentage of people (%)",
+            "range": [-max_val, max_val],
+            "tickvals": [-(max_val), -(max_val / 2), 0, max_val / 2, max_val],
+            "ticktext": [
+                f"{max_val:.0f}",
+                f"{max_val/2:.0f}",
+                "0",
+                f"{max_val/2:.0f}",
+                f"{max_val:.0f}",
+            ],
+        },
+        yaxis={"title": "", "autorange": "reversed"},
+        showlegend=False,
+    )
+    return fig
+
+
+def build_nutrition_age_frequency_heatmap(
+    df: pd.DataFrame,
+    food: str,
+    region: str,
+    sex: str,
+) -> go.Figure:
+    scoped = df[
+        (df["region"] == region)
+        & (df["food"] == food)
+        & (df["sex"] == sex)
+        & (df["age_group"].isin(NUTRITION_AGE_PYRAMID_ORDER))
+    ].copy()
+    pivot = scoped.pivot_table(index="age_group", columns="frequency", values="value", aggfunc="first")
+    pivot = pivot.reindex(NUTRITION_AGE_PYRAMID_ORDER)[NUTRITION_FREQUENCY_ORDER]
+    fig = go.Figure(
+        data=go.Heatmap(
+            z=pivot.values,
+            x=[str(c) for c in pivot.columns],
+            y=[str(i) for i in pivot.index],
+            colorscale=[[0, "#F8FAFC"], [0.5, "#86EFAC"], [1, "#166534"]],
+            hovertemplate="Age: %{y}<br>Frequency: %{x}<br>Value: %{z:.1f}%<extra></extra>",
+            colorbar={"title": "%"},
+        )
+    )
+    fig.update_layout(
+        title={"text": f"{food} | {sex}", "x": 0.5},
+        height=360,
+        margin={"l": 20, "r": 20, "t": 64, "b": 16},
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+        xaxis={"title": "Frequency of consumption"},
+        yaxis={"title": "Age group", "autorange": "reversed"},
+    )
+    return fig
+
+
+def build_nutrition_regional_daily_comparison(df: pd.DataFrame) -> go.Figure:
+    scoped = df[
+        (df["frequency"] == "Once a day or more")
+        & (df["age_group"] == "15 years and over")
+        & (df["sex"] == "Both sexes")
+        & (df["region"].isin(DUBLIN_HSE_REGIONS + [GALWAY_HSE_REGION]))
+    ].copy()
+    scoped["area"] = scoped["region"].map(
+        lambda r: "Dublin HSE areas" if r in DUBLIN_HSE_REGIONS else "West / North West (Galway area)"
+    )
+    grouped = (
+        scoped.groupby(["food", "area"], as_index=False, observed=True)["value"]
+        .mean()
+        .rename(columns={"value": "mean_value"})
+    )
+    foods = nutrition_food_order(grouped)
+    fig = go.Figure()
+    for area, color in (
+        ("Dublin HSE areas", "#2563EB"),
+        ("West / North West (Galway area)", "#16A085"),
+    ):
+        sub = grouped[grouped["area"] == area].set_index("food").reindex(foods).reset_index()
+        fig.add_trace(
+            go.Bar(
+                name=area,
+                x=sub["food"],
+                y=sub["mean_value"],
+                marker={"color": color},
+                text=[f"{v:.1f}%" if pd.notna(v) else "" for v in sub["mean_value"]],
+                textposition="outside",
+            )
+        )
+    fig.update_layout(
+        barmode="group",
+        title={"text": "Daily consumption: Dublin HSE areas vs West / North West", "x": 0.5},
+        height=420,
+        margin={"l": 20, "r": 20, "t": 72, "b": 20},
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+        yaxis={"title": "Mean percentage (%)", "range": [0, None]},
+        xaxis={"tickangle": -18},
+        legend={"orientation": "h", "yanchor": "bottom", "y": 1.02, "x": 0.5, "xanchor": "center"},
+    )
+    return fig
+
+
+@st.cache_data
+def load_body_mass() -> pd.DataFrame:
+    df = pd.read_csv(BODY_MASS_PATH)
+    df = df.rename(
+        columns={
+            "Statistic Label": "group",
+            "Year": "year",
+            "Sex": "sex",
+            "VALUE": "value",
+        }
+    )
+    df["value"] = pd.to_numeric(df["value"], errors="coerce")
+    df["group"] = pd.Categorical(df["group"], categories=BODY_MASS_ORDER, ordered=True)
+    return df
+
+
+def render_body_mass_source_html() -> str:
+    return (
+        '<div class="heatmap-math">'
+        "<h4>Body mass groups</h4>"
+        "<p>Distribution of BMI categories (underweight, normal weight, overweight, obese) "
+        f"from Irish health survey data aligned with CSO releases via "
+        f'<a href="{CSO_SOURCE_URL}" target="_blank" rel="noopener noreferrer">data.cso.ie</a>.</p>'
+        "</div>"
+    )
+
+
+def build_body_mass_distribution(df: pd.DataFrame) -> go.Figure:
+    scoped = df[df["sex"].isin(["Male", "Female"])].copy()
+    fig = go.Figure()
+    for sex, color in (("Male", "#2563EB"), ("Female", "#DB2777")):
+        sub = scoped[scoped["sex"] == sex].sort_values("group")
+        fig.add_trace(
+            go.Bar(
+                name=sex,
+                x=sub["group"].astype(str),
+                y=sub["value"],
+                marker={"color": color},
+                text=[f"{v:.1f}%" for v in sub["value"]],
+                textposition="outside",
+                hovertemplate=f"{sex}<br>%{{x}}: %{{y:.1f}}%<extra></extra>",
+            )
+        )
+    year_label = int(scoped["year"].iloc[0]) if not scoped.empty else ""
+    fig.update_layout(
+        barmode="group",
+        title={"text": f"Nutritional body mass groups ({year_label})", "x": 0.5},
+        height=420,
+        margin={"l": 20, "r": 20, "t": 72, "b": 20},
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+        xaxis={"title": "BMI category"},
+        yaxis={"title": "Percentage of people (%)", "range": [0, None]},
+        showlegend=False,
+    )
+    return fig
+
+
+def build_body_mass_donut(df: pd.DataFrame) -> go.Figure:
+    scoped = df[df["sex"] == "Both sexes"].sort_values("group")
+    fig = go.Figure(
+        data=[
+            go.Pie(
+                labels=scoped["group"].astype(str),
+                values=scoped["value"],
+                hole=0.45,
+                marker={"colors": [BODY_MASS_COLORS[g] for g in scoped["group"].astype(str)]},
+                hovertemplate="%{label}: %{value:.1f}%<extra></extra>",
+            )
+        ]
+    )
+    year_label = int(scoped["year"].iloc[0]) if not scoped.empty else ""
+    fig.update_layout(
+        title={"text": f"Population BMI mix ({year_label}, both sexes)", "x": 0.5},
+        height=380,
+        margin={"l": 10, "r": 10, "t": 72, "b": 10},
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+    )
+    return fig
+
+
+def _pxstat_dim_maps(cube: dict, dim_key: str) -> tuple[list[str], dict[str, str], dict[str, int]]:
+    cat = cube["dimension"][dim_key]["category"]
+    codes = cat["index"]
+    labels = cat["label"]
+    if isinstance(labels, dict):
+        code_to_label = {code: labels.get(code, code) for code in codes}
+    else:
+        code_to_label = dict(zip(codes, labels))
+    code_to_pos = {code: pos for pos, code in enumerate(codes)}
+    return codes, code_to_label, code_to_pos
+
+
+def _pxstat_flat_index(positions: list[int], sizes: list[int]) -> int:
+    idx = positions[0]
+    for i in range(1, len(positions)):
+        idx = idx * sizes[i] + positions[i]
+    return idx
+
+
+def apply_chart_layout(
+    fig: go.Figure,
+    title: str,
+    *,
+    height: int = 420,
+    show_legend: bool = False,
+) -> go.Figure:
+    top_margin = CHART_LEGEND_TOP_MARGIN if show_legend else CHART_TITLE_TOP_MARGIN
+    layout: dict = {
+        "title": {"text": title, "x": 0.5, "xanchor": "center", "y": 0.98, "yanchor": "top"},
+        "height": height,
+        "margin": {"l": 20, "r": 20, "t": top_margin, "b": 20},
+        "paper_bgcolor": "#FFFFFF",
+        "plot_bgcolor": "#FFFFFF",
+    }
+    if show_legend:
+        layout["legend"] = {
+            "orientation": "h",
+            "yanchor": "bottom",
+            "y": 1.0,
+            "x": 0.5,
+            "xanchor": "center",
+        }
+    fig.update_layout(**layout)
+    return fig
+
+
+@st.cache_data
+def load_vsa35_cause_catalog() -> pd.DataFrame:
+    with open(VSA35_PATH, encoding="utf-8") as handle:
+        cube = json.load(handle)
+    cause_dim = cube["dimension"]["C02478V04618"]["category"]
+    rows = [
+        {"cause_code": code, "cause_label": cause_dim["label"].get(code, code)}
+        for code in cause_dim["index"]
+        if code != "-"
+    ]
+    return pd.DataFrame(rows).sort_values("cause_label")
+
+
+@st.cache_data
+def load_vsa35_deaths() -> pd.DataFrame:
+    with open(VSA35_PATH, encoding="utf-8") as handle:
+        cube = json.load(handle)
+
+    dim_keys = cube["id"]
+    sizes = cube["size"]
+    values = cube["value"]
+    maps = {key: _pxstat_dim_maps(cube, key) for key in dim_keys}
+
+    stat_code = maps["STATISTIC"][0][0]
+    year_codes = [code for code in maps["TLIST(A1)"][0] if code != "-"]
+    sex_codes = [code for code in maps["C02199V02655"][0] if code != "-"]
+    cause_codes = [code for code in maps["C02478V04618"][0] if code != "-"]
+    age_codes = [code for code in maps["C02076V02508"][0] if code != "-"]
+
+    rows: list[dict] = []
+    for year in year_codes:
+        for sex in sex_codes:
+            for cause in cause_codes:
+                for age in age_codes:
+                    positions = [
+                        maps["STATISTIC"][2][stat_code],
+                        maps["TLIST(A1)"][2][year],
+                        maps["C02199V02655"][2][sex],
+                        maps["C02478V04618"][2][cause],
+                        maps["C02076V02508"][2][age],
+                    ]
+                    raw = values[_pxstat_flat_index(positions, sizes)]
+                    if raw in (":", None):
+                        continue
+                    rows.append(
+                        {
+                            "year": int(year),
+                            "sex_code": sex,
+                            "sex": maps["C02199V02655"][1][sex],
+                            "cause_code": cause,
+                            "cause_label": maps["C02478V04618"][1].get(cause, cause),
+                            "age_code": age,
+                            "age_group": maps["C02076V02508"][1][age],
+                            "deaths": int(raw),
+                        }
+                    )
+    return pd.DataFrame(rows)
+
+
+def burden_cause_options(deaths_df: pd.DataFrame, catalog_df: pd.DataFrame) -> pd.DataFrame:
+    totals = (
+        deaths_df.groupby("cause_code", as_index=False)["deaths"]
+        .sum()
+        .rename(columns={"deaths": "total_deaths"})
+    )
+    options = catalog_df.merge(totals, on="cause_code", how="inner")
+    return options.sort_values(["total_deaths", "cause_label"], ascending=[False, True])
+
+
+def burden_cause_color(cause_code: str, index: int = 0) -> str:
+    if cause_code in BURDEN_CAUSE_COLORS:
+        return BURDEN_CAUSE_COLORS[cause_code]
+    return PLOT_QUALITATIVE[index % len(PLOT_QUALITATIVE)]
+
+
+def burden_cause_short_label(cause_label: str) -> str:
+    if " " in cause_label:
+        return cause_label.split(" ", 1)[1]
+    return cause_label
+
+
+def vsa35_age_order(df: pd.DataFrame) -> list[str]:
+    age_rank = {
+        "Under 1 year": 0,
+        "1 - 4 years": 1,
+        "5 - 9 years": 2,
+        "10 - 14 years": 3,
+        "15 - 19 years": 4,
+        "20 - 24 years": 5,
+        "25 - 29 years": 6,
+        "30 - 34 years": 7,
+        "35 - 39 years": 8,
+        "40 - 44 years": 9,
+        "45 - 49 years": 10,
+        "50 - 54 years": 11,
+        "55 - 59 years": 12,
+        "60 - 64 years": 13,
+        "65 - 69 years": 14,
+        "70 - 74 years": 15,
+        "75 - 79 years": 16,
+        "80 - 84 years": 17,
+        "85 years and over": 18,
+    }
+    ages = [age for age in df["age_group"].unique() if age != "All ages"]
+    return sorted(ages, key=lambda label: age_rank.get(label, 999))
+
+
+def render_burden_source_html() -> str:
+    return (
+        '<div class="heatmap-math">'
+        "<h4>Data source</h4>"
+        "<p>Revised deaths by underlying cause of death (ICD-10), table VSA35, extracted from "
+        f'<a href="{CSO_SOURCE_URL}" target="_blank" rel="noopener noreferrer">data.cso.ie</a>. '
+        "This release is national and does not include district-level breakdowns.</p>"
+        "</div>"
+    )
+
+
+def build_burden_time_trends(
+    df: pd.DataFrame,
+    selected_codes: list[str],
+    cause_labels: dict[str, str],
+) -> go.Figure:
+    scoped = df[df["cause_code"].isin(selected_codes)].copy()
+    totals = (
+        scoped.groupby(["year", "cause_code"], as_index=False)["deaths"]
+        .sum()
+        .sort_values("year")
+    )
+    fig = go.Figure()
+    for idx, code in enumerate(selected_codes):
+        label = cause_labels.get(code, code)
+        short = burden_cause_short_label(label)
+        sub = totals[totals["cause_code"] == code]
+        if sub.empty:
+            continue
+        fig.add_trace(
+            go.Scatter(
+                x=sub["year"],
+                y=sub["deaths"],
+                mode="lines+markers",
+                name=short,
+                line={"color": burden_cause_color(code, idx), "width": 2.5},
+                marker={"size": 7},
+                hovertemplate=f"{label}<br>%{{x}}: %{{y}} deaths<extra></extra>",
+            )
+        )
+    fig.update_xaxes(title="Year", dtick=1)
+    fig.update_yaxes(title="Revised deaths", rangemode="tozero")
+    return apply_chart_layout(
+        fig,
+        "National deaths from selected causes (2012-2021)",
+        show_legend=True,
+    )
+
+
+def build_burden_age_pyramid(
+    df: pd.DataFrame,
+    cause_code: str,
+    cause_label: str,
+) -> go.Figure:
+    scoped = df[
+        (df["cause_code"] == cause_code) & (df["sex"].isin(["Male", "Female"]))
+    ].copy()
+    ages = vsa35_age_order(scoped)
+    grouped = scoped.groupby(["age_group", "sex"], as_index=False, observed=True)["deaths"].sum()
+    male_vals = []
+    female_vals = []
+    for age in ages:
+        male_vals.append(
+            -float(grouped.loc[(grouped["age_group"] == age) & (grouped["sex"] == "Male"), "deaths"].sum())
+        )
+        female_vals.append(
+            float(grouped.loc[(grouped["age_group"] == age) & (grouped["sex"] == "Female"), "deaths"].sum())
+        )
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            y=ages,
+            x=male_vals,
+            name="Male",
+            orientation="h",
+            marker={"color": "#2563EB"},
+            hovertemplate="Male<br>%{y}: %{x:.0f} deaths<extra></extra>",
+        )
+    )
+    fig.add_trace(
+        go.Bar(
+            y=ages,
+            x=female_vals,
+            name="Female",
+            orientation="h",
+            marker={"color": "#DB2777"},
+            hovertemplate="Female<br>%{y}: %{x:.0f} deaths<extra></extra>",
+        )
+    )
+    max_val = max(max(abs(v) for v in male_vals), max(female_vals)) * 1.2 or 1
+    short = burden_cause_short_label(cause_label)
+    fig.update_layout(
+        barmode="overlay",
+        xaxis={
+            "title": "Accumulated deaths",
+            "range": [-max_val, max_val],
+            "tickvals": [-max_val, -max_val / 2, 0, max_val / 2, max_val],
+            "ticktext": [
+                f"{max_val:.0f}",
+                f"{max_val/2:.0f}",
+                "0",
+                f"{max_val/2:.0f}",
+                f"{max_val:.0f}",
+            ],
+        },
+        yaxis={"title": "", "autorange": "reversed"},
+        showlegend=False,
+    )
+    return apply_chart_layout(
+        fig,
+        f"{short}: accumulated deaths by age (2012-2021)",
+        height=460,
+    )
+
+
+def classify_fsai_hazard(title: str) -> str:
+    text = str(title).lower()
+    if "salmonella" in text:
+        return "Salmonella"
+    if "listeria" in text:
+        return "Listeria"
+    if "e. coli" in text or "e coli" in text or "escherichia" in text:
+        return "E. coli"
+    if "hepatitis a" in text:
+        return "Hepatitis A"
+    if "allerg" in text:
+        return "Allergen"
+    if any(token in text for token in ("plastic", "metal", "glass", "foreign body", "piece", "fragments")):
+        return "Foreign body"
+    if any(
+        token in text
+        for token in ("mould", "mold", "microbio", "bacter", "toxin", "cereulide", "pest", "virus", "norovirus")
+    ):
+        return "Other microbiological"
+    if any(
+        token in text
+        for token in (
+            "use-by",
+            "use by",
+            "best before",
+            "mislabell",
+            "label",
+            "cooking instruction",
+            "packaging",
+            "pack size",
+            "not labelled",
+            "not labeled",
+            "not in english",
+        )
+    ):
+        return "Labelling & packaging"
+    if any(
+        token in text
+        for token in ("melatonin", "cbd", "thc", "opioid", "alkaloid", "furan", "pesticide", "chemical", "unsafe level", "tropane")
+    ):
+        return "Chemical / contaminant"
+    if any(token in text for token in ("mouse", "rodent", "infestation")):
+        return "Contamination (physical)"
+    if any(token in text for token in ("spoila", "unfit for human", "quality issue")):
+        return "Quality / spoilage"
+    if "recall" in text and "due to" in text:
+        return "Product compliance"
+    return "Other"
+
+
+@st.cache_data
+def load_fsai_alerts() -> pd.DataFrame:
+    df = pd.read_csv(FSAI_ALERTS_PATH)
+    df["alert_date"] = pd.to_datetime(df["date"], errors="coerce")
+    df = df[df["alert_date"].notna() & (df["alert_date"] >= FSAI_ALERTS_START)].copy()
+    df["year"] = df["alert_date"].dt.year
+    df["month"] = df["alert_date"].dt.to_period("M").astype(str)
+    df["hazard_class"] = df["title"].map(classify_fsai_hazard)
+    return df
+
+
+def render_fsai_hazard_note_html() -> str:
+    return (
+        '<div class="heatmap-math">'
+        "<h4>Hazard type notes</h4>"
+        "<p><strong>Product compliance</strong> covers recalls for undeclared ingredients, "
+        "incorrect use-by dates, missing cooking instructions, or packaging issues without a "
+        "named microbiological hazard.</p>"
+        "<p><strong>Labelling & packaging</strong> groups mislabelling and instruction errors "
+        "when the title explicitly references labels or packaging.</p>"
+        "<p><strong>Other</strong> (residual category) captures alerts that do not match the "
+        "rules above, such as administrative updates or mixed wording. Review titles in the "
+        "source file for case-by-case detail.</p>"
+        "</div>"
+    )
+
+
+def render_fsai_source_html() -> str:
+    return (
+        '<div class="heatmap-math">'
+        "<h4>Data source</h4>"
+        "<p>Food safety alerts compiled from FSAI public notices in "
+        f'<a href="{FSAI_SOURCE_URL}" target="_blank" rel="noopener noreferrer">'
+        "fsai.ie food alerts</a>.</p>"
+        "</div>"
+    )
+
+
+def build_fsai_alerts_timeline(df: pd.DataFrame) -> go.Figure:
+    scoped = df[df["alert_date"].notna()].copy()
+    yearly = scoped.groupby("year", as_index=False).size().rename(columns={"size": "alerts"})
+    fig = go.Figure(
+        data=[
+            go.Bar(
+                x=yearly["year"],
+                y=yearly["alerts"],
+                marker={"color": "#2563EB"},
+                text=yearly["alerts"],
+                textposition="outside",
+                hovertemplate="Year %{x}<br>%{y} alerts<extra></extra>",
+            )
+        ]
+    )
+    fig.update_xaxes(title="Year", dtick=1)
+    fig.update_yaxes(title="Number of alerts", rangemode="tozero")
+    return apply_chart_layout(fig, "FSAI food alerts over time (from 2022)")
+
+
+def build_fsai_alerts_by_type(df: pd.DataFrame) -> go.Figure:
+    scoped = df[df["alert_date"].notna()].copy()
+    counts = (
+        scoped.groupby("hazard_class", as_index=False)
+        .size()
+        .rename(columns={"size": "alerts"})
+        .sort_values("alerts", ascending=False)
+    )
+    fig = go.Figure(
+        data=[
+            go.Bar(
+                x=counts["hazard_class"],
+                y=counts["alerts"],
+                marker={"color": [FSAI_HAZARD_COLORS.get(h, "#64748B") for h in counts["hazard_class"]]},
+                text=counts["alerts"],
+                textposition="outside",
+                hovertemplate="%{x}<br>%{y} alerts<extra></extra>",
+            )
+        ]
+    )
+    fig.update_xaxes(title="Hazard type", tickangle=-18)
+    fig.update_yaxes(title="Number of alerts", rangemode="tozero")
+    return apply_chart_layout(fig, "FSAI alerts by hazard type (from 2022)", height=440)
+
+
+def build_fsai_alerts_type_timeline(df: pd.DataFrame) -> go.Figure:
+    scoped = df[df["alert_date"].notna()].copy()
+    grouped = (
+        scoped.groupby(["year", "hazard_class"], as_index=False)
+        .size()
+        .rename(columns={"size": "alerts"})
+        .sort_values("year")
+    )
+    hazard_order = (
+        grouped.groupby("hazard_class")["alerts"]
+        .sum()
+        .sort_values(ascending=False)
+        .index.tolist()
+    )
+    fig = go.Figure()
+    for hazard in hazard_order:
+        sub = grouped[grouped["hazard_class"] == hazard]
+        fig.add_trace(
+            go.Bar(
+                name=hazard,
+                x=sub["year"],
+                y=sub["alerts"],
+                marker={"color": FSAI_HAZARD_COLORS.get(hazard, "#64748B")},
+                hovertemplate=f"{hazard}<br>%{{x}}: %{{y}} alerts<extra></extra>",
+            )
+        )
+    fig.update_layout(barmode="stack")
+    fig.update_xaxes(title="Year", dtick=1)
+    fig.update_yaxes(title="Number of alerts", rangemode="tozero")
+    return apply_chart_layout(
+        fig,
+        "FSAI alerts by hazard type over time (from 2022)",
+        height=460,
+        show_legend=True,
+    )
+
+
 def format_subcategory_label(subcategory: str) -> str:
     value = subcategory.split("=", 1)[1] if "=" in subcategory else subcategory
     return value.replace("_", " ").title()
@@ -983,6 +1947,45 @@ def subcategory_div_icon(subcategory: str, category: str) -> folium.DivIcon:
         icon_px=SUBCATEGORY_MARKER_ICON_PX,
         border_color=ring_color,
         border_width=2,
+    )
+
+
+def waste_site_div_icon() -> folium.DivIcon:
+    marker_px = 24
+    icon_px = 12
+    html = f"""
+    <div style="
+        background-color:#111827;
+        width:{marker_px}px;
+        height:{marker_px}px;
+        border-radius:4px;
+        border:2px solid #F59E0B;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        box-shadow:0 1px 4px rgba(0,0,0,0.35);
+        transform:rotate(45deg);
+    ">
+        <i class="fa-solid fa-dumpster" style="color:#F59E0B;font-size:{icon_px}px;line-height:1;transform:rotate(-45deg);"></i>
+    </div>
+    """
+    return folium.DivIcon(
+        html=html,
+        icon_size=(marker_px, marker_px),
+        icon_anchor=(marker_px // 2, marker_px // 2),
+        class_name="empty",
+    )
+
+
+def render_waste_network_legend_html() -> str:
+    return (
+        '<div class="map-legend-wrap" style="margin-bottom:10px;">'
+        '<div class="map-legend-items" style="justify-content:center;">'
+        '<div class="map-legend-item">'
+        '<span class="map-legend-icon" style="background:#111827;border:2px solid #F59E0B;border-radius:4px;transform:rotate(45deg);">'
+        '<i class="fa-solid fa-dumpster" style="color:#F59E0B;transform:rotate(-45deg);"></i>'
+        "</span><span>Food waste / recycling site</span></div>"
+        "</div></div>"
     )
 
 
@@ -1774,6 +2777,24 @@ def build_categories_food_network_map(
                 fill_opacity=0.9,
                 tooltip=tip,
             ).add_to(network_fg)
+
+    waste_sub = county_df[county_df["category"] == "waste"]
+    if not waste_sub.empty:
+        waste_fg = folium.FeatureGroup(name="Food waste sites", show=True)
+        for row in waste_sub.itertuples(index=False):
+            location = [row.lat, row.lon]
+            name = row.name if pd.notna(row.name) and str(row.name).strip() else "(unnamed)"
+            tip = (
+                f"{name} | Waste | {format_subcategory_label(row.subcategory)} | "
+                f"{row.distance_km:.1f} km"
+            )
+            folium.Marker(
+                location=location,
+                tooltip=tip,
+                icon=waste_site_div_icon(),
+            ).add_to(waste_fg)
+        waste_fg.add_to(m)
+
     network_fg.add_to(m)
     return m
 
@@ -2618,9 +3639,9 @@ def main() -> None:
         tab_home,
         tab_food,
         tab_heatmaps,
+        tab_nutrition,
         tab_burden,
         tab_alerts,
-        tab_water,
         tab_waste,
         tab_gaps,
     ) = st.tabs(
@@ -2628,9 +3649,9 @@ def main() -> None:
             "🏠  Home",
             "📍  Food System",
             "🗺️  Food ecology",
+            "🥗  Nutrition",
             "📊  Burden disease",
             "🔔  Alert frequency",
-            "💧  Water risk",
             "♻️  Waste / animal interface",
             "🔍  What's missing?",
         ]
@@ -2648,9 +3669,10 @@ def main() -> None:
             ),
             footer_md=(
                 "**Explore the dashboard:** use **Food System** and **Food ecology** for spatial "
-                "food environment data; **Burden disease** and **Alert frequency** for health "
-                "surveillance; **Water risk** and **Waste / animal interface** for ecological "
-                "infrastructure; **What's missing?** for data gaps and research opportunities."
+                "food environment data; **Nutrition** and **Burden disease** for diet and "
+                "health outcomes; **Alert frequency** for FSAI food safety signals; "
+                "**Waste / animal interface** for ecological infrastructure; **What's missing?** "
+                "for data gaps and research opportunities."
             ),
         )
 
@@ -3040,8 +4062,10 @@ def main() -> None:
             st.subheader("Food network maps")
             st.caption(
                 f"Hub-and-spoke routes from each city centre to OSM points in the selected "
-                f"categories within {ecology_radius_km} km."
+                f"categories within {ecology_radius_km} km. Diamond waste markers show food waste "
+                "and recycling sites in the same buffer."
             )
+            st.markdown(render_waste_network_legend_html(), unsafe_allow_html=True)
             st.markdown(render_food_network_methodology_html(), unsafe_allow_html=True)
 
             net_left, net_right = st.columns(2, gap="large")
@@ -3103,38 +4127,261 @@ def main() -> None:
                 unsafe_allow_html=True,
             )
 
+    # ── Tab: Nutrition ────────────────────────────────────────────────────
+    with tab_nutrition:
+        st.subheader("Nutrition")
+        st.caption(
+            "Body mass distribution and nutritional consumption patterns linked to diet-related "
+            "health in the One Health framework."
+        )
+
+        try:
+            body_mass_df = load_body_mass()
+        except FileNotFoundError:
+            st.error(f"Body mass dataset not found at `{BODY_MASS_PATH}`.")
+            body_mass_df = None
+
+        if body_mass_df is not None:
+            st.markdown("### Body mass groups")
+            st.markdown(render_body_mass_source_html(), unsafe_allow_html=True)
+            st.markdown(render_gender_icon_legend_html(), unsafe_allow_html=True)
+            bm_left, bm_right = st.columns(2, gap="large")
+            with bm_left:
+                body_mass_bar = build_body_mass_distribution(body_mass_df)
+                st.plotly_chart(body_mass_bar, use_container_width=True, key="nutrition_body_mass_bar")
+                render_chart_download(
+                    body_mass_bar,
+                    "Download body mass bar chart (HTML)",
+                    "body_mass_distribution.html",
+                    "dl_nutrition_body_mass_bar",
+                )
+            with bm_right:
+                body_mass_donut = build_body_mass_donut(body_mass_df)
+                st.plotly_chart(body_mass_donut, use_container_width=True, key="nutrition_body_mass_donut")
+                render_chart_download(
+                    body_mass_donut,
+                    "Download body mass donut chart (HTML)",
+                    "body_mass_donut.html",
+                    "dl_nutrition_body_mass_donut",
+                )
+
+        st.markdown("### Nutritional consumption (IHS44)")
+        st.markdown(render_nutrition_source_html(), unsafe_allow_html=True)
+
+        try:
+            nutrition_df = load_nutrition_consumption()
+        except FileNotFoundError:
+            st.error(f"Nutrition dataset not found at `{NUTRITION_DATA_PATH}`.")
+            nutrition_df = None
+
+        if nutrition_df is not None:
+            region_options = sorted(nutrition_df["region"].unique(), key=str)
+            default_region = "Ireland" if "Ireland" in region_options else region_options[0]
+            selected_region = st.selectbox(
+                "HSE region",
+                options=region_options,
+                index=region_options.index(default_region),
+                key="nutrition_region",
+            )
+            pyramid_frequency = st.selectbox(
+                "Pyramid frequency band",
+                options=NUTRITION_FREQUENCY_ORDER,
+                index=NUTRITION_FREQUENCY_ORDER.index("Once a day or more"),
+                key="nutrition_pyramid_frequency",
+            )
+
+            st.markdown("#### Age pyramids by food item")
+            st.caption(
+                f"Population-style pyramids by age group for each food item "
+                f"({pyramid_frequency}). Male values extend left, female values extend right."
+            )
+            st.markdown(render_gender_icon_legend_html(), unsafe_allow_html=True)
+            foods = nutrition_food_order(nutrition_df)
+            for row_start in range(0, len(foods), 2):
+                p_cols = st.columns(2, gap="large")
+                for col, food in zip(p_cols, foods[row_start : row_start + 2]):
+                    with col:
+                        pyramid_fig = build_nutrition_age_pyramid(
+                            nutrition_df,
+                            food,
+                            selected_region,
+                            pyramid_frequency,
+                        )
+                        st.plotly_chart(
+                            pyramid_fig,
+                            use_container_width=True,
+                            key=f"nutrition_pyramid_{food.replace(' ', '_')}",
+                        )
+
+            st.markdown("#### Age and frequency heatmaps")
+            st.caption(
+                "Full consumption distributions across age groups for each food item, "
+                "split by sex."
+            )
+            for food in foods:
+                st.markdown(f"**{food}**")
+                hm_left, hm_right = st.columns(2, gap="large")
+                with hm_left:
+                    st.markdown(
+                        '<div class="map-legend-item" style="margin-bottom:6px;">'
+                        '<span class="map-legend-icon" style="background:#DBEAFE;">'
+                        '<i class="fa-solid fa-person" style="color:#1D4ED8;"></i>'
+                        "</span><span>Male</span></div>",
+                        unsafe_allow_html=True,
+                    )
+                    male_hm = build_nutrition_age_frequency_heatmap(
+                        nutrition_df, food, selected_region, "Male"
+                    )
+                    st.plotly_chart(
+                        male_hm, use_container_width=True, key=f"nutrition_hm_m_{food[:8]}"
+                    )
+                with hm_right:
+                    st.markdown(
+                        '<div class="map-legend-item" style="margin-bottom:6px;">'
+                        '<span class="map-legend-icon" style="background:#FCE7F3;">'
+                        '<i class="fa-solid fa-person-dress" style="color:#BE185D;"></i>'
+                        "</span><span>Female</span></div>",
+                        unsafe_allow_html=True,
+                    )
+                    female_hm = build_nutrition_age_frequency_heatmap(
+                        nutrition_df, food, selected_region, "Female"
+                    )
+                    st.plotly_chart(
+                        female_hm, use_container_width=True, key=f"nutrition_hm_f_{food[:8]}"
+                    )
+
     # ── Tab: Burden disease ───────────────────────────────────────────────
     with tab_burden:
         st.subheader("Burden disease")
         st.caption(
-            "Foodborne and enteric disease burden for Galway and Dublin from HPSC surveillance."
+            "Mortality burden from food-associated infections in Ireland, using CSO revised "
+            "death statistics (VSA35)."
         )
-        st.info(
-            "This section will integrate HPSC epidemiological indicators, outbreak trends, "
-            "and comparative disease burden across counties within the One Health framework."
-        )
+        st.markdown(render_burden_source_html(), unsafe_allow_html=True)
+
+        try:
+            burden_df = load_vsa35_deaths()
+        except FileNotFoundError:
+            st.error(f"VSA35 dataset not found at `{VSA35_PATH}`.")
+            burden_df = None
+
+        if burden_df is not None:
+            catalog_df = load_vsa35_cause_catalog()
+            cause_options_df = burden_cause_options(burden_df, catalog_df)
+            cause_label_map = dict(
+                zip(cause_options_df["cause_code"], cause_options_df["cause_label"])
+            )
+            available_codes = cause_options_df["cause_code"].tolist()
+            default_codes = [
+                code for code in BURDEN_DEFAULT_FOOD_CAUSES if code in available_codes
+            ]
+            selected_causes = st.multiselect(
+                "Underlying causes of death (ICD-10)",
+                options=available_codes,
+                default=default_codes or available_codes[:10],
+                format_func=lambda code: cause_label_map.get(code, code),
+                key="burden_selected_causes",
+            )
+
+            if not selected_causes:
+                st.warning("Select at least one cause of death to display charts.")
+            else:
+                st.markdown("### National trends over time")
+                st.caption(
+                    "Default selection covers ICD A00-A09 intestinal and foodborne infections "
+                    "(cholera through unspecified gastroenteritis). Listeria (A32) is excluded. "
+                    "VSA35 is national only; no district breakdown is available."
+                )
+                trend_fig = build_burden_time_trends(
+                    burden_df, selected_causes, cause_label_map
+                )
+                st.plotly_chart(trend_fig, use_container_width=True, key="burden_time_trends")
+                render_chart_download(
+                    trend_fig,
+                    "Download burden trends chart (HTML)",
+                    "burden_disease_trends.html",
+                    "dl_burden_trends",
+                )
+
+                st.markdown("### Accumulated age pyramids")
+                st.caption(
+                    "Deaths summed across 2012-2021 by age group and sex for each selected cause. "
+                    "Male values extend left, female values extend right."
+                )
+                st.markdown(render_gender_icon_legend_html(), unsafe_allow_html=True)
+                for row_start in range(0, len(selected_causes), 2):
+                    p_cols = st.columns(2, gap="large")
+                    for col, cause_code in zip(p_cols, selected_causes[row_start : row_start + 2]):
+                        with col:
+                            pyramid_fig = build_burden_age_pyramid(
+                                burden_df,
+                                cause_code,
+                                cause_label_map.get(cause_code, cause_code),
+                            )
+                            st.plotly_chart(
+                                pyramid_fig,
+                                use_container_width=True,
+                                key=f"burden_pyramid_{cause_code}",
+                            )
+                            short = burden_cause_short_label(
+                                cause_label_map.get(cause_code, cause_code)
+                            )
+                            render_chart_download(
+                                pyramid_fig,
+                                f"Download {short} pyramid (HTML)",
+                                f"burden_pyramid_{cause_code}.html",
+                                f"dl_burden_pyramid_{cause_code}",
+                            )
 
     # ── Tab: Alert frequency ──────────────────────────────────────────────
     with tab_alerts:
         st.subheader("Alert frequency")
         st.caption(
-            "FSAI and RASFF food safety alert frequency and geolocation for Galway and Dublin."
+            "FSAI food safety alerts from 2022 onward, shown over time and by hazard type."
         )
-        st.info(
-            "This section will integrate FSAI/RASFF alert timelines, hazard categories, "
-            "and spatial patterns to link food safety signals with population exposure."
-        )
+        st.markdown(render_fsai_source_html(), unsafe_allow_html=True)
 
-    # ── Tab: Water risk ───────────────────────────────────────────────────
-    with tab_water:
-        st.subheader("Water risk")
-        st.caption(
-            "Water infrastructure, coastal ecology, and exposure risk in urban food environments."
-        )
-        st.info(
-            "This section will combine OSM water features with EPA bathing-water quality, "
-            "shellfish monitoring, and coastal risk layers for Galway and Dublin."
-        )
+        try:
+            alerts_df = load_fsai_alerts()
+        except FileNotFoundError:
+            st.error(f"FSAI alerts dataset not found at `{FSAI_ALERTS_PATH}`.")
+            alerts_df = None
+
+        if alerts_df is not None:
+            timeline_fig = build_fsai_alerts_timeline(alerts_df)
+            st.plotly_chart(timeline_fig, use_container_width=True, key="alerts_timeline")
+            render_chart_download(
+                timeline_fig,
+                "Download alerts timeline (HTML)",
+                "fsai_alerts_timeline.html",
+                "dl_alerts_timeline",
+            )
+
+            type_left, type_right = st.columns(2, gap="large")
+            with type_left:
+                type_fig = build_fsai_alerts_by_type(alerts_df)
+                st.plotly_chart(type_fig, use_container_width=True, key="alerts_by_type")
+                render_chart_download(
+                    type_fig,
+                    "Download alerts by type (HTML)",
+                    "fsai_alerts_by_type.html",
+                    "dl_alerts_by_type",
+                )
+            with type_right:
+                stack_fig = build_fsai_alerts_type_timeline(alerts_df)
+                st.plotly_chart(stack_fig, use_container_width=True, key="alerts_type_timeline")
+                render_chart_download(
+                    stack_fig,
+                    "Download alerts by type over time (HTML)",
+                    "fsai_alerts_type_timeline.html",
+                    "dl_alerts_type_timeline",
+                )
+
+            st.markdown(render_fsai_hazard_note_html(), unsafe_allow_html=True)
+            st.caption(
+                f"Showing {len(alerts_df):,} alerts from 2022 onward with parsed dates. Hazard "
+                "types are inferred from alert titles."
+            )
 
     # ── Tab: Waste / animal interface ─────────────────────────────────────
     with tab_waste:
