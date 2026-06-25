@@ -10,6 +10,7 @@ import base64
 from pathlib import Path
 
 import folium
+import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -196,6 +197,9 @@ NETWORK_MAP_HEIGHT = 480
 NETWORK_NODE_RADIUS = 2
 NETWORK_LINE_WEIGHT = 2.5
 NETWORK_LINE_OPACITY = 0.42
+WASTE_MESH_LINE_COLOR = "#111827"
+WASTE_MESH_LINE_WEIGHT = 2.0
+WASTE_MESH_LINE_OPACITY = 0.55
 TRAVEL_SPEED_KMH = 4.5
 
 ACCESS_TIER = {
@@ -1819,6 +1823,256 @@ def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
         + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon / 2) ** 2
     )
     return r * 2 * math.asin(math.sqrt(a))
+
+
+def min_distances_waste_to_food(waste: pd.DataFrame, food: pd.DataFrame) -> np.ndarray:
+    w_lat = waste["lat"].to_numpy(dtype=float)[:, None]
+    w_lon = waste["lon"].to_numpy(dtype=float)[:, None]
+    f_lat = food["lat"].to_numpy(dtype=float)[None, :]
+    f_lon = food["lon"].to_numpy(dtype=float)[None, :]
+    dlat = np.radians(f_lat - w_lat)
+    dlon = np.radians(f_lon - w_lon)
+    a = (
+        np.sin(dlat / 2) ** 2
+        + np.cos(np.radians(w_lat)) * np.cos(np.radians(f_lat)) * np.sin(dlon / 2) ** 2
+    )
+    dist_km = 6371.0 * 2 * np.arcsin(np.sqrt(a))
+    return dist_km.min(axis=1)
+
+
+def compute_waste_food_proximity_table(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
+    radius_df = filter_by_city_radius(df, radius_km)
+    rows: list[dict[str, object]] = []
+    for cat in FOOD_ACCESS_CATEGORIES:
+        row: dict[str, object] = {"Food source": CATEGORY_META[cat]["label"]}
+        for county in COUNTY_DISPLAY_ORDER:
+            label = COUNTY_META[county]["label"]
+            waste = radius_df[(radius_df["county"] == county) & (radius_df["category"] == "waste")]
+            food = radius_df[(radius_df["county"] == county) & (radius_df["category"] == cat)]
+            if waste.empty or food.empty:
+                row[f"{label} (m)"] = None
+                row[f"{label} (min)"] = None
+                continue
+            nearest = min_distances_waste_to_food(waste, food)
+            mean_km = float(nearest.mean())
+            row[f"{label} (m)"] = int(round(mean_km * 1000))
+            row[f"{label} (min)"] = round(travel_time_minutes(mean_km), 1)
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def compute_waste_subcategory_proximity_top5(
+    df: pd.DataFrame,
+    radius_km: float,
+    top_n: int = 5,
+) -> pd.DataFrame:
+    radius_df = filter_by_city_radius(df, radius_km)
+    rows: list[dict[str, object]] = []
+    for subcat in subcategory_options(radius_df):
+        cat_series = radius_df.loc[radius_df["subcategory"] == subcat, "category"]
+        if cat_series.empty:
+            continue
+        cat = cat_series.iloc[0]
+        if cat not in FOOD_ACCESS_CATEGORIES:
+            continue
+        row: dict[str, object] = {
+            "Subcategory": format_subcategory_label(subcat),
+            "Parent category": CATEGORY_META[cat]["label"],
+        }
+        mean_distances_m: list[float] = []
+        for county in COUNTY_DISPLAY_ORDER:
+            label = COUNTY_META[county]["label"]
+            waste = radius_df[(radius_df["county"] == county) & (radius_df["category"] == "waste")]
+            food = radius_df[
+                (radius_df["county"] == county) & (radius_df["subcategory"] == subcat)
+            ]
+            if waste.empty or food.empty:
+                row[f"{label} (m)"] = None
+                row[f"{label} (min)"] = None
+                continue
+            nearest = min_distances_waste_to_food(waste, food)
+            mean_km = float(nearest.mean())
+            mean_m = mean_km * 1000
+            row[f"{label} (m)"] = int(round(mean_m))
+            row[f"{label} (min)"] = round(travel_time_minutes(mean_km), 1)
+            mean_distances_m.append(mean_m)
+        if mean_distances_m:
+            row["_proximity_score"] = float(np.mean(mean_distances_m))
+            rows.append(row)
+    if not rows:
+        return pd.DataFrame(
+            columns=[
+                "Subcategory",
+                "Parent category",
+                "Galway (m)",
+                "Galway (min)",
+                "Dublin (m)",
+                "Dublin (min)",
+            ]
+        )
+    ranked = pd.DataFrame(rows).sort_values("_proximity_score", ascending=True).head(top_n)
+    return ranked.drop(columns="_proximity_score").reset_index(drop=True)
+
+
+def render_waste_proximity_table_html(table_df: pd.DataFrame) -> str:
+    headers = list(table_df.columns)
+    head_html = "".join(f"<th>{col}</th>" for col in headers)
+    body_rows = []
+    for _, row in table_df.iterrows():
+        cells = []
+        for col in headers:
+            value = row[col]
+            if pd.isna(value):
+                cells.append("<td>N/A</td>")
+            elif col.endswith("(min)"):
+                cells.append(f"<td>{float(value):.1f}</td>")
+            elif col.endswith("(m)"):
+                cells.append(f"<td>{int(value):,}</td>")
+            else:
+                cells.append(f"<td>{value}</td>")
+        body_rows.append(f"<tr>{''.join(cells)}</tr>")
+    return (
+        '<div class="stats-table-wrap">'
+        '<table class="stats-table">'
+        f"<thead><tr>{head_html}</tr></thead>"
+        f"<tbody>{''.join(body_rows)}</tbody>"
+        "</table></div>"
+    )
+
+
+def render_waste_proximity_methodology_html(radius_km: float) -> str:
+    return (
+        '<div class="heatmap-math">'
+        "<h4>Waste-to-food proximity</h4>"
+        f"<p>For each waste site within <strong>{radius_km:g} km</strong> of the city centre, "
+        "straight-line distance (haversine) is computed to the nearest OSM point in each food "
+        "source category. The table reports the mean nearest-neighbour distance in metres "
+        f"and estimated walking time at <strong>{TRAVEL_SPEED_KMH:g} km/h</strong>. "
+        "The subcategory table lists the five OSM subcategories with the smallest mean "
+        "waste-to-food proximity (averaged across Galway and Dublin when both are available).</p>"
+        "<p><code>time (min) = distance (m) ÷ 1000 ÷ speed (km/h) × 60</code></p>"
+        "</div>"
+    )
+
+
+def render_waste_mesh_methodology_html() -> str:
+    return (
+        '<div class="heatmap-math">'
+        "<h4>Waste mesh network</h4>"
+        "<p>Waste sites are linked in a minimum-spanning tree: each site connects to others "
+        "without using the city centre as a hub. Edge lengths follow haversine distance between "
+        "paired waste points. This schematic highlights clusters and corridors between disposal "
+        "and recycling infrastructure.</p>"
+        "</div>"
+    )
+
+
+def waste_mesh_edges(latitudes: np.ndarray, longitudes: np.ndarray) -> list[tuple[int, int]]:
+    n = len(latitudes)
+    if n < 2:
+        return []
+    in_tree = np.zeros(n, dtype=bool)
+    min_dist = np.full(n, np.inf)
+    min_edge = np.full(n, -1, dtype=int)
+    in_tree[0] = True
+    for j in range(1, n):
+        min_dist[j] = haversine_km(latitudes[0], longitudes[0], latitudes[j], longitudes[j])
+        min_edge[j] = 0
+    edges: list[tuple[int, int]] = []
+    for _ in range(n - 1):
+        j = int(np.argmin(min_dist))
+        if not np.isfinite(min_dist[j]):
+            break
+        edges.append((int(min_edge[j]), j))
+        in_tree[j] = True
+        min_dist[j] = np.inf
+        for k in range(n):
+            if in_tree[k]:
+                continue
+            dist = haversine_km(latitudes[j], longitudes[j], latitudes[k], longitudes[k])
+            if dist < min_dist[k]:
+                min_dist[k] = dist
+                min_edge[k] = j
+    return edges
+
+
+def build_waste_mesh_network_map(
+    county_df: pd.DataFrame,
+    county: str,
+    radius_km: float,
+) -> folium.Map:
+    meta = COUNTY_META[county]
+    m = _static_map_base(county, radius_km, NETWORK_MAP_HEIGHT)
+    waste_sub = county_df[county_df["category"] == "waste"].copy()
+
+    if waste_sub.empty:
+        folium.Marker(
+            [meta["city_lat"], meta["city_lon"]],
+            tooltip="No waste sites in buffer",
+            icon=folium.Icon(color="lightgray", icon="info-sign"),
+        ).add_to(m)
+        return m
+
+    lats = waste_sub["lat"].to_numpy(dtype=float)
+    lons = waste_sub["lon"].to_numpy(dtype=float)
+    edges = waste_mesh_edges(lats, lons)
+
+    mesh_fg = folium.FeatureGroup(name="Waste mesh network", show=True)
+    for i, j in edges:
+        dist_km = haversine_km(lats[i], lons[i], lats[j], lons[j])
+        folium.PolyLine(
+            locations=[[lats[i], lons[i]], [lats[j], lons[j]]],
+            color=WASTE_MESH_LINE_COLOR,
+            weight=WASTE_MESH_LINE_WEIGHT,
+            opacity=WASTE_MESH_LINE_OPACITY,
+            tooltip=f"Waste link: {dist_km:.2f} km ({dist_km * 1000:.0f} m)",
+        ).add_to(mesh_fg)
+
+    for row in waste_sub.itertuples(index=False):
+        location = [row.lat, row.lon]
+        name = row.name if pd.notna(row.name) and str(row.name).strip() else "(unnamed)"
+        tip = (
+            f"{name} | Waste | {format_subcategory_label(row.subcategory)} | "
+            f"{row.distance_km:.2f} km from centre"
+        )
+        folium.Marker(
+            location=location,
+            tooltip=tip,
+            icon=waste_site_div_icon(),
+        ).add_to(mesh_fg)
+
+    mesh_fg.add_to(m)
+    return m
+
+
+@st.cache_data(show_spinner="Building waste heatmap...")
+def build_waste_heatmap_cached(county: str, county_data_json: str, radius_km: float) -> str:
+    county_df = pd.read_json(io.StringIO(county_data_json))
+    m = build_categories_heatmap(county_df, county, ["waste"], radius_km)
+    return folium_to_html(m)
+
+
+@st.cache_data(show_spinner="Building waste mesh network...")
+def build_waste_mesh_network_cached(county: str, county_data_json: str, radius_km: float) -> str:
+    county_df = pd.read_json(io.StringIO(county_data_json))
+    m = build_waste_mesh_network_map(county_df, county, radius_km)
+    return folium_to_html(m)
+
+
+@st.cache_data(show_spinner="Calculating waste proximity...")
+def compute_waste_food_proximity_table_cached(panel_json: str, radius_km: float) -> pd.DataFrame:
+    panel_df = pd.read_json(io.StringIO(panel_json))
+    return compute_waste_food_proximity_table(panel_df, radius_km)
+
+
+@st.cache_data(show_spinner="Calculating waste subcategory proximity...")
+def compute_waste_subcategory_proximity_top5_cached(
+    panel_json: str,
+    radius_km: float,
+    top_n: int = 5,
+) -> pd.DataFrame:
+    panel_df = pd.read_json(io.StringIO(panel_json))
+    return compute_waste_subcategory_proximity_top5(panel_df, radius_km, top_n=top_n)
 
 
 def filter_by_city_radius(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
@@ -4387,12 +4641,104 @@ def main() -> None:
     with tab_waste:
         st.subheader("Waste / animal interface")
         st.caption(
-            "Waste disposal, primary production, and animal and human food pathway interfaces."
+            "Waste disposal infrastructure, mesh connectivity between waste sites, and proximity "
+            "to food sources in Galway and Dublin."
         )
-        st.info(
-            "This section will map waste infrastructure, farm to urban edges, and zoonotic "
-            "interface zones to support One Health food safety analysis."
+
+        waste_radius_km = st.slider(
+            "Radius from city centre (km)",
+            min_value=1,
+            max_value=5,
+            value=DEFAULT_RADIUS_KM,
+            step=1,
+            key="waste_radius",
         )
+
+        dublin_waste_json = prepare_heatmap_county_json(df, waste_radius_km, "dublin")
+        galway_waste_json = prepare_heatmap_county_json(df, waste_radius_km, "galway")
+        waste_key_suffix = f"{waste_radius_km}"
+
+        st.subheader("Waste density heatmaps")
+        st.caption(
+            f"Kernel-density map of waste and recycling sites within {waste_radius_km} km "
+            "of each city centre."
+        )
+        waste_hm_left, waste_hm_right = st.columns(2, gap="large")
+        with waste_hm_left:
+            st.markdown(f"### {COUNTY_META['galway']['label']}")
+            hm_waste_gal = build_waste_heatmap_cached("galway", galway_waste_json, waste_radius_km)
+            render_folium_html_embed(hm_waste_gal, height=HEATMAP_MAP_HEIGHT)
+            render_map_download(
+                hm_waste_gal,
+                "Download Galway waste heatmap (HTML)",
+                f"galway_waste_heatmap_{waste_key_suffix}.html",
+                f"dl_hm_gal_waste_{waste_key_suffix}",
+            )
+        with waste_hm_right:
+            st.markdown(f"### {COUNTY_META['dublin']['label']}")
+            hm_waste_dub = build_waste_heatmap_cached("dublin", dublin_waste_json, waste_radius_km)
+            render_folium_html_embed(hm_waste_dub, height=HEATMAP_MAP_HEIGHT)
+            render_map_download(
+                hm_waste_dub,
+                "Download Dublin waste heatmap (HTML)",
+                f"dublin_waste_heatmap_{waste_key_suffix}.html",
+                f"dl_hm_dub_waste_{waste_key_suffix}",
+            )
+
+        st.markdown(render_heatmap_methodology_html(), unsafe_allow_html=True)
+
+        st.subheader("Waste mesh network maps")
+        st.caption(
+            f"Waste sites linked to each other (minimum-spanning tree) within {waste_radius_km} km. "
+            "Diamond markers show individual waste and recycling points."
+        )
+        st.markdown(render_waste_mesh_methodology_html(), unsafe_allow_html=True)
+        st.markdown(render_waste_network_legend_html(), unsafe_allow_html=True)
+
+        waste_net_left, waste_net_right = st.columns(2, gap="large")
+        with waste_net_left:
+            st.markdown(f"### {COUNTY_META['galway']['label']}")
+            net_waste_gal = build_waste_mesh_network_cached(
+                "galway", galway_waste_json, waste_radius_km
+            )
+            render_folium_html_embed(net_waste_gal, height=NETWORK_MAP_HEIGHT)
+            render_map_download(
+                net_waste_gal,
+                "Download Galway waste mesh network (HTML)",
+                f"galway_waste_mesh_{waste_key_suffix}.html",
+                f"dl_net_gal_waste_{waste_key_suffix}",
+            )
+        with waste_net_right:
+            st.markdown(f"### {COUNTY_META['dublin']['label']}")
+            net_waste_dub = build_waste_mesh_network_cached(
+                "dublin", dublin_waste_json, waste_radius_km
+            )
+            render_folium_html_embed(net_waste_dub, height=NETWORK_MAP_HEIGHT)
+            render_map_download(
+                net_waste_dub,
+                "Download Dublin waste mesh network (HTML)",
+                f"dublin_waste_mesh_{waste_key_suffix}.html",
+                f"dl_net_dub_waste_{waste_key_suffix}",
+            )
+
+        st.subheader("Waste-to-food proximity")
+        st.caption(
+            f"Nearest straight-line distance from each waste site to food sources by category "
+            f"within {waste_radius_km} km, reported in metres and estimated walking time."
+        )
+        st.markdown(render_waste_proximity_methodology_html(waste_radius_km), unsafe_allow_html=True)
+        proximity_table = compute_waste_food_proximity_table_cached(df.to_json(), waste_radius_km)
+        st.markdown("**By food category**", unsafe_allow_html=True)
+        st.markdown(render_waste_proximity_table_html(proximity_table), unsafe_allow_html=True)
+
+        subcat_proximity = compute_waste_subcategory_proximity_top5_cached(
+            df.to_json(), waste_radius_km, top_n=5
+        )
+        st.markdown("**Top 5 closest OSM subcategories**", unsafe_allow_html=True)
+        st.caption(
+            "Subcategories ranked by mean waste-to-nearest-point distance (lowest first)."
+        )
+        st.markdown(render_waste_proximity_table_html(subcat_proximity), unsafe_allow_html=True)
 
     # ── Tab: What's missing? ──────────────────────────────────────────────
     with tab_gaps:
