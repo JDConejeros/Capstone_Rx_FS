@@ -23,6 +23,8 @@ IMAGE_DIR = Path(__file__).parent / "image"
 UC_DAVIS_LOGO = IMAGE_DIR / "uc_davis.png"
 UCD_LOGO = IMAGE_DIR / "ucd.png"
 OH_TEXT_COLOR = "#4A4A4A"
+OH_NAVY = "#1E3A5F"
+OH_FOREST = "#2F5D3A"
 OH_FONT = "Helvetica, Arial, sans-serif"
 
 CATEGORY_META = {
@@ -85,12 +87,18 @@ CATEGORY_ORDER = list(CATEGORY_META.keys())
 DEFAULT_CATEGORIES = ["fast_food", "local_market", "farm"]
 DEFAULT_SUBCATEGORIES = ["shop=butcher", "shop=greengrocer", "landuse=farmland"]
 DEFAULT_RADIUS_KM = 5
+DEFAULT_ECOLOGY_CATEGORIES = ["fast_food"]
 MARKER_PX = 20
 MARKER_ICON_PX = 11
 SUBCATEGORY_MARKER_PX = 24
 SUBCATEGORY_MARKER_ICON_PX = 13
 POINT_MAP_HEIGHT = 520
 HEATMAP_MAP_HEIGHT = 480
+NETWORK_MAP_HEIGHT = 480
+NETWORK_NODE_RADIUS = 2
+NETWORK_LINE_WEIGHT = 2.5
+NETWORK_LINE_OPACITY = 0.42
+TRAVEL_SPEED_KMH = 4.5
 CHART_TITLE_TOP_MARGIN = 72
 
 ACCESS_TIER = {
@@ -217,36 +225,51 @@ PLATFORM_DESCRIPTION = (
 ONE_HEALTH_DOMAINS = {
     "human": {
         "label": "HUMAN HEALTH",
-        "cx": 0.0,
-        "cy": -1.05,
-        "color": "#9DC9E8",
+        "cx": -0.92,
+        "cy": 0.82,
+        "color": "#C5DDB8",
+        "label_color": "#3D6B45",
     },
     "environment": {
-        "label": "ENVIRONMENTAL HEALTH",
-        "cx": 1.05,
-        "cy": 0.78,
-        "color": "#F2E682",
+        "label": "ENVIRONMENT",
+        "cx": 0.92,
+        "cy": 0.82,
+        "color": "#B8D4EA",
+        "label_color": "#2E6B9E",
     },
-    "animal_plant": {
-        "label": "ANIMAL AND<br>PLANT HEALTH",
-        "cx": -1.05,
-        "cy": 0.78,
-        "color": "#6EC4B3",
+    "agriculture": {
+        "label": "AGRICULTURE",
+        "cx": -0.92,
+        "cy": -0.82,
+        "color": "#F5E6A8",
+        "label_color": "#8A7340",
+    },
+    "society": {
+        "label": "SOCIETY",
+        "cx": 0.92,
+        "cy": -0.82,
+        "color": "#D4C5E0",
+        "label_color": "#6B5088",
     },
 }
 
-OH_DOMAIN_LABEL_GAP = 0.38
+OH_CENTER_RADIUS = 0.78
+OH_DOMAIN_LABEL_GAP = 0.34
 
-OH_DOMAIN_RADIUS = 1.84
+OH_DOMAIN_RADIUS = 1.52
 OH_THEME_INSET = 0.18
 OH_LABEL_MAX_DISTANCE = 0.44
 OH_REGION_ANCHORS: dict[tuple[str, ...], tuple[float, float]] = {
-    ("human",): (0.0, -1.78),
-    ("environment",): (1.34, 0.72),
-    ("animal_plant",): (-1.34, 0.72),
-    ("animal_plant", "human"): (-0.72, -0.42),
-    ("environment", "human"): (0.72, -0.42),
-    ("animal_plant", "environment"): (0.0, 0.88),
+    ("human",): (-0.68, 0.58),
+    ("environment",): (0.68, 0.58),
+    ("agriculture",): (-0.68, -0.58),
+    ("society",): (0.68, -0.58),
+    ("agriculture", "human"): (-0.92, 0.0),
+    ("environment", "human"): (0.0, 0.82),
+    ("environment", "agriculture"): (0.0, 0.0),
+    ("agriculture", "society"): (0.0, -0.82),
+    ("environment", "society"): (0.92, 0.0),
+    ("human", "society"): (0.0, 0.12),
 }
 
 ONE_HEALTH_THEMES = [
@@ -263,10 +286,10 @@ ONE_HEALTH_THEMES = [
         "id": "access_equity",
         "label": "Distance & access equity",
         "color": "#2980B9",
-        "domains": ["human"],
+        "domains": ["human", "society"],
         "tab": "Food System",
         "coverage": "full",
-        "detail": "Healthy vs unhealthy access metrics, density, and comparative Galway–Dublin tables.",
+        "detail": "Healthy vs unhealthy access metrics, density, and comparative Galway and Dublin tables.",
     },
     {
         "id": "food_ecology",
@@ -281,7 +304,7 @@ ONE_HEALTH_THEMES = [
         "id": "foodborne_burden",
         "label": "Foodborne disease burden",
         "color": "#C0392B",
-        "domains": ["human", "animal_plant"],
+        "domains": ["human", "agriculture"],
         "tab": "Burden disease",
         "coverage": "partial",
         "detail": "HPSC epidemiological indicators (integration in progress).",
@@ -290,7 +313,7 @@ ONE_HEALTH_THEMES = [
         "id": "alert_frequency",
         "label": "Food safety alert frequency",
         "color": "#E67E22",
-        "domains": ["human", "animal_plant"],
+        "domains": ["human", "agriculture"],
         "tab": "Alert frequency",
         "coverage": "partial",
         "detail": "FSAI/RASFF alert geolocation and temporal patterns (integration in progress).",
@@ -308,7 +331,7 @@ ONE_HEALTH_THEMES = [
         "id": "waste_interface",
         "label": "Waste & animal interface",
         "color": "#7F8C8D",
-        "domains": ["environment", "animal_plant"],
+        "domains": ["environment", "agriculture"],
         "tab": "Waste / animal interface",
         "coverage": "partial",
         "detail": "Waste disposal and production nodes; zoonotic overlap mapping pending.",
@@ -317,7 +340,7 @@ ONE_HEALTH_THEMES = [
         "id": "livestock_production",
         "label": "Livestock & farm production",
         "color": "#159957",
-        "domains": ["animal_plant"],
+        "domains": ["agriculture"],
         "tab": "Food System",
         "coverage": "partial",
         "detail": "OSM farm and agricultural nodes within urban buffers; species mix and throughput not yet modelled.",
@@ -326,7 +349,7 @@ ONE_HEALTH_THEMES = [
         "id": "supply_chain",
         "label": "Supply chain & city scale",
         "color": "#5B6CFF",
-        "domains": ["human", "environment"],
+        "domains": ["society", "environment"],
         "tab": "Food System",
         "coverage": "partial",
         "detail": "Urban buffer comparisons proxy supply-chain exposure; establishment-level linkage pending.",
@@ -362,7 +385,7 @@ ONE_HEALTH_THEMES = [
         "id": "price_affordability",
         "label": "Price & affordability",
         "color": "#D97706",
-        "domains": ["human"],
+        "domains": ["society"],
         "tab": "What's missing?",
         "coverage": "gap",
         "detail": "Opportunity: integrate CSO price indices and healthy basket cost by district.",
@@ -371,7 +394,7 @@ ONE_HEALTH_THEMES = [
         "id": "gender_access",
         "label": "Gender & social access",
         "color": "#D97706",
-        "domains": ["human"],
+        "domains": ["society"],
         "tab": "What's missing?",
         "coverage": "gap",
         "detail": "Opportunity: gender-disaggregated vulnerability and care-work food access patterns.",
@@ -380,7 +403,7 @@ ONE_HEALTH_THEMES = [
         "id": "alert_case_link",
         "label": "Alert-to-case linkage",
         "color": "#D97706",
-        "domains": ["human", "animal_plant"],
+        "domains": ["human", "agriculture"],
         "tab": "What's missing?",
         "coverage": "gap",
         "detail": "Opportunity: connect FSAI alerts to HPSC outbreak line lists in space and time.",
@@ -398,16 +421,16 @@ ONE_HEALTH_THEMES = [
         "id": "zoonotic_overlap",
         "label": "Zoonotic overlap maps",
         "color": "#D97706",
-        "domains": ["animal_plant", "human"],
+        "domains": ["agriculture", "human"],
         "tab": "What's missing?",
         "coverage": "gap",
-        "detail": "Opportunity: farm–urban edge and wildlife interface layers for Galway vs Dublin.",
+        "detail": "Opportunity: farm to urban edge and wildlife interface layers for Galway vs Dublin.",
     },
     {
         "id": "meat_consumption",
         "label": "Meat consumption",
         "color": "#D97706",
-        "domains": ["animal_plant", "human"],
+        "domains": ["agriculture", "human"],
         "tab": "What's missing?",
         "coverage": "gap",
         "detail": "Opportunity: link household meat intake (CSO/HSE surveys) to retail and farm-source exposure.",
@@ -416,7 +439,7 @@ ONE_HEALTH_THEMES = [
         "id": "fish_consumption",
         "label": "Fish & seafood consumption",
         "color": "#D97706",
-        "domains": ["animal_plant", "human"],
+        "domains": ["agriculture", "human"],
         "tab": "What's missing?",
         "coverage": "gap",
         "detail": "Opportunity: map seafood retail, coastal catch zones, and per-capita fish intake by district.",
@@ -425,7 +448,7 @@ ONE_HEALTH_THEMES = [
         "id": "milk_consumption",
         "label": "Milk & dairy consumption",
         "color": "#D97706",
-        "domains": ["animal_plant", "human"],
+        "domains": ["agriculture", "human"],
         "tab": "What's missing?",
         "coverage": "gap",
         "detail": "Opportunity: connect dairy retail density and farm supply to population dairy intake patterns.",
@@ -434,7 +457,7 @@ ONE_HEALTH_THEMES = [
         "id": "scavenger_animals",
         "label": "Scavenger animals",
         "color": "#D97706",
-        "domains": ["animal_plant", "environment"],
+        "domains": ["agriculture", "environment"],
         "tab": "Waste / animal interface",
         "coverage": "gap",
         "detail": "Opportunity: gulls, rodents, and other scavengers at waste sites and food-handling zones.",
@@ -443,7 +466,7 @@ ONE_HEALTH_THEMES = [
         "id": "poultry_eggs",
         "label": "Poultry & egg supply",
         "color": "#D97706",
-        "domains": ["animal_plant"],
+        "domains": ["agriculture"],
         "tab": "What's missing?",
         "coverage": "gap",
         "detail": "Opportunity: poultry farms, egg retail, and avian influenza risk near urban food nodes.",
@@ -452,7 +475,7 @@ ONE_HEALTH_THEMES = [
         "id": "wildlife_feral",
         "label": "Wildlife & feral animals",
         "color": "#D97706",
-        "domains": ["animal_plant", "environment"],
+        "domains": ["agriculture", "environment"],
         "tab": "What's missing?",
         "coverage": "gap",
         "detail": "Opportunity: urban wildlife corridors and feral populations overlapping food production areas.",
@@ -461,7 +484,7 @@ ONE_HEALTH_THEMES = [
         "id": "antimicrobial_animals",
         "label": "Antimicrobial use in animals",
         "color": "#D97706",
-        "domains": ["animal_plant", "human"],
+        "domains": ["agriculture", "human"],
         "tab": "What's missing?",
         "coverage": "gap",
         "detail": "Opportunity: farm-level antimicrobial stewardship data linked to foodborne resistance burden.",
@@ -476,7 +499,7 @@ GAP_OPPORTUNITIES = [
     "Spatial linkage between FSAI/RASFF alerts and HPSC confirmed outbreak cases.",
     "Real-time water-quality and coastal ecology layers for food-production zones.",
     "Climate-change attribution and future-scenario modelling at city scale.",
-    "Zoonotic and farm–urban interface mapping for animal–human food pathways.",
+    "Zoonotic and farm to urban interface mapping for animal and human food pathways.",
     "Animal-source food consumption pathways for meat, fish, and dairy by district.",
     "Scavenger and wildlife interfaces at waste sites and urban food-handling zones.",
     "Poultry, egg supply chains, and avian disease risk near population centres.",
@@ -1250,12 +1273,226 @@ def build_category_subcategory_donut(
     county_df = df[(df["county"] == county) & (df["category"] == category)]
     subcats = county_df["subcategory"].unique()
     label_map = {subcat: format_subcategory_label(subcat) for subcat in subcats}
-    title = f"{COUNTY_META[county]['label']} — {CATEGORY_META[category]['label']}"
+    title = f"{COUNTY_META[county]['label']} | {CATEGORY_META[category]['label']}"
     return build_donut(
         county_df["subcategory"],
         title,
         label_map=label_map,
         color_map=None,
+    )
+
+
+def travel_time_minutes(distance_km: float) -> float:
+    return distance_km / TRAVEL_SPEED_KMH * 60.0
+
+
+def _set_county_travel_means(
+    row: dict[str, object],
+    sub: pd.DataFrame,
+    label: str,
+) -> None:
+    if sub.empty:
+        row[f"{label} (km)"] = None
+        row[f"{label} (min)"] = None
+    else:
+        mean_km = float(sub["distance_km"].mean())
+        row[f"{label} (km)"] = round(mean_km, 2)
+        row[f"{label} (min)"] = round(travel_time_minutes(mean_km), 1)
+
+
+def compute_access_tier_travel_table(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
+    radius_df = filter_by_city_radius(df, radius_km)
+    food = radius_df[radius_df["category"].isin(FOOD_ACCESS_CATEGORIES)].copy()
+    rows: list[dict[str, object]] = []
+    tier_order = ["healthy", "unhealthy", "mixed"]
+    for tier in tier_order:
+        row: dict[str, object] = {"Access tier": ACCESS_TIER_META[tier]["label"]}
+        for county in COUNTY_DISPLAY_ORDER:
+            label = COUNTY_META[county]["label"]
+            sub = food[(food["county"] == county) & (food["access_tier"] == tier)]
+            _set_county_travel_means(row, sub, label)
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def compute_category_travel_table(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
+    radius_df = filter_by_city_radius(df, radius_km)
+    rows: list[dict[str, object]] = []
+    for cat in CATEGORY_ORDER:
+        row: dict[str, object] = {"Category": CATEGORY_META[cat]["label"]}
+        for county in COUNTY_DISPLAY_ORDER:
+            label = COUNTY_META[county]["label"]
+            sub = radius_df[(radius_df["county"] == county) & (radius_df["category"] == cat)]
+            _set_county_travel_means(row, sub, label)
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def compute_subcategory_travel_comparison(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
+    radius_df = filter_by_city_radius(df, radius_km)
+    rows: list[dict[str, object]] = []
+    for subcat in subcategory_options(radius_df):
+        cat = radius_df.loc[radius_df["subcategory"] == subcat, "category"].iloc[0]
+        row: dict[str, object] = {
+            "Subcategory": format_subcategory_label(subcat),
+            "Parent category": CATEGORY_META[cat]["label"],
+        }
+        for county in COUNTY_DISPLAY_ORDER:
+            label = COUNTY_META[county]["label"]
+            sub = radius_df[
+                (radius_df["county"] == county) & (radius_df["subcategory"] == subcat)
+            ]
+            _set_county_travel_means(row, sub, label)
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def compute_subcategory_travel_extremes(
+    comparison_df: pd.DataFrame,
+    top_n: int = 5,
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    gal_km, gal_min = "Galway (km)", "Galway (min)"
+    dub_km, dub_min = "Dublin (km)", "Dublin (min)"
+    gal_valid = comparison_df.dropna(subset=[gal_km])
+    dub_valid = comparison_df.dropna(subset=[dub_km])
+    gal_close = gal_valid.nsmallest(top_n, gal_km)[["Subcategory", gal_km, gal_min]].reset_index(
+        drop=True
+    )
+    gal_far = gal_valid.nlargest(top_n, gal_km)[["Subcategory", gal_km, gal_min]].reset_index(
+        drop=True
+    )
+    dub_close = dub_valid.nsmallest(top_n, dub_km)[["Subcategory", dub_km, dub_min]].reset_index(
+        drop=True
+    )
+    dub_far = dub_valid.nlargest(top_n, dub_km)[["Subcategory", dub_km, dub_min]].reset_index(
+        drop=True
+    )
+    return gal_close, gal_far, dub_close, dub_far
+
+
+def render_subcategory_travel_extremes_html(
+    gal_close: pd.DataFrame,
+    gal_far: pd.DataFrame,
+    dub_close: pd.DataFrame,
+    dub_far: pd.DataFrame,
+    radius_km: float,
+    top_n: int = 5,
+) -> str:
+    def _rows(table: pd.DataFrame, km_col: str, min_col: str) -> str:
+        body = []
+        for _, row in table.iterrows():
+            body.append(
+                f"<tr><td>{row['Subcategory']}</td>"
+                f"<td>{row[km_col]:.2f}</td>"
+                f"<td>{row[min_col]:.1f}</td></tr>"
+            )
+        return "".join(body)
+
+    def _pair_table(
+        title: str,
+        gal_table: pd.DataFrame,
+        dub_table: pd.DataFrame,
+        gal_km: str,
+        gal_min: str,
+        dub_km: str,
+        dub_min: str,
+    ) -> str:
+        return (
+            f"<p><strong>{title}</strong></p>"
+            '<div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:4px;margin-bottom:12px;">'
+            '<div class="stats-table-wrap" style="flex:1;min-width:280px;">'
+            f'<div class="map-legend-title">{COUNTY_META["galway"]["label"]}</div>'
+            '<table class="stats-table">'
+            "<thead><tr><th>Subcategory</th><th>km</th><th>min</th></tr></thead>"
+            f"<tbody>{_rows(gal_table, gal_km, gal_min)}</tbody>"
+            "</table></div>"
+            '<div class="stats-table-wrap" style="flex:1;min-width:280px;">'
+            f'<div class="map-legend-title">{COUNTY_META["dublin"]["label"]}</div>'
+            '<table class="stats-table">'
+            "<thead><tr><th>Subcategory</th><th>km</th><th>min</th></tr></thead>"
+            f"<tbody>{_rows(dub_table, dub_km, dub_min)}</tbody>"
+            "</table></div>"
+            "</div>"
+        )
+
+    return (
+        '<div class="metric-definitions">'
+        f"<p>Top {top_n} closest and farthest OSM subcategories by mean straight-line distance "
+        f"from each city centre within a <strong>{radius_km:g} km</strong> buffer.</p>"
+        "</div>"
+        + _pair_table(
+            "Closest to city centre (top 5)",
+            gal_close,
+            dub_close,
+            "Galway (km)",
+            "Galway (min)",
+            "Dublin (km)",
+            "Dublin (min)",
+        )
+        + _pair_table(
+            "Farthest from city centre (top 5)",
+            gal_far,
+            dub_far,
+            "Galway (km)",
+            "Galway (min)",
+            "Dublin (km)",
+            "Dublin (min)",
+        )
+    )
+
+
+def render_travel_stats_table_html(table_df: pd.DataFrame) -> str:
+    headers = list(table_df.columns)
+    head_html = "".join(f"<th>{col}</th>" for col in headers)
+    body_rows = []
+    for _, row in table_df.iterrows():
+        cells = []
+        for col in headers:
+            value = row[col]
+            if col.endswith("(min)") and pd.isna(value):
+                cells.append("<td>N/A</td>")
+            elif col.endswith("(km)") and pd.isna(value):
+                cells.append("<td>N/A</td>")
+            elif col.endswith("(km)") and isinstance(value, float):
+                cells.append(f"<td>{value:.2f}</td>")
+            elif isinstance(value, float):
+                cells.append(f"<td>{value:.1f}</td>")
+            else:
+                cells.append(f"<td>{value}</td>")
+        body_rows.append(f"<tr>{''.join(cells)}</tr>")
+    return (
+        '<div class="stats-table-wrap">'
+        '<table class="stats-table">'
+        f"<thead><tr>{head_html}</tr></thead>"
+        f"<tbody>{''.join(body_rows)}</tbody>"
+        "</table></div>"
+    )
+
+
+def render_travel_time_methodology_html(radius_km: float) -> str:
+    return (
+        '<div class="heatmap-math">'
+        "<h4>How average travel time is estimated</h4>"
+        f"<p>Mean travel time from each city centre to food features within a "
+        f"<strong>{radius_km:g} km</strong> urban buffer.</p>"
+        f"<p>Distance is straight-line (haversine) from the city centre to each point. "
+        f"Travel time uses a walking-speed proxy of <strong>{TRAVEL_SPEED_KMH:g} km/h</strong>:</p>"
+        "<p><code>time (min) = distance (km) ÷ speed (km/h) × 60</code></p>"
+        "<p>Healthy vs unhealthy rows use the same access-tier classification as the Food System tab. "
+        "Subcategory extremes show the five closest and five farthest subcategories per city.</p>"
+        "</div>"
+    )
+
+
+def render_food_network_methodology_html() -> str:
+    return (
+        '<div class="heatmap-math">'
+        "<h4>Food network layer</h4>"
+        "<p>Each map shows hub-and-spoke routes from the city centre to every point in one "
+        "category within the urban buffer. Lines trace potential displacement paths; small nodes "
+        "mark individual OSM features. This is a schematic food-access network, not observed "
+        "movement or road routing.</p>"
+        "</div>"
     )
 
 
@@ -1270,7 +1507,7 @@ The heatmap builds a smooth density surface by summing Gaussian kernels centred 
 <p><strong>Intensity at location p:</strong></p>
 <p><span class="formula">λ(p) = Σᵢ K(p, pᵢ)</span></p>
 <p>Parameters used here: <strong>radius = 18 px</strong> (influence radius on screen),
-<strong>blur = 14 px</strong> (Gaussian smoothing). Values are min–max normalised to a colour gradient
+<strong>blur = 14 px</strong> (Gaussian smoothing). Values are min to max normalised to a colour gradient
 (low → high density). Overlapping points produce hotter (darker) areas; isolated points produce small local peaks.</p>
 <p>This is a <em>visual density estimate</em>, not a formal statistical model. It highlights spatial clusters
 of food infrastructure within the selected urban buffer.</p>
@@ -1287,9 +1524,10 @@ def prepare_heatmap_county_json(df: pd.DataFrame, radius_km: float, county: str)
 def warm_heatmap_cache(df: pd.DataFrame, radius_km: float) -> tuple[str, str]:
     dublin_json = prepare_heatmap_county_json(df, radius_km, "dublin")
     galway_json = prepare_heatmap_county_json(df, radius_km, "galway")
+    default_cats = tuple(DEFAULT_ECOLOGY_CATEGORIES)
     for county, county_json in (("dublin", dublin_json), ("galway", galway_json)):
-        for cat in CATEGORY_ORDER:
-            build_category_heatmap_cached(county, cat, county_json, radius_km)
+        build_categories_heatmap_cached(county, default_cats, county_json, radius_km)
+        build_categories_network_cached(county, default_cats, county_json, radius_km)
     return dublin_json, galway_json
 
 
@@ -1427,18 +1665,28 @@ def build_category_heatmap(
     category: str,
     radius_km: float,
 ) -> folium.Map:
+    return build_categories_heatmap(county_df, county, [category], radius_km)
+
+
+def build_categories_heatmap(
+    county_df: pd.DataFrame,
+    county: str,
+    categories: list[str],
+    radius_km: float,
+) -> folium.Map:
     m = _static_map_base(county, radius_km, HEATMAP_MAP_HEIGHT)
-    cat_meta = CATEGORY_META[category]
-    sub = county_df[county_df["category"] == category]
+    sub = county_df[county_df["category"].isin(categories)]
 
     if sub.empty:
         folium.Marker(
             [COUNTY_META[county]["city_lat"], COUNTY_META[county]["city_lon"]],
-            tooltip=f"No {cat_meta['label']} points in buffer",
+            tooltip="No points for the selected categories in buffer",
             icon=folium.Icon(color="lightgray", icon="info-sign"),
         ).add_to(m)
         return m
 
+    primary_cat = categories[0]
+    cat_meta = CATEGORY_META[primary_cat]
     heat_data = [[row.lat, row.lon] for row in sub.itertuples(index=False)]
     gradient = {
         0.2: "#ffffcc",
@@ -1453,6 +1701,93 @@ def build_category_heatmap(
         gradient=gradient,
     ).add_to(m)
     return m
+
+
+@st.cache_data(show_spinner=False)
+def build_categories_heatmap_cached(
+    county: str,
+    categories: tuple[str, ...],
+    county_data_json: str,
+    radius_km: float,
+) -> str:
+    county_df = pd.read_json(io.StringIO(county_data_json))
+    m = build_categories_heatmap(county_df, county, list(categories), radius_km)
+    return folium_to_html(m)
+
+
+def build_category_food_network_map(
+    county_df: pd.DataFrame,
+    county: str,
+    category: str,
+    radius_km: float,
+) -> folium.Map:
+    return build_categories_food_network_map(county_df, county, [category], radius_km)
+
+
+def build_categories_food_network_map(
+    county_df: pd.DataFrame,
+    county: str,
+    categories: list[str],
+    radius_km: float,
+) -> folium.Map:
+    meta = COUNTY_META[county]
+    city_lat, city_lon = meta["city_lat"], meta["city_lon"]
+    m = _static_map_base(county, radius_km, NETWORK_MAP_HEIGHT)
+    sub = county_df[county_df["category"].isin(categories)]
+
+    if sub.empty:
+        folium.Marker(
+            [city_lat, city_lon],
+            tooltip="No points for the selected categories in buffer",
+            icon=folium.Icon(color="lightgray", icon="info-sign"),
+        ).add_to(m)
+        return m
+
+    network_fg = folium.FeatureGroup(name="Food network", show=True)
+    center = [city_lat, city_lon]
+    for cat in categories:
+        cat_meta = CATEGORY_META[cat]
+        color = cat_meta["color"]
+        cat_sub = sub[sub["category"] == cat]
+        for row in cat_sub.itertuples(index=False):
+            location = [row.lat, row.lon]
+            name = row.name if pd.notna(row.name) and str(row.name).strip() else "(unnamed)"
+            travel_min = travel_time_minutes(row.distance_km)
+            tip = (
+                f"{name} | {cat_meta['label']} | "
+                f"{format_subcategory_label(row.subcategory)} | "
+                f"{row.distance_km:.1f} km | ~{travel_min:.0f} min"
+            )
+            folium.PolyLine(
+                locations=[center, location],
+                color=color,
+                weight=NETWORK_LINE_WEIGHT,
+                opacity=NETWORK_LINE_OPACITY,
+            ).add_to(network_fg)
+            folium.CircleMarker(
+                location=location,
+                radius=NETWORK_NODE_RADIUS,
+                color=color,
+                weight=1,
+                fill=True,
+                fill_color=color,
+                fill_opacity=0.9,
+                tooltip=tip,
+            ).add_to(network_fg)
+    network_fg.add_to(m)
+    return m
+
+
+@st.cache_data(show_spinner="Building food network map...")
+def build_categories_network_cached(
+    county: str,
+    categories: tuple[str, ...],
+    county_data_json: str,
+    radius_km: float,
+) -> str:
+    county_df = pd.read_json(io.StringIO(county_data_json))
+    m = build_categories_food_network_map(county_df, county, list(categories), radius_km)
+    return folium_to_html(m)
 
 
 def render_folium_html_embed(map_html: str, height: int) -> None:
@@ -1889,9 +2224,11 @@ def _theme_text_position(theme: dict) -> str:
 def _domain_label_position(domain_id: str) -> tuple[float, float]:
     cx = ONE_HEALTH_DOMAINS[domain_id]["cx"]
     cy = ONE_HEALTH_DOMAINS[domain_id]["cy"]
-    if domain_id == "human":
-        return cx, cy - OH_DOMAIN_RADIUS - OH_DOMAIN_LABEL_GAP
-    return cx, cy + OH_DOMAIN_RADIUS + OH_DOMAIN_LABEL_GAP
+    gap = OH_DOMAIN_LABEL_GAP
+    radius = OH_DOMAIN_RADIUS
+    if cy > 0:
+        return cx, cy + radius + gap
+    return cx, cy - radius - gap
 
 
 def _clamp_theme_position(x: float, y: float, domain_ids: list[str]) -> tuple[float, float]:
@@ -1935,10 +2272,10 @@ def _layout_visible_themes(mode: str) -> list[dict]:
 
 
 OH_NETWORK_LAYOUT = {
-    "height": 760,
+    "height": 820,
     "margin": {"l": 16, "r": 16, "t": 8, "b": 16},
-    "x_range": [-3.35, 3.35],
-    "y_range": [-3.55, 3.25],
+    "x_range": [-3.25, 3.25],
+    "y_range": [-3.45, 3.35],
 }
 
 
@@ -1965,6 +2302,19 @@ def build_one_health_network(mode: str = "overview") -> go.Figure:
     fig = go.Figure()
     themes = _layout_visible_themes(mode)
 
+    fig.add_shape(
+        type="circle",
+        xref="x",
+        yref="y",
+        x0=-OH_CENTER_RADIUS,
+        y0=-OH_CENTER_RADIUS,
+        x1=OH_CENTER_RADIUS,
+        y1=OH_CENTER_RADIUS,
+        fillcolor="rgba(255,255,255,0.94)",
+        line={"color": "#CBD5E1", "width": 2.5},
+        layer="below",
+    )
+
     for domain in ONE_HEALTH_DOMAINS.values():
         cx, cy = domain["cx"], domain["cy"]
         radius = OH_DOMAIN_RADIUS
@@ -1976,8 +2326,8 @@ def build_one_health_network(mode: str = "overview") -> go.Figure:
             y0=cy - radius,
             x1=cx + radius,
             y1=cy + radius,
-            fillcolor=_hex_rgba(domain["color"], 0.42),
-            line={"color": _hex_rgba(domain["color"], 0.85), "width": 1.5},
+            fillcolor=_hex_rgba(domain["color"], 0.58),
+            line={"color": _hex_rgba(domain.get("label_color", domain["color"]), 0.9), "width": 2},
             layer="below",
         )
 
@@ -1986,12 +2336,13 @@ def build_one_health_network(mode: str = "overview") -> go.Figure:
         for domain_id in theme["domains"]:
             domain = ONE_HEALTH_DOMAINS[domain_id]
             dash = "dash" if theme["coverage"] == "gap" else "solid"
-            width = 1.4 if theme["coverage"] == "gap" and mode == "gaps" else 0.9
-            line_color = "#D97706" if theme["coverage"] == "gap" else OH_TEXT_COLOR
+            width = 1.6 if theme["coverage"] == "gap" and mode == "gaps" else 1.1
             if mode == "gaps" and theme["coverage"] != "gap":
                 line_color = _hex_rgba("#64748B", opacity * 0.45)
+            elif theme["coverage"] == "gap":
+                line_color = _hex_rgba("#D97706", 0.35 * opacity)
             else:
-                line_color = _hex_rgba(OH_TEXT_COLOR, 0.28 * opacity)
+                line_color = _hex_rgba(domain.get("label_color", OH_FOREST), 0.22 * opacity)
             fig.add_trace(
                 go.Scatter(
                     x=[theme["x"], domain["cx"]],
@@ -2009,7 +2360,7 @@ def build_one_health_network(mode: str = "overview") -> go.Figure:
             2.2 if t["coverage"] == "gap" and mode == "gaps" else 1.0 for t in themes
         ]
         theme_border_colors = [
-            "#D97706" if t["coverage"] == "gap" else OH_TEXT_COLOR for t in themes
+            "#D97706" if t["coverage"] == "gap" else OH_FOREST for t in themes
         ]
         for theme in themes:
             label_dist = math.hypot(theme["label_x"] - theme["x"], theme["label_y"] - theme["y"])
@@ -2019,7 +2370,7 @@ def build_one_health_network(mode: str = "overview") -> go.Figure:
                         x=[theme["x"], theme["label_x"]],
                         y=[theme["y"], theme["label_y"]],
                         mode="lines",
-                        line={"color": _hex_rgba(OH_TEXT_COLOR, 0.16), "width": 0.8, "dash": "dot"},
+                        line={"color": _hex_rgba(OH_FOREST, 0.14), "width": 0.8, "dash": "dot"},
                         hoverinfo="skip",
                         showlegend=False,
                     )
@@ -2053,21 +2404,48 @@ def build_one_health_network(mode: str = "overview") -> go.Figure:
                 mode="text",
                 text=[t["label"] for t in themes],
                 textposition="middle center",
-                textfont={"size": 9, "color": OH_TEXT_COLOR, "family": OH_FONT},
+                textfont={"size": 9, "color": OH_FOREST, "family": OH_FONT},
                 hoverinfo="skip",
                 showlegend=False,
             )
         )
 
+    fig.add_annotation(
+        x=0.0,
+        y=3.12,
+        text="<b>WHY FOOD MATTERS IN ONE HEALTH</b>",
+        showarrow=False,
+        font={"size": 15, "color": OH_NAVY, "family": OH_FONT},
+        xref="x",
+        yref="y",
+        align="center",
+    )
+    fig.add_annotation(
+        x=0.0,
+        y=2.86,
+        text=(
+            "<i>Healthy People • Healthy Animals • Healthy Environment • "
+            "Healthy Communities</i>"
+        ),
+        showarrow=False,
+        font={"size": 10, "color": OH_FOREST, "family": OH_FONT},
+        xref="x",
+        yref="y",
+        align="center",
+    )
+
     for domain_id, domain in ONE_HEALTH_DOMAINS.items():
         label_x, label_y = _domain_label_position(domain_id)
-        label_size = 12 if domain_id == "animal_plant" else 13
         fig.add_annotation(
             x=label_x,
             y=label_y,
             text=f"<b>{domain['label']}</b>",
             showarrow=False,
-            font={"size": label_size, "color": OH_TEXT_COLOR, "family": OH_FONT},
+            font={
+                "size": 12,
+                "color": domain.get("label_color", OH_NAVY),
+                "family": OH_FONT,
+            },
             xref="x",
             yref="y",
             align="center",
@@ -2075,12 +2453,13 @@ def build_one_health_network(mode: str = "overview") -> go.Figure:
 
     fig.add_annotation(
         x=0.0,
-        y=0.06,
-        text="<b>OH</b>",
+        y=0.0,
+        text="<b>FOOD<br>SYSTEMS</b>",
         showarrow=False,
-        font={"size": 30, "color": OH_TEXT_COLOR, "family": OH_FONT},
+        font={"size": 14, "color": OH_NAVY, "family": OH_FONT},
         xref="x",
         yref="y",
+        align="center",
     )
 
     return _apply_oh_network_layout(fig)
@@ -2188,7 +2567,14 @@ def render_oh_network_section(
 ) -> None:
     st.subheader(subheader)
     st.caption(caption)
-    render_oh_network_chart(build_one_health_network(mode=mode), chart_key=chart_key)
+    network_fig = build_one_health_network(mode=mode)
+    render_oh_network_chart(network_fig, chart_key=chart_key)
+    render_chart_download(
+        network_fig,
+        "Download interactive network chart (HTML)",
+        f"one_health_network_{mode}.html",
+        f"dl_oh_network_{mode}",
+    )
     st.markdown(render_oh_network_legend(mode=mode), unsafe_allow_html=True)
     st.markdown(footer_md)
 
@@ -2204,7 +2590,7 @@ def main() -> None:
 
     st.markdown(
         '<div class="dashboard-header-block">'
-        '<h1 class="dashboard-title-main">Capstone project Rx One Health Field Institute</h1>'
+        '<h1 class="dashboard-title-main">Capstone Project Rx One Health Field Institute</h1>'
         '<h2 class="dashboard-title-sub">One Health Food Lens: Galway &amp; Dublin</h2>'
         '</div>',
         unsafe_allow_html=True,
@@ -2256,8 +2642,9 @@ def main() -> None:
             chart_key="oh_network_home",
             subheader="One Health food system network",
             caption=(
-                "Three large circles are the One Health domains. Smaller nodes sit inside each "
-                "domain or at shared intersections when a theme spans two areas. Hover for details."
+                "Four pastel domains surround a central Food Systems hub, styled after the "
+                "One Health food infographic. Theme nodes sit inside each domain or at shared "
+                "intersections when a dashboard theme spans two areas. Hover for details."
             ),
             footer_md=(
                 "**Explore the dashboard:** use **Food System** and **Food ecology** for spatial "
@@ -2587,59 +2974,134 @@ def main() -> None:
 
     # ── Tab: Food ecology ─────────────────────────────────────────────────
     with tab_heatmaps:
-        st.subheader("Food ecology heatmaps")
-        heat_radius_km = st.slider(
-            "Radius from city centre (km)",
-            min_value=1,
-            max_value=5,
-            value=DEFAULT_RADIUS_KM,
-            step=1,
-            key="heat_radius",
-        )
+        st.subheader("Food ecology")
+        ec_f1, ec_f2 = st.columns([4, 2])
+        with ec_f1:
+            ecology_categories = st.multiselect(
+                "Categories",
+                options=CATEGORY_ORDER,
+                default=DEFAULT_ECOLOGY_CATEGORIES,
+                format_func=lambda c: CATEGORY_META[c]["label"],
+                key="ecology_categories",
+            )
+        with ec_f2:
+            ecology_radius_km = st.slider(
+                "Radius from city centre (km)",
+                min_value=1,
+                max_value=5,
+                value=DEFAULT_RADIUS_KM,
+                step=1,
+                key="ecology_radius",
+            )
 
-        dublin_radius_json = prepare_heatmap_county_json(df, heat_radius_km, "dublin")
-        galway_radius_json = prepare_heatmap_county_json(df, heat_radius_km, "galway")
-        warm_heatmap_cache(df, heat_radius_km)
+        if not ecology_categories:
+            st.warning("Select at least one category.")
+        else:
+            ecology_cat_tuple = tuple(ecology_categories)
+            dublin_radius_json = prepare_heatmap_county_json(df, ecology_radius_km, "dublin")
+            galway_radius_json = prepare_heatmap_county_json(df, ecology_radius_km, "galway")
+            ecology_key_suffix = f"{ecology_radius_km}_{'_'.join(ecology_cat_tuple)}"
 
-        st.caption(
-            f"All 7 categories within {heat_radius_km} km of each city centre. "
-            "Use +/- on each map to adjust zoom."
-        )
+            st.subheader("Food ecology heatmaps")
+            st.caption(
+                f"Kernel-density map for selected categories within {ecology_radius_km} km "
+                "of each city centre. Use +/- on each map to adjust zoom."
+            )
+            st.markdown(render_map_legend_html(ecology_categories), unsafe_allow_html=True)
 
-        col_gal, col_dub = st.columns(2, gap="large")
-        with col_gal:
-            st.markdown(f"### {COUNTY_META['galway']['label']}")
-        with col_dub:
-            st.markdown(f"### {COUNTY_META['dublin']['label']}")
-
-        for cat in CATEGORY_ORDER:
-            st.markdown(render_category_title_html(cat), unsafe_allow_html=True)
-            hm_left, hm_right = st.columns(2, gap="large")
-            with hm_left:
-                hm_gal = build_category_heatmap_cached(
-                    "galway", cat, galway_radius_json, heat_radius_km
+            col_gal, col_dub = st.columns(2, gap="large")
+            with col_gal:
+                st.markdown(f"### {COUNTY_META['galway']['label']}")
+                hm_gal = build_categories_heatmap_cached(
+                    "galway", ecology_cat_tuple, galway_radius_json, ecology_radius_km
                 )
                 render_folium_html_embed(hm_gal, height=HEATMAP_MAP_HEIGHT)
                 render_map_download(
                     hm_gal,
-                    f"Download Galway {CATEGORY_META[cat]['label']} heatmap (HTML)",
-                    f"galway_{cat}_heatmap.html",
-                    f"dl_hm_gal_{cat}_{heat_radius_km}",
+                    "Download Galway heatmap (HTML)",
+                    f"galway_ecology_heatmap_{ecology_key_suffix}.html",
+                    f"dl_hm_gal_ecology_{ecology_key_suffix}",
                 )
-            with hm_right:
-                hm_dub = build_category_heatmap_cached(
-                    "dublin", cat, dublin_radius_json, heat_radius_km
+            with col_dub:
+                st.markdown(f"### {COUNTY_META['dublin']['label']}")
+                hm_dub = build_categories_heatmap_cached(
+                    "dublin", ecology_cat_tuple, dublin_radius_json, ecology_radius_km
                 )
                 render_folium_html_embed(hm_dub, height=HEATMAP_MAP_HEIGHT)
                 render_map_download(
                     hm_dub,
-                    f"Download Dublin {CATEGORY_META[cat]['label']} heatmap (HTML)",
-                    f"dublin_{cat}_heatmap.html",
-                    f"dl_hm_dub_{cat}_{heat_radius_km}",
+                    "Download Dublin heatmap (HTML)",
+                    f"dublin_ecology_heatmap_{ecology_key_suffix}.html",
+                    f"dl_hm_dub_ecology_{ecology_key_suffix}",
                 )
 
-        st.markdown(render_osm_subcategories_html(), unsafe_allow_html=True)
-        st.markdown(render_heatmap_methodology_html(), unsafe_allow_html=True)
+            st.markdown(render_heatmap_methodology_html(), unsafe_allow_html=True)
+
+            st.subheader("Food network maps")
+            st.caption(
+                f"Hub-and-spoke routes from each city centre to OSM points in the selected "
+                f"categories within {ecology_radius_km} km."
+            )
+            st.markdown(render_food_network_methodology_html(), unsafe_allow_html=True)
+
+            net_left, net_right = st.columns(2, gap="large")
+            with net_left:
+                st.markdown(f"### {COUNTY_META['galway']['label']}")
+                net_gal = build_categories_network_cached(
+                    "galway", ecology_cat_tuple, galway_radius_json, ecology_radius_km
+                )
+                render_folium_html_embed(net_gal, height=NETWORK_MAP_HEIGHT)
+                render_map_download(
+                    net_gal,
+                    "Download Galway food network (HTML)",
+                    f"galway_ecology_network_{ecology_key_suffix}.html",
+                    f"dl_net_gal_ecology_{ecology_key_suffix}",
+                )
+            with net_right:
+                st.markdown(f"### {COUNTY_META['dublin']['label']}")
+                net_dub = build_categories_network_cached(
+                    "dublin", ecology_cat_tuple, dublin_radius_json, ecology_radius_km
+                )
+                render_folium_html_embed(net_dub, height=NETWORK_MAP_HEIGHT)
+                render_map_download(
+                    net_dub,
+                    "Download Dublin food network (HTML)",
+                    f"dublin_ecology_network_{ecology_key_suffix}.html",
+                    f"dl_net_dub_ecology_{ecology_key_suffix}",
+                )
+
+            st.markdown(render_osm_subcategories_html(), unsafe_allow_html=True)
+
+            st.subheader("Average travel time from city centre")
+            st.caption(
+                f"Mean straight-line distance and estimated walking time within "
+                f"{ecology_radius_km} km (at {TRAVEL_SPEED_KMH:g} km/h)."
+            )
+            st.markdown(render_travel_time_methodology_html(ecology_radius_km), unsafe_allow_html=True)
+
+            tier_travel = compute_access_tier_travel_table(df, ecology_radius_km)
+            st.markdown("**Healthy vs unhealthy access**", unsafe_allow_html=True)
+            st.markdown(render_travel_stats_table_html(tier_travel), unsafe_allow_html=True)
+
+            category_travel = compute_category_travel_table(df, ecology_radius_km)
+            st.markdown("**General categories**", unsafe_allow_html=True)
+            st.markdown(render_travel_stats_table_html(category_travel), unsafe_allow_html=True)
+
+            subcat_comparison = compute_subcategory_travel_comparison(df, ecology_radius_km)
+            gal_close, gal_far, dub_close, dub_far = compute_subcategory_travel_extremes(
+                subcat_comparison
+            )
+            st.markdown("**OSM subcategories: closest vs farthest**", unsafe_allow_html=True)
+            st.markdown(
+                render_subcategory_travel_extremes_html(
+                    gal_close,
+                    gal_far,
+                    dub_close,
+                    dub_far,
+                    ecology_radius_km,
+                ),
+                unsafe_allow_html=True,
+            )
 
     # ── Tab: Burden disease ───────────────────────────────────────────────
     with tab_burden:
@@ -2678,10 +3140,10 @@ def main() -> None:
     with tab_waste:
         st.subheader("Waste / animal interface")
         st.caption(
-            "Waste disposal, primary production, and animal–human food pathway interfaces."
+            "Waste disposal, primary production, and animal and human food pathway interfaces."
         )
         st.info(
-            "This section will map waste infrastructure, farm–urban edges, and zoonotic "
+            "This section will map waste infrastructure, farm to urban edges, and zoonotic "
             "interface zones to support One Health food safety analysis."
         )
 
@@ -2691,10 +3153,10 @@ def main() -> None:
         render_oh_network_section(
             mode="gaps",
             chart_key="oh_network_gaps",
-            subheader="What's missing? — opportunity windows",
+            subheader="What's missing? opportunity windows",
             caption=(
                 "The same One Health network, highlighting themes that current data cannot yet "
-                "resolve and where additional evidence would strengthen food–health policy."
+                "resolve and where additional evidence would strengthen food and health policy."
             ),
             footer_md=f"**Priority opportunity windows**\n{gap_list}",
         )
