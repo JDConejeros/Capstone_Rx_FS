@@ -3725,8 +3725,11 @@ def fig_to_html(fig: go.Figure) -> str:
     return fig.to_html(include_plotlyjs="cdn", full_html=True)
 
 
-def fig_to_png(fig: go.Figure) -> bytes:
-    return fig.to_image(format="png", scale=2, engine="kaleido")
+def fig_to_png(fig: go.Figure) -> bytes | None:
+    try:
+        return fig.to_image(format="png", scale=2, engine="kaleido")
+    except Exception:
+        return None
 
 
 def render_chart_download(fig: go.Figure, label: str, filename: str, key: str) -> None:
@@ -3738,23 +3741,33 @@ def render_chart_download(fig: go.Figure, label: str, filename: str, key: str) -
     else:
         png_label = f"{label} (PNG)"
 
+    png_bytes = fig_to_png(fig)
     st.markdown('<div class="chart-dl-spacer"></div>', unsafe_allow_html=True)
-    dl_col1, dl_col2 = st.columns(2)
-    with dl_col1:
+    if png_bytes is not None:
+        dl_col1, dl_col2 = st.columns(2)
+        with dl_col1:
+            st.download_button(
+                label,
+                data=fig_to_html(fig),
+                file_name=filename,
+                mime="text/html",
+                key=f"{key}_html",
+            )
+        with dl_col2:
+            st.download_button(
+                png_label,
+                data=png_bytes,
+                file_name=png_filename,
+                mime="image/png",
+                key=f"{key}_png",
+            )
+    else:
         st.download_button(
             label,
             data=fig_to_html(fig),
             file_name=filename,
             mime="text/html",
             key=f"{key}_html",
-        )
-    with dl_col2:
-        st.download_button(
-            png_label,
-            data=fig_to_png(fig),
-            file_name=png_filename,
-            mime="image/png",
-            key=f"{key}_png",
         )
     st.markdown('<div class="chart-block-gap"></div>', unsafe_allow_html=True)
 
