@@ -233,6 +233,14 @@ WASTE_MESH_LINE_COLOR = "#111827"
 WASTE_MESH_LINE_WEIGHT = 2.0
 WASTE_MESH_LINE_OPACITY = 0.55
 TRAVEL_SPEED_KMH = 4.5
+ECOLOGY_TRAVEL_GALWAY_COLOR = "#DC2626"
+ECOLOGY_TRAVEL_DUBLIN_COLOR = "#2563EB"
+ACCESS_TIER_FA_ICONS = {
+    "healthy": "seedling",
+    "unhealthy": "burger",
+    "mixed": "utensils",
+    "infrastructure": "recycle",
+}
 
 ACCESS_TIER = {
     "supermarket": "healthy",
@@ -730,6 +738,90 @@ CUSTOM_CSS = """
     div[data-testid="column"] {
         padding-left: 10px !important;
         padding-right: 10px !important;
+    }
+    .travel-distance-section {
+        margin-top: 1.25rem;
+    }
+    .travel-distance-card {
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin-bottom: 14px;
+        background: #FFFFFF;
+    }
+    .travel-distance-card h4 {
+        margin: 0 0 12px 0;
+        font-size: 0.98rem;
+        font-weight: 600;
+        color: #1E293B;
+    }
+    .travel-distance-track {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    .travel-distance-track:last-child {
+        margin-bottom: 0;
+    }
+    .travel-walker-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #F1F5F9;
+        border: 1px solid #E2E8F0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #475569;
+        flex-shrink: 0;
+        font-size: 17px;
+    }
+    .travel-arrow-lane {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .travel-arrow-bar {
+        display: flex;
+        align-items: center;
+        min-height: 14px;
+    }
+    .travel-arrow-line {
+        height: 5px;
+        border-radius: 999px;
+        flex-shrink: 0;
+    }
+    .travel-arrow-head {
+        font-size: 13px;
+        line-height: 1;
+        margin-left: -1px;
+        flex-shrink: 0;
+    }
+    .travel-arrow-caption {
+        font-size: 0.78rem;
+        color: #64748B;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .travel-target-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 15px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+    .travel-distance-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 14px;
     }
     .heatmap-cat-title {
         font-size: 0.92rem;
@@ -2967,6 +3059,164 @@ def render_travel_time_methodology_html(radius_km: float) -> str:
     )
 
 
+def _travel_distance_scale_pct(km: float | None, max_km: float) -> float:
+    if km is None or pd.isna(km) or max_km <= 0:
+        return 0.0
+    return max(10.0, min(100.0, (float(km) / max_km) * 100))
+
+
+def _travel_distance_caption(county_label: str, km: float | None, minutes: float | None) -> str:
+    if km is None or pd.isna(km):
+        return f"{county_label} · no data"
+    if minutes is None or pd.isna(minutes):
+        return f"{county_label} · {float(km):.2f} km"
+    return f"{county_label} · {float(km):.2f} km · {float(minutes):.1f} min walk"
+
+
+def _travel_target_icon_html(fa_name: str, bg_color: str, icon_color: str) -> str:
+    return (
+        f'<span class="travel-target-icon" style="background:{bg_color};color:{icon_color};">'
+        f'<i class="fa-solid fa-{fa_name}"></i></span>'
+    )
+
+
+def _travel_distance_track_html(
+    county_label: str,
+    color: str,
+    km: float | None,
+    minutes: float | None,
+    max_km: float,
+    target_icon_html: str,
+) -> str:
+    width_pct = _travel_distance_scale_pct(km, max_km)
+    caption = _travel_distance_caption(county_label, km, minutes)
+    return (
+        '<div class="travel-distance-track">'
+        '<span class="travel-walker-icon">'
+        '<i class="fa-solid fa-person-walking"></i>'
+        "</span>"
+        '<div class="travel-arrow-lane">'
+        '<div class="travel-arrow-bar">'
+        f'<span class="travel-arrow-line" style="width:{width_pct:.1f}%;background:{color};"></span>'
+        f'<span class="travel-arrow-head" style="color:{color};">▶</span>'
+        "</div>"
+        f'<span class="travel-arrow-caption">{caption}</span>'
+        "</div>"
+        f"{target_icon_html}"
+        "</div>"
+    )
+
+
+def render_travel_distance_diagram_html(
+    title: str,
+    fa_name: str,
+    bg_color: str,
+    icon_color: str,
+    gal_km: float | None,
+    gal_min: float | None,
+    dub_km: float | None,
+    dub_min: float | None,
+) -> str:
+    km_values = [value for value in (gal_km, dub_km) if value is not None and not pd.isna(value)]
+    max_km = max(km_values) if km_values else 1.0
+    target_icon = _travel_target_icon_html(fa_name, bg_color, icon_color)
+    return (
+        '<div class="travel-distance-card">'
+        f"<h4>{title}</h4>"
+        + _travel_distance_track_html(
+            COUNTY_META["galway"]["label"],
+            ECOLOGY_TRAVEL_GALWAY_COLOR,
+            gal_km,
+            gal_min,
+            max_km,
+            target_icon,
+        )
+        + _travel_distance_track_html(
+            COUNTY_META["dublin"]["label"],
+            ECOLOGY_TRAVEL_DUBLIN_COLOR,
+            dub_km,
+            dub_min,
+            max_km,
+            target_icon,
+        )
+        + "</div>"
+    )
+
+
+def _county_travel_from_row(row: pd.Series, county: str) -> tuple[float | None, float | None]:
+    label = COUNTY_META[county]["label"]
+    km = row.get(f"{label} (km)")
+    minutes = row.get(f"{label} (min)")
+    if km is None or pd.isna(km):
+        return None, None
+    if minutes is None or pd.isna(minutes):
+        return float(km), None
+    return float(km), float(minutes)
+
+
+def render_ecology_travel_distance_diagrams_html(
+    tier_travel: pd.DataFrame,
+    subcat_comparison: pd.DataFrame,
+    subcat_label_to_key: dict[str, str],
+) -> str:
+    blocks: list[str] = ['<div class="travel-distance-section">']
+
+    healthy_label = ACCESS_TIER_META["healthy"]["label"]
+    healthy_rows = tier_travel[tier_travel["Access tier"] == healthy_label]
+    if not healthy_rows.empty:
+        healthy_row = healthy_rows.iloc[0]
+        gal_km, gal_min = _county_travel_from_row(healthy_row, "galway")
+        dub_km, dub_min = _county_travel_from_row(healthy_row, "dublin")
+        blocks.append(
+            render_travel_distance_diagram_html(
+                healthy_label,
+                ACCESS_TIER_FA_ICONS["healthy"],
+                ACCESS_TIER_META["healthy"]["color"],
+                "#FFFFFF",
+                gal_km,
+                gal_min,
+                dub_km,
+                dub_min,
+            )
+        )
+
+    subcat_cards: list[str] = []
+    subcat_sorted = subcat_comparison.sort_values("Subcategory", key=lambda s: s.map(str.lower))
+    for _, row in subcat_sorted.iterrows():
+        subcat_key = subcat_label_to_key.get(row["Subcategory"])
+        if not subcat_key:
+            continue
+        parent_cat = next(
+            (cat for cat, label in CATEGORY_META.items() if label["label"] == row["Parent category"]),
+            None,
+        )
+        if parent_cat is None:
+            continue
+        gal_km, gal_min = _county_travel_from_row(row, "galway")
+        dub_km, dub_min = _county_travel_from_row(row, "dublin")
+        if gal_km is None and dub_km is None:
+            continue
+        bg_color, icon_color = subcategory_marker_colors(subcat_key, parent_cat)
+        subcat_cards.append(
+            render_travel_distance_diagram_html(
+                row["Subcategory"],
+                subcategory_fa_name(subcat_key, parent_cat),
+                bg_color,
+                icon_color,
+                gal_km,
+                gal_min,
+                dub_km,
+                dub_min,
+            )
+        )
+
+    if subcat_cards:
+        blocks.append('<div class="travel-distance-grid">' + "".join(subcat_cards) + "</div>")
+
+    blocks.append("</div>")
+    return "".join(blocks)
+
+
 def render_food_network_methodology_html() -> str:
     return (
         '<div class="heatmap-math">'
@@ -4600,14 +4850,35 @@ def main() -> None:
             st.markdown(render_travel_time_methodology_html(ecology_radius_km), unsafe_allow_html=True)
 
             tier_travel = compute_access_tier_travel_table(df, ecology_radius_km)
+            category_travel = compute_category_travel_table(df, ecology_radius_km)
+            subcat_comparison = compute_subcategory_travel_comparison(df, ecology_radius_km)
+            ecology_radius_df = filter_by_city_radius(df, ecology_radius_km)
+            subcat_label_to_key = {
+                format_subcategory_label(subcat): subcat
+                for subcat in subcategory_options(ecology_radius_df)
+            }
+
+            st.subheader("Walking distance diagrams")
+            st.caption(
+                "Schematic view of mean straight-line walking distance from each city centre. "
+                "Red arrows represent Galway; blue arrows represent Dublin. Arrow length is "
+                "proportional to average distance within the selected buffer."
+            )
+            st.markdown(
+                render_ecology_travel_distance_diagrams_html(
+                    tier_travel,
+                    subcat_comparison,
+                    subcat_label_to_key,
+                ),
+                unsafe_allow_html=True,
+            )
+
             st.markdown("**Healthy vs unhealthy access**", unsafe_allow_html=True)
             st.markdown(render_travel_stats_table_html(tier_travel), unsafe_allow_html=True)
 
-            category_travel = compute_category_travel_table(df, ecology_radius_km)
             st.markdown("**General categories**", unsafe_allow_html=True)
             st.markdown(render_travel_stats_table_html(category_travel), unsafe_allow_html=True)
 
-            subcat_comparison = compute_subcategory_travel_comparison(df, ecology_radius_km)
             gal_close, gal_far, dub_close, dub_far = compute_subcategory_travel_extremes(
                 subcat_comparison
             )
