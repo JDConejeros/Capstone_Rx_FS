@@ -7,6 +7,7 @@ import io
 import json
 import math
 import base64
+import re
 from pathlib import Path
 
 import folium
@@ -143,8 +144,39 @@ BODY_MASS_COLORS = {
     "Overweight": "#F39C12",
     "Obese": "#C0392B",
 }
-CHART_TITLE_TOP_MARGIN = 88
-CHART_LEGEND_TOP_MARGIN = 118
+CHART_TITLE_TOP_MARGIN = 104
+CHART_LEGEND_TOP_MARGIN = 148
+CHART_MARGIN_L = 36
+CHART_MARGIN_R = 36
+CHART_MARGIN_B = 64
+CHART_HEIGHT_DEFAULT = 500
+CHART_HEIGHT_MEDIUM = 460
+CHART_HEIGHT_COMPACT = 440
+CHART_HEIGHT_DONUT = 400
+NUTRITION_CHART_TITLE_TOP_MARGIN = 112
+NUTRITION_CHART_MARGIN_B = 72
+NUTRITION_CHART_HEIGHT_STANDARD = 500
+NUTRITION_CHART_HEIGHT_PYRAMID = 440
+NUTRITION_CHART_HEIGHT_HEATMAP = 540
+NUTRITION_CHART_HEIGHT_DONUT = 420
+BODY_MASS_BAR_HEIGHT = 580
+BODY_MASS_DONUT_HEIGHT = 560
+CHART_TITLE_FONT_SIZE = 20
+CHART_AXIS_TITLE_FONT_SIZE = 18
+CHART_TICK_FONT_SIZE = 18
+CHART_LEGEND_FONT_SIZE = 17
+CHART_PIE_LABEL_FONT_SIZE = 17
+CHART_DONUT_LABEL_FONT_SIZE = 19
+NUTRITION_CHART_AXIS_TITLE_FONT_SIZE = 21
+NUTRITION_CHART_TICK_FONT_SIZE = 21
+NUTRITION_CHART_LEGEND_FONT_SIZE = 20
+NUTRITION_CHART_PIE_LABEL_FONT_SIZE = 19
+CHART_TITLE_POSITION = {
+    "x": 0.5,
+    "xanchor": "center",
+    "y": 0.98,
+    "yanchor": "top",
+}
 
 BURDEN_DEFAULT_FOOD_CAUSES = [
     "A00",
@@ -280,19 +312,14 @@ METRIC_DEFINITIONS = [
         "Count of fast food and food court features within the urban buffer.",
     ),
     (
-        "mixed_points",
-        "Mixed food service points",
-        "Count of sit-down food service features (restaurants, cafés, pubs) within the buffer.",
-    ),
-    (
         "healthy_share_pct",
         "Healthy share (%)",
-        "Healthy access points divided by all food-access points (healthy + unhealthy + mixed), × 100.",
+        "Healthy access points divided by healthy + unhealthy food-access points, × 100.",
     ),
     (
         "unhealthy_share_pct",
         "Unhealthy share (%)",
-        "Unhealthy access points divided by all food-access points, × 100.",
+        "Unhealthy access points divided by healthy + unhealthy food-access points, × 100.",
     ),
     (
         "healthy_unhealthy_ratio",
@@ -688,10 +715,21 @@ CUSTOM_CSS = """
         margin-bottom: 6px;
     }
     .chart-dl-spacer {
-        margin-top: 6px;
+        margin-top: 10px;
     }
     .chart-block-gap {
-        margin-bottom: 1.25rem;
+        margin-bottom: 2.5rem;
+    }
+    .chart-row-gap {
+        height: 1.75rem;
+    }
+    div[data-testid="stPlotlyChart"] {
+        padding: 10px 6px 14px 6px;
+        margin-bottom: 10px;
+    }
+    div[data-testid="column"] {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
     .heatmap-cat-title {
         font-size: 0.92rem;
@@ -814,9 +852,15 @@ CUSTOM_CSS = """
         font-size: clamp(1.85rem, 3.5vw, 3rem);
         font-weight: 700;
         color: #2563eb !important;
-        margin: 0.02em 0 1rem 0;
+        margin: 0.02em 0 0.35rem 0;
         line-height: 1.08;
         letter-spacing: -0.01em;
+    }
+    .dashboard-credits {
+        font-size: 1rem;
+        color: #64748B;
+        margin: 0 0 1rem 0;
+        line-height: 1.4;
     }
     .dashboard-header-block {
         margin-bottom: 0.5rem;
@@ -1022,16 +1066,16 @@ def build_nutrition_frequency_distribution(df: pd.DataFrame, region: str) -> go.
         )
     fig.update_layout(
         barmode="group",
-        title={"text": f"Consumption frequency distributions ({region})", "x": 0.5},
-        height=420,
-        margin={"l": 20, "r": 20, "t": 72, "b": 20},
+        title=centered_chart_title(f"Consumption frequency distributions ({region})"),
+        height=NUTRITION_CHART_HEIGHT_STANDARD,
+        margin=nutrition_chart_margins(),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         xaxis={"title": "Frequency of consumption", "categoryorder": "array", "categoryarray": NUTRITION_FREQUENCY_ORDER},
         yaxis={"title": "Percentage of people (%)", "range": [0, None]},
         legend={"title": {"text": "Food item"}},
     )
-    return fig
+    return apply_nutrition_chart_typography(fig)
 
 
 def build_nutrition_gender_comparison(df: pd.DataFrame, region: str) -> go.Figure:
@@ -1062,16 +1106,16 @@ def build_nutrition_gender_comparison(df: pd.DataFrame, region: str) -> go.Figur
             )
     fig.update_layout(
         barmode="group",
-        title={"text": f"Gender comparison by food item ({region})", "x": 0.5},
-        height=460,
-        margin={"l": 20, "r": 20, "t": 72, "b": 20},
+        title=centered_chart_title(f"Gender comparison by food item ({region})"),
+        height=NUTRITION_CHART_HEIGHT_STANDARD,
+        margin=nutrition_chart_margins(),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         xaxis={"title": "Frequency of consumption", "categoryorder": "array", "categoryarray": NUTRITION_FREQUENCY_ORDER},
         yaxis={"title": "Percentage of people (%)", "range": [0, None]},
         showlegend=False,
     )
-    return fig
+    return apply_nutrition_chart_typography(fig)
 
 
 def build_nutrition_gender_daily_chart(df: pd.DataFrame, region: str) -> go.Figure:
@@ -1109,16 +1153,16 @@ def build_nutrition_gender_daily_chart(df: pd.DataFrame, region: str) -> go.Figu
     )
     fig.update_layout(
         barmode="group",
-        title={"text": "Daily consumption (once a day or more) by gender", "x": 0.5},
-        height=420,
-        margin={"l": 20, "r": 20, "t": 72, "b": 20},
+        title=centered_chart_title("Daily consumption (once a day or more) by gender"),
+        height=NUTRITION_CHART_HEIGHT_STANDARD,
+        margin=nutrition_chart_margins(bottom=88),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         yaxis={"title": "Percentage of people (%)", "range": [0, None]},
         xaxis={"tickangle": -18},
         showlegend=False,
     )
-    return fig
+    return apply_nutrition_chart_typography(fig)
 
 
 def build_nutrition_age_pyramid(
@@ -1167,9 +1211,9 @@ def build_nutrition_age_pyramid(
     )
     max_val = max(max(abs(v) for v in male), max(female)) * 1.25
     fig.update_layout(
-        title={"text": f"{food}: {frequency}", "x": 0.5},
-        height=360,
-        margin={"l": 20, "r": 20, "t": 64, "b": 16},
+        title=centered_chart_title(f"{food}: {frequency}"),
+        height=NUTRITION_CHART_HEIGHT_PYRAMID,
+        margin=nutrition_chart_margins(),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         barmode="overlay",
@@ -1188,7 +1232,7 @@ def build_nutrition_age_pyramid(
         yaxis={"title": "", "autorange": "reversed"},
         showlegend=False,
     )
-    return fig
+    return apply_nutrition_chart_typography(fig)
 
 
 def build_nutrition_age_frequency_heatmap(
@@ -1216,15 +1260,15 @@ def build_nutrition_age_frequency_heatmap(
         )
     )
     fig.update_layout(
-        title={"text": f"{food} | {sex}", "x": 0.5},
-        height=360,
-        margin={"l": 20, "r": 20, "t": 64, "b": 16},
+        title=centered_chart_title(f"{food} | {sex}"),
+        height=NUTRITION_CHART_HEIGHT_HEATMAP,
+        margin=nutrition_chart_margins(),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         xaxis={"title": "Frequency of consumption"},
         yaxis={"title": "Age group", "autorange": "reversed"},
     )
-    return fig
+    return apply_nutrition_chart_typography(fig)
 
 
 def build_nutrition_regional_daily_comparison(df: pd.DataFrame) -> go.Figure:
@@ -1261,16 +1305,16 @@ def build_nutrition_regional_daily_comparison(df: pd.DataFrame) -> go.Figure:
         )
     fig.update_layout(
         barmode="group",
-        title={"text": "Daily consumption: Dublin HSE areas vs West / North West", "x": 0.5},
-        height=420,
-        margin={"l": 20, "r": 20, "t": 72, "b": 20},
+        title=centered_chart_title("Daily consumption: Dublin HSE areas vs West / North West"),
+        height=NUTRITION_CHART_HEIGHT_STANDARD,
+        margin=nutrition_chart_margins(bottom=88),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         yaxis={"title": "Mean percentage (%)", "range": [0, None]},
         xaxis={"tickangle": -18},
         legend={"orientation": "h", "yanchor": "bottom", "y": 1.02, "x": 0.5, "xanchor": "center"},
     )
-    return fig
+    return apply_nutrition_chart_typography(fig)
 
 
 @st.cache_data
@@ -1319,16 +1363,16 @@ def build_body_mass_distribution(df: pd.DataFrame) -> go.Figure:
     year_label = int(scoped["year"].iloc[0]) if not scoped.empty else ""
     fig.update_layout(
         barmode="group",
-        title={"text": f"Nutritional body mass groups ({year_label})", "x": 0.5},
-        height=420,
-        margin={"l": 20, "r": 20, "t": 72, "b": 20},
+        title=centered_chart_title(f"Nutritional body mass groups ({year_label})"),
+        height=BODY_MASS_BAR_HEIGHT,
+        margin=nutrition_chart_margins(bottom=88),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         xaxis={"title": "BMI category"},
         yaxis={"title": "Percentage of people (%)", "range": [0, None]},
         showlegend=False,
     )
-    return fig
+    return apply_nutrition_chart_typography(fig)
 
 
 def build_body_mass_donut(df: pd.DataFrame) -> go.Figure:
@@ -1346,13 +1390,13 @@ def build_body_mass_donut(df: pd.DataFrame) -> go.Figure:
     )
     year_label = int(scoped["year"].iloc[0]) if not scoped.empty else ""
     fig.update_layout(
-        title={"text": f"Population BMI mix ({year_label}, both sexes)", "x": 0.5},
-        height=380,
-        margin={"l": 10, "r": 10, "t": 72, "b": 10},
+        title=centered_chart_title(f"Population BMI mix ({year_label}, both sexes)"),
+        height=BODY_MASS_DONUT_HEIGHT,
+        margin=nutrition_chart_margins(bottom=56, top=NUTRITION_CHART_TITLE_TOP_MARGIN),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
     )
-    return fig
+    return apply_nutrition_chart_typography(fig)
 
 
 def _pxstat_dim_maps(cube: dict, dim_key: str) -> tuple[list[str], dict[str, str], dict[str, int]]:
@@ -1374,18 +1418,108 @@ def _pxstat_flat_index(positions: list[int], sizes: list[int]) -> int:
     return idx
 
 
+def default_chart_margins(
+    *,
+    top: int | None = None,
+    bottom: int | None = None,
+    left: int | None = None,
+    right: int | None = None,
+) -> dict[str, int]:
+    return {
+        "l": left if left is not None else CHART_MARGIN_L,
+        "r": right if right is not None else CHART_MARGIN_R,
+        "t": top if top is not None else CHART_TITLE_TOP_MARGIN,
+        "b": bottom if bottom is not None else CHART_MARGIN_B,
+    }
+
+
+def nutrition_chart_margins(
+    *,
+    top: int | None = None,
+    bottom: int | None = None,
+) -> dict[str, int]:
+    return default_chart_margins(
+        top=top or NUTRITION_CHART_TITLE_TOP_MARGIN,
+        bottom=bottom or NUTRITION_CHART_MARGIN_B,
+    )
+
+
+def centered_chart_title(text: str) -> dict:
+    return {"text": text, **CHART_TITLE_POSITION}
+
+
+def apply_chart_typography(
+    fig: go.Figure,
+    *,
+    tick_font_size: int = CHART_TICK_FONT_SIZE,
+    axis_title_font_size: int = CHART_AXIS_TITLE_FONT_SIZE,
+    legend_font_size: int = CHART_LEGEND_FONT_SIZE,
+    title_font_size: int = CHART_TITLE_FONT_SIZE,
+    pie_label_font_size: int = CHART_PIE_LABEL_FONT_SIZE,
+) -> go.Figure:
+    fig.update_layout(
+        font={"size": tick_font_size, "family": "Helvetica, Arial, sans-serif"},
+        title={
+            "font": {"size": title_font_size},
+            **CHART_TITLE_POSITION,
+        },
+    )
+    fig.update_xaxes(
+        title_font={"size": axis_title_font_size},
+        tickfont={"size": tick_font_size},
+    )
+    fig.update_yaxes(
+        title_font={"size": axis_title_font_size},
+        tickfont={"size": tick_font_size},
+    )
+    fig.update_layout(
+        legend={
+            "font": {"size": legend_font_size},
+            "title": {"font": {"size": axis_title_font_size}},
+        }
+    )
+    colorbar_font = {
+        "title": {"font": {"size": axis_title_font_size}},
+        "tickfont": {"size": tick_font_size},
+    }
+    if getattr(fig.layout, "coloraxis", None) is not None:
+        fig.update_coloraxes(colorbar=colorbar_font)
+    for trace in fig.data:
+        if getattr(trace, "colorbar", None) is not None:
+            trace.update(colorbar=colorbar_font)
+    fig.update_traces(
+        textfont={"size": tick_font_size},
+        selector={"type": "bar"},
+    )
+    fig.update_traces(
+        textfont={"size": pie_label_font_size},
+        selector={"type": "pie"},
+    )
+    return fig
+
+
+def apply_nutrition_chart_typography(fig: go.Figure) -> go.Figure:
+    return apply_chart_typography(
+        fig,
+        tick_font_size=NUTRITION_CHART_TICK_FONT_SIZE,
+        axis_title_font_size=NUTRITION_CHART_AXIS_TITLE_FONT_SIZE,
+        legend_font_size=NUTRITION_CHART_LEGEND_FONT_SIZE,
+        pie_label_font_size=NUTRITION_CHART_PIE_LABEL_FONT_SIZE,
+    )
+
+
 def apply_chart_layout(
     fig: go.Figure,
     title: str,
     *,
-    height: int = 420,
+    height: int = CHART_HEIGHT_DEFAULT,
     show_legend: bool = False,
 ) -> go.Figure:
     top_margin = CHART_LEGEND_TOP_MARGIN if show_legend else CHART_TITLE_TOP_MARGIN
     layout: dict = {
-        "title": {"text": title, "x": 0.5, "xanchor": "center", "y": 0.98, "yanchor": "top"},
+        "title": centered_chart_title(title),
         "height": height,
-        "margin": {"l": 20, "r": 20, "t": top_margin, "b": 20},
+        "margin": default_chart_margins(top=top_margin),
         "paper_bgcolor": "#FFFFFF",
         "plot_bgcolor": "#FFFFFF",
     }
@@ -1398,7 +1532,7 @@ def apply_chart_layout(
             "xanchor": "center",
         }
     fig.update_layout(**layout)
-    return fig
+    return apply_chart_typography(fig)
 
 
 @st.cache_data
@@ -1557,6 +1691,98 @@ def build_burden_time_trends(
     )
 
 
+def build_burden_sex_distribution(df: pd.DataFrame, cause_codes: list[str]) -> go.Figure:
+    scoped = df[
+        df["cause_code"].isin(cause_codes) & df["sex"].isin(["Male", "Female"])
+    ].copy()
+    totals = scoped.groupby("sex", observed=True)["deaths"].sum()
+    sexes = ["Male", "Female"]
+    values = [int(totals.get(sex, 0)) for sex in sexes]
+    fig = go.Figure(
+        data=[
+            go.Bar(
+                x=sexes,
+                y=values,
+                marker={"color": ["#2563EB", "#DB2777"]},
+                text=values,
+                textposition="outside",
+                hovertemplate="%{x}<br>%{y} deaths<extra></extra>",
+            )
+        ]
+    )
+    fig.update_xaxes(title="Sex")
+    fig.update_yaxes(title="Accumulated deaths (2012-2021)", rangemode="tozero")
+    return apply_chart_layout(
+        fig,
+        "Food-associated deaths by sex",
+        height=CHART_HEIGHT_MEDIUM,
+    )
+
+
+def build_burden_age_pyramid_aggregated(
+    df: pd.DataFrame,
+    cause_codes: list[str],
+) -> go.Figure:
+    scoped = df[
+        df["cause_code"].isin(cause_codes) & df["sex"].isin(["Male", "Female"])
+    ].copy()
+    ages = vsa35_age_order(scoped)
+    grouped = scoped.groupby(["age_group", "sex"], observed=True)["deaths"].sum().reset_index()
+    male_vals = []
+    female_vals = []
+    for age in ages:
+        male_vals.append(
+            -float(grouped.loc[(grouped["age_group"] == age) & (grouped["sex"] == "Male"), "deaths"].sum())
+        )
+        female_vals.append(
+            float(grouped.loc[(grouped["age_group"] == age) & (grouped["sex"] == "Female"), "deaths"].sum())
+        )
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            y=ages,
+            x=male_vals,
+            name="Male",
+            orientation="h",
+            marker={"color": "#2563EB"},
+            hovertemplate="Male<br>%{y}: %{x:.0f} deaths<extra></extra>",
+        )
+    )
+    fig.add_trace(
+        go.Bar(
+            y=ages,
+            x=female_vals,
+            name="Female",
+            orientation="h",
+            marker={"color": "#DB2777"},
+            hovertemplate="Female<br>%{y}: %{x:.0f} deaths<extra></extra>",
+        )
+    )
+    max_val = max(max(abs(v) for v in male_vals), max(female_vals)) * 1.2 or 1
+    fig.update_layout(
+        barmode="overlay",
+        xaxis={
+            "title": "Accumulated deaths",
+            "range": [-max_val, max_val],
+            "tickvals": [-max_val, -max_val / 2, 0, max_val / 2, max_val],
+            "ticktext": [
+                f"{max_val:.0f}",
+                f"{max_val/2:.0f}",
+                "0",
+                f"{max_val/2:.0f}",
+                f"{max_val:.0f}",
+            ],
+        },
+        yaxis={"title": "", "autorange": "reversed"},
+        showlegend=False,
+    )
+    return apply_chart_layout(
+        fig,
+        "Food-associated deaths by age (2012-2021)",
+        height=CHART_HEIGHT_DEFAULT,
+    )
+
+
 def build_burden_age_pyramid(
     df: pd.DataFrame,
     cause_code: str,
@@ -1619,7 +1845,7 @@ def build_burden_age_pyramid(
     return apply_chart_layout(
         fig,
         f"{short}: accumulated deaths by age (2012-2021)",
-        height=460,
+        height=CHART_HEIGHT_DEFAULT,
     )
 
 
@@ -1753,7 +1979,7 @@ def build_fsai_alerts_by_type(df: pd.DataFrame) -> go.Figure:
     )
     fig.update_xaxes(title="Hazard type", tickangle=-18)
     fig.update_yaxes(title="Number of alerts", rangemode="tozero")
-    return apply_chart_layout(fig, "FSAI alerts by hazard type (from 2022)", height=440)
+    return apply_chart_layout(fig, "FSAI alerts by hazard type (from 2022)", height=CHART_HEIGHT_MEDIUM)
 
 
 def build_fsai_alerts_type_timeline(df: pd.DataFrame) -> go.Figure:
@@ -1788,7 +2014,7 @@ def build_fsai_alerts_type_timeline(df: pd.DataFrame) -> go.Figure:
     return apply_chart_layout(
         fig,
         "FSAI alerts by hazard type over time (from 2022)",
-        height=460,
+        height=CHART_HEIGHT_DEFAULT,
         show_legend=True,
     )
 
@@ -2561,7 +2787,7 @@ def compute_access_tier_travel_table(df: pd.DataFrame, radius_km: float) -> pd.D
     radius_df = filter_by_city_radius(df, radius_km)
     food = radius_df[radius_df["category"].isin(FOOD_ACCESS_CATEGORIES)].copy()
     rows: list[dict[str, object]] = []
-    tier_order = ["healthy", "unhealthy", "mixed"]
+    tier_order = ["healthy", "unhealthy"]
     for tier in tier_order:
         row: dict[str, object] = {"Access tier": ACCESS_TIER_META[tier]["label"]}
         for county in COUNTY_DISPLAY_ORDER:
@@ -3032,23 +3258,6 @@ def build_categories_food_network_map(
                 tooltip=tip,
             ).add_to(network_fg)
 
-    waste_sub = county_df[county_df["category"] == "waste"]
-    if not waste_sub.empty:
-        waste_fg = folium.FeatureGroup(name="Food waste sites", show=True)
-        for row in waste_sub.itertuples(index=False):
-            location = [row.lat, row.lon]
-            name = row.name if pd.notna(row.name) and str(row.name).strip() else "(unnamed)"
-            tip = (
-                f"{name} | Waste | {format_subcategory_label(row.subcategory)} | "
-                f"{row.distance_km:.1f} km"
-            )
-            folium.Marker(
-                location=location,
-                tooltip=tip,
-                icon=waste_site_div_icon(),
-            ).add_to(waste_fg)
-        waste_fg.add_to(m)
-
     network_fg.add_to(m)
     return m
 
@@ -3091,21 +3300,23 @@ def build_donut(
     title: str,
     label_map: dict[str, str] | None = None,
     color_map: dict[str, str] | None = None,
+    textfont_size: int = CHART_PIE_LABEL_FONT_SIZE,
 ) -> go.Figure:
-    layout_title = {"text": title, "x": 0.5, "xanchor": "center", "y": 0.98, "yanchor": "top"}
-    layout_margin = {"l": 10, "r": 10, "t": CHART_TITLE_TOP_MARGIN, "b": 10}
+    layout_title = centered_chart_title(title)
+    donut_bottom = 72 if textfont_size >= CHART_DONUT_LABEL_FONT_SIZE else 56
+    layout_margin = default_chart_margins(left=16, right=16, bottom=donut_bottom)
 
     if series.empty:
         fig = go.Figure()
         fig.update_layout(
             title=layout_title,
-            height=340,
+            height=CHART_HEIGHT_DONUT,
             margin=layout_margin,
             paper_bgcolor="#FFFFFF",
             plot_bgcolor="#FFFFFF",
         )
         fig.add_annotation(text="No data", xref="paper", yref="paper", x=0.5, y=0.5, showarrow=False)
-        return fig
+        return apply_chart_typography(fig)
 
     counts = series.value_counts()
     if isinstance(counts.index, pd.CategoricalIndex):
@@ -3123,18 +3334,19 @@ def build_donut(
                 marker={"colors": colors} if colors else None,
                 textinfo="percent+label",
                 textposition="outside",
+                textfont={"size": textfont_size},
             )
         ]
     )
     fig.update_layout(
         title=layout_title,
-        height=340,
+        height=CHART_HEIGHT_DONUT,
         margin=layout_margin,
         showlegend=False,
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
     )
-    return fig
+    return apply_chart_typography(fig)
 
 
 def compute_access_summary(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
@@ -3146,8 +3358,7 @@ def compute_access_summary(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
 
         healthy = int((food["access_tier"] == "healthy").sum())
         unhealthy = int((food["access_tier"] == "unhealthy").sum())
-        mixed = int((food["access_tier"] == "mixed").sum())
-        total_food = healthy + unhealthy + mixed
+        access_total = healthy + unhealthy
 
         rows.append(
             {
@@ -3155,10 +3366,9 @@ def compute_access_summary(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
                 "county_label": COUNTY_META[county]["label"],
                 "healthy_points": healthy,
                 "unhealthy_points": unhealthy,
-                "mixed_points": mixed,
-                "total_food_points": total_food,
-                "healthy_share_pct": round(healthy / total_food * 100, 1) if total_food else 0,
-                "unhealthy_share_pct": round(unhealthy / total_food * 100, 1) if total_food else 0,
+                "total_food_points": access_total,
+                "healthy_share_pct": round(healthy / access_total * 100, 1) if access_total else 0,
+                "unhealthy_share_pct": round(unhealthy / access_total * 100, 1) if access_total else 0,
                 "healthy_unhealthy_ratio": round(healthy / unhealthy, 2) if unhealthy else None,
                 "healthy_density": round(healthy / area, 2),
                 "unhealthy_density": round(unhealthy / area, 2),
@@ -3169,7 +3379,8 @@ def compute_access_summary(df: pd.DataFrame, radius_km: float) -> pd.DataFrame:
 
 def build_access_tier_donut(df: pd.DataFrame, county: str) -> go.Figure:
     food = df[(df["county"] == county) & (df["category"].isin(FOOD_ACCESS_CATEGORIES))]
-    tier_order = ["healthy", "unhealthy", "mixed"]
+    food = food[food["access_tier"].isin(["healthy", "unhealthy"])]
+    tier_order = ["healthy", "unhealthy"]
     label_map = {k: ACCESS_TIER_META[k]["label"] for k in tier_order}
     color_map = {k: ACCESS_TIER_META[k]["color"] for k in tier_order}
     return build_donut(
@@ -3183,19 +3394,17 @@ def build_access_tier_donut(df: pd.DataFrame, county: str) -> go.Figure:
 def build_access_comparison_bar(summary: pd.DataFrame) -> go.Figure:
     long = summary.melt(
         id_vars=["county_label"],
-        value_vars=["healthy_points", "unhealthy_points", "mixed_points"],
+        value_vars=["healthy_points", "unhealthy_points"],
         var_name="access_type",
         value_name="count",
     )
     type_labels = {
         "healthy_points": "Healthy access",
         "unhealthy_points": "Unhealthy access",
-        "mixed_points": "Mixed / other",
     }
     type_colors = {
         "Healthy access": ACCESS_TIER_META["healthy"]["color"],
         "Unhealthy access": ACCESS_TIER_META["unhealthy"]["color"],
-        "Mixed / other": ACCESS_TIER_META["mixed"]["color"],
     }
     long["access_label"] = long["access_type"].map(type_labels)
 
@@ -3210,14 +3419,14 @@ def build_access_comparison_bar(summary: pd.DataFrame) -> go.Figure:
         title="Healthy vs unhealthy food access points",
     )
     fig.update_layout(
-        height=380,
-        margin={"l": 20, "r": 20, "t": CHART_TITLE_TOP_MARGIN, "b": 20},
-        title={"x": 0.5, "xanchor": "center", "y": 0.98, "yanchor": "top"},
+        height=CHART_HEIGHT_MEDIUM,
+        margin=default_chart_margins(),
+        title=centered_chart_title("Healthy vs unhealthy food access points"),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
     )
     fig.update_xaxes(categoryorder="array", categoryarray=COUNTY_LABEL_ORDER)
-    return fig
+    return apply_chart_typography(fig)
 
 
 def build_access_density_bar(summary: pd.DataFrame, radius_km: float) -> go.Figure:
@@ -3252,30 +3461,58 @@ def build_access_density_bar(summary: pd.DataFrame, radius_km: float) -> go.Figu
         title=f"Food access density within {radius_km:g} km of city centre",
     )
     fig.update_layout(
-        height=380,
-        margin={"l": 20, "r": 20, "t": CHART_TITLE_TOP_MARGIN, "b": 20},
-        title={"x": 0.5, "xanchor": "center", "y": 0.98, "yanchor": "top"},
+        height=CHART_HEIGHT_MEDIUM,
+        margin=default_chart_margins(),
+        title=centered_chart_title(f"Food access density within {radius_km:g} km of city centre"),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
     )
     fig.update_xaxes(categoryorder="array", categoryarray=COUNTY_LABEL_ORDER)
-    return fig
+    return apply_chart_typography(fig)
 
 
 def fig_to_html(fig: go.Figure) -> str:
     return fig.to_html(include_plotlyjs="cdn", full_html=True)
 
 
+def fig_to_png(fig: go.Figure) -> bytes:
+    return fig.to_image(format="png", scale=2, engine="kaleido")
+
+
 def render_chart_download(fig: go.Figure, label: str, filename: str, key: str) -> None:
+    png_filename = Path(filename).with_suffix(".png").name
+    if "(HTML)" in label:
+        png_label = label.replace("(HTML)", "(PNG)")
+    elif "HTML" in label:
+        png_label = label.replace("HTML", "PNG")
+    else:
+        png_label = f"{label} (PNG)"
+
     st.markdown('<div class="chart-dl-spacer"></div>', unsafe_allow_html=True)
-    st.download_button(
-        label,
-        data=fig_to_html(fig),
-        file_name=filename,
-        mime="text/html",
-        key=key,
-    )
+    dl_col1, dl_col2 = st.columns(2)
+    with dl_col1:
+        st.download_button(
+            label,
+            data=fig_to_html(fig),
+            file_name=filename,
+            mime="text/html",
+            key=f"{key}_html",
+        )
+    with dl_col2:
+        st.download_button(
+            png_label,
+            data=fig_to_png(fig),
+            file_name=png_filename,
+            mime="image/png",
+            key=f"{key}_png",
+        )
     st.markdown('<div class="chart-block-gap"></div>', unsafe_allow_html=True)
+
+
+def render_nutrition_chart_download(
+    fig: go.Figure, label: str, filename: str, key: str
+) -> None:
+    render_chart_download(fig, label, filename, key)
 
 
 def _theme_opacity(coverage: str, mode: str) -> float:
@@ -3552,6 +3789,9 @@ OH_NETWORK_LAYOUT = {
     "x_range": [-3.25, 3.25],
     "y_range": [-3.45, 3.35],
 }
+OH_NETWORK_HEADLINE_FONT_SIZE = 20
+OH_NETWORK_SUBTITLE_FONT_SIZE = 14
+OH_NETWORK_DOMAIN_LABEL_FONT_SIZE = 16
 
 
 def _apply_oh_network_layout(fig: go.Figure) -> go.Figure:
@@ -3690,7 +3930,7 @@ def build_one_health_network(mode: str = "overview") -> go.Figure:
         y=3.12,
         text="<b>WHY FOOD MATTERS IN ONE HEALTH</b>",
         showarrow=False,
-        font={"size": 15, "color": OH_NAVY, "family": OH_FONT},
+        font={"size": OH_NETWORK_HEADLINE_FONT_SIZE, "color": OH_NAVY, "family": OH_FONT},
         xref="x",
         yref="y",
         align="center",
@@ -3703,7 +3943,7 @@ def build_one_health_network(mode: str = "overview") -> go.Figure:
             "Healthy Communities</i>"
         ),
         showarrow=False,
-        font={"size": 10, "color": OH_FOREST, "family": OH_FONT},
+        font={"size": OH_NETWORK_SUBTITLE_FONT_SIZE, "color": OH_FOREST, "family": OH_FONT},
         xref="x",
         yref="y",
         align="center",
@@ -3717,7 +3957,7 @@ def build_one_health_network(mode: str = "overview") -> go.Figure:
             text=f"<b>{domain['label']}</b>",
             showarrow=False,
             font={
-                "size": 12,
+                "size": OH_NETWORK_DOMAIN_LABEL_FONT_SIZE,
                 "color": domain.get("label_color", OH_NAVY),
                 "family": OH_FONT,
             },
@@ -3867,6 +4107,8 @@ def main() -> None:
         '<div class="dashboard-header-block">'
         '<h1 class="dashboard-title-main">Capstone Project Rx One Health Field Institute</h1>'
         '<h2 class="dashboard-title-sub">One Health Food Lens: Galway &amp; Dublin</h2>'
+        '<p class="dashboard-credits">Developed by José Daniel Conejeros, Liberty Wood, '
+        'Maria Belen Vargas, Mary Anne Ferrer</p>'
         '</div>',
         unsafe_allow_html=True,
     )
@@ -4015,12 +4257,14 @@ def main() -> None:
                 COUNTY_META["dublin"]["label"],
                 label_map=cat_label_map,
                 color_map=cat_color_map,
+                textfont_size=CHART_DONUT_LABEL_FONT_SIZE,
             )
             donut_galway = build_donut(
                 filtered.loc[filtered["county"] == "galway", "category"],
                 COUNTY_META["galway"]["label"],
                 label_map=cat_label_map,
                 color_map=cat_color_map,
+                textfont_size=CHART_DONUT_LABEL_FONT_SIZE,
             )
 
             st.subheader("Points by category")
@@ -4316,10 +4560,8 @@ def main() -> None:
             st.subheader("Food network maps")
             st.caption(
                 f"Hub-and-spoke routes from each city centre to OSM points in the selected "
-                f"categories within {ecology_radius_km} km. Diamond waste markers show food waste "
-                "and recycling sites in the same buffer."
+                f"categories within {ecology_radius_km} km."
             )
-            st.markdown(render_waste_network_legend_html(), unsafe_allow_html=True)
             st.markdown(render_food_network_methodology_html(), unsafe_allow_html=True)
 
             net_left, net_right = st.columns(2, gap="large")
@@ -4401,22 +4643,22 @@ def main() -> None:
             st.markdown(render_gender_icon_legend_html(), unsafe_allow_html=True)
             bm_left, bm_right = st.columns(2, gap="large")
             with bm_left:
-                body_mass_bar = build_body_mass_distribution(body_mass_df)
-                st.plotly_chart(body_mass_bar, use_container_width=True, key="nutrition_body_mass_bar")
-                render_chart_download(
-                    body_mass_bar,
-                    "Download body mass bar chart (HTML)",
-                    "body_mass_distribution.html",
-                    "dl_nutrition_body_mass_bar",
-                )
-            with bm_right:
                 body_mass_donut = build_body_mass_donut(body_mass_df)
                 st.plotly_chart(body_mass_donut, use_container_width=True, key="nutrition_body_mass_donut")
-                render_chart_download(
+                render_nutrition_chart_download(
                     body_mass_donut,
                     "Download body mass donut chart (HTML)",
                     "body_mass_donut.html",
                     "dl_nutrition_body_mass_donut",
+                )
+            with bm_right:
+                body_mass_bar = build_body_mass_distribution(body_mass_df)
+                st.plotly_chart(body_mass_bar, use_container_width=True, key="nutrition_body_mass_bar")
+                render_nutrition_chart_download(
+                    body_mass_bar,
+                    "Download body mass bar chart (HTML)",
+                    "body_mass_distribution.html",
+                    "dl_nutrition_body_mass_bar",
                 )
 
         st.markdown("### Nutritional consumption (IHS44)")
@@ -4452,6 +4694,8 @@ def main() -> None:
             st.markdown(render_gender_icon_legend_html(), unsafe_allow_html=True)
             foods = nutrition_food_order(nutrition_df)
             for row_start in range(0, len(foods), 2):
+                if row_start > 0:
+                    st.markdown('<div class="chart-row-gap"></div>', unsafe_allow_html=True)
                 p_cols = st.columns(2, gap="large")
                 for col, food in zip(p_cols, foods[row_start : row_start + 2]):
                     with col:
@@ -4466,13 +4710,23 @@ def main() -> None:
                             use_container_width=True,
                             key=f"nutrition_pyramid_{food.replace(' ', '_')}",
                         )
+                        food_slug = re.sub(r"[^a-z0-9]+", "_", food.lower()).strip("_")
+                        render_nutrition_chart_download(
+                            pyramid_fig,
+                            "Download pyramid chart (HTML)",
+                            f"nutrition_pyramid_{food_slug}.html",
+                            f"dl_nutrition_pyramid_{food_slug}",
+                        )
 
             st.markdown("#### Age and frequency heatmaps")
             st.caption(
                 "Full consumption distributions across age groups for each food item, "
                 "split by sex."
             )
-            for food in foods:
+            for food_idx, food in enumerate(foods):
+                if food_idx > 0:
+                    st.markdown('<div class="chart-row-gap"></div>', unsafe_allow_html=True)
+                food_slug = re.sub(r"[^a-z0-9]+", "_", food.lower()).strip("_")
                 st.markdown(f"**{food}**")
                 hm_left, hm_right = st.columns(2, gap="large")
                 with hm_left:
@@ -4489,6 +4743,12 @@ def main() -> None:
                     st.plotly_chart(
                         male_hm, use_container_width=True, key=f"nutrition_hm_m_{food[:8]}"
                     )
+                    render_nutrition_chart_download(
+                        male_hm,
+                        "Download male heatmap (HTML)",
+                        f"nutrition_heatmap_male_{food_slug}.html",
+                        f"dl_nutrition_hm_m_{food_slug}",
+                    )
                 with hm_right:
                     st.markdown(
                         '<div class="map-legend-item" style="margin-bottom:6px;">'
@@ -4502,6 +4762,12 @@ def main() -> None:
                     )
                     st.plotly_chart(
                         female_hm, use_container_width=True, key=f"nutrition_hm_f_{food[:8]}"
+                    )
+                    render_nutrition_chart_download(
+                        female_hm,
+                        "Download female heatmap (HTML)",
+                        f"nutrition_heatmap_female_{food_slug}.html",
+                        f"dl_nutrition_hm_f_{food_slug}",
                     )
 
     # ── Tab: Burden disease ───────────────────────────────────────────────
@@ -4557,35 +4823,31 @@ def main() -> None:
                     "dl_burden_trends",
                 )
 
-                st.markdown("### Accumulated age pyramids")
+                st.markdown("### Deaths by sex and age")
                 st.caption(
-                    "Deaths summed across 2012-2021 by age group and sex for each selected cause. "
-                    "Male values extend left, female values extend right."
+                    "Total food-associated deaths (selected causes) accumulated across 2012-2021, "
+                    "by sex and by age group."
                 )
                 st.markdown(render_gender_icon_legend_html(), unsafe_allow_html=True)
-                for row_start in range(0, len(selected_causes), 2):
-                    p_cols = st.columns(2, gap="large")
-                    for col, cause_code in zip(p_cols, selected_causes[row_start : row_start + 2]):
-                        with col:
-                            pyramid_fig = build_burden_age_pyramid(
-                                burden_df,
-                                cause_code,
-                                cause_label_map.get(cause_code, cause_code),
-                            )
-                            st.plotly_chart(
-                                pyramid_fig,
-                                use_container_width=True,
-                                key=f"burden_pyramid_{cause_code}",
-                            )
-                            short = burden_cause_short_label(
-                                cause_label_map.get(cause_code, cause_code)
-                            )
-                            render_chart_download(
-                                pyramid_fig,
-                                f"Download {short} pyramid (HTML)",
-                                f"burden_pyramid_{cause_code}.html",
-                                f"dl_burden_pyramid_{cause_code}",
-                            )
+                sex_fig = build_burden_sex_distribution(burden_df, selected_causes)
+                pyramid_fig = build_burden_age_pyramid_aggregated(burden_df, selected_causes)
+                burden_sex_col, burden_age_col = st.columns(2, gap="large")
+                with burden_sex_col:
+                    st.plotly_chart(sex_fig, use_container_width=True, key="burden_sex_dist")
+                    render_chart_download(
+                        sex_fig,
+                        "Download burden sex chart (HTML)",
+                        "burden_sex_distribution.html",
+                        "dl_burden_sex_dist",
+                    )
+                with burden_age_col:
+                    st.plotly_chart(pyramid_fig, use_container_width=True, key="burden_age_pyramid")
+                    render_chart_download(
+                        pyramid_fig,
+                        "Download burden age pyramid (HTML)",
+                        "burden_age_pyramid.html",
+                        "dl_burden_age_pyramid",
+                    )
 
     # ── Tab: Alert frequency ──────────────────────────────────────────────
     with tab_alerts:
